@@ -106,20 +106,24 @@
   .badge.partial { background: rgba(240,161,60,.15); color: var(--warn); }
   .badge.skipped { background: rgba(240,87,79,.14); color: var(--bad); }
   .badge.rest { background: var(--line); color: var(--ink-2); }
-  /* schedule */
-  .day-row { border-bottom: 1px solid var(--line); cursor: pointer; -webkit-tap-highlight-color: transparent; }
-  .day-row:last-child { border-bottom: 0; }
-  .day-row .head { display: flex; align-items: center; gap: 12px; padding: 12px 4px; }
-  .day-row .dow {
-    width: 46px; flex-shrink: 0; font-weight: 900; font-size: .85rem;
-    text-transform: uppercase; color: var(--ink-2);
+  /* schedule — one tile per day */
+  .day-row { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .day-card { padding: 6px 14px; margin-bottom: 10px; }
+  .day-card.dim { opacity: .85; }
+  .day-row .head { display: flex; align-items: center; gap: 12px; padding: 10px 2px; }
+  .datechip {
+    width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+    background: rgba(5,140,92,.12); color: #058c5c; font-weight: 900;
   }
-  .day-row .dow small { display: block; font-weight: 600; font-size: .68rem; color: var(--ink-3); font-style: normal; }
-  .day-row.today .dow, .day-row.today .dow small { color: var(--volt); }
-  .card.lite .day-row.today .dow, .card.lite .day-row.today .dow small { color: #058c5c; }
-  .card.lite .st.completed { color: #047a51; } .card.lite .st.partial { color: #a05a04; }
-  .card.lite .st.skipped { color: #b91c1c; }
-  .card.lite .day-row.open .chev { color: #058c5c; }
+  .datechip .d1 { font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; }
+  .datechip .d2 { font-family: var(--headline); font-size: 1.3rem; line-height: 1; }
+  .day-card.dim .datechip { background: rgba(242,245,243,.07); color: var(--ink-2); }
+  .day-card.today .datechip { background: var(--volt); color: #06130d; }
+  .day-card.today.dim .datechip { background: var(--volt); color: #06130d; }
+  .card.lite.day-row .st.completed { color: #047a51; } .card.lite.day-row .st.partial { color: #a05a04; }
+  .card.lite.day-row .st.skipped { color: #b91c1c; }
+  .card.lite .day-row.open .chev, .card.lite.day-row.open .chev { color: #058c5c; }
   .day-row .what { flex: 1; min-width: 0; }
   .day-row .what .t { font-weight: 800; font-size: .95rem; text-transform: uppercase; letter-spacing: .01em; }
   .day-row .what .d {
@@ -132,7 +136,7 @@
   .day-row .full {
     display: grid; grid-template-rows: 0fr;
     transition: grid-template-rows .3s cubic-bezier(.4,0,.2,1);
-    padding: 0 4px 0 58px;
+    padding: 0 2px 0 60px;
   }
   .day-row .full .inner {
     overflow: hidden; min-height: 0; opacity: 0;
@@ -416,10 +420,13 @@ function renderSchedule() {
     <span class="label">Week ${w.week}${w.phase ? ' · ' + esc(w.phase.replace('_', ' ')) : ''}</span>
     <button id="wkNext" ${weekIdx === weeks.length - 1 ? 'disabled' : ''}>›</button>
   </div>`;
-  const rows = sessions.map((s, i) => `
-    <div class="day-row ${s.date === t ? 'today' : ''}" data-i="${i}">
+  const rows = sessions.map((s, i) => {
+    const isRest = s.type === 'rest' || s.type === 'active_recovery';
+    const dayNum = parseInt(s.date.slice(8, 10), 10);
+    return `
+    <div class="card day-row day-card ${isRest ? 'dim' : 'lite'} ${s.date === t ? 'today' : ''}" data-i="${i}">
       <div class="head">
-        <div class="dow">${esc(s.day)}<small>${shortDate(s.date)}</small></div>
+        <div class="datechip"><span class="d1">${esc(s.day)}</span><span class="d2">${dayNum}</span></div>
         <div class="what">
           <div class="t">${esc(TYPE_LABEL[s.type] || s.type)}</div>
           <div class="d">${esc(s.detail)}</div>
@@ -433,8 +440,9 @@ function renderSchedule() {
           <div class="meta">${s.duration_min ? '~' + s.duration_min + ' min · ' : ''}${esc(s.status)}</div>
         </div>
       </div>
-    </div>`).join('');
-  el.innerHTML = nav + `<div class="card lite" style="padding:6px 14px">${rows}</div>` + (w.focus ? `<div class="card muted">Focus: ${esc(w.focus)}</div>` : '');
+    </div>`;
+  }).join('');
+  el.innerHTML = nav + rows + (w.focus ? `<div class="card muted">Focus: ${esc(w.focus)}</div>` : '');
   const prev = $('wkPrev'), next = $('wkNext');
   if (prev) prev.onclick = () => { weekIdx--; renderSchedule(); };
   if (next) next.onclick = () => { weekIdx++; renderSchedule(); };
