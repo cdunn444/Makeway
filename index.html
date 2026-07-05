@@ -106,12 +106,26 @@
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   .day-row .st { font-size: 1rem; width: 22px; text-align: center; flex-shrink: 0; font-weight: 800; }
-  .day-row .chev { color: var(--ink-3); flex-shrink: 0; transition: transform .18s; font-size: .8rem; }
+  .day-row .chev { color: var(--ink-3); flex-shrink: 0; transition: transform .28s cubic-bezier(.4,0,.2,1); font-size: .8rem; }
   .day-row.open .chev { transform: rotate(90deg); color: var(--volt); }
-  .day-row .full { display: none; padding: 0 4px 14px 58px; }
-  .day-row.open .full { display: block; }
-  .day-row.open .what .d { display: none; }
+  .day-row .full {
+    display: grid; grid-template-rows: 0fr;
+    transition: grid-template-rows .3s cubic-bezier(.4,0,.2,1);
+    padding: 0 4px 0 58px;
+  }
+  .day-row .full .inner {
+    overflow: hidden; min-height: 0; opacity: 0;
+    transition: opacity .22s ease .04s;
+  }
+  .day-row.open .full { grid-template-rows: 1fr; }
+  .day-row.open .full .inner { opacity: 1; }
   .day-row .full .txt { font-size: .92rem; line-height: 1.55; color: var(--ink); }
+  .day-row .full .inner > .meta { padding-bottom: 14px; }
+  .day-row .what .d { transition: opacity .18s ease; }
+  .day-row.open .what .d { opacity: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    .day-row .full, .day-row .full .inner, .day-row .chev, .day-row .what .d { transition: none; }
+  }
   .day-row .full .meta { color: var(--ink-2); font-size: .8rem; margin-top: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
   .st.completed { color: var(--good); } .st.partial { color: var(--warn); }
   .st.skipped { color: var(--bad); } .st.upcoming { color: var(--ink-3); }
@@ -388,8 +402,10 @@ function renderSchedule() {
         <div class="chev">›</div>
       </div>
       <div class="full">
-        <div class="txt">${esc(s.detail)}</div>
-        <div class="meta">${s.duration_min ? '~' + s.duration_min + ' min · ' : ''}${esc(s.status)}</div>
+        <div class="inner">
+          <div class="txt">${esc(s.detail)}</div>
+          <div class="meta">${s.duration_min ? '~' + s.duration_min + ' min · ' : ''}${esc(s.status)}</div>
+        </div>
       </div>
     </div>`).join('');
   el.innerHTML = nav + `<div class="card" style="padding:4px 12px">${rows}</div>` + (w.focus ? `<div class="card muted">Focus: ${esc(w.focus)}</div>` : '');
