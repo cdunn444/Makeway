@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coach</title>
+<meta name="theme-color" content="#059669">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Coach">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+  :root {
+    --accent: #059669;
+    --accent-soft: rgba(5,150,105,.12);
+    --bg: #f4f5f4;
+    --surface: #ffffff;
+    --ink: #1a2421;
+    --ink-2: #5b6663;
+    --ink-3: #8b9490;
+    --line: rgba(26,36,33,.08);
+    --good: #059669; --warn: #b45309; --bad: #b91c1c;
+    --shadow: 0 1px 3px rgba(26,36,33,.07), 0 4px 14px rgba(26,36,33,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131715;
+      --surface: #1d2320;
+      --ink: #eef1ef;
+      --ink-2: #a8b2ad;
+      --ink-3: #6f7975;
+      --line: rgba(238,241,239,.09);
+      --shadow: none;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--ink);
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+  header.app {
+    padding: calc(14px + env(safe-area-inset-top)) 20px 6px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header.app h1 { font-size: 1.55rem; letter-spacing: -0.02em; }
+  header.app .sub { color: var(--ink-2); font-size: .85rem; margin-top: 2px; }
+  .gear { background: none; border: 0; color: var(--ink-3); font-size: 1.15rem; padding: 8px; cursor: pointer; }
+  main { padding: 8px 16px 24px; max-width: 640px; margin: 0 auto; }
+  .card {
+    background: var(--surface); border-radius: 16px; padding: 16px;
+    margin-bottom: 12px; box-shadow: var(--shadow); border: 1px solid var(--line);
+  }
+  .card h3 {
+    font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--ink-3); margin-bottom: 8px; font-weight: 600;
+  }
+  .context {
+    background: var(--accent-soft); color: var(--accent);
+    border: 0; font-weight: 600; font-size: .95rem;
+  }
+  @media (prefers-color-scheme: dark) { .context { color: #2bce99; } }
+  .wk-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 2px; }
+  .wk-meta { color: var(--ink-2); font-size: .88rem; margin-bottom: 8px; }
+  .wk-detail { font-size: .95rem; line-height: 1.5; }
+  ul.plain { list-style: none; }
+  ul.plain li { padding: 5px 0; font-size: .93rem; line-height: 1.45; display: flex; gap: 8px; }
+  ul.plain li::before { content: "•"; color: var(--accent); font-weight: 700; }
+  .badge {
+    display: inline-block; font-size: .72rem; font-weight: 600; border-radius: 999px;
+    padding: 3px 10px; vertical-align: 2px; margin-left: 8px;
+  }
+  .badge.upcoming { background: var(--accent-soft); color: var(--accent); }
+  .badge.completed { background: rgba(5,150,105,.15); color: var(--good); }
+  .badge.partial { background: rgba(180,83,9,.14); color: var(--warn); }
+  .badge.skipped { background: rgba(185,28,28,.12); color: var(--bad); }
+  .badge.rest { background: var(--line); color: var(--ink-2); }
+  /* schedule */
+  .day-row {
+    display: flex; align-items: center; gap: 12px; padding: 11px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .day-row:last-child { border-bottom: 0; }
+  .day-row .dow { width: 44px; font-weight: 700; font-size: .85rem; color: var(--ink-2); flex-shrink: 0; }
+  .day-row.today .dow { color: var(--accent); }
+  .day-row .what { flex: 1; min-width: 0; }
+  .day-row .what .t { font-weight: 600; font-size: .95rem; }
+  .day-row .what .d { color: var(--ink-2); font-size: .82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .day-row .st { font-size: 1rem; width: 24px; text-align: center; flex-shrink: 0; }
+  .st.completed { color: var(--good); } .st.partial { color: var(--warn); }
+  .st.skipped { color: var(--bad); } .st.upcoming { color: var(--ink-3); }
+  .wknav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .wknav button {
+    background: var(--surface); border: 1px solid var(--line); color: var(--ink);
+    border-radius: 10px; padding: 6px 14px; font-size: .9rem; cursor: pointer;
+  }
+  .wknav .label { font-weight: 700; font-size: .95rem; }
+  /* progress */
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px; box-shadow: var(--shadow); }
+  .tile .v { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .tile .l { color: var(--ink-2); font-size: .8rem; margin-top: 2px; }
+  .chart { position: relative; height: 150px; display: flex; align-items: flex-end; gap: 2px; padding-top: 18px; }
+  .chart .col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; position: relative; }
+  .chart .bar { width: 100%; max-width: 40px; background: var(--accent); border-radius: 4px 4px 0 0; min-height: 2px; }
+  .chart .col .xl { font-size: .68rem; color: var(--ink-3); margin-top: 6px; }
+  .chart .col .dl { font-size: .7rem; color: var(--ink-2); position: absolute; top: 0; font-variant-numeric: tabular-nums; }
+  .chart .col .tip {
+    display: none; position: absolute; bottom: calc(100% + 2px); left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: var(--bg); font-size: .72rem; padding: 4px 8px; border-radius: 6px; white-space: nowrap; z-index: 2;
+  }
+  .chart .col:hover .tip, .chart .col:active .tip { display: block; }
+  .loglist li { flex-direction: column; gap: 0; }
+  .loglist li::before { display: none; }
+  .loglist .row1 { display: flex; justify-content: space-between; width: 100%; font-weight: 600; font-size: .9rem; }
+  .loglist .row1 .dt { color: var(--ink-3); font-weight: 400; font-size: .8rem; }
+  .loglist .row2 { color: var(--ink-2); font-size: .83rem; }
+  /* tab bar */
+  nav.tabs {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 10;
+    display: flex; background: var(--surface); border-top: 1px solid var(--line);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  nav.tabs button {
+    flex: 1; background: none; border: 0; padding: 10px 0 8px; cursor: pointer;
+    color: var(--ink-3); font-size: .68rem; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  }
+  nav.tabs button.on { color: var(--accent); }
+  nav.tabs svg { width: 23px; height: 23px; }
+  /* FAB */
+  .fab {
+    position: fixed; right: 18px; bottom: calc(78px + env(safe-area-inset-bottom)); z-index: 11;
+    width: 58px; height: 58px; border-radius: 50%; background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(5,150,105,.4); text-decoration: none;
+  }
+  .fab:active { transform: scale(.94); }
+  .fab svg { width: 30px; height: 30px; }
+  .hidden { display: none !important; }
+  .setup input {
+    width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--ink); font-size: .95rem; margin: 6px 0 12px;
+  }
+  .setup button.go {
+    background: var(--accent); color: #fff; border: 0; border-radius: 10px;
+    padding: 10px 18px; font-weight: 700; font-size: .95rem; cursor: pointer;
+  }
+  .muted { color: var(--ink-2); font-size: .86rem; line-height: 1.5; }
+  .err { color: var(--bad); font-size: .86rem; }
+</style>
+</head>
+<body>
+
+<header class="app">
+  <div><h1 id="title">Coach</h1><div class="sub" id="subtitle"></div></div>
+  <button class="gear" id="gearBtn" aria-label="Settings">&#9881;&#65039;</button>
+</header>
+
+<main>
+  <div id="view-setup" class="hidden">
+    <div class="card setup">
+      <h3>Connect to your coach data</h3>
+      <p class="muted">Couldn't load <code>coach-data/</code> from GitHub. If the repo is private,
+      paste a fine-grained personal access token with read-only <b>Contents</b> access to
+      <b id="repoName"></b>. It's stored only on this device.</p>
+      <input id="tokenInput" type="password" placeholder="github_pat_…" autocomplete="off">
+      <label class="muted">Branch</label>
+      <input id="branchInput" type="text" placeholder="main">
+      <button class="go" id="saveSetup">Save & reload</button>
+      <p class="err" id="setupErr"></p>
+    </div>
+  </div>
+  <div id="view-brief"></div>
+  <div id="view-schedule" class="hidden"></div>
+  <div id="view-progress" class="hidden"></div>
+</main>
+
+<a class="fab" id="fab" href="https://claude.ai/code" target="_blank" rel="noopener" aria-label="Talk to Coach">
+  <svg viewBox="0 0 512 512" fill="none" aria-hidden="true">
+    <circle cx="225" cy="305" r="118" fill="#fff"/>
+    <rect x="225" y="196" width="223" height="66" rx="22" fill="#fff"/>
+    <circle cx="225" cy="305" r="46" fill="#059669"/>
+  </svg>
+</a>
+
+<nav class="tabs">
+  <button data-tab="brief" class="on">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+    Daily Brief
+  </button>
+  <button data-tab="schedule">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+    Schedule
+  </button>
+  <button data-tab="progress">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M11 20V4M18 20v-9"/></svg>
+    Progress
+  </button>
+</nav>
+
+<script>
+const OWNER = 'cdunn444', REPO = 'Coach';
+const DEFAULT_BRANCHES = ['main', 'claude/skill-from-prd-skh9jj'];
+const LS = { token: 'coach_gh_token', branch: 'coach_gh_branch' };
+const $ = id => document.getElementById(id);
+document.getElementById('repoName').textContent = OWNER + '/' + REPO;
+
+/* ---------- data loading ---------- */
+async function ghFetch(path, branch, token) {
+  const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}?ref=${encodeURIComponent(branch)}&t=${Date.now()}`;
+  const headers = { 'Accept': 'application/vnd.github.raw+json' };
+  if (token) headers['Authorization'] = 'Bearer ' + token;
+  const r = await fetch(url, { headers, signal: AbortSignal.timeout(4000) });
+  if (!r.ok) throw new Error(r.status);
+  return r.text();
+}
+async function localFetch(path) {
+  const r = await fetch(path + '?t=' + Date.now(), { cache: 'no-store', signal: AbortSignal.timeout(4000) });
+  if (!r.ok) throw new Error(r.status);
+  return r.text();
+}
+async function loadFile(path) {
+  const token = localStorage.getItem(LS.token) || '';
+  const saved = localStorage.getItem(LS.branch);
+  const branches = saved ? [saved] : DEFAULT_BRANCHES;
+  for (const b of branches) {
+    try { return await ghFetch(path, b, token); } catch (e) { /* next */ }
+  }
+  return await localFetch(path); // same-origin GitHub Pages copy (may lag a deploy)
+}
+const parseJSONL = t => t.split('\n').filter(l => l.trim()).map(l => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+
+/* ---------- session-type presets ---------- */
+const TYPE_LABEL = { easy_run:'Easy Run', tempo_run:'Tempo Run', interval_run:'Intervals', long_run:'Long Run', strength:'Strength', cross_train:'Cross-Training', active_recovery:'Active Recovery', rest:'Rest Day' };
+const CONTEXT = {
+  easy_run: 'Easy day — keep it genuinely conversational.',
+  tempo_run: 'Quality day — get carbs in this morning.',
+  interval_run: 'Hard day — fuel up and warm up properly.',
+  long_run: 'Long one today — carbs this morning, fuel practice out there.',
+  strength: 'Strength day — protein and a solid meal beforehand.',
+  cross_train: 'Cross-training — move well, keep effort easy-moderate.',
+  active_recovery: 'Recovery day — movement is the goal, not effort.',
+  rest: 'Rest day — recovery is where the training sticks.'
+};
+const PREP = {
+  easy_run: ['2–3 min brisk walk into the run', 'Leg swings front-back + side-side — 10/leg', 'Walking lunge with reach — 6/leg'],
+  tempo_run: ['5 min easy jog', 'Leg swings 10/leg + hip circles', 'A-skips 2×20m, high knees 2×20m', '3–4 strides before the first hard rep'],
+  interval_run: ['5 min easy jog', 'Leg swings 10/leg + hip circles', 'A-skips 2×20m, high knees 2×20m', '4 strides building to ~90%'],
+  long_run: ['Same as easy-run prep', 'Calf raises 2×15 + glute bridge 2×10 if it’s a morning run'],
+  strength: ['3–5 min easy cardio', 'Bodyweight squat 2×10, glute bridge 2×10', "World's greatest stretch — 3/side", 'Light ramp-up sets of the first movement'],
+  cross_train: ['5 min easy spin/row to warm up', 'Hip circles + arm circles — 8 each way'],
+  active_recovery: ['Nothing formal — the session is the mobility work'],
+  rest: ['Optional 10-min flow: hip flexors, figure-4, calves, thoracic — 60–90s each']
+};
+const FUEL = {
+  quality: ['Pre (60+ min before): carb-forward, low fat/fiber — oats + banana + coffee', 'Post (within ~45 min): 20–40g protein + fast carbs', 'Carbs are the story today — don’t run this one empty'],
+  easy: ['No special pre-fuel needed under 60 min', 'Protein at the next meal; normal eating day'],
+  strength: ['Pre (1–2 h): balanced meal, protein + carbs', 'Post (within ~2 h): 30–40g protein; daily total matters most', 'Caffeine 30–45 min before if you use it'],
+  rest: ['Carbs come down today, protein stays up', 'If weight loss is a goal, today is where the deficit lives', 'Anchor protein at every meal']
+};
+const fuelFor = t => (t === 'tempo_run' || t === 'interval_run' || t === 'long_run') ? FUEL.quality
+  : t === 'strength' ? FUEL.strength
+  : (t === 'rest' || t === 'active_recovery') ? FUEL.rest : FUEL.easy;
+
+/* ---------- date helpers ---------- */
+const todayStr = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const fmtDate = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+const shortDate = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+const greeting = () => { const h = new Date().getHours(); return h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening'; };
+
+/* ---------- state ---------- */
+let PLAN = null, PROFILE = null, LOG = [], weekIdx = 0;
+
+function allSessions() { return (PLAN?.weeks || []).flatMap(w => w.sessions.map(s => ({ ...s, week: w.week }))); }
+function esc(t) { const d = document.createElement('div'); d.textContent = t ?? ''; return d.innerHTML; }
+
+/* ---------- Daily Brief ---------- */
+function renderBrief() {
+  const el = $('view-brief');
+  const t = todayStr();
+  const s = allSessions().find(x => x.date === t);
+  $('subtitle').textContent = fmtDate(t);
+  let html = '';
+  if (!s) {
+    const next = allSessions().filter(x => x.date > t && x.type !== 'rest').sort((a, b) => a.date.localeCompare(b.date))[0];
+    html = `<div class="card"><div class="wk-title">${greeting()}!</div>
+      <p class="muted">No session planned for today${PLAN ? '' : ' — no plan found yet'}.
+      Tap the whistle to talk to your coach.</p></div>`;
+    if (next) html += `<div class="card">
+      <h3>Next Up — ${esc(next.day)} ${shortDate(next.date)}</h3>
+      <div class="wk-title">${esc(TYPE_LABEL[next.type] || next.type)}</div>
+      ${next.duration_min ? `<div class="wk-meta">~${next.duration_min} min</div>` : ''}
+      <div class="wk-detail">${esc(next.detail)}</div></div>`;
+  } else {
+    const label = TYPE_LABEL[s.type] || s.type;
+    const isRest = s.type === 'rest' || s.type === 'active_recovery';
+    html += `<div class="card context">${esc(CONTEXT[s.type] || '')}</div>`;
+    html += `<div class="card">
+      <h3>Today's Session</h3>
+      <div class="wk-title">${esc(label)}<span class="badge ${esc(s.status)}">${esc(s.status)}</span></div>
+      ${s.duration_min ? `<div class="wk-meta">~${s.duration_min} min</div>` : ''}
+      <div class="wk-detail">${esc(s.detail)}</div>
+    </div>`;
+    if (!isRest || s.type === 'active_recovery') {
+      html += `<div class="card"><h3>Movement Prep</h3><ul class="plain">${(PREP[s.type] || []).map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>`;
+    }
+    const inj = (PROFILE?.injuries || []).filter(i => i && i.area);
+    if (inj.length) html += `<div class="card"><h3>Prehab — your flags</h3><ul class="plain">${inj.map(i => `<li>${esc(i.area)}: ${esc(i.detail || '')}</li>`).join('')}</ul></div>`;
+    const m = PROFILE?.targets?.[isRest ? 'macros_rest_day' : 'macros_training_day'];
+    html += `<div class="card"><h3>Fuel It</h3>
+      ${m ? `<div class="wk-meta">${m.kcal} kcal · ${m.protein_g}g protein · ${m.carbs_g}g carbs · ${m.fat_g}g fat</div>` : ''}
+      <ul class="plain">${fuelFor(s.type).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
+      ${m ? '' : '<p class="muted" style="margin-top:8px">Complete onboarding with your coach to get exact macro numbers.</p>'}
+    </div>`;
+    if (s.status === 'upcoming') html += `<div class="card muted">Done? Tap the whistle and tell Coach how it went — completed, partial, or skipped.</div>`;
+  }
+  el.innerHTML = html;
+}
+
+/* ---------- Schedule ---------- */
+const ST_ICON = { completed: '✓', partial: '◐', skipped: '✗', upcoming: '·' };
+function renderSchedule() {
+  const el = $('view-schedule');
+  const weeks = PLAN?.weeks || [];
+  if (!weeks.length) { el.innerHTML = '<div class="card muted">No plan yet — talk to your coach to build one.</div>'; return; }
+  weekIdx = Math.min(weekIdx, weeks.length - 1);
+  const w = weeks[weekIdx];
+  const t = todayStr();
+  const sessions = [...w.sessions].sort((a, b) => a.date.localeCompare(b.date));
+  const nav = `<div class="wknav">
+    <button id="wkPrev" ${weekIdx === 0 ? 'disabled' : ''}>‹</button>
+    <span class="label">Week ${w.week}${w.phase ? ' · ' + esc(w.phase.replace('_', ' ')) : ''}</span>
+    <button id="wkNext" ${weekIdx === weeks.length - 1 ? 'disabled' : ''}>›</button>
+  </div>`;
+  const rows = sessions.map(s => `
+    <div class="day-row ${s.date === t ? 'today' : ''}">
+      <div class="dow">${esc(s.day)}<br><span style="font-weight:400;font-size:.72rem">${shortDate(s.date)}</span></div>
+      <div class="what">
+        <div class="t">${esc(TYPE_LABEL[s.type] || s.type)}</div>
+        <div class="d">${esc(s.detail)}</div>
+      </div>
+      <div class="st ${esc(s.status)}" title="${esc(s.status)}">${ST_ICON[s.status] || '·'}</div>
+    </div>`).join('');
+  el.innerHTML = nav + `<div class="card">${rows}</div>` + (w.focus ? `<div class="card muted">Focus: ${esc(w.focus)}</div>` : '');
+  const prev = $('wkPrev'), next = $('wkNext');
+  if (prev) prev.onclick = () => { weekIdx--; renderSchedule(); };
+  if (next) next.onclick = () => { weekIdx++; renderSchedule(); };
+}
+
+/* ---------- Progress ---------- */
+function isoWeekKey(ds) {
+  const d = new Date(ds + 'T12:00:00');
+  const day = (d.getDay() + 6) % 7; // Mon=0
+  d.setDate(d.getDate() - day);
+  return d.toISOString().slice(0, 10); // week's Monday
+}
+function renderProgress() {
+  const el = $('view-progress');
+  const t = todayStr();
+  const workouts = LOG.filter(e => e.kind === 'workout');
+  const done = workouts.filter(e => e.result === 'completed' || e.result === 'partial');
+  // 4-week window
+  const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 28);
+  const cut = cutoff.toISOString().slice(0, 10);
+  const planned28 = allSessions().filter(s => s.date >= cut && s.date <= t && s.type !== 'rest');
+  const done28 = done.filter(e => (e.session_date || e.date) >= cut);
+  // streak: consecutive weeks (ending this week) with >=1 completed workout
+  const wkSet = new Set(done.map(e => isoWeekKey(e.session_date || e.date)));
+  let streak = 0; { const d = new Date();
+    for (;;) { const k = isoWeekKey(d.toISOString().slice(0, 10));
+      if (wkSet.has(k)) { streak++; d.setDate(d.getDate() - 7); } else break; } }
+  // weekly volume (minutes) last 6 weeks
+  const volByWk = {};
+  for (const e of done) {
+    const k = isoWeekKey(e.session_date || e.date);
+    const sess = allSessions().find(s => s.date === (e.session_date || e.date));
+    const min = e.duration_min || sess?.duration_min || 30;
+    volByWk[k] = (volByWk[k] || 0) + min;
+  }
+  const wkKeys = []; { const d = new Date();
+    for (let i = 5; i >= 0; i--) { const dd = new Date(d); dd.setDate(d.getDate() - i * 7); wkKeys.push(isoWeekKey(dd.toISOString().slice(0, 10))); } }
+  const vols = wkKeys.map(k => volByWk[k] || 0);
+  const maxV = Math.max(...vols, 1);
+  const tiles = `<div class="tiles">
+    <div class="tile"><div class="v">${done28.length}<span style="font-size:1rem;color:var(--ink-3)">/${planned28.length || '–'}</span></div><div class="l">sessions, last 4 weeks</div></div>
+    <div class="tile"><div class="v">${streak}</div><div class="l">week streak</div></div>
+    <div class="tile"><div class="v">${vols[5]}</div><div class="l">minutes this week</div></div>
+    <div class="tile"><div class="v">${workouts.length}</div><div class="l">workouts logged, all time</div></div>
+  </div>`;
+  const maxIdx = vols.indexOf(Math.max(...vols));
+  const chart = `<div class="card"><h3>Weekly training minutes</h3>
+    <div class="chart">${wkKeys.map((k, i) => `
+      <div class="col">
+        <div class="tip">wk of ${shortDate(k)} — ${vols[i]} min</div>
+        ${(i === maxIdx && vols[i] > 0) || i === 5 ? `<div class="dl">${vols[i]}</div>` : ''}
+        <div class="bar" style="height:${Math.round(vols[i] / maxV * 100)}%"></div>
+        <div class="xl">${shortDate(k)}</div>
+      </div>`).join('')}</div></div>`;
+  const recent = [...workouts].sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 6);
+  const list = `<div class="card"><h3>Recent activity</h3>
+    ${recent.length ? `<ul class="plain loglist">${recent.map(e => `
+      <li><div class="row1"><span>${ST_ICON[e.result] || ''} ${esc(TYPE_LABEL[e.type] || e.type || 'workout')}</span><span class="dt">${shortDate(e.session_date || e.date)}</span></div>
+      <div class="row2">${esc(e.actual || e.reason || e.note || e.result)}</div></li>`).join('')}</ul>`
+    : '<p class="muted">Nothing logged yet. After your first workout, tell Coach how it went — it lands here.</p>'}</div>`;
+  el.innerHTML = tiles + chart + list;
+}
+
+/* ---------- tabs / setup / boot ---------- */
+const views = { brief: renderBrief, schedule: renderSchedule, progress: renderProgress };
+document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.classList.toggle('on', x === b));
+  for (const v of ['brief', 'schedule', 'progress']) $('view-' + v).classList.toggle('hidden', v !== b.dataset.tab);
+  $('view-setup').classList.add('hidden');
+  views[b.dataset.tab]();
+});
+$('gearBtn').onclick = () => {
+  $('view-setup').classList.toggle('hidden');
+  $('tokenInput').value = localStorage.getItem(LS.token) || '';
+  $('branchInput').value = localStorage.getItem(LS.branch) || '';
+};
+$('saveSetup').onclick = () => {
+  const tok = $('tokenInput').value.trim(), br = $('branchInput').value.trim();
+  tok ? localStorage.setItem(LS.token, tok) : localStorage.removeItem(LS.token);
+  br ? localStorage.setItem(LS.branch, br) : localStorage.removeItem(LS.branch);
+  location.reload();
+};
+
+async function boot() {
+  let failures = 0;
+  const grab = async (path, fallback) => { try { return await loadFile(path); } catch { failures++; return fallback; } };
+  const [plan, profile, log, session] = await Promise.all([
+    grab('coach-data/plan.json', null),
+    grab('coach-data/profile.json', null),
+    grab('coach-data/log.jsonl', ''),
+    grab('coach-data/session.json', null),
+  ]);
+  try { PLAN = plan && JSON.parse(plan); } catch {}
+  try { PROFILE = profile && JSON.parse(profile); } catch {}
+  LOG = parseJSONL(log || '');
+  try { const s = session && JSON.parse(session); if (s?.url) $('fab').href = s.url; } catch {}
+  if (!PLAN && !PROFILE) {
+    $('view-setup').classList.remove('hidden');
+    $('setupErr').textContent = failures ? 'Could not reach the repo anonymously — it may be private.' : '';
+  }
+  // pick current week for schedule
+  const t = todayStr();
+  const weeks = PLAN?.weeks || [];
+  const idx = weeks.findIndex(w => w.sessions.some(s => s.date >= t));
+  weekIdx = idx >= 0 ? idx : Math.max(0, weeks.length - 1);
+  renderBrief(); renderSchedule(); renderProgress();
+}
+boot();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>

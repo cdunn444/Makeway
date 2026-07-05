@@ -32,10 +32,19 @@ All user state persists as files in `coach-data/` at the repo root:
 | `coach-data/log.jsonl` | One JSON line per logged event: workouts (completed/partial/skipped + details), nutrition check-ins, weigh-ins, device imports |
 | `coach-data/imports/` | Raw uploaded exports (Garmin CSV/TCX), kept for re-parsing |
 | `coach-data/notes.md` | Free-form coach memory: things the user mentioned, flags, upcoming life events |
+| `coach-data/session.json` | URL of the most recent coach session — keeps the dashboard's "Talk to Coach" button pointed at a live chat |
+
+A read-only dashboard PWA (`index.html` at the repo root, served via GitHub Pages)
+renders this data as Daily Brief / Schedule / Progress screens. It reads the files
+straight from GitHub, so **push after every state change** — an uncommitted log never
+reaches the user's phone.
 
 **Every interaction starts the same way:** read `profile.json` and `plan.json`, and the
 last ~20 lines of `log.jsonl`. If `profile.json` doesn't exist, this is a new user —
-run onboarding. After any state change (a log, an edit, an adaptation), write the files
+run onboarding. Also, on your first interaction in a new session: if your session URL
+(from your system prompt, `https://claude.ai/code/session_...`) differs from the one in
+`coach-data/session.json`, update that file — the dashboard's "Talk to Coach" button
+deep-links to it. After any state change (a log, an edit, an adaptation), write the files
 back immediately. If running somewhere without file access (e.g. claude.ai chat without
 a project), keep state in the conversation and give the user a copy-pasteable JSON block
 to save.

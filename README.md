@@ -53,6 +53,26 @@ block to save between sessions; for persistent memory, use it inside a Project a
 keep `profile.json` / `plan.json` as project files. Claude Code is the best
 experience because state persists automatically on disk.
 
+## The dashboard (iPhone home-screen app)
+
+`index.html` at the repo root is a self-contained PWA that renders your coach data as
+the PRD's app screens — **Daily Brief**, **Schedule**, and **Progress** — with a
+floating whistle button (lower right) that deep-links into your most recent Claude
+Code coach chat (it reads `coach-data/session.json`, which the skill keeps updated).
+Data is fetched live from GitHub on each open, so it shows whatever the coach last
+pushed. If the repo is private, tap the gear icon once and paste a fine-grained PAT
+with read-only Contents access (stored only on your device).
+
+**Deploy (one-time):** GitHub → repo **Settings → Pages → Source: Deploy from a
+branch** → pick `main` (after merging) or this branch, folder `/ (root)`. Your app
+URL will be `https://<user>.github.io/Coach/`.
+
+**Install on iPhone:** open that URL in Safari → Share → **Add to Home Screen**.
+You get the whistle icon, full-screen app, the works.
+
+**Daily loop:** glance at the dashboard → tap the whistle → tell Coach how the
+workout went → Coach logs, adapts, and pushes → pull down to refresh the dashboard.
+
 ## Repo layout
 
 ```
