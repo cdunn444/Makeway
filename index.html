@@ -66,21 +66,6 @@
     color: var(--volt); margin-bottom: 12px; font-weight: 800;
   }
   .card h3::after { content: ""; display: block; width: 30px; height: 3px; background: var(--volt); margin-top: 6px; border-radius: 2px; }
-  /* white "hero" cards — big black numbers on white, per the athletic-editorial look */
-  .card.lite {
-    background: #f4f5f2; border: none; color: #101312;
-    --ink: #101312; --ink-2: #5c645f; --ink-3: #8b938e; --line: rgba(16,19,18,.1);
-  }
-  .card.lite .chart .col .tip { background: #101312; color: #f4f5f2; }
-  .card.lite h3 { color: #101312; }
-  .card.lite h3::after { background: #101312; }
-  .card.lite .wk-detail, .card.lite .wk-title { color: #101312; }
-  .card.lite ul.plain li::before { color: #058c5c; }
-  .card.lite .badge.upcoming { background: rgba(5,140,92,.12); color: #058c5c; }
-  .card.lite .badge.completed { background: rgba(5,140,92,.12); color: #047a51; }
-  .card.lite .badge.partial { background: rgba(176,98,7,.14); color: #a05a04; }
-  .card.lite .badge.skipped { background: rgba(185,28,28,.12); color: #b91c1c; }
-  .card.lite .badge.rest { background: rgba(16,19,18,.08); color: #5c645f; }
   .context {
     background: var(--volt-soft); border-color: rgba(0,227,127,.25);
     color: var(--volt); font-weight: 800; font-size: .95rem;
@@ -114,21 +99,17 @@
   .datechip {
     width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
-    background: rgba(5,140,92,.12); color: #058c5c; font-weight: 900;
+    background: var(--volt-soft); color: var(--volt); font-weight: 900;
   }
   .datechip .d1 { font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; }
   .datechip .d2 { font-family: var(--headline); font-size: 1.3rem; line-height: 1; }
   .day-card.dim .datechip { background: rgba(242,245,243,.07); color: var(--ink-2); }
   .day-card.today .datechip { background: var(--volt); color: #06130d; }
   .day-card.today.dim .datechip { background: var(--volt); color: #06130d; }
-  .card.lite.day-row .st.completed { color: #047a51; } .card.lite.day-row .st.partial { color: #a05a04; }
-  .card.lite.day-row .st.skipped { color: #b91c1c; }
-  .card.lite .day-row.open .chev, .card.lite.day-row.open .chev { color: #058c5c; }
   .day-row .what { flex: 1; min-width: 0; }
-  .day-row .what .t { font-weight: 800; font-size: .95rem; text-transform: uppercase; letter-spacing: .01em; }
-  .day-row .what .d {
-    color: var(--ink-2); font-size: .82rem;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  .day-row .what .t {
+    font-family: var(--headline);
+    font-weight: 900; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .01em; line-height: 1;
   }
   .day-row .st { font-size: 1rem; width: 22px; text-align: center; flex-shrink: 0; font-weight: 800; }
   .day-row .chev { color: var(--ink-3); flex-shrink: 0; transition: transform .28s cubic-bezier(.4,0,.2,1); font-size: .8rem; }
@@ -146,10 +127,8 @@
   .day-row.open .full .inner { opacity: 1; }
   .day-row .full .txt { font-size: .92rem; line-height: 1.55; color: var(--ink); }
   .day-row .full .inner > .meta { padding-bottom: 14px; }
-  .day-row .what .d { transition: opacity .18s ease; }
-  .day-row.open .what .d { opacity: 0; }
   @media (prefers-reduced-motion: reduce) {
-    .day-row .full, .day-row .full .inner, .day-row .chev, .day-row .what .d { transition: none; }
+    .day-row .full, .day-row .full .inner, .day-row .chev { transition: none; }
   }
   .day-row .full .meta { color: var(--ink-2); font-size: .8rem; margin-top: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
   .st.completed { color: var(--good); } .st.partial { color: var(--warn); }
@@ -168,19 +147,19 @@
   /* progress */
   .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
   .tile {
-    background: #f4f5f2; border: none; border-radius: 22px; padding: 16px 14px 14px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 16px 14px 14px;
   }
   .tile .k {
     font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 800;
-    color: #101312; margin-bottom: 10px;
+    color: var(--volt); margin-bottom: 10px;
   }
-  .tile .k::after { content: ""; display: block; width: 26px; height: 3px; background: #101312; margin-top: 5px; border-radius: 2px; }
+  .tile .k::after { content: ""; display: block; width: 26px; height: 3px; background: var(--volt); margin-top: 5px; border-radius: 2px; }
   .tile .v {
     font-family: var(--headline);
     font-size: 2.6rem; font-weight: 900; letter-spacing: -0.01em;
-    font-variant-numeric: tabular-nums; line-height: 1; color: #101312;
+    font-variant-numeric: tabular-nums; line-height: 1; color: var(--ink);
   }
-  .tile .l { color: #5c645f; font-size: .68rem; margin-top: 6px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+  .tile .l { color: var(--ink-2); font-size: .68rem; margin-top: 6px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
   .chart { position: relative; height: 150px; display: flex; align-items: flex-end; gap: 2px; padding-top: 18px; }
   .chart .col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; position: relative; }
   .chart .bar { width: 100%; max-width: 40px; background: var(--bar); border-radius: 4px 4px 0 0; min-height: 2px; }
@@ -374,7 +353,7 @@ function renderBrief() {
     html = `<div class="card"><div class="wk-title">${greeting()}!</div>
       <p class="muted">No session planned for today${PLAN ? '' : ' — no plan found yet'}.
       Tap the whistle to talk to your coach.</p></div>`;
-    if (next) html += `<div class="card lite">
+    if (next) html += `<div class="card">
       <h3>Next Up — ${esc(next.day)} ${shortDate(next.date)}</h3>
       <div class="wk-title">${esc(TYPE_LABEL[next.type] || next.type)}</div>
       ${next.duration_min ? `<div class="wk-meta">~${next.duration_min} min</div>` : ''}
@@ -383,7 +362,7 @@ function renderBrief() {
     const label = TYPE_LABEL[s.type] || s.type;
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
     html += `<div class="card context">${esc(CONTEXT[s.type] || '')}</div>`;
-    html += `<div class="card lite">
+    html += `<div class="card">
       <h3>Today's Session</h3>
       <div class="wk-title">${esc(label)}<span class="badge ${esc(s.status)}">${esc(s.status)}</span></div>
       ${s.duration_min ? `<div class="wk-meta">~${s.duration_min} min</div>` : ''}
@@ -395,7 +374,7 @@ function renderBrief() {
     const inj = (PROFILE?.injuries || []).filter(i => i && i.area);
     if (inj.length) html += `<div class="card"><h3>Prehab — your flags</h3><ul class="plain">${inj.map(i => `<li>${esc(i.area)}: ${esc(i.detail || '')}</li>`).join('')}</ul></div>`;
     const m = PROFILE?.targets?.[isRest ? 'macros_rest_day' : 'macros_training_day'];
-    html += `<div class="card lite"><h3>Fuel It</h3>
+    html += `<div class="card"><h3>Fuel It</h3>
       ${m ? `<div class="wk-meta">${m.kcal} kcal · ${m.protein_g}g protein · ${m.carbs_g}g carbs · ${m.fat_g}g fat</div>` : ''}
       <ul class="plain">${fuelFor(s.type).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
       ${m ? '' : '<p class="muted" style="margin-top:8px">Complete onboarding with your coach to get exact macro numbers.</p>'}
@@ -424,12 +403,11 @@ function renderSchedule() {
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
     const dayNum = parseInt(s.date.slice(8, 10), 10);
     return `
-    <div class="card day-row day-card ${isRest ? 'dim' : 'lite'} ${s.date === t ? 'today' : ''}" data-i="${i}">
+    <div class="card day-row day-card ${isRest ? 'dim' : ''} ${s.date === t ? 'today' : ''}" data-i="${i}">
       <div class="head">
         <div class="datechip"><span class="d1">${esc(s.day)}</span><span class="d2">${dayNum}</span></div>
         <div class="what">
           <div class="t">${esc(TYPE_LABEL[s.type] || s.type)}</div>
-          <div class="d">${esc(s.detail)}</div>
         </div>
         <div class="st ${esc(s.status)}" title="${esc(s.status)}">${ST_ICON[s.status] || '·'}</div>
         <div class="chev">›</div>
@@ -490,7 +468,7 @@ function renderProgress() {
     <div class="tile"><div class="k">All Time</div><div class="v">${workouts.length}</div><div class="l">workouts logged</div></div>
   </div>`;
   const maxIdx = vols.indexOf(Math.max(...vols));
-  const chart = `<div class="card lite"><h3>Weekly training minutes</h3>
+  const chart = `<div class="card"><h3>Weekly training minutes</h3>
     <div class="chart">${wkKeys.map((k, i) => `
       <div class="col">
         <div class="tip">wk of ${shortDate(k)} — ${vols[i]} min</div>
