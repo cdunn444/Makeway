@@ -1,0 +1,25 @@
+{
+  "created": "2026-07-05",
+  "provisional": true,
+  "provisional_note": "Built from a quick-start week request. Missing: goals, stats (TDEE not computable), training history, diet prefs, schedule. Run /coach onboard to complete.",
+  "goals": {
+    "primary": { "text": "general fitness (assumed)", "event_date": null, "metric": null },
+    "secondary": null,
+    "tertiary": null
+  },
+  "stats": { "age": null, "sex": null, "height_cm": null, "weight_kg": null, "weigh_ins": [] },
+  "training_history": {
+    "days_per_week": null,
+    "activities": ["assumed: can run outdoors"],
+    "benchmark": null
+  },
+  "injuries": [],
+  "diet": { "restrictions": [], "preferences": {}, "supplements": [] },
+  "schedule": { "training_days": ["Mon", "Tue", "Thu", "Sat"], "preferred_time": null, "long_session_day": "Sat" },
+  "targets": {
+    "tdee": null,
+    "macros_training_day": null,
+    "macros_rest_day": null,
+    "note": "Cannot compute TDEE/macros without age, height, weight, sex — timing principles only until onboarding."
+  }
+}

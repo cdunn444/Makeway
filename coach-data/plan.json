@@ -1,0 +1,22 @@
+{
+  "generated": "2026-07-05",
+  "goal_summary": "Travel week (no gym/weights) — general fitness, provisional until onboarding",
+  "phase_map": [{ "phase": "travel_block", "weeks": [1, 1] }],
+  "current_week": 1,
+  "weeks": [
+    {
+      "week": 1,
+      "phase": "travel_block",
+      "focus": "consistency on the road: running + bodyweight strength, conservative volume",
+      "sessions": [
+        { "date": "2026-07-06", "day": "Mon", "type": "easy_run", "detail": "25-30 min easy run, conversational pace (RPE 3-4). New city = flat, simple out-and-back route.", "duration_min": 30, "status": "upcoming" },
+        { "date": "2026-07-07", "day": "Tue", "type": "strength", "detail": "Bodyweight full-body circuit, 3 rounds: 12 squats, 10 push-ups (elevate hands if needed), 10 reverse lunges/leg, 30s side plank/side, 15 glute bridges, 10 chair/bench dips. 60-90s rest between rounds.", "duration_min": 30, "status": "upcoming" },
+        { "date": "2026-07-08", "day": "Wed", "type": "rest", "detail": "Rest — walking around town counts. 10-min evening mobility optional.", "status": "upcoming" },
+        { "date": "2026-07-09", "day": "Thu", "type": "tempo_run", "detail": "30 min: 10 easy + 4 x (2 min comfortably-hard RPE 6-7 / 90s easy) + 6 easy. Effort-based, no pace target needed while traveling.", "duration_min": 30, "status": "upcoming" },
+        { "date": "2026-07-10", "day": "Fri", "type": "strength", "detail": "Bodyweight strength B, 3 rounds: 10 tempo squats (3s down), 8-10 pike or decline push-ups, 12 split squats/leg, 40s plank, 15 single-leg glute bridges/leg, 20 calf raises. Finish: 5 min hip mobility.", "duration_min": 30, "status": "upcoming" },
+        { "date": "2026-07-11", "day": "Sat", "type": "long_run", "detail": "45-50 min easy long run (or long brisk hike/walk if legs are tired). All conversational.", "duration_min": 50, "status": "upcoming" },
+        { "date": "2026-07-12", "day": "Sun", "type": "active_recovery", "detail": "20-30 min walk + 10 min mobility: hip flexor stretch, figure-4, calf stretch, thoracic opener - 60-90s each.", "duration_min": 30, "status": "upcoming" }
+      ]
+    }
+  ]
+}
