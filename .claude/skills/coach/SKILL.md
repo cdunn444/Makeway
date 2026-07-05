@@ -29,7 +29,8 @@ All user state persists as files in `coach-data/` at the repo root:
 |---|---|
 | `coach-data/profile.json` | Goals (priority-ordered), stats, training history, injuries, dietary prefs, weekly schedule |
 | `coach-data/plan.json` | The current training plan: phase, week-by-week sessions with type, volume, intensity |
-| `coach-data/log.jsonl` | One JSON line per logged event: workouts (completed/partial/skipped + details), nutrition check-ins, weigh-ins |
+| `coach-data/log.jsonl` | One JSON line per logged event: workouts (completed/partial/skipped + details), nutrition check-ins, weigh-ins, device imports |
+| `coach-data/imports/` | Raw uploaded exports (Garmin CSV/TCX), kept for re-parsing |
 | `coach-data/notes.md` | Free-form coach memory: things the user mentioned, flags, upcoming life events |
 
 **Every interaction starts the same way:** read `profile.json` and `plan.json`, and the
@@ -49,6 +50,8 @@ Arguments (also match natural language equivalents):
 - `onboard` — run or redo onboarding (`references/onboarding.md`)
 - `brief` — today's Daily Brief (below)
 - `log <what happened>` — log a workout, meal adherence, or weigh-in
+- `import <file>` — import a Garmin/wearable export (CSV/TCX/GPX): auto-log sessions
+  with real pace/HR/duration, dedupe, then adapt (`references/garmin-import.md`)
 - `schedule` — show/edit the week; move, swap, or edit sessions
 - `progress` — consistency, volume trends, milestones, streaks, PRs
 - `plan` — show or regenerate the full plan (`references/methodology.md`)
@@ -119,7 +122,8 @@ are shown and labeled, never blank. Write edits to `plan.json`.
 **Progress:** from `log.jsonl` compute — sessions completed vs. planned (rolling 4
 weeks), weekly volume trend, streaks (consecutive days trained, weeks on plan),
 nutrition adherence, auto-detected PRs, and progress toward the primary goal with a
-projected timeline. Anchor it: show where they were 4 weeks ago so quitting feels
+projected timeline. If device data has been imported, lead with the aerobic trend
+(easy-run pace at a given heart rate — see `references/garmin-import.md`). Anchor it: show where they were 4 weeks ago so quitting feels
 costly. Lead with the win, then the gap.
 
 ## Goal conflicts

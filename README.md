@@ -31,6 +31,7 @@ Clone this repo and start Claude Code in it. Then:
 ```
 /coach              # onboard (first time) or today's Daily Brief
 /coach log done, 4 miles at 10:30 pace
+/coach import garmin-week.csv   # weekly Garmin Connect export → auto-logged with real pace/HR
 /coach schedule     # view/edit the week ("move Thursday's run to Friday")
 /coach progress     # trends, streaks, milestones
 ```
@@ -64,6 +65,7 @@ experience because state persists automatically on disk.
     nutrition.md              # TDEE, macros, session-specific nutrient timing
     movement-prep.md          # warmups by session type + prehab menus
     adaptation.md             # the rule-based adaptation engine
+    garmin-import.md          # wearable export import (CSV/TCX/GPX) + device-data insights
 coach-data/                   # your profile, plan, and logs (created at onboarding)
 docs/Coach_PRD_v0.1.md        # the product spec this implements
 ```
