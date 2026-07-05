@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Coach</title>
-<meta name="theme-color" content="#0c0c0d">
+<meta name="theme-color" content="#0b0d0c">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Coach">
@@ -12,18 +12,18 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
 <style>
-  /* Committed dark athletic theme — Strava/Garmin/ESPN energy. One look, both OS modes. */
+  /* Committed dark athletic theme — volt green. One look, both OS modes. */
   :root {
-    --volt: #fc4c02;           /* chrome accent: buttons, labels, highlights */
-    --volt-soft: rgba(252,76,2,.12);
-    --bar: #fc4c02;            /* chart marks — validated vs dark surface */
-    --bg: #0c0c0d;
-    --surface: #171719;
-    --surface-2: #1e1e21;
-    --ink: #f5f4f2;
-    --ink-2: #a3a19c;
-    --ink-3: #67655f;
-    --line: rgba(245,244,242,.09);
+    --volt: #00e37f;           /* chrome accent: buttons, labels, highlights */
+    --volt-soft: rgba(0,227,127,.1);
+    --bar: #059669;            /* chart marks — validated vs dark surface */
+    --bg: #0b0d0c;
+    --surface: #141816;
+    --surface-2: #1b201d;
+    --ink: #f2f5f3;
+    --ink-2: #9aa5a0;
+    --ink-3: #5f6a65;
+    --line: rgba(242,245,243,.08);
     --good: #2bd58a; --warn: #f0a13c; --bad: #f0574f;
     --headline: "HelveticaNeue-CondensedBlack", "Helvetica Neue Condensed",
       "AvenirNextCondensed-Bold", "Arial Narrow", -apple-system, sans-serif;
@@ -33,7 +33,7 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background:
-      radial-gradient(120% 50% at 50% -10%, rgba(252,76,2,.10), transparent 60%),
+      radial-gradient(120% 50% at 50% -10%, rgba(0,227,127,.09), transparent 60%),
       var(--bg);
     color: var(--ink);
     padding-bottom: calc(80px + env(safe-area-inset-bottom));
@@ -65,7 +65,7 @@
     color: var(--volt); margin-bottom: 10px; font-weight: 800;
   }
   .context {
-    background: var(--volt-soft); border-color: rgba(252,76,2,.3);
+    background: var(--volt-soft); border-color: rgba(0,227,127,.25);
     color: var(--volt); font-weight: 800; font-size: .95rem;
     text-transform: uppercase; letter-spacing: .02em; font-style: italic;
   }
@@ -171,7 +171,7 @@
     position: fixed; right: 18px; bottom: calc(82px + env(safe-area-inset-bottom)); z-index: 11;
     width: 60px; height: 60px; border-radius: 50%; background: var(--volt);
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 0 1px rgba(252,76,2,.4), 0 6px 24px rgba(252,76,2,.35);
+    box-shadow: 0 0 0 1px rgba(0,227,127,.4), 0 6px 24px rgba(0,227,127,.35);
     text-decoration: none;
   }
   .fab:active { transform: scale(.94); }
@@ -182,7 +182,7 @@
     background: var(--bg); color: var(--ink); font-size: .95rem; margin: 6px 0 12px;
   }
   .setup button.go {
-    background: var(--volt); color: #140a05; border: 0; border-radius: 8px;
+    background: var(--volt); color: #06130d; border: 0; border-radius: 8px;
     padding: 11px 20px; font-weight: 900; font-size: .9rem; text-transform: uppercase;
     letter-spacing: .06em; cursor: pointer; transform: skewX(-6deg);
   }
@@ -221,9 +221,9 @@
 
 <a class="fab" id="fab" href="https://claude.ai/code" target="_blank" rel="noopener" aria-label="Talk to Coach">
   <svg viewBox="0 0 512 512" fill="none" aria-hidden="true">
-    <circle cx="225" cy="305" r="118" fill="#140a05"/>
-    <rect x="225" y="196" width="223" height="66" rx="22" fill="#140a05"/>
-    <circle cx="225" cy="305" r="46" fill="#fc4c02"/>
+    <circle cx="225" cy="305" r="118" fill="#06130d"/>
+    <rect x="225" y="196" width="223" height="66" rx="22" fill="#06130d"/>
+    <circle cx="225" cy="305" r="46" fill="#00e37f"/>
   </svg>
 </a>
 
