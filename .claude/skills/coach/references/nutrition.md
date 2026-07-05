@@ -26,8 +26,13 @@ must respect the profile's dietary restrictions — check before naming any food
   placed on rest/easy days per the conflict rules in `methodology.md`. Target rate
   ≤0.5–1% body weight/week.
 
-Compute a training-day and a rest-day macro set and store both in `profile.json`;
-the Daily Brief picks per today's session and states which one applies.
+Compute a training-day and a rest-day macro set and store both in `profile.json`,
+along with `targets.fuel` pre/post meal strings per session category (see
+`data-model.md`) written against the user's restrictions. The Daily Brief and the
+dashboard pick the right set per today's session; the dashboard anchors pre/post
+to clock times from `schedule.preferred_time`. For early-morning trainees (< ~7am
+starts), pre-workout is a quick carb 20–30 min out, not a full meal — the real
+recovery meal is breakfast.
 
 ## Timing by session type
 

@@ -207,6 +207,24 @@
     background: var(--ink); color: var(--bg); font-size: .72rem; padding: 4px 8px; border-radius: 6px; white-space: nowrap; z-index: 2;
   }
   .chart .col:hover .tip, .chart .col:active .tip { display: block; }
+  /* nutrition block */
+  .macrorow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+  .macro {
+    background: rgba(255,255,255,.05); border: 1px solid var(--line);
+    border-radius: 14px; padding: 10px 4px; text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+  }
+  .macro .mv { font-family: var(--headline); font-weight: 900; font-size: 1.35rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .macro .ml { font-size: .58rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .1em; font-weight: 800; margin-top: 4px; }
+  .fuelrow { display: flex; gap: 10px; padding: 7px 0; align-items: flex-start; }
+  .fuelrow .when {
+    flex-shrink: 0; min-width: 96px; text-align: center;
+    background: var(--volt-soft); color: var(--volt); font-weight: 800; font-size: .66rem;
+    text-transform: uppercase; letter-spacing: .05em; border-radius: 8px; padding: 6px 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  }
+  .fuelrow .what2 { font-size: .9rem; line-height: 1.45; color: var(--ink); padding-top: 2px; }
+  .daytag { color: var(--ink-2); font-weight: 700; letter-spacing: .1em; }
   .loglist li { flex-direction: column; gap: 0; }
   .loglist li::before { display: none; }
   .loglist .row1 { display: flex; justify-content: space-between; width: 100%; font-weight: 800; font-size: .9rem; text-transform: uppercase; }
@@ -372,6 +390,44 @@ const FUEL = {
 const fuelFor = t => (t === 'tempo_run' || t === 'interval_run' || t === 'long_run') ? FUEL.quality
   : t === 'strength' ? FUEL.strength
   : (t === 'rest' || t === 'active_recovery') ? FUEL.rest : FUEL.easy;
+const fuelCat = t => (t === 'tempo_run' || t === 'interval_run') ? 'quality'
+  : t === 'long_run' ? 'long' : t === 'strength' ? 'strength' : 'easy';
+
+/* clock helpers for pre/post timing */
+const toMins = t => { const [h, m] = (t || '').split(':').map(Number); return isNaN(h) ? null : h * 60 + (m || 0); };
+const fmt12 = mins => { mins = ((mins % 1440) + 1440) % 1440; let h = Math.floor(mins / 60), m = mins % 60;
+  const ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return h + ':' + String(m).padStart(2, '0') + ' ' + ap; };
+
+function nutritionBlock(s, isRest) {
+  const T = PROFILE?.targets;
+  const m = T?.[isRest ? 'macros_rest_day' : 'macros_training_day'];
+  let html = `<div class="card"><h3>Fuel It${m ? ` · <span class="daytag">${isRest ? 'REST DAY' : 'TRAINING DAY'}</span>` : ''}</h3>`;
+  if (m) {
+    html += `<div class="macrorow">
+      <div class="macro"><div class="mv">${m.kcal}</div><div class="ml">kcal</div></div>
+      <div class="macro"><div class="mv">${m.protein_g}</div><div class="ml">protein g</div></div>
+      <div class="macro"><div class="mv">${m.carbs_g}</div><div class="ml">carbs g</div></div>
+      <div class="macro"><div class="mv">${m.fat_g}</div><div class="ml">fat g</div></div>
+    </div>`;
+  }
+  if (!isRest && s) {
+    const cat = fuelCat(s.type);
+    const start = toMins(PROFILE?.schedule?.preferred_time);
+    const pre = T?.fuel?.pre?.[cat], post = T?.fuel?.post?.[cat];
+    if (start != null && (pre || post)) {
+      const postBy = start + (s.duration_min || 40) + (cat === 'strength' ? 90 : 40);
+      if (pre) html += `<div class="fuelrow"><div class="when">Pre · by ${fmt12(start - 25)}</div><div class="what2">${esc(pre)}</div></div>`;
+      if (post) html += `<div class="fuelrow"><div class="when">Post · by ${fmt12(postBy)}</div><div class="what2">${esc(post)}</div></div>`;
+      html += `<div class="fuelrow"><div class="when">Session ${fmt12(start)}</div><div class="what2 muted">Times assume your usual ~${fmt12(start)} start — shift them with your day.</div></div>`;
+    } else {
+      html += `<ul class="plain">${fuelFor(s.type).map(f => `<li>${esc(f)}</li>`).join('')}</ul>`;
+    }
+  } else {
+    html += `<ul class="plain">${FUEL.rest.map(f => `<li>${esc(f)}</li>`).join('')}</ul>`;
+  }
+  if (!m) html += '<p class="muted" style="margin-top:8px">Complete onboarding with your coach to get exact macro numbers.</p>';
+  return html + '</div>';
+}
 
 /* ---------- date helpers ---------- */
 const todayStr = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
@@ -402,6 +458,7 @@ function renderBrief() {
       <div class="wk-title">${esc(TYPE_LABEL[next.type] || next.type)}</div>
       ${next.duration_min ? `<div class="wk-meta">~${next.duration_min} min</div>` : ''}
       <div class="wk-detail">${esc(next.detail)}</div></div>`;
+    if (PROFILE?.targets) html += nutritionBlock(null, true);
   } else {
     const label = TYPE_LABEL[s.type] || s.type;
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
@@ -417,12 +474,7 @@ function renderBrief() {
     }
     const inj = (PROFILE?.injuries || []).filter(i => i && i.area);
     if (inj.length) html += `<div class="card"><h3>Prehab — your flags</h3><ul class="plain">${inj.map(i => `<li>${esc(i.area)}: ${esc(i.detail || '')}</li>`).join('')}</ul></div>`;
-    const m = PROFILE?.targets?.[isRest ? 'macros_rest_day' : 'macros_training_day'];
-    html += `<div class="card"><h3>Fuel It</h3>
-      ${m ? `<div class="wk-meta">${m.kcal} kcal · ${m.protein_g}g protein · ${m.carbs_g}g carbs · ${m.fat_g}g fat</div>` : ''}
-      <ul class="plain">${fuelFor(s.type).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-      ${m ? '' : '<p class="muted" style="margin-top:8px">Complete onboarding with your coach to get exact macro numbers.</p>'}
-    </div>`;
+    html += nutritionBlock(s, isRest);
     if (s.status === 'upcoming') html += `<div class="card muted">Done? Tap the whistle and tell Coach how it went — completed, partial, or skipped.</div>`;
   }
   el.innerHTML = html;

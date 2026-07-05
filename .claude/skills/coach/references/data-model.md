@@ -34,9 +34,13 @@ the environment (e.g. `date` command or the conversation context), never guess.
     "long_session_day": "Sat"
   },
   "targets": {
-    "tdee": 2750,
+    "tdee_baseline": 2750,
     "macros_training_day": { "kcal": 2600, "protein_g": 168, "carbs_g": 300, "fat_g": 72 },
-    "macros_rest_day":     { "kcal": 2300, "protein_g": 168, "carbs_g": 220, "fat_g": 75 }
+    "macros_rest_day":     { "kcal": 2300, "protein_g": 168, "carbs_g": 220, "fat_g": 75 },
+    "fuel": {
+      "pre":  { "quality": "…", "long": "…", "easy": "…", "strength": "…" },
+      "post": { "quality": "…", "long": "…", "easy": "…", "strength": "…" }
+    }
   }
 }
 ```

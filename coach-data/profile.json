@@ -1,25 +1,61 @@
 {
   "created": "2026-07-05",
-  "provisional": true,
-  "provisional_note": "Built from a quick-start week request. Missing: goals, stats (TDEE not computable), training history, diet prefs, schedule. Run /coach onboard to complete.",
+  "onboarded": "2026-07-05",
   "goals": {
-    "primary": { "text": "general fitness (assumed)", "event_date": null, "metric": null },
-    "secondary": null,
+    "primary": { "text": "build a solid running base", "event_date": null, "metric": "consistent 20+ mi weeks by fall, injury-free" },
+    "secondary": { "text": "lose weight", "metric": "sustainable ~0.5-0.75 lb/week" },
     "tertiary": null
   },
-  "stats": { "age": null, "sex": null, "height_cm": null, "weight_kg": null, "weigh_ins": [] },
-  "training_history": {
-    "days_per_week": null,
-    "activities": ["assumed: can run outdoors"],
-    "benchmark": null
+  "stats": {
+    "age": 35, "sex": "male", "height_cm": 170, "weight_kg": 75.7,
+    "weigh_ins": [ { "date": "2026-07-05", "kg": 75.7 } ]
   },
-  "injuries": [],
-  "diet": { "restrictions": [], "preferences": {}, "supplements": [] },
-  "schedule": { "training_days": ["Mon", "Tue", "Thu", "Sat"], "preferred_time": null, "long_session_day": "Sat" },
+  "training_history": {
+    "days_per_week": 6,
+    "activities": ["running 4-5x/wk", "weights 1-2x/wk", "pickleball 1x/wk"],
+    "benchmark": { "type": "easy_run", "value": "5.02 mi in 51:02 (~10:10/mi easy)", "date": "2026-07-05" },
+    "recent_volume": "12-16 mi/wk through June (Garmin), travel dip to ~5 mi first week of July"
+  },
+  "injuries": [
+    { "area": "left arch", "detail": "achey, plantar-fascia pattern — worse with volume spikes", "status": "managing" },
+    { "area": "shins", "detail": "occasional shin splints when volume is not managed — ramp conservatively", "status": "managing" }
+  ],
+  "diet": {
+    "restrictions": ["gluten-free", "dairy-free", "soy-free"],
+    "preferences": { "protein_powder": "pea or rice protein only (no whey, no soy)" },
+    "supplements": ["multivitamin", "fish oil", "pumpkin seed oil & saw palmetto"]
+  },
+  "schedule": {
+    "training_days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "preferred_time": "05:45",
+    "time_note": "trains 5:00-6:30am, done before work",
+    "long_session_day": "Sat",
+    "units": "miles"
+  },
+  "context": {
+    "traveling_until": "2026-08-02",
+    "equipment": "bodyweight only through July; possible light gym access",
+    "pickleball": "opportunistic — counts as cross-training on easy/rest days"
+  },
   "targets": {
-    "tdee": null,
-    "macros_training_day": null,
-    "macros_rest_day": null,
-    "note": "Cannot compute TDEE/macros without age, height, weight, sex — timing principles only until onboarding."
+    "bmr": 1650,
+    "tdee_baseline": 2270,
+    "macros_training_day": { "kcal": 2450, "protein_g": 155, "carbs_g": 300, "fat_g": 70 },
+    "macros_rest_day":     { "kcal": 1850, "protein_g": 155, "carbs_g": 140, "fat_g": 75 },
+    "notes": "Deficit lives on rest days (~420 below baseline+activity) and is mild on training days (~270). Protein constant 2.0 g/kg. Bodyweight-strength days: trimming ~40g carbs is fine if not hungry.",
+    "fuel": {
+      "pre": {
+        "quality": "20-30 min before: banana or rice cake + honey, black coffee",
+        "long": "25-30 min before: banana + rice cake w/ honey; bring water past 60 min",
+        "easy": "optional — half a banana if hungry; water + coffee is fine this early",
+        "strength": "20-30 min before: banana or GF granola bar (check soy-free)"
+      },
+      "post": {
+        "quality": "within ~45 min: pea protein shake + banana or white rice",
+        "long": "within 30-45 min: pea protein shake + fast carbs, then real breakfast",
+        "easy": "breakfast within an hour: eggs + potatoes, or GF oats + berries",
+        "strength": "within ~2 h: 35-40g protein — eggs + GF oats, or pea protein shake"
+      }
+    }
   }
 }
