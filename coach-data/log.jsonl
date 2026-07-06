@@ -13,3 +13,4 @@
 {"date": "2026-06-22", "kind": "week_history", "week": "2026-06-22", "miles": 10.5, "source": "strava screenshot 2026-07-05"}
 {"date": "2026-06-29", "kind": "week_history", "week": "2026-06-29", "miles": 5.0, "source": "strava screenshot 2026-07-05"}
 {"date": "2026-07-06", "kind": "workout", "session_date": "2026-07-06", "type": "easy_run", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i163241725", "planned": true, "name": "Treadmill Running", "actual": "3.0 mi in 31 min", "duration_min": 31, "miles": 3.0, "avg_pace": "10:20/mi", "avg_hr": 144, "max_hr": 169}
+{"date": "2026-07-06", "kind": "nutrition", "kcal": 600, "protein_g": 26, "carbs_g": 55, "fat_g": 28, "desc": "hotel breakfast burrito (est: eggs, potato, cheese, flour tortilla)"}
