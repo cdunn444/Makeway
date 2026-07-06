@@ -69,7 +69,11 @@ recovery meal is breakfast.
 
 ## Adherence logging & adaptation
 
-When the user reports being significantly over/under target (±300 kcal or more),
+Meals log as individual `kind: "nutrition"` entries with estimated `kcal`/
+`protein_g`/`carbs_g`/`fat_g` (see `data-model.md`); the dashboard sums the day
+against targets live. Estimate from standard portions, say the assumption, move on.
+
+When the day's total lands significantly over/under target (±300 kcal or more),
 log it (`kind: "nutrition"`) and shift the *next day's* targets to partially
 compensate — spread half the surplus/shortfall over the next 1–2 days, never crash
 tomorrow's carbs below what tomorrow's session needs. One over day is noise; a

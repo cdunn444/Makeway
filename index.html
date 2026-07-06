@@ -241,6 +241,9 @@
   }
   .macro .mv { font-family: var(--headline); font-weight: 900; font-size: 1.35rem; line-height: 1; font-variant-numeric: tabular-nums; }
   .macro .ml { font-size: .58rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .1em; font-weight: 800; margin-top: 4px; }
+  .macro .mbar { height: 4px; border-radius: 2px; background: rgba(255,255,255,.09); margin-top: 8px; overflow: hidden; }
+  .macro .mbar i { display: block; height: 100%; background: var(--volt); border-radius: 2px; transition: width .5s cubic-bezier(.4,0,.2,1); }
+  .macro .mbar i.over { background: var(--warn); }
   .fuelrow { display: flex; gap: 10px; padding: 7px 0; align-items: flex-start; }
   .fuelrow .when {
     flex-shrink: 0; min-width: 96px; text-align: center;
@@ -473,12 +476,27 @@ function nutritionBlock(s, isRest) {
   const tag = isRest || !s ? 'REST DAY' : (TYPE_LABEL[s.type] || s.type).toUpperCase();
   let html = `<div class="card"><h3>Today's Fuel${m ? ` · <span class="daytag">${tag}</span>` : ''}</h3>`;
   if (m) {
+    const t = todayStr();
+    const eaten = LOG.filter(e => e.kind === 'nutrition' && e.date === t)
+      .reduce((a, e) => ({ kcal: a.kcal + (e.kcal || 0), p: a.p + (e.protein_g || 0),
+                           c: a.c + (e.carbs_g || 0), f: a.f + (e.fat_g || 0) }),
+              { kcal: 0, p: 0, c: 0, f: 0 });
+    const cell = (got, target, label) => {
+      const pct = target ? Math.min(100, Math.round(got / target * 100)) : 0;
+      const over = target && got > target * 1.05;
+      return `<div class="macro">
+        <div class="mv">${Math.round(got)}</div>
+        <div class="ml">/ ${target} ${label}</div>
+        <div class="mbar"><i class="${over ? 'over' : ''}" style="width:${pct}%"></i></div>
+      </div>`;
+    };
     html += `<div class="macrorow">
-      <div class="macro"><div class="mv">${m.kcal}</div><div class="ml">kcal</div></div>
-      <div class="macro"><div class="mv">${m.protein_g}</div><div class="ml">protein g</div></div>
-      <div class="macro"><div class="mv">${m.carbs_g}</div><div class="ml">carbs g</div></div>
-      <div class="macro"><div class="mv">${m.fat_g}</div><div class="ml">fat g</div></div>
+      ${cell(eaten.kcal, m.kcal, 'kcal')}
+      ${cell(eaten.p, m.protein_g, 'g pro')}
+      ${cell(eaten.c, m.carbs_g, 'g carb')}
+      ${cell(eaten.f, m.fat_g, 'g fat')}
     </div>`;
+    if (!eaten.kcal) html += `<p class="muted" style="margin-bottom:10px">Tell Coach what you eat ("ate eggs + rice, big bowl") — totals track here.</p>`;
   }
   if (!isRest && s) {
     const start = toMins(PROFILE?.schedule?.preferred_time);

@@ -115,6 +115,15 @@ sick") into a log entry: `completed | partial | skipped`, with actuals for parti
 the answer feeds adaptation and builds the habit. Never guilt-trip; one question, then
 move on. Append to `log.jsonl`, then immediately run the adaptation check.
 
+**Food logging:** when the user describes a meal ("ate eggs + rice", "protein shake
+and a banana"), estimate its macros from standard portions — state your estimate and
+assumptions in one line ("logging ~550 kcal, 35P/60C/18F — assumed 2 eggs + 1.5 cups
+rice"), let them correct, and append a `kind: "nutrition"` line with `kcal`,
+`protein_g`, `carbs_g`, `fat_g`, and `desc`. Multiple entries per day sum on the
+dashboard's macro tracker, so push after each. Round estimates; don't interrogate
+about grams — a coach's estimate beats an abandoned log. If a day ends far off
+target, the adaptation rules in `references/nutrition.md` apply.
+
 ## Adaptation engine
 
 After every log, apply the rules in `references/adaptation.md` (rule-based, MVP):

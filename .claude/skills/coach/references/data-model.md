@@ -93,7 +93,7 @@ approach — adaptation makes far-future detail stale anyway.
 {"date": "2026-07-06", "kind": "workout", "session_date": "2026-07-06", "type": "easy_run", "result": "completed", "actual": "3 mi @ 10:45/mi", "rpe": 4, "note": "felt good"}
 {"date": "2026-07-08", "kind": "workout", "session_date": "2026-07-08", "type": "strength", "result": "partial", "actual": "squats + RDL only, ran out of time", "note": ""}
 {"date": "2026-07-10", "kind": "workout", "session_date": "2026-07-10", "type": "tempo_run", "result": "skipped", "reason": "sick kid, no sleep"}
-{"date": "2026-07-10", "kind": "nutrition", "adherence": "over", "detail": "~600 kcal over, work dinner"}
+{"date": "2026-07-10", "kind": "nutrition", "kcal": 610, "protein_g": 42, "carbs_g": 55, "fat_g": 22, "desc": "eggs + rice + avocado"}
 {"date": "2026-07-12", "kind": "weigh_in", "kg": 83.4}
 {"date": "2026-07-12", "kind": "adaptation", "action": "moved tempo to Sun, reduced to 3 mi", "trigger": "skipped 2026-07-10"}
 ```
