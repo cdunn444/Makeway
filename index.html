@@ -245,14 +245,12 @@
   .macro .ml { font-size: .62rem; color: var(--ink-3); font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
   .macro .mbar { height: 4px; border-radius: 2px; background: rgba(255,255,255,.09); margin-top: 8px; overflow: hidden; }
   .macro .mbar i { display: block; height: 100%; background: var(--volt); border-radius: 2px; transition: width .5s cubic-bezier(.4,0,.2,1); }
-  .fuelrow { display: flex; gap: 10px; padding: 7px 0; align-items: flex-start; }
-  .fuelrow .when {
-    flex-shrink: 0; min-width: 96px; text-align: center;
-    background: var(--volt-soft); color: var(--volt); font-weight: 800; font-size: .66rem;
-    text-transform: uppercase; letter-spacing: .05em; border-radius: 8px; padding: 6px 8px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  .sec { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .seclab {
+    font-size: .62rem; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--volt); font-weight: 800; margin-bottom: 6px;
   }
-  .fuelrow .what2 { font-size: .9rem; line-height: 1.45; color: var(--ink); padding-top: 2px; }
+  .sectxt { font-size: .92rem; line-height: 1.5; color: var(--ink); }
   .daytag { color: var(--ink-2); font-weight: 700; letter-spacing: .1em; }
   .loglist li { flex-direction: column; gap: 0; }
   .loglist li::before { display: none; }
@@ -432,11 +430,6 @@ const fuelFor = t => (t === 'tempo_run' || t === 'interval_run' || t === 'long_r
 const fuelCat = t => (t === 'tempo_run' || t === 'interval_run') ? 'quality'
   : t === 'long_run' ? 'long' : t === 'strength' ? 'strength' : 'easy';
 
-/* clock helpers for pre/post timing */
-const toMins = t => { const [h, m] = (t || '').split(':').map(Number); return isNaN(h) ? null : h * 60 + (m || 0); };
-const fmt12 = mins => { mins = ((mins % 1440) + 1440) % 1440; let h = Math.floor(mins / 60), m = mins % 60;
-  const ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return h + ':' + String(m).padStart(2, '0') + ' ' + ap; };
-
 /* Per-day macro targets from the session-type energy model:
    kcal = tdee_baseline + session cost - deficit placement; protein constant,
    fat by day type, carbs = remainder. Falls back to the flat two-set targets. */
@@ -459,19 +452,6 @@ function dayMacros(s) {
   const protein_g = M.protein_g || 150;
   const carbs_g = Math.max(0, Math.round((kcal - protein_g * 4 - fat_g * 9) / 4));
   return { kcal, protein_g, carbs_g, fat_g };
-}
-
-function prePostRows(s) {
-  const T = PROFILE?.targets;
-  const cat = fuelCat(s.type);
-  const start = toMins(PROFILE?.schedule?.preferred_time);
-  const pre = T?.fuel?.pre?.[cat], post = T?.fuel?.post?.[cat];
-  if (start == null || (!pre && !post)) return '';
-  const postBy = start + (s.duration_min || 40) + (cat === 'strength' ? 90 : 40);
-  let h = '';
-  if (pre) h += `<div class="fuelrow"><div class="when">Pre · by ${fmt12(start - 25)}</div><div class="what2">${esc(pre)}</div></div>`;
-  if (post) h += `<div class="fuelrow"><div class="when">Post · by ${fmt12(postBy)}</div><div class="what2">${esc(post)}</div></div>`;
-  return h;
 }
 
 function nutritionBlock(s, isRest) {
@@ -502,10 +482,9 @@ function nutritionBlock(s, isRest) {
     if (!eaten.kcal) html += `<p class="muted" style="margin-bottom:10px">Tell Coach what you eat ("ate eggs + rice, big bowl") — totals track here.</p>`;
   }
   if (!isRest && s) {
-    const start = toMins(PROFILE?.schedule?.preferred_time);
-    if (start != null && prePostRows(s)) {
-      html += `<p class="muted">Pre/post timing is on the workout card above — times assume your usual ~${fmt12(start)} start.</p>`;
-    } else {
+    const cat = fuelCat(s.type);
+    const hasFuel = PROFILE?.targets?.fuel?.pre?.[cat] || PROFILE?.targets?.fuel?.post?.[cat];
+    if (!hasFuel) {
       html += `<ul class="plain">${fuelFor(s.type).map(f => `<li>${esc(f)}</li>`).join('')}</ul>`;
     }
   } else {
@@ -548,17 +527,19 @@ function renderBrief() {
   } else {
     const label = TYPE_LABEL[s.type] || s.type;
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
-    const fuelRows = isRest ? '' : prePostRows(s);
+    const cat = fuelCat(s.type);
+    const pre = isRest ? null : PROFILE?.targets?.fuel?.pre?.[cat];
+    const post = isRest ? null : PROFILE?.targets?.fuel?.post?.[cat];
+    const prepList = (!isRest || s.type === 'active_recovery') ? (PREP[s.type] || []) : [];
     html += `<div class="card">
       <h3>Today's Session</h3>
       <div class="wk-title">${esc(label)}<span class="badge ${esc(s.status)}">${esc(s.status)}</span></div>
       ${s.duration_min ? `<div class="wk-meta">~${s.duration_min} min</div>` : ''}
       <div class="wk-detail">${esc(s.detail)}</div>
-      ${fuelRows ? `<div style="margin-top:14px">${fuelRows}</div>` : ''}
+      ${pre ? `<div class="sec"><div class="seclab">Pre-Workout</div><div class="sectxt">${esc(pre)}</div></div>` : ''}
+      ${prepList.length ? `<div class="sec"><div class="seclab">Movement Prep</div><ul class="plain">${prepList.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
+      ${post ? `<div class="sec"><div class="seclab">Post-Workout</div><div class="sectxt">${esc(post)}</div></div>` : ''}
     </div>`;
-    if (!isRest || s.type === 'active_recovery') {
-      html += `<div class="card"><h3>Movement Prep</h3><ul class="plain">${(PREP[s.type] || []).map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>`;
-    }
     const inj = (PROFILE?.injuries || []).filter(i => i && i.area);
     if (inj.length) html += `<div class="card"><h3>Prehab — your flags</h3><ul class="plain">${inj.map(i => `<li>${esc(i.area)}: ${esc(i.detail || '')}</li>`).join('')}</ul></div>`;
     html += nutritionBlock(s, isRest);
