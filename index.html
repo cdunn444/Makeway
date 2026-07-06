@@ -433,7 +433,6 @@ function nutritionBlock(s, isRest) {
 const todayStr = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
 const fmtDate = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
 const shortDate = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-const greeting = () => { const h = new Date().getHours(); return h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening'; };
 
 /* ---------- state ---------- */
 let PLAN = null, PROFILE = null, LOG = [], weekIdx = 0;
@@ -450,9 +449,8 @@ function renderBrief() {
   let html = '';
   if (!s) {
     const next = allSessions().filter(x => x.date > t && x.type !== 'rest').sort((a, b) => a.date.localeCompare(b.date))[0];
-    html = `<div class="card"><div class="wk-title">${greeting()}!</div>
-      <p class="muted">No session planned for today${PLAN ? '' : ' — no plan found yet'}.
-      Tap the whistle to talk to your coach.</p></div>`;
+    html = '';
+    if (!PLAN) html = `<div class="card muted">No plan found yet — tap the whistle to talk to your coach.</div>`;
     if (next) html += `<div class="card">
       <h3>Next Up — ${esc(next.day)} ${shortDate(next.date)}</h3>
       <div class="wk-title">${esc(TYPE_LABEL[next.type] || next.type)}</div>
