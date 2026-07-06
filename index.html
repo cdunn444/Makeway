@@ -138,8 +138,12 @@
     font-weight: 900; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .01em; line-height: 1;
   }
   .day-row .st { font-size: 1rem; width: 22px; text-align: center; flex-shrink: 0; font-weight: 800; }
-  .day-row .chev { color: var(--ink-3); flex-shrink: 0; transition: transform .28s cubic-bezier(.4,0,.2,1); font-size: .8rem; }
-  .day-row.open .chev { transform: rotate(90deg); color: var(--volt); }
+  .day-row .chev {
+    width: 24px; height: 24px; flex-shrink: 0; color: var(--volt);
+    transition: transform .28s cubic-bezier(.4,0,.2,1);
+  }
+  .day-row .chev svg { width: 24px; height: 24px; display: block; }
+  .day-row.open .chev { transform: rotate(180deg); }
   .day-row .full {
     display: grid; grid-template-rows: 0fr;
     transition: grid-template-rows .3s cubic-bezier(.4,0,.2,1);
@@ -181,13 +185,13 @@
   }
   .wknav button:disabled { color: var(--ink-3); }
   .wkintro { padding: 16px 6px; }
-  .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .wkintro .counts { color: var(--ink-2); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
   .wksum .minum {
     font-family: var(--headline); font-weight: 900; font-size: 2.7rem; line-height: 1;
     letter-spacing: -0.01em; font-variant-numeric: tabular-nums;
   }
   .wksum .milab { color: var(--volt); font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; line-height: 1.4; }
-  .wksum .counts { margin-left: auto; text-align: right; color: var(--ink-2); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; line-height: 1.6; }
   .wksum-text { color: var(--ink-2); font-size: .9rem; line-height: 1.5; }
   .wknav .label {
     font-family: var(--headline);
@@ -517,7 +521,7 @@ function renderBrief() {
 }
 
 /* ---------- Schedule ---------- */
-const ST_ICON = { completed: '✓', partial: '◐', skipped: '✗', upcoming: '·' };
+const ST_ICON = { completed: '✓', partial: '◐', skipped: '✗' };
 function renderSchedule() {
   const el = $('view-schedule');
   const weeks = PLAN?.weeks || [];
@@ -538,8 +542,8 @@ function renderSchedule() {
     <div class="wksum">
       <div class="minum">${miles % 1 ? miles.toFixed(1) : miles}</div>
       <div class="milab">miles<br>planned</div>
-      <div class="counts">${nRuns} runs · ${nStr} strength<br>${sessions.length - nRuns - nStr} recovery</div>
     </div>
+    <div class="counts">${nRuns + nStr} workouts · ${nRuns} runs · ${nStr} strength</div>
     ${w.summary || w.focus ? `<div class="wksum-text">${esc(w.summary || w.focus)}</div>` : ''}
   </div>`;
   const rows = sessions.map((s, i) => {
@@ -553,8 +557,8 @@ function renderSchedule() {
         <div class="what">
           <div class="t">${esc(TYPE_LABEL[s.type] || s.type)}</div>
         </div>
-        <div class="st ${esc(s.status)}" title="${esc(s.status)}">${ST_ICON[s.status] || '·'}</div>
-        <div class="chev">›</div>
+        ${ST_ICON[s.status] ? `<div class="st ${esc(s.status)}" title="${esc(s.status)}">${ST_ICON[s.status]}</div>` : ''}
+        <div class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
       </div>
       <div class="full">
         <div class="inner">
