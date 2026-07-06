@@ -1,4 +1,4 @@
-name: Strava sync
+name: Activity sync
 
 on:
   schedule:
@@ -18,12 +18,14 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Pull new Strava activities into coach-data
+      - name: Pull new activities into coach-data
         env:
+          INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
+          INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
-        run: python scripts/strava_sync.py
+        run: python scripts/activity_sync.py
 
       - name: Commit and push if anything changed
         run: |
@@ -31,7 +33,7 @@ jobs:
             git config user.name "coach-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add coach-data
-            git commit -m "Strava sync: auto-log activities"
+            git commit -m "Activity sync: auto-log activities"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           else

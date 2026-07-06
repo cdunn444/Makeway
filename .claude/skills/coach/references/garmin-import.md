@@ -1,10 +1,11 @@
 # Garmin / Wearable Import
 
-**Automatic path (preferred):** the Strava sync Action
-(`.github/workflows/strava-sync.yml` + `scripts/strava_sync.py`) pulls activities
-from the official Strava API every 4 hours (Garmin auto-syncs to Strava), logs them
-with `"source": "strava"`, dedupes by `strava_id`, and updates plan statuses. The
-manual flows below remain for wellness data, gaps, or when Strava sync is down.
+**Automatic path (preferred):** the activity sync Action
+(`.github/workflows/activity-sync.yml` + `scripts/activity_sync.py`) pulls
+activities every 4 hours from intervals.icu (free; official Garmin Connect sync)
+or Strava (needs paid sub), logs them with `"source"`/`"sync_id"`, dedupes, and
+updates plan statuses. The manual flows below remain for wellness data, gaps, or
+when sync is down.
 
 Handles `/coach import <file>` (or the user pasting/uploading an export). Purpose:
 turn a weekly Garmin Connect export into logged sessions with real actuals — pace,
