@@ -45,6 +45,11 @@ the environment (e.g. `date` command or the conversation context), never guess.
 }
 ```
 
+`profile.optional_strength` (`title`, `note`, `exercises[]`) is a short optional
+core/posterior-chain/lower-leg circuit the dashboard shows on every run day —
+keep it tuned to the user's injury flags and equipment, and update it as those
+change.
+
 ## plan.json
 
 ```json

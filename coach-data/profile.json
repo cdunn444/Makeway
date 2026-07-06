@@ -141,5 +141,17 @@
       ],
       "notes": "day kcal = tdee_baseline + session cost - deficit; protein constant; fat by day type; carbs = remainder. Key sessions carry the smallest deficit so they stay fueled."
     }
+  },
+  "optional_strength": {
+    "title": "Core + Lower Legs",
+    "note": "Optional \u2014 after your run or anytime today (~12 min). 2 rounds normally, 3 if fresh; skip the day before the long run if legs feel heavy. Built around your arch + shin history.",
+    "exercises": [
+      "Single-leg glute bridge \u2014 2\u00d710/leg",
+      "Side plank \u2014 2\u00d730s/side",
+      "Dead bug \u2014 2\u00d78/side",
+      "Eccentric calf raise, 3s down \u2014 2\u00d712/leg",
+      "Tibialis raises \u2014 2\u00d715",
+      "Short-foot arch doming \u2014 2\u00d710/foot"
+    ]
   }
 }

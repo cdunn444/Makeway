@@ -540,8 +540,13 @@ function renderBrief() {
       ${prepList.length ? `<div class="sec"><div class="seclab">Movement Prep</div><ul class="plain">${prepList.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
       ${post ? `<div class="sec"><div class="seclab">Post-Workout</div><div class="sectxt">${esc(post)}</div></div>` : ''}
     </div>`;
-    const inj = (PROFILE?.injuries || []).filter(i => i && i.area);
-    if (inj.length) html += `<div class="card"><h3>Prehab — your flags</h3><ul class="plain">${inj.map(i => `<li>${esc(i.area)}: ${esc(i.detail || '')}</li>`).join('')}</ul></div>`;
+    const os = PROFILE?.optional_strength;
+    if (s.type.endsWith('_run') && os?.exercises?.length) {
+      html += `<div class="card"><h3>Optional Strength${os.title ? ` · <span class="daytag">${esc(os.title).toUpperCase()}</span>` : ''}</h3>
+        ${os.note ? `<p class="muted" style="margin-bottom:10px">${esc(os.note)}</p>` : ''}
+        <ul class="plain">${os.exercises.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </div>`;
+    }
     html += nutritionBlock(s, isRest);
     if (s.status === 'upcoming') html += `<div class="card muted">Done? Tap the whistle and tell Coach how it went — completed, partial, or skipped.</div>`;
   }
