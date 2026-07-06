@@ -242,6 +242,8 @@
   .macro .mk { font-size: .56rem; color: rgba(241,244,246,.52); text-transform: uppercase; letter-spacing: .1em; font-weight: 800; margin-bottom: 6px; }
   .macro .mv { font-family: var(--headline); font-weight: 900; font-size: 1.5rem; line-height: 1; font-variant-numeric: tabular-nums; }
   .macro .mv.hit { color: var(--volt); }
+  .macro .mv.over { color: var(--bad); }
+  .macro .mbar i.over { background: var(--bad); }
   .macro .ml { font-size: .62rem; color: var(--ink-3); font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
   .macro .mbar { height: 4px; border-radius: 2px; background: rgba(255,255,255,.09); margin-top: 8px; overflow: hidden; }
   .macro .mbar i { display: block; height: 100%; background: var(--volt); border-radius: 2px; transition: width .5s cubic-bezier(.4,0,.2,1); }
@@ -251,18 +253,13 @@
     color: rgba(241,244,246,.52); font-weight: 800; margin-bottom: 6px;
   }
   .sectxt { font-size: .92rem; line-height: 1.5; color: var(--ink); }
-  .cread {
-    margin: 2px 0 14px; padding: 10px 12px 11px; border-radius: 12px;
-    background: rgba(255,255,255,.04); border-left: 3px solid var(--good);
-  }
+  .cread { margin: 2px 0 14px; }
   .cread .seclab { margin-bottom: 4px; }
   .cread .seclab::before {
     content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
     background: var(--good); margin-right: 7px; vertical-align: 1px;
   }
-  .cread.watch { border-left-color: var(--warn); }
   .cread.watch .seclab::before { background: var(--warn); }
-  .cread.flag { border-left-color: var(--bad); }
   .cread.flag .seclab::before { background: var(--bad); }
   .daytag { color: var(--ink-2); font-weight: 700; letter-spacing: .1em; }
   .loglist li { flex-direction: column; gap: 0; }
@@ -506,12 +503,15 @@ function nutritionBlock(s, isRest) {
                            c: a.c + (e.carbs_g || 0), f: a.f + (e.fat_g || 0) }),
               { kcal: 0, p: 0, c: 0, f: 0 });
     const cell = (label, got, target, unit) => {
-      const pct = target ? Math.min(100, Math.round(got / target * 100)) : 0;
+      const raw = target ? got / target * 100 : 0;
+      const pct = Math.min(100, Math.round(raw));
+      // blue = landed within 5% of target; red = blew past it by >10%
+      const cls = raw > 110 ? 'over' : (raw >= 95 && raw <= 105 ? 'hit' : '');
       return `<div class="macro">
         <div class="mk">${label}</div>
-        <div class="mv ${pct >= 100 ? 'hit' : ''}">${Math.round(got)}</div>
+        <div class="mv ${cls}">${Math.round(got)}</div>
         <div class="ml">of ${target}${unit}</div>
-        <div class="mbar"><i style="width:${pct}%"></i></div>
+        <div class="mbar"><i class="${cls === 'over' ? 'over' : ''}" style="width:${pct}%"></i></div>
       </div>`;
     };
     html += `<div class="macrorow">
