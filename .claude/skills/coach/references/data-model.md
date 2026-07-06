@@ -101,6 +101,10 @@ approach — adaptation makes far-future detail stale anyway.
 Log adaptations you make as `kind: "adaptation"` lines so there's an audit trail of
 what the engine changed and why.
 
+`kind: "week_history"` lines (`week` = Monday date, `miles`, `source`) backfill
+weekly mileage totals from before Coach existed — the dashboard chart uses them
+only for weeks with no logged runs, so they never double-count synced data.
+
 ## notes.md
 
 Free-form coach memory in short bullets: things the user mentioned (travel next week,

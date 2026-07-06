@@ -1,2 +1,14 @@
 {"date": "2026-07-05", "kind": "weigh_in", "kg": 75.7, "note": "onboarding baseline, 167 lb"}
 {"date": "2026-07-05", "kind": "adaptation", "action": "onboarding: computed targets (2450/1850 kcal), extended plan weeks 2-4 (rebuild 15->17, down week 12), added arch/shin prehab", "trigger": "user onboarding interview"}
+{"date": "2026-04-13", "kind": "week_history", "week": "2026-04-13", "miles": 13.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-04-20", "kind": "week_history", "week": "2026-04-20", "miles": 15.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-04-27", "kind": "week_history", "week": "2026-04-27", "miles": 11.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-05-04", "kind": "week_history", "week": "2026-05-04", "miles": 0, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-05-11", "kind": "week_history", "week": "2026-05-11", "miles": 3.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-05-18", "kind": "week_history", "week": "2026-05-18", "miles": 12.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-05-25", "kind": "week_history", "week": "2026-05-25", "miles": 13.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-06-01", "kind": "week_history", "week": "2026-06-01", "miles": 14.0, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-06-08", "kind": "week_history", "week": "2026-06-08", "miles": 15.0, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-06-15", "kind": "week_history", "week": "2026-06-15", "miles": 15.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-06-22", "kind": "week_history", "week": "2026-06-22", "miles": 10.5, "source": "strava screenshot 2026-07-05"}
+{"date": "2026-06-29", "kind": "week_history", "week": "2026-06-29", "miles": 5.0, "source": "strava screenshot 2026-07-05"}
