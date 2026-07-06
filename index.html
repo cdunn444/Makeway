@@ -73,12 +73,6 @@
       border: 1px solid rgba(255,255,255,.09);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 10px 30px rgba(0,0,0,.3);
     }
-    .card.context {
-      background:
-        linear-gradient(125deg, rgba(255,255,255,.06), rgba(255,255,255,0) 45%),
-        rgba(0,227,127,.1);
-      border-color: rgba(0,227,127,.28);
-    }
     .wknav button, .gear {
       background: rgba(255,255,255,.06);
       -webkit-backdrop-filter: blur(12px) saturate(1.4);
@@ -99,11 +93,6 @@
     color: var(--volt); margin-bottom: 12px; font-weight: 800;
   }
   .card h3::after { content: ""; display: block; width: 30px; height: 3px; background: var(--volt); margin-top: 6px; border-radius: 2px; }
-  .context {
-    background: var(--volt-soft); border-color: rgba(0,227,127,.25);
-    color: var(--volt); font-weight: 800; font-size: .95rem;
-    text-transform: uppercase; letter-spacing: .02em;
-  }
   .wk-title {
     font-family: var(--headline);
     font-size: 1.9rem; font-weight: 900; text-transform: uppercase;
@@ -385,16 +374,6 @@ const parseJSONL = t => t.split('\n').filter(l => l.trim()).map(l => { try { ret
 
 /* ---------- session-type presets ---------- */
 const TYPE_LABEL = { easy_run:'Easy Run', tempo_run:'Tempo Run', interval_run:'Intervals', long_run:'Long Run', strength:'Strength', cross_train:'Cross-Training', active_recovery:'Active Recovery', rest:'Rest Day' };
-const CONTEXT = {
-  easy_run: 'Easy day — keep it genuinely conversational.',
-  tempo_run: 'Quality day — get carbs in this morning.',
-  interval_run: 'Hard day — fuel up and warm up properly.',
-  long_run: 'Long one today — carbs this morning, fuel practice out there.',
-  strength: 'Strength day — protein and a solid meal beforehand.',
-  cross_train: 'Cross-training — move well, keep effort easy-moderate.',
-  active_recovery: 'Recovery day — movement is the goal, not effort.',
-  rest: 'Rest day — recovery is where the training sticks.'
-};
 const PREP = {
   easy_run: ['2–3 min brisk walk into the run', 'Leg swings front-back + side-side — 10/leg', 'Walking lunge with reach — 6/leg'],
   tempo_run: ['5 min easy jog', 'Leg swings 10/leg + hip circles', 'A-skips 2×20m, high knees 2×20m', '3–4 strides before the first hard rep'],
@@ -508,8 +487,7 @@ function renderBrief() {
     if (!PLAN) {
       html = `<div class="card muted">No plan found yet — tap the whistle to talk to your coach.</div>`;
     } else {
-      html += `<div class="card context">${esc(CONTEXT.rest)}</div>
-      <div class="card">
+      html += `<div class="card">
         <h3>Today's Session</h3>
         <div class="wk-title">Rest Day</div>
         <div class="wk-detail">Nothing on the plan today — walk, stretch, recover.</div>
@@ -519,7 +497,6 @@ function renderBrief() {
   } else {
     const label = TYPE_LABEL[s.type] || s.type;
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
-    html += `<div class="card context">${esc(CONTEXT[s.type] || '')}</div>`;
     const fuelRows = isRest ? '' : prePostRows(s);
     html += `<div class="card">
       <h3>Today's Session</h3>
