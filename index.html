@@ -183,7 +183,18 @@
   }
   .wknav button:disabled { color: var(--ink-3); }
   .wkintro { padding: 16px 6px 24px; }
-  .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .wksum .minum.ran { color: var(--volt); }
+  .wkdiv { width: 1px; height: 40px; background: var(--line); margin: 0 8px; }
+  .wkbar {
+    height: 6px; border-radius: 3px; background: rgba(255,255,255,.08);
+    margin-bottom: 12px; overflow: hidden;
+  }
+  .wkbar .fill {
+    height: 100%; background: var(--volt); border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,227,127,.45);
+    transition: width .5s cubic-bezier(.4,0,.2,1);
+  }
   .wkintro .counts { color: var(--ink-2); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
   .wksum .minum {
     font-family: var(--headline); font-weight: 900; font-size: 2.7rem; line-height: 1;
@@ -533,11 +544,21 @@ function renderSchedule() {
   const miles = sessions.reduce((sum, s) => sum + (s.miles ?? (parseFloat((s.detail || '').match(/(\d+(?:\.\d+)?)\s*mi\b/)?.[1]) || 0)), 0);
   const nRuns = sessions.filter(s => s.type.endsWith('_run')).length;
   const nStr = sessions.filter(s => s.type === 'strength').length;
+  const lo = sessions[0]?.date, hi = sessions[sessions.length - 1]?.date;
+  const ranMiles = LOG.filter(e => e.kind === 'workout' && (e.result === 'completed' || e.result === 'partial'))
+    .filter(e => { const d = e.session_date || e.date; return d >= lo && d <= hi; })
+    .reduce((sum, e) => sum + (e.miles ?? (parseFloat((e.actual || '').match(/(\d+(?:\.\d+)?)\s*mi\b/)?.[1]) || 0)), 0);
+  const fmtMi = v => (Math.round(v * 10) / 10) % 1 ? (Math.round(v * 10) / 10).toFixed(1) : Math.round(v * 10) / 10;
+  const pct = miles ? Math.min(100, Math.round(ranMiles / miles * 100)) : 0;
   const summary = `<div class="wkintro">
     <div class="wksum">
-      <div class="minum">${miles % 1 ? miles.toFixed(1) : miles}</div>
+      <div class="minum">${fmtMi(miles)}</div>
       <div class="milab">miles<br>planned</div>
+      <div class="wkdiv"></div>
+      <div class="minum ran">${fmtMi(ranMiles)}</div>
+      <div class="milab">miles<br>ran</div>
     </div>
+    <div class="wkbar"><div class="fill" style="width:${pct}%"></div></div>
     <div class="counts">${nRuns + nStr} workouts · ${nRuns} runs · ${nStr} strength</div>
     ${w.summary || w.focus ? `<div class="wksum-text">${esc(w.summary || w.focus)}</div>` : ''}
   </div>`;
