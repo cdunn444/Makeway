@@ -17,3 +17,5 @@
 {"date": "2026-07-06", "kind": "nutrition", "desc": "handful pistachios + cashews, half Bobo's PB&J sandwich", "kcal": 320, "protein_g": 10, "carbs_g": 28, "fat_g": 20}
 {"date": "2026-07-06", "kind": "adaptation", "action": "reviewed synced easy run (3.0 mi, 10:20/mi, avg HR 144) — completed as planned, no plan change", "trigger": "activity sync icu-i163241725"}
 {"date": "2026-07-06", "kind": "workout", "session_date": "2026-07-06", "type": "strength", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i163255988", "planned": false, "name": "Strength", "actual": "26 min", "duration_min": 26, "avg_hr": 104, "max_hr": 129}
+{"date": "2026-07-06", "kind": "nutrition", "desc": "Diego's (Newport RI): shrimp tacos, corn tortillas, no cheese + handful tortilla chips", "kcal": 800, "protein_g": 38, "carbs_g": 80, "fat_g": 34}
+{"date": "2026-07-06", "kind": "adaptation", "action": "reviewed synced unplanned 26-min strength (avg HR 104) — treated as optional core/lower-leg circuit, no plan change; asked user if it was a full workout", "trigger": "activity sync icu-i163255988"}
