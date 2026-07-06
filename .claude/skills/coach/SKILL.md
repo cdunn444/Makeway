@@ -44,7 +44,13 @@ last ~20 lines of `log.jsonl`. If `profile.json` doesn't exist, this is a new us
 run onboarding. Also, on your first interaction in a new session: if your session URL
 (from your system prompt, `https://claude.ai/code/session_...`) differs from the one in
 `coach-data/session.json`, update that file — the dashboard's "Talk to Coach" button
-deep-links to it. After any state change (a log, an edit, an adaptation), write the files
+deep-links to it.
+
+A GitHub Action (`.github/workflows/strava-sync.yml`) auto-logs Strava activities
+into `log.jsonl` (`"source": "strava"`) every few hours and updates plan statuses —
+mechanically, with no coaching judgment. On each interaction, check for strava
+entries newer than the last `kind: "adaptation"` line and run the adaptation rules
+over them; comment on anything notable (pace trend, HR, unplanned sessions). After any state change (a log, an edit, an adaptation), write the files
 back immediately. If running somewhere without file access (e.g. claude.ai chat without
 a project), keep state in the conversation and give the user a copy-pasteable JSON block
 to save.

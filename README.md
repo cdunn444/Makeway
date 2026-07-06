@@ -73,6 +73,31 @@ You get the whistle icon, full-screen app, the works.
 **Daily loop:** glance at the dashboard → tap the whistle → tell Coach how the
 workout went → Coach logs, adapts, and pushes → pull down to refresh the dashboard.
 
+## Automatic Strava sync
+
+Your Garmin already pushes activities to Strava; a scheduled GitHub Action
+(`.github/workflows/strava-sync.yml`) pulls new ones from the official Strava API
+every 4 hours, auto-logs them into `coach-data/log.jsonl` with real pace/HR, marks
+plan sessions completed/partial, and pushes — so the dashboard updates itself.
+
+One-time setup:
+
+1. Create an API application at [strava.com/settings/api](https://www.strava.com/settings/api)
+   (Category: Data Importer, Authorization Callback Domain: `localhost`). Note the
+   **Client ID** and **Client Secret**.
+2. Authorize it — visit (with your client ID):
+   `https://www.strava.com/oauth/authorize?client_id=YOUR_ID&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all`
+   Approve; the browser lands on a dead localhost page — copy the `code=...` value
+   from the address bar.
+3. Exchange the code for a refresh token (one `curl`, or ask Coach to do it):
+   `curl -X POST https://www.strava.com/oauth/token -d client_id=YOUR_ID -d client_secret=YOUR_SECRET -d code=THE_CODE -d grant_type=authorization_code`
+   — grab `refresh_token` from the response.
+4. Add three repo secrets (Settings → Secrets and variables → Actions):
+   `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN`.
+5. Test it: Actions tab → Strava sync → Run workflow.
+
+Secrets stay in GitHub's encrypted vault — never in the repo files.
+
 ## Repo layout
 
 ```

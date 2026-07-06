@@ -1,0 +1,39 @@
+name: Strava sync
+
+on:
+  schedule:
+    - cron: '23 */4 * * *'   # every 4 hours
+  workflow_dispatch:          # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Pull new Strava activities into coach-data
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: python scripts/strava_sync.py
+
+      - name: Commit and push if anything changed
+        run: |
+          if [[ -n "$(git status --porcelain coach-data)" ]]; then
+            git config user.name "coach-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add coach-data
+            git commit -m "Strava sync: auto-log activities"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          else
+            echo "Nothing to commit."
+          fi
