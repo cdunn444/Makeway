@@ -191,6 +191,7 @@
     border-radius: 999px; padding: 6px 16px; font-size: 1rem; font-weight: 900; cursor: pointer;
   }
   .wknav button:disabled { color: var(--ink-3); }
+  .wkintro { padding: 6px 6px 16px; }
   .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
   .wksum .minum {
     font-family: var(--headline); font-weight: 900; font-size: 2.7rem; line-height: 1;
@@ -503,14 +504,17 @@ function renderBrief() {
   $('subtitle').textContent = 'Coach · ' + fmtDate(t);
   let html = '';
   if (!s) {
-    const next = allSessions().filter(x => x.date > t && x.type !== 'rest').sort((a, b) => a.date.localeCompare(b.date))[0];
     html = '';
-    if (!PLAN) html = `<div class="card muted">No plan found yet — tap the whistle to talk to your coach.</div>`;
-    if (next) html += `<div class="card">
-      <h3>Next Up — ${esc(next.day)} ${shortDate(next.date)}</h3>
-      <div class="wk-title">${esc(TYPE_LABEL[next.type] || next.type)}</div>
-      ${next.duration_min ? `<div class="wk-meta">~${next.duration_min} min</div>` : ''}
-      <div class="wk-detail">${esc(next.detail)}</div></div>`;
+    if (!PLAN) {
+      html = `<div class="card muted">No plan found yet — tap the whistle to talk to your coach.</div>`;
+    } else {
+      html += `<div class="card context">${esc(CONTEXT.rest)}</div>
+      <div class="card">
+        <h3>Today's Session</h3>
+        <div class="wk-title">Rest Day</div>
+        <div class="wk-detail">Nothing on the plan today — walk, stretch, recover.</div>
+      </div>`;
+    }
     if (PROFILE?.targets) html += nutritionBlock(null, true);
   } else {
     const label = TYPE_LABEL[s.type] || s.type;
@@ -553,7 +557,7 @@ function renderSchedule() {
   const miles = sessions.reduce((sum, s) => sum + (s.miles ?? (parseFloat((s.detail || '').match(/(\d+(?:\.\d+)?)\s*mi\b/)?.[1]) || 0)), 0);
   const nRuns = sessions.filter(s => s.type.endsWith('_run')).length;
   const nStr = sessions.filter(s => s.type === 'strength').length;
-  const summary = `<div class="card">
+  const summary = `<div class="wkintro">
     <div class="wksum">
       <div class="minum">${miles % 1 ? miles.toFixed(1) : miles}</div>
       <div class="milab">miles<br>planned</div>
