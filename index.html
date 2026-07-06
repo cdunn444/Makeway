@@ -312,6 +312,29 @@
   .fab:active { transform: scale(.94); }
   .fab svg { width: 32px; height: 32px; }
   .hidden { display: none !important; }
+  /* pull-to-refresh */
+  .ptr {
+    position: fixed; top: calc(env(safe-area-inset-top) - 44px); left: 50%; z-index: 30;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(19,23,27,.85);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 6px 18px rgba(0,0,0,.4);
+    display: flex; align-items: center; justify-content: center;
+    transform: translate(-50%, 0); opacity: 0; pointer-events: none;
+    transition: opacity .15s;
+  }
+  .ptr.show { opacity: 1; }
+  .ptr .arr { width: 20px; height: 20px; color: var(--ink-2); transition: transform .18s, color .18s; }
+  .ptr.ready .arr { transform: rotate(180deg); color: var(--volt); }
+  .ptr .spinner {
+    display: none; width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid rgba(0,200,255,.25); border-top-color: var(--volt);
+    animation: ptrspin .7s linear infinite;
+  }
+  .ptr.spin .arr { display: none; }
+  .ptr.spin .spinner { display: block; }
+  @keyframes ptrspin { to { transform: rotate(360deg); } }
   .setup input {
     width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line);
     background: var(--bg); color: var(--ink); font-size: .95rem; margin: 6px 0 12px;
@@ -350,6 +373,11 @@
   <div id="view-schedule" class="hidden"></div>
   <div id="view-progress" class="hidden"></div>
 </main>
+
+<div class="ptr" id="ptr" aria-hidden="true">
+  <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
+  <div class="spinner"></div>
+</div>
 
 <a class="fab" id="fab" href="https://claude.ai/code" target="_blank" rel="noopener" aria-label="Talk to Coach">
   <svg viewBox="0 0 512 512" fill="none" aria-hidden="true">
@@ -774,6 +802,44 @@ async function boot() {
 }
 boot();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+/* pull-to-refresh: drag down from the top of the page to refetch coach-data */
+{
+  const ptr = $('ptr');
+  const THRESH = 70;
+  let startY = null, pulling = false, busy = false;
+  document.addEventListener('touchstart', e => {
+    pulling = window.scrollY <= 0 && !busy;
+    startY = pulling ? e.touches[0].clientY : null;
+  }, { passive: true });
+  document.addEventListener('touchmove', e => {
+    if (!pulling || startY == null) return;
+    const dy = e.touches[0].clientY - startY;
+    if (dy > 8 && window.scrollY <= 0) {
+      const d = Math.min(dy / 2, 96);
+      ptr.style.transform = `translate(-50%, ${d}px)`;
+      ptr.classList.add('show');
+      ptr.classList.toggle('ready', d >= THRESH);
+    } else {
+      ptr.classList.remove('show', 'ready');
+    }
+  }, { passive: true });
+  document.addEventListener('touchend', async () => {
+    if (!pulling) return;
+    const go = ptr.classList.contains('ready');
+    pulling = false; startY = null;
+    if (go && !busy) {
+      busy = true;
+      ptr.classList.add('spin');
+      ptr.style.transform = `translate(-50%, ${THRESH}px)`;
+      try { await boot(); } catch {}
+      ptr.classList.remove('spin');
+      busy = false;
+    }
+    ptr.classList.remove('show', 'ready');
+    ptr.style.transform = '';
+  });
+}
 </script>
 </body>
 </html>
