@@ -106,6 +106,16 @@ approach — adaptation makes far-future detail stale anyway.
 Log adaptations you make as `kind: "adaptation"` lines so there's an audit trail of
 what the engine changed and why.
 
+`kind: "coach_note"` lines (`topic`, `level`, `text`) carry the coach's running
+read on the day — currently `topic: "nutrition"`, appended after each logged meal
+and at end of day. `level` is `good | watch | flag`; the dashboard renders only the
+*latest* note per day inside the fuel card, so append a fresh line rather than
+editing (the file stays append-only). Keep `text` to 1–2 sentences.
+
+```jsonl
+{"date": "2026-07-10", "kind": "coach_note", "topic": "nutrition", "level": "watch", "text": "Protein's behind pace at 62g by 2pm — anchor it at dinner. Calories fine."}
+```
+
 `kind: "week_history"` lines (`week` = Monday date, `miles`, `source`) backfill
 weekly mileage totals from before Coach existed — the dashboard chart uses them
 only for weeks with no logged runs, so they never double-count synced data.

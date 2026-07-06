@@ -251,6 +251,19 @@
     color: rgba(241,244,246,.52); font-weight: 800; margin-bottom: 6px;
   }
   .sectxt { font-size: .92rem; line-height: 1.5; color: var(--ink); }
+  .cread {
+    margin: 2px 0 14px; padding: 10px 12px 11px; border-radius: 12px;
+    background: rgba(255,255,255,.04); border-left: 3px solid var(--good);
+  }
+  .cread .seclab { margin-bottom: 4px; }
+  .cread .seclab::before {
+    content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--good); margin-right: 7px; vertical-align: 1px;
+  }
+  .cread.watch { border-left-color: var(--warn); }
+  .cread.watch .seclab::before { background: var(--warn); }
+  .cread.flag { border-left-color: var(--bad); }
+  .cread.flag .seclab::before { background: var(--bad); }
   .daytag { color: var(--ink-2); font-weight: 700; letter-spacing: .1em; }
   .loglist li { flex-direction: column; gap: 0; }
   .loglist li::before { display: none; }
@@ -507,7 +520,17 @@ function nutritionBlock(s, isRest) {
       ${cell('Carbs', eaten.c, m.carbs_g, 'g')}
       ${cell('Fat', eaten.f, m.fat_g, 'g')}
     </div>`;
-    if (!eaten.kcal) html += `<p class="muted" style="margin-bottom:10px">Tell Coach what you eat ("ate eggs + rice, big bowl") — totals track here.</p>`;
+    const notes = LOG.filter(e => e.kind === 'coach_note' && e.topic === 'nutrition' && e.date === t);
+    const note = notes[notes.length - 1];
+    if (note?.text) {
+      const lvl = note.level === 'watch' || note.level === 'flag' ? note.level : 'good';
+      html += `<div class="cread ${lvl}">
+        <div class="seclab">Coach's Read${lvl !== 'good' ? ` · ${lvl}` : ''}</div>
+        <div class="sectxt">${esc(note.text)}</div>
+      </div>`;
+    } else if (!eaten.kcal) {
+      html += `<p class="muted" style="margin-bottom:10px">Tell Coach what you eat ("ate eggs + rice, big bowl") — totals track here.</p>`;
+    }
   }
   if (!isRest && s) {
     const cat = fuelCat(s.type);

@@ -124,6 +124,17 @@ dashboard's macro tracker, so push after each. Round estimates; don't interrogat
 about grams — a coach's estimate beats an abandoned log. If a day ends far off
 target, the adaptation rules in `references/nutrition.md` apply.
 
+**Coach's read:** after every nutrition line, also append an updated
+`kind: "coach_note"` line — `{"date", "kind": "coach_note", "topic": "nutrition",
+"level": "good|watch|flag", "text": "..."}`. The dashboard shows the *latest* note
+for today inside the fuel card, so each meal replaces the last read. One or two
+sentences, written like a coach glancing at the tracker: where they stand vs. today's
+targets, what to prioritize in the remaining meals ("protein's behind pace — anchor
+it at dinner"), and any warning. Levels: `good` = on track; `watch` = drifting
+(protein behind by mid-afternoon, kcal running hot, light fueling before tomorrow's
+key session); `flag` = needs action (big overshoot/undershoot, key session tomorrow
+and glycogen low, pattern repeating). End-of-day, give the verdict note the same way.
+
 ## Adaptation engine
 
 After every log, apply the rules in `references/adaptation.md` (rule-based, MVP):
