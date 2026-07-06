@@ -163,6 +163,12 @@
   .day-row.open .full { grid-template-rows: 1fr; }
   .day-row.open .full .inner { opacity: 1; }
   .day-row .full .txt { font-size: .92rem; line-height: 1.55; color: var(--ink); }
+  .day-row .full .dmacros {
+    display: inline-block; margin-top: 10px; padding: 5px 10px; border-radius: 8px;
+    background: var(--volt-soft); color: var(--volt); font-size: .74rem; font-weight: 800;
+    letter-spacing: .04em; font-variant-numeric: tabular-nums;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  }
   .day-row .full .inner > .meta { padding-bottom: 14px; }
   @media (prefers-reduced-motion: reduce) {
     .day-row .full, .day-row .full .inner, .day-row .chev { transition: none; }
@@ -406,6 +412,19 @@ const toMins = t => { const [h, m] = (t || '').split(':').map(Number); return is
 const fmt12 = mins => { mins = ((mins % 1440) + 1440) % 1440; let h = Math.floor(mins / 60), m = mins % 60;
   const ap = h >= 12 ? 'PM' : 'AM'; h = h % 12 || 12; return h + ':' + String(m).padStart(2, '0') + ' ' + ap; };
 
+function prePostRows(s) {
+  const T = PROFILE?.targets;
+  const cat = fuelCat(s.type);
+  const start = toMins(PROFILE?.schedule?.preferred_time);
+  const pre = T?.fuel?.pre?.[cat], post = T?.fuel?.post?.[cat];
+  if (start == null || (!pre && !post)) return '';
+  const postBy = start + (s.duration_min || 40) + (cat === 'strength' ? 90 : 40);
+  let h = '';
+  if (pre) h += `<div class="fuelrow"><div class="when">Pre · by ${fmt12(start - 25)}</div><div class="what2">${esc(pre)}</div></div>`;
+  if (post) h += `<div class="fuelrow"><div class="when">Post · by ${fmt12(postBy)}</div><div class="what2">${esc(post)}</div></div>`;
+  return h;
+}
+
 function nutritionBlock(s, isRest) {
   const T = PROFILE?.targets;
   const m = T?.[isRest ? 'macros_rest_day' : 'macros_training_day'];
@@ -419,14 +438,9 @@ function nutritionBlock(s, isRest) {
     </div>`;
   }
   if (!isRest && s) {
-    const cat = fuelCat(s.type);
     const start = toMins(PROFILE?.schedule?.preferred_time);
-    const pre = T?.fuel?.pre?.[cat], post = T?.fuel?.post?.[cat];
-    if (start != null && (pre || post)) {
-      const postBy = start + (s.duration_min || 40) + (cat === 'strength' ? 90 : 40);
-      if (pre) html += `<div class="fuelrow"><div class="when">Pre · by ${fmt12(start - 25)}</div><div class="what2">${esc(pre)}</div></div>`;
-      if (post) html += `<div class="fuelrow"><div class="when">Post · by ${fmt12(postBy)}</div><div class="what2">${esc(post)}</div></div>`;
-      html += `<div class="fuelrow"><div class="when">Session ${fmt12(start)}</div><div class="what2 muted">Times assume your usual ~${fmt12(start)} start — shift them with your day.</div></div>`;
+    if (start != null && prePostRows(s)) {
+      html += `<p class="muted">Pre/post timing is on the workout card above — times assume your usual ~${fmt12(start)} start.</p>`;
     } else {
       html += `<ul class="plain">${fuelFor(s.type).map(f => `<li>${esc(f)}</li>`).join('')}</ul>`;
     }
@@ -469,11 +483,13 @@ function renderBrief() {
     const label = TYPE_LABEL[s.type] || s.type;
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
     html += `<div class="card context">${esc(CONTEXT[s.type] || '')}</div>`;
+    const fuelRows = isRest ? '' : prePostRows(s);
     html += `<div class="card">
       <h3>Today's Session</h3>
       <div class="wk-title">${esc(label)}<span class="badge ${esc(s.status)}">${esc(s.status)}</span></div>
       ${s.duration_min ? `<div class="wk-meta">~${s.duration_min} min</div>` : ''}
       <div class="wk-detail">${esc(s.detail)}</div>
+      ${fuelRows ? `<div style="margin-top:14px">${fuelRows}</div>` : ''}
     </div>`;
     if (!isRest || s.type === 'active_recovery') {
       html += `<div class="card"><h3>Movement Prep</h3><ul class="plain">${(PREP[s.type] || []).map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>`;
@@ -515,6 +531,7 @@ function renderSchedule() {
   const rows = sessions.map((s, i) => {
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
     const dayNum = parseInt(s.date.slice(8, 10), 10);
+    const dm = PROFILE?.targets?.[isRest ? 'macros_rest_day' : 'macros_training_day'];
     return `
     <div class="card day-row day-card ${isRest ? 'dim' : ''} ${s.date === t ? 'today' : ''}" data-i="${i}">
       <div class="head">
@@ -528,6 +545,7 @@ function renderSchedule() {
       <div class="full">
         <div class="inner">
           <div class="txt">${esc(s.detail)}</div>
+          ${dm ? `<div class="dmacros">${dm.kcal} kcal · ${dm.protein_g}P · ${dm.carbs_g}C · ${dm.fat_g}F</div>` : ''}
           <div class="meta">${s.duration_min ? '~' + s.duration_min + ' min · ' : ''}${esc(s.status)}</div>
         </div>
       </div>
