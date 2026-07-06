@@ -180,7 +180,7 @@
     border-radius: 999px; padding: 6px 16px; font-size: 1rem; font-weight: 900; cursor: pointer;
   }
   .wknav button:disabled { color: var(--ink-3); }
-  .wkintro { padding: 6px 6px 16px; }
+  .wkintro { padding: 16px 6px; }
   .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
   .wksum .minum {
     font-family: var(--headline); font-weight: 900; font-size: 2.7rem; line-height: 1;
@@ -441,7 +441,7 @@ function prePostRows(s) {
 function nutritionBlock(s, isRest) {
   const m = dayMacros(isRest ? null : s);
   const tag = isRest || !s ? 'REST DAY' : (TYPE_LABEL[s.type] || s.type).toUpperCase();
-  let html = `<div class="card"><h3>Fuel It${m ? ` · <span class="daytag">${tag}</span>` : ''}</h3>`;
+  let html = `<div class="card"><h3>Today's Fuel${m ? ` · <span class="daytag">${tag}</span>` : ''}</h3>`;
   if (m) {
     html += `<div class="macrorow">
       <div class="macro"><div class="mv">${m.kcal}</div><div class="ml">kcal</div></div>
