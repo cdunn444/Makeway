@@ -41,13 +41,29 @@ def normalize(sync_id, sport, start_local, distance_m, moving_s, avg_hr, max_hr,
     }
 
 
+UA = "coach-activity-sync/1.0 (github.com/cdunn444/Coach)"
+
+
 def fetch_intervals(athlete_id, api_key):
+    athlete_id = athlete_id.strip()
     oldest = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%dT00:00:00")
     url = f"https://intervals.icu/api/v1/athlete/{urllib.parse.quote(athlete_id)}/activities?oldest={oldest}"
-    auth = base64.b64encode(f"API_KEY:{api_key}".encode()).decode()
-    req = urllib.request.Request(url, headers={"Authorization": f"Basic {auth}"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        acts = json.load(r)
+    auth = base64.b64encode(f"API_KEY:{api_key.strip()}".encode()).decode()
+    req = urllib.request.Request(url, headers={"Authorization": f"Basic {auth}", "User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            acts = json.load(r)
+    except urllib.error.HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode()[:300]
+        except Exception:
+            pass
+        print(f"intervals.icu returned HTTP {e.code} for athlete '{athlete_id}'. {body}")
+        if e.code in (401, 403):
+            print("Check the INTERVALS_ATHLETE_ID (exactly as shown in Developer Settings, "
+                  "e.g. 'i123456') and INTERVALS_API_KEY secrets.")
+        sys.exit(1)
     return [normalize(f"icu-{a.get('id')}", a.get("type"), a.get("start_date_local"),
                       a.get("distance"), a.get("moving_time"),
                       a.get("average_heartrate"), a.get("max_heartrate"),
@@ -59,12 +75,13 @@ def fetch_strava(cid, secret, refresh):
         "client_id": cid, "client_secret": secret,
         "grant_type": "refresh_token", "refresh_token": refresh,
     }).encode()
-    req = urllib.request.Request("https://www.strava.com/oauth/token", data=body)
+    req = urllib.request.Request("https://www.strava.com/oauth/token", data=body,
+                                 headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as r:
         token = json.load(r)
     after = int((datetime.now(timezone.utc) - timedelta(days=30)).timestamp())
     url = f"https://www.strava.com/api/v3/athlete/activities?after={after}&per_page=100"
-    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token['access_token']}"})
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token['access_token']}", "User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as r:
         acts = json.load(r)
     return [normalize(f"strava-{a.get('id')}", a.get("sport_type") or a.get("type"),
