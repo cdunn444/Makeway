@@ -176,6 +176,14 @@
     border-radius: 8px; padding: 6px 16px; font-size: 1rem; font-weight: 900; cursor: pointer;
   }
   .wknav button:disabled { color: var(--ink-3); }
+  .wksum { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .wksum .minum {
+    font-family: var(--headline); font-weight: 900; font-size: 2.7rem; line-height: 1;
+    letter-spacing: -0.01em; font-variant-numeric: tabular-nums;
+  }
+  .wksum .milab { color: var(--volt); font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; line-height: 1.4; }
+  .wksum .counts { margin-left: auto; text-align: right; color: var(--ink-2); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; line-height: 1.6; }
+  .wksum-text { color: var(--ink-2); font-size: .9rem; line-height: 1.5; }
   .wknav .label {
     font-family: var(--headline);
     font-weight: 900; font-size: 1.15rem;
@@ -493,6 +501,17 @@ function renderSchedule() {
     <span class="label">Week ${w.week}${w.phase ? ' · ' + esc(w.phase.replace('_', ' ')) : ''}</span>
     <button id="wkNext" ${weekIdx === weeks.length - 1 ? 'disabled' : ''}>›</button>
   </div>`;
+  const miles = sessions.reduce((sum, s) => sum + (s.miles ?? (parseFloat((s.detail || '').match(/(\d+(?:\.\d+)?)\s*mi\b/)?.[1]) || 0)), 0);
+  const nRuns = sessions.filter(s => s.type.endsWith('_run')).length;
+  const nStr = sessions.filter(s => s.type === 'strength').length;
+  const summary = `<div class="card">
+    <div class="wksum">
+      <div class="minum">${miles % 1 ? miles.toFixed(1) : miles}</div>
+      <div class="milab">miles<br>planned</div>
+      <div class="counts">${nRuns} runs · ${nStr} strength<br>${sessions.length - nRuns - nStr} recovery</div>
+    </div>
+    ${w.summary || w.focus ? `<div class="wksum-text">${esc(w.summary || w.focus)}</div>` : ''}
+  </div>`;
   const rows = sessions.map((s, i) => {
     const isRest = s.type === 'rest' || s.type === 'active_recovery';
     const dayNum = parseInt(s.date.slice(8, 10), 10);
@@ -514,7 +533,7 @@ function renderSchedule() {
       </div>
     </div>`;
   }).join('');
-  el.innerHTML = nav + rows + (w.focus ? `<div class="card muted">Focus: ${esc(w.focus)}</div>` : '');
+  el.innerHTML = nav + summary + rows;
   const prev = $('wkPrev'), next = $('wkNext');
   if (prev) prev.onclick = () => { weekIdx--; renderSchedule(); };
   if (next) next.onclick = () => { weekIdx++; renderSchedule(); };

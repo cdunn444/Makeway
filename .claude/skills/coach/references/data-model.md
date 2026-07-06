@@ -77,6 +77,10 @@ the environment (e.g. `date` command or the conversation context), never guess.
 }
 ```
 
+Run sessions carry a numeric `miles` field and each week carries a 1–2 sentence
+`summary` — the dashboard's Schedule header totals the miles and shows the summary,
+so keep both current when adapting the plan.
+
 Session `status`: `upcoming | completed | partial | skipped`. Session `type` values:
 `easy_run, tempo_run, interval_run, long_run, strength, cross_train, active_recovery,
 rest` (extend as needed for the user's activities). Only generate detailed sessions
