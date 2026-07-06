@@ -720,7 +720,7 @@ function renderProgress() {
       <li><div class="row1"><span>${ST_ICON[e.result] || ''} ${esc(TYPE_LABEL[e.type] || e.type || 'workout')}</span><span class="dt">${shortDate(e.session_date || e.date)}</span></div>
       <div class="row2">${esc(e.actual || e.reason || e.note || e.result)}</div></li>`).join('')}</ul>`
     : '<p class="muted">Nothing logged yet. After your first workout, tell Coach how it went \u2014 it lands here.</p>'}</div>`;
-  el.innerHTML = tiles + chart + list;
+  el.innerHTML = chart + tiles + list;
   // scrubber: tap/drag across the chart to read any week
   const wrap = el.querySelector('.lwrap');
   if (wrap) {
