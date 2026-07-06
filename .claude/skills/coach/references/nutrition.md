@@ -26,8 +26,14 @@ must respect the profile's dietary restrictions — check before naming any food
   placed on rest/easy days per the conflict rules in `methodology.md`. Target rate
   ≤0.5–1% body weight/week.
 
-Compute a training-day and a rest-day macro set and store both in `profile.json`,
-along with `targets.fuel` pre/post meal strings per session category (see
+Store a session-type energy model in `profile.json` under `targets.model`
+(protein constant; fat by training/rest; kcal/mile by run type; strength/cross
+session costs; deficit placement per day class — largest on rest, mild on
+easy/strength, minimal on key sessions). Day targets are then *computed*:
+`kcal = tdee_baseline + session cost − deficit`, carbs = remainder — so a 6-mile
+long run, a tempo day, an easy 3, a lift day, and a rest day each get their own
+numbers. Keep `macros_training_day`/`macros_rest_day` as representative fallback
+sets. Also store `targets.fuel` pre/post meal strings per session category (see
 `data-model.md`) written against the user's restrictions. The Daily Brief and the
 dashboard pick the right set per today's session; the dashboard anchors pre/post
 to clock times from `schedule.preferred_time`. For early-morning trainees (< ~7am
