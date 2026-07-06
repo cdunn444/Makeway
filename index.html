@@ -260,24 +260,26 @@
   .loglist .row1 .dt { color: var(--ink-3); font-weight: 600; font-size: .78rem; }
   .loglist .row2 { color: var(--ink-2); font-size: .84rem; }
   /* weekly mileage line chart */
-  .lwrap { position: relative; height: 170px; }
+  .lread { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+  .lread .lrd { color: var(--ink-2); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .lread .lrv { font-family: var(--headline); font-weight: 900; font-size: 1.8rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .lread .lrv small { font-size: .95rem; color: var(--ink-2); font-weight: 700; }
+  .lwrap { position: relative; height: 170px; touch-action: pan-y; cursor: crosshair; }
   .lwrap svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
   .lwrap .dot {
     position: absolute; width: 9px; height: 9px; border-radius: 50%;
     background: var(--bar); box-shadow: 0 0 0 2px var(--surface);
     transform: translate(-50%, -50%); z-index: 2;
+    transition: transform .12s ease, background .12s ease;
   }
-  .lwrap .dot.last { background: var(--volt); box-shadow: 0 0 0 2px var(--surface), 0 0 10px rgba(0,227,127,.5); }
-  .lwrap .dot .dl2 {
-    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
-    font-size: .72rem; color: var(--ink); font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap;
+  .lwrap .dot.active {
+    background: var(--volt); transform: translate(-50%, -50%) scale(1.35);
+    box-shadow: 0 0 0 2px var(--surface), 0 0 12px rgba(0,227,127,.55);
   }
-  .lwrap .dot .tip {
-    display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
-    background: var(--ink); color: var(--bg); font-size: .72rem; padding: 4px 8px;
-    border-radius: 6px; white-space: nowrap; z-index: 3;
+  .lcursor {
+    position: absolute; width: 2px; border-radius: 1px; display: none;
+    background: rgba(242,245,243,.22); transform: translateX(-50%); z-index: 1;
   }
-  .lwrap .dot:hover .tip, .lwrap .dot:active .tip { display: block; }
   .lwrap .yl { position: absolute; right: 0; transform: translateY(-50%); font-size: .64rem; color: var(--ink-3); font-weight: 700; }
   .lwrap .xl2 { position: absolute; bottom: 0; transform: translateX(-50%); font-size: .64rem; color: var(--ink-3); font-weight: 700; text-transform: uppercase; }
   /* tab bar */
@@ -474,8 +476,8 @@ function prePostRows(s) {
 
 function nutritionBlock(s, isRest) {
   const m = dayMacros(isRest ? null : s);
-  const tag = isRest || !s ? 'REST DAY' : (TYPE_LABEL[s.type] || s.type).toUpperCase();
-  let html = `<div class="card"><h3>Today's Fuel${m ? ` · <span class="daytag">${tag}</span>` : ''}</h3>`;
+  const tag = isRest || !s ? '' : (TYPE_LABEL[s.type] || s.type).toUpperCase();
+  let html = `<div class="card"><h3>Today's Fuel${m && tag ? ` · <span class="daytag">${tag}</span>` : ''}</h3>`;
   if (m) {
     const t = todayStr();
     const eaten = LOG.filter(e => e.kind === 'nutrition' && e.date === t)
@@ -696,17 +698,20 @@ function renderProgress() {
     return `<span class="xl2" style="left:${xPct(i).toFixed(2)}%">${m}</span>`;
   }).join('');
   const dots = keys.map((k, i) => `
-    <div class="dot ${i === keys.length - 1 ? 'last' : ''}" style="left:${xPct(i).toFixed(2)}%;top:${yPx(vals[i]).toFixed(1)}px">
-      ${i === keys.length - 1 ? `<span class="dl2">${fmtMi(vals[i])}</span>` : ''}
-      <div class="tip">wk of ${shortDate(k)} \u2014 ${fmtMi(vals[i])} mi</div>
-    </div>`).join('');
+    <div class="dot" style="left:${xPct(i).toFixed(2)}%;top:${yPx(vals[i]).toFixed(1)}px"></div>`).join('');
   const chart = `<div class="card"><h3>Weekly Mileage \u00b7 12 wks</h3>
+    <div class="lread"><span class="lrd"></span><span class="lrv"></span></div>
     <div class="lwrap">
       <svg viewBox="0 0 100 ${H}" preserveAspectRatio="none">
+        <defs><linearGradient id="mgrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#059669" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+        </linearGradient></defs>
         ${grid}
-        <path d="${area}" fill="rgba(5,150,105,.16)"/>
+        <path d="${area}" fill="url(#mgrad)"/>
         <polyline points="${linePts}" fill="none" stroke="var(--bar)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
       </svg>
+      <div class="lcursor" style="top:${PADT}px;height:${plotH}px"></div>
       ${ylabels}${xlabels}${dots}
     </div></div>`;
   const recent = [...workouts].sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 6);
@@ -716,6 +721,28 @@ function renderProgress() {
       <div class="row2">${esc(e.actual || e.reason || e.note || e.result)}</div></li>`).join('')}</ul>`
     : '<p class="muted">Nothing logged yet. After your first workout, tell Coach how it went \u2014 it lands here.</p>'}</div>`;
   el.innerHTML = tiles + chart + list;
+  // scrubber: tap/drag across the chart to read any week
+  const wrap = el.querySelector('.lwrap');
+  if (wrap) {
+    const lrd = el.querySelector('.lrd'), lrv = el.querySelector('.lrv');
+    const dotEls = [...wrap.querySelectorAll('.dot')];
+    const cur = wrap.querySelector('.lcursor');
+    const setIdx = i => {
+      lrd.textContent = 'Week of ' + shortDate(keys[i]);
+      lrv.innerHTML = `${fmtMi(vals[i])} <small>mi</small>`;
+      dotEls.forEach((d, j) => d.classList.toggle('active', j === i));
+      cur.style.left = xPct(i).toFixed(2) + '%';
+      cur.style.display = 'block';
+    };
+    setIdx(keys.length - 1);
+    const pick = ev => {
+      const r = wrap.getBoundingClientRect();
+      const frac = (ev.clientX - r.left) / r.width;
+      setIdx(Math.max(0, Math.min(keys.length - 1, Math.round(frac * (keys.length - 1)))));
+    };
+    wrap.addEventListener('pointerdown', e => { e.preventDefault(); pick(e); });
+    wrap.addEventListener('pointermove', e => { if (e.buttons) pick(e); });
+  }
 }
 
 /* ---------- tabs / setup / boot ---------- */
