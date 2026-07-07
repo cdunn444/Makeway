@@ -101,6 +101,9 @@ and the current date, then render:
    nutrient timing per `references/nutrition.md`. Daily macros (from TDEE + today's
    training load), a pre-workout meal with specific timing and foods, the
    post-workout recovery window. Rest-day macros differ from long-run macros.
+   Once today's workouts sync with `active_kcal`, quote targets from actual burn,
+   not the estimate (planned session's burn replaces the model number; unplanned
+   workouts add) — the dashboard already computes it this way.
    Always respect dietary restrictions from the profile.
 5. **Log prompt** — end with: "When you're done, tell me how it went —
    completed, partial, or skipped."

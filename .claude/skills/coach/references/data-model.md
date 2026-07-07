@@ -106,6 +106,13 @@ approach — adaptation makes far-future detail stale anyway.
 Log adaptations you make as `kind: "adaptation"` lines so there's an audit trail of
 what the engine changed and why.
 
+Synced workout lines carry `active_kcal` (device active calories) and `planned`
+(`true` = matched a planned session, `false` = extra/unplanned). Day kcal targets
+use these: actual burn replaces the planned session's model estimate, unplanned
+workouts add on top. When logging a workout manually that *wasn't* on the plan,
+set `planned: false` and estimate `active_kcal` so it counts toward the day's
+budget the same way.
+
 `kind: "coach_note"` lines (`topic`, `level`, `text`) carry the coach's running
 read on the day — currently `topic: "nutrition"`, appended after each logged meal
 and at end of day. `level` is `good | watch | flag`; the dashboard renders only the

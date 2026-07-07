@@ -40,6 +40,14 @@ to clock times from `schedule.preferred_time`. For early-morning trainees (< ~7a
 starts), pre-workout is a quick carb 20–30 min out, not a full meal — the real
 recovery meal is breakfast.
 
+**Actual burn beats the estimate.** Synced workouts carry `active_kcal` (device
+active calories). Once today's data is in, the day's kcal target uses it: the
+planned session's actual burn replaces the model estimate, and unplanned workouts
+(`planned: false`) add on top — the dashboard computes this automatically, so
+match it when you quote targets in chat. A bonus 26-min strength session raises
+the day's budget by its measured burn, not a guess. Deficit placement still keys
+off the planned session type.
+
 ## Timing by session type
 
 ### Endurance — quality (tempo, intervals) or long run

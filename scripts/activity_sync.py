@@ -28,7 +28,8 @@ RUN_TYPES = {"Run", "TrailRun", "VirtualRun"}
 STRENGTH_TYPES = {"WeightTraining", "Workout", "Crossfit"}
 
 
-def normalize(sync_id, sport, start_local, distance_m, moving_s, avg_hr, max_hr, name, source):
+def normalize(sync_id, sport, start_local, distance_m, moving_s, avg_hr, max_hr, name, source,
+              calories=None):
     return {
         "sync_id": sync_id, "sport": sport or "Workout",
         "date": (start_local or "")[:10],
@@ -37,6 +38,7 @@ def normalize(sync_id, sport, start_local, distance_m, moving_s, avg_hr, max_hr,
         "mins": round((moving_s or 0) / 60),
         "avg_hr": round(avg_hr) if avg_hr else None,
         "max_hr": round(max_hr) if max_hr else None,
+        "kcal": round(calories) if calories else None,
         "name": name, "source": source,
     }
 
@@ -67,7 +69,8 @@ def fetch_intervals(athlete_id, api_key):
     return [normalize(f"icu-{a.get('id')}", a.get("type"), a.get("start_date_local"),
                       a.get("distance"), a.get("moving_time"),
                       a.get("average_heartrate"), a.get("max_heartrate"),
-                      a.get("name"), "intervals.icu") for a in acts]
+                      a.get("name"), "intervals.icu",
+                      calories=a.get("icu_active_calories") or a.get("calories")) for a in acts]
 
 
 def fetch_strava(cid, secret, refresh):
@@ -87,7 +90,8 @@ def fetch_strava(cid, secret, refresh):
     return [normalize(f"strava-{a.get('id')}", a.get("sport_type") or a.get("type"),
                       a.get("start_date_local"), a.get("distance"), a.get("moving_time"),
                       a.get("average_heartrate"), a.get("max_heartrate"),
-                      a.get("name"), "strava") for a in acts]
+                      a.get("name"), "strava",
+                      calories=a.get("calories") or a.get("kilojoules")) for a in acts]
 
 
 def fetch_activities():
@@ -160,7 +164,8 @@ def main():
             continue
         cat = category(act["sport"])
         sess = next((s for s in by_date.get(act["date"], [])
-                     if session_category(s["type"]) == cat and s.get("status") in ("upcoming", "skipped")), None)
+                     if s["type"] != "rest" and session_category(s["type"]) == cat
+                     and s.get("status") in ("upcoming", "skipped")), None)
         result = "completed"
         if sess and cat == "run" and sess.get("miles"):
             result = "completed" if act["miles"] >= 0.9 * sess["miles"] else "partial"
@@ -184,6 +189,8 @@ def main():
             entry["avg_hr"] = act["avg_hr"]
         if act["max_hr"]:
             entry["max_hr"] = act["max_hr"]
+        if act.get("kcal"):
+            entry["active_kcal"] = act["kcal"]
         new_lines.append(entry)
         if sess:
             sess["status"] = result
