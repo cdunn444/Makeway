@@ -776,7 +776,8 @@ function renderProgress() {
     const dotEls = [...wrap.querySelectorAll('.dot')];
     const cur = wrap.querySelector('.lcursor');
     const setIdx = i => {
-      lrd.textContent = 'Week of ' + shortDate(keys[i]);
+      const we = new Date(keys[i] + 'T12:00:00'); we.setDate(we.getDate() + 6);
+      lrd.textContent = shortDate(keys[i]) + ' – ' + we.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
       lrv.innerHTML = `${fmtMi(vals[i])} <small>mi</small>`;
       dotEls.forEach((d, j) => d.classList.toggle('active', j === i));
       cur.style.left = xPct(i).toFixed(2) + '%';
