@@ -88,7 +88,7 @@
   }
   .card h3 {
     font-size: .68rem; text-transform: uppercase; letter-spacing: .16em;
-    color: var(--volt); margin-bottom: 12px; font-weight: 800;
+    color: var(--volt); margin-bottom: 16px; font-weight: 800;
   }
   .card h3::after { content: ""; display: block; width: 30px; height: 3px; background: var(--volt); margin-top: 6px; border-radius: 2px; }
   .wk-title {
@@ -384,6 +384,9 @@
   <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
   <div class="spinner"></div>
 </div>
+<!-- hidden switch: toggling it fires the system haptic on iOS 17.4+ (no vibration API there) -->
+<input type="checkbox" switch id="hapticsw" tabindex="-1" aria-hidden="true"
+       style="position:fixed;left:-100px;top:0;width:1px;height:1px;opacity:0;pointer-events:none">
 
 <a class="fab" id="fab" href="https://claude.ai/code" target="_blank" rel="noopener" aria-label="Talk to Coach">
   <svg viewBox="0 0 512 512" fill="none" aria-hidden="true">
@@ -841,6 +844,10 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
   const ptr = $('ptr');
   const THRESH = 70;
   let startY = null, pulling = false, busy = false;
+  const haptic = () => {
+    if (navigator.vibrate) { navigator.vibrate(10); return; }
+    try { $('hapticsw').click(); } catch {}
+  };
   document.addEventListener('touchstart', e => {
     pulling = window.scrollY <= 0 && !busy;
     startY = pulling ? e.touches[0].clientY : null;
@@ -852,7 +859,9 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
       const d = Math.min(dy / 2, 96);
       ptr.style.transform = `translate(-50%, ${d}px)`;
       ptr.classList.add('show');
+      const wasReady = ptr.classList.contains('ready');
       ptr.classList.toggle('ready', d >= THRESH);
+      if (!wasReady && d >= THRESH) haptic();
     } else {
       ptr.classList.remove('show', 'ready');
     }
@@ -867,6 +876,7 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
       ptr.style.transform = `translate(-50%, ${THRESH}px)`;
       try { await boot(); } catch {}
       ptr.classList.remove('spin');
+      haptic();
       busy = false;
     }
     ptr.classList.remove('show', 'ready');
