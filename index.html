@@ -721,9 +721,10 @@ function renderProgress() {
     for (let i = 11; i >= 0; i--) { const dd = new Date(d); dd.setDate(d.getDate() - i * 7); keys.push(isoWeekKey(dd.toISOString().slice(0, 10))); } }
   const milesByWk = {};
   for (const e of done) { const k = isoWeekKey(e.session_date || e.date); milesByWk[k] = (milesByWk[k] || 0) + runMiles(e); }
-  // backfilled weekly totals (e.g. from Strava history) fill weeks with no logged runs
+  // backfilled weekly totals (e.g. from Strava history): take the larger of
+  // logged runs vs the backfill so partial logging never undercounts a week
   for (const e of LOG.filter(e => e.kind === 'week_history')) {
-    if (!milesByWk[e.week]) milesByWk[e.week] = e.miles || 0;
+    if ((milesByWk[e.week] || 0) < (e.miles || 0)) milesByWk[e.week] = e.miles || 0;
   }
   const vals = keys.map(k => Math.round((milesByWk[k] || 0) * 10) / 10);
   const yMax = Math.max(4, Math.ceil(Math.max(...vals, 1) / 4) * 4);
