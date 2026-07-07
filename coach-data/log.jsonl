@@ -25,3 +25,4 @@
 {"date": "2026-07-06", "kind": "nutrition", "desc": "dessert: 1 scoop Truvani vegan chocolate protein + 1 egg", "kcal": 200, "protein_g": 26, "carbs_g": 5, "fat_g": 9}
 {"date": "2026-07-06", "kind": "coach_note", "topic": "nutrition", "level": "good", "text": "Final read with dessert: ~2,415 kcal, 160P/190C/108F. Protein target hit (155g) — first full-protein day on plan. Calories land under the ~2,520 earned with the bonus strength session. Textbook travel day."}
 {"date": "2026-07-04", "kind": "workout", "session_date": "2026-07-04", "type": "easy_run", "result": "completed", "planned": false, "miles": 4.0, "actual": "4 mi", "source": "user report", "note": "pre-plan run, added retroactively for July totals"}
+{"date": "2026-07-07", "kind": "nutrition", "desc": "breakfast: 2 scrambled eggs + 1/2 cup rolled oats + coffee", "kcal": 340, "protein_g": 17, "carbs_g": 30, "fat_g": 16}
