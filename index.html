@@ -253,14 +253,10 @@
     color: rgba(241,244,246,.52); font-weight: 800; margin-bottom: 6px;
   }
   .sectxt { font-size: .92rem; line-height: 1.5; color: var(--ink); }
-  .cread { margin: 2px 0 14px; }
+  .cread { margin: 2px 0 14px; padding-top: 16px; }
   .cread .seclab { margin-bottom: 4px; }
-  .cread .seclab::before {
-    content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--good); margin-right: 7px; vertical-align: 1px;
-  }
-  .cread.watch .seclab::before { background: var(--warn); }
-  .cread.flag .seclab::before { background: var(--bad); }
+  .cread.watch .seclab { color: var(--warn); }
+  .cread.flag .seclab { color: var(--bad); }
   .daytag { color: var(--ink-2); font-weight: 700; letter-spacing: .1em; }
   .loglist li { flex-direction: column; gap: 0; }
   .loglist li::before { display: none; }
