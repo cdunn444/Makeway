@@ -137,6 +137,9 @@ it at dinner"), and any warning. Levels: `good` = on track; `watch` = drifting
 (protein behind by mid-afternoon, kcal running hot, light fueling before tomorrow's
 key session); `flag` = needs action (big overshoot/undershoot, key session tomorrow
 and glycogen low, pattern repeating). End-of-day, give the verdict note the same way.
+Optionally add a `macros` object for per-macro tap-to-see reads (see
+`references/data-model.md`) when one macro deserves a sharper line than the
+dashboard's auto-generated insight.
 
 ## Adaptation engine
 

@@ -242,6 +242,12 @@
   .macro .mv.hit { color: var(--volt); }
   .macro .mv.over { color: var(--bad); }
   .macro .mbar i.over { background: var(--bad); }
+  .macro { cursor: pointer; -webkit-tap-highlight-color: transparent; transition: box-shadow .18s, background .18s; }
+  .macro.sel {
+    background: var(--volt-soft);
+    box-shadow: inset 0 0 0 1.5px var(--volt), inset 0 1px 0 rgba(255,255,255,.07);
+  }
+  .cread.sel .seclab { color: var(--volt); text-transform: uppercase; }
   .macro .ml { font-size: .62rem; color: var(--ink-3); font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
   .macro .mbar { height: 4px; border-radius: 2px; background: rgba(255,255,255,.09); margin-top: 8px; overflow: hidden; }
   .macro .mbar i { display: block; height: 100%; background: var(--volt); border-radius: 2px; transition: width .5s cubic-bezier(.4,0,.2,1); }
@@ -503,22 +509,74 @@ function dayMacros(s, date) {
   return { kcal, protein_g, carbs_g, fat_g };
 }
 
+/* Tap-a-tile insight: a pointed read on one macro, generated from the day's
+   log — pace vs time of day, biggest contributor meal, what's left to spend.
+   A coach_note can override any of these via note.macros.{calories|protein|carbs|fat}. */
+let macroSel = null;
+function macroInsight(key, m, eaten, entries, isRest) {
+  const F = { calories: ['kcal', m.kcal, eaten.kcal, ' cal'], protein: ['protein_g', m.protein_g, eaten.p, 'g'],
+              carbs: ['carbs_g', m.carbs_g, eaten.c, 'g'], fat: ['fat_g', m.fat_g, eaten.f, 'g'] }[key];
+  const [field, target, got, unit] = F;
+  const left = Math.max(0, Math.round(target - got));
+  const over = Math.max(0, Math.round(got - target));
+  const pct = target ? got / target * 100 : 0;
+  // expected share of the day's intake by now (rough meal curve, 7am–9pm)
+  const now = new Date(); const h = now.getHours() + now.getMinutes() / 60;
+  const pts = [[7, 5], [10, 30], [13, 50], [16, 65], [19, 85], [21, 100]];
+  let exp = pts[0][1];
+  if (h >= 21) exp = 100;
+  else for (let i = 1; i < pts.length; i++) {
+    if (h < pts[i][0]) { const [x0, y0] = pts[i - 1], [x1, y1] = pts[i];
+      exp = h <= x0 ? y0 : y0 + (y1 - y0) * (h - x0) / (x1 - x0); break; }
+  }
+  const ratio = exp ? pct / exp : 0;
+  const src = entries.filter(e => (e[field] || 0) > 0).sort((a, b) => (b[field] || 0) - (a[field] || 0))[0];
+  const from = src?.desc ? ` — mostly the ${esc(src.desc.split(/[(:,]/)[0].trim().slice(0, 32))}` : '';
+  if (key === 'calories') {
+    if (pct > 105) return `Past the day's budget by ${over} cal${from}. Not a crisis — make it a light, protein-first evening and we move on.`;
+    if (pct >= 95) return `Calorie budget is done. If you're hungry later, keep it to protein and veg — no cost there.`;
+    if (ratio > 1.3) return `${left} cal left, but you're ahead of pace for this time of day${from}. Make the next meal lean and volume-heavy — veg, lean protein — and you still land clean.`;
+    if (ratio < 0.7) return `${left} cal still to go and you're under pace — don't bank hunger, it backfires at night. Get a real meal in.`;
+    return `${left} cal left and you're right on pace. Split it across what's left of the day and you land on target.`;
+  }
+  if (key === 'protein') {
+    if (pct >= 100) return `Protein's locked — ${Math.round(got)}g down. Anything more is bonus; nothing to manage here.`;
+    if (ratio < 0.8) return `~${left}g protein still to go — you're behind pace. Anchor every remaining meal around it: 35–40g each, protein first on the plate.`;
+    if (ratio > 1.2) return `Ahead of pace on protein${from}. Keep this up and the day takes care of itself.`;
+    return `On pace — ~${left}g to go. Split it across your remaining meals and you're covered.`;
+  }
+  if (key === 'carbs') {
+    if (pct > 105) return `Carbs are ${over}g past target${from}. If training's done, taper them tonight — protein and veg close the day better.`;
+    if (pct >= 95) return `Carb budget spent. Ease off starches tonight; protein + veg to finish.`;
+    if (ratio > 1.3) return `Moving through carbs ahead of pace${from}. Save 40–60g for the evening so dinner isn't running on empty.`;
+    if (!isRest) return `${left}g carbs left — that's your fuel lever. Put them near training: rice, potatoes, fruit, tortillas.`;
+    return `${left}g carbs left, and on a rest day there's no rush — spread them thin and let protein lead.`;
+  }
+  // fat
+  if (pct > 105) return `Fat's over by ${over}g${from}. Done is done — keep dinner lean: grilled protein + rice or potato, no added oils, and today still works.`;
+  if (pct >= 88) return `~${Math.round(pct)}% of your fat is used${from}. Keep dinner lean — grilled protein with carbs, easy on oils, nuts and nut butters.`;
+  if (ratio > 1.3) return `Fat's moving fast${from} — ${left}g left for the rest of the day. Favor lean cuts tonight.`;
+  if (ratio < 0.7) return `Plenty of fat room — ${left}g left. A normal dinner won't blow it; no need to eat dry.`;
+  return `On pace — ${left}g left. Half an avocado or a drizzle of olive oil at dinner fits fine.`;
+}
+
 function nutritionBlock(s, isRest) {
   const m = dayMacros(isRest ? null : s, todayStr());
   const tag = isRest || !s ? '' : (TYPE_LABEL[s.type] || s.type).toUpperCase();
   let html = `<div class="card"><h3>Today's Fuel${m && tag ? ` · <span class="daytag">${tag}</span>` : ''}</h3>`;
   if (m) {
     const t = todayStr();
-    const eaten = LOG.filter(e => e.kind === 'nutrition' && e.date === t)
+    const entries = LOG.filter(e => e.kind === 'nutrition' && e.date === t);
+    const eaten = entries
       .reduce((a, e) => ({ kcal: a.kcal + (e.kcal || 0), p: a.p + (e.protein_g || 0),
                            c: a.c + (e.carbs_g || 0), f: a.f + (e.fat_g || 0) }),
               { kcal: 0, p: 0, c: 0, f: 0 });
-    const cell = (label, got, target, unit) => {
+    const cell = (key, label, got, target, unit) => {
       const raw = target ? got / target * 100 : 0;
       const pct = Math.min(100, Math.round(raw));
       // blue = landed within 5% of target; red = blew past it by >10%
       const cls = raw > 110 ? 'over' : (raw >= 95 && raw <= 105 ? 'hit' : '');
-      return `<div class="macro">
+      return `<div class="macro ${macroSel === key ? 'sel' : ''}" data-m="${key}" role="button" aria-pressed="${macroSel === key}">
         <div class="mk">${label}</div>
         <div class="mv ${cls}">${Math.round(got)}</div>
         <div class="ml">of ${target}${unit}</div>
@@ -526,14 +584,20 @@ function nutritionBlock(s, isRest) {
       </div>`;
     };
     html += `<div class="macrorow">
-      ${cell('Calories', eaten.kcal, m.kcal, '')}
-      ${cell('Protein', eaten.p, m.protein_g, 'g')}
-      ${cell('Carbs', eaten.c, m.carbs_g, 'g')}
-      ${cell('Fat', eaten.f, m.fat_g, 'g')}
+      ${cell('calories', 'Calories', eaten.kcal, m.kcal, '')}
+      ${cell('protein', 'Protein', eaten.p, m.protein_g, 'g')}
+      ${cell('carbs', 'Carbs', eaten.c, m.carbs_g, 'g')}
+      ${cell('fat', 'Fat', eaten.f, m.fat_g, 'g')}
     </div>`;
     const notes = LOG.filter(e => e.kind === 'coach_note' && e.topic === 'nutrition' && e.date === t);
     const note = notes[notes.length - 1];
-    if (note?.text) {
+    if (macroSel) {
+      const ins = note?.macros?.[macroSel] ? esc(note.macros[macroSel]) : macroInsight(macroSel, m, eaten, entries, isRest);
+      html += `<div class="cread sel">
+        <div class="seclab">Coach's Read · ${macroSel}</div>
+        <div class="sectxt">${ins}</div>
+      </div>`;
+    } else if (note?.text) {
       const lvl = note.level === 'watch' || note.level === 'flag' ? note.level : 'good';
       html += `<div class="cread ${lvl}">
         <div class="seclab">Coach's Read${lvl !== 'good' ? ` · ${lvl}` : ''}</div>
@@ -613,6 +677,10 @@ function renderBrief() {
     if (s.status === 'upcoming') html += `<div class="card muted">Done? Tap the whistle and tell Coach how it went — completed, partial, or skipped.</div>`;
   }
   el.innerHTML = html;
+  el.querySelectorAll('.macro[data-m]').forEach(tile => tile.onclick = () => {
+    macroSel = macroSel === tile.dataset.m ? null : tile.dataset.m;
+    renderBrief();
+  });
 }
 
 /* ---------- Schedule ---------- */

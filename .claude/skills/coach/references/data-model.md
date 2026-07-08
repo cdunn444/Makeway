@@ -123,6 +123,13 @@ editing (the file stays append-only). Keep `text` to 1–2 sentences.
 {"date": "2026-07-10", "kind": "coach_note", "topic": "nutrition", "level": "watch", "text": "Protein's behind pace at 62g by 2pm — anchor it at dinner. Calories fine."}
 ```
 
+A note may also carry an optional `macros` object — per-macro pointed reads shown
+when the user taps that tile on the dashboard (`{"macros": {"fat": "Almost done on
+fat thanks to the burrito — keep dinner lean.", "protein": "..."}}`; keys:
+`calories|protein|carbs|fat`, each 1 sentence). The dashboard auto-generates a
+per-macro insight when a key is absent, so only write these when you have
+something sharper to say than pace-vs-target.
+
 `kind: "week_history"` lines (`week` = Monday date, `miles`, `source`) backfill
 weekly mileage totals from before Coach existed — the dashboard chart uses them
 only for weeks with no logged runs, so they never double-count synced data.
