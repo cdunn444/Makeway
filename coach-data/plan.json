@@ -39,7 +39,8 @@
           "type": "strength",
           "detail": "Bodyweight A, 3 rounds: 12 squats, 10 push-ups, 10 reverse lunges/leg, 30s side plank/side, 15 glute bridges, 15 single-leg calf raises/leg.",
           "duration_min": 30,
-          "status": "upcoming"
+          "status": "skipped",
+          "note": "Skipped \u2014 family obligations. ~50% of volume folded into Friday strength (3->4 rounds)."
         },
         {
           "date": "2026-07-08",
@@ -63,8 +64,8 @@
           "date": "2026-07-10",
           "day": "Fri",
           "type": "strength",
-          "detail": "Bodyweight B, 3 rounds: 10 tempo squats (3s down), 8-10 pike push-ups, 12 split squats/leg, 40s plank, 15 SL glute bridges/leg, 20 tibialis raises.",
-          "duration_min": 30,
+          "detail": "Bodyweight B, 4 rounds (bumped from 3 to absorb Tuesday's skipped session): 10 tempo squats (3s down), 8-10 pike push-ups, 12 split squats/leg, 40s plank, 15 SL glute bridges/leg, 20 tibialis raises.",
+          "duration_min": 38,
           "status": "upcoming"
         },
         {
