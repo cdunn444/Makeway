@@ -48,8 +48,9 @@
           "type": "hybrid",
           "detail": "Driveway circuit (pivoted from easy run to absorb yesterday's skipped Bodyweight A): 5 min warm-up walk + mobility, then 3 rounds of 1 easy-pace driveway lap + Bodyweight A station (12 squats, 10 push-ups, 10 reverse lunges/leg, 30s side plank/side, 15 glute bridges, 15 SL calf raises/leg), 5-7 min cool-down + calf/arch stretch.",
           "duration_min": 45,
-          "status": "upcoming",
-          "note": "Traveling, no easy running route available beyond a circular driveway; combined with strength to absorb Tuesday's skip."
+          "status": "completed",
+          "note": "Traveling, no easy running route available beyond a circular driveway; combined with strength to absorb Tuesday's skip.",
+          "actual": "5 rounds (planned 3); swapped calf raises->dead bugs, regular->pike push-ups; glute bridges single-leg, 10/leg"
         },
         {
           "date": "2026-07-09",
