@@ -27,3 +27,4 @@
 {"date": "2026-07-04", "kind": "workout", "session_date": "2026-07-04", "type": "easy_run", "result": "completed", "planned": false, "miles": 4.0, "actual": "4 mi", "source": "user report", "note": "pre-plan run, added retroactively for July totals"}
 {"date": "2026-07-07", "kind": "nutrition", "desc": "breakfast: 2 scrambled eggs + 1/2 cup rolled oats + coffee", "kcal": 340, "protein_g": 17, "carbs_g": 30, "fat_g": 16}
 {"date": "2026-07-07", "kind": "nutrition", "desc": "lunch: Pattie Shack (Plymouth) grilled chicken sandwich, 6 oz breast, GF bun, lettuce/tomato/onion/mayo/Swiss cheese, ~5 fries", "kcal": 815, "protein_g": 65, "carbs_g": 50, "fat_g": 36}
+{"date": "2026-07-07", "kind": "nutrition", "desc": "dinner out: grilled swordfish, ~half serving coconut black rice, carrot puree, 1 lamb lollipop, roasted parsnip + broccolini", "kcal": 700, "protein_g": 58, "carbs_g": 48, "fat_g": 33}
