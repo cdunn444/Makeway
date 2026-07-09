@@ -58,8 +58,9 @@
           "type": "easy_run",
           "detail": "3 mi very easy, no strides \u2014 downgraded from tempo since legs are tired/sore from yesterday's 5-round circuit + pickleball.",
           "duration_min": 32,
-          "status": "upcoming",
-          "miles": 3.0
+          "status": "completed",
+          "miles": 3.0,
+          "actual": "4.36 mi in 46:01, avg HR 159/max 181 \u2014 longer than planned 3 mi due to route miscalculation"
         },
         {
           "date": "2026-07-10",
