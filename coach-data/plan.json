@@ -55,11 +55,11 @@
         {
           "date": "2026-07-09",
           "day": "Thu",
-          "type": "tempo_run",
-          "detail": "4 mi: 1 easy + 4 x (2 min comfortably-hard RPE 6-7 / 90s easy) + 1 easy.",
-          "duration_min": 42,
+          "type": "easy_run",
+          "detail": "3 mi very easy, no strides \u2014 downgraded from tempo since legs are tired/sore from yesterday's 5-round circuit + pickleball.",
+          "duration_min": 32,
           "status": "upcoming",
-          "miles": 4.0
+          "miles": 3.0
         },
         {
           "date": "2026-07-10",
