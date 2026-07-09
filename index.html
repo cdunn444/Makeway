@@ -631,6 +631,11 @@ let PLAN = null, PROFILE = null, LOG = [], weekIdx = 0;
 
 function allSessions() { return (PLAN?.weeks || []).flatMap(w => w.sessions.map(s => ({ ...s, week: w.week }))); }
 function esc(t) { const d = document.createElement('div'); d.textContent = t ?? ''; return d.innerHTML; }
+function actualFor(s) {
+  if (s.status !== 'completed' && s.status !== 'partial') return null;
+  const matches = LOG.filter(e => e.kind === 'workout' && (e.session_date || e.date) === s.date && e.type === s.type);
+  return matches[matches.length - 1] || null;
+}
 
 /* ---------- Daily Brief ---------- */
 function renderBrief() {
@@ -658,11 +663,13 @@ function renderBrief() {
     const pre = isRest ? null : PROFILE?.targets?.fuel?.pre?.[cat];
     const post = isRest ? null : PROFILE?.targets?.fuel?.post?.[cat];
     const prepList = (!isRest || s.type === 'active_recovery') ? (PREP[s.type] || []) : [];
+    const actual = actualFor(s);
     html += `<div class="card">
       <h3>Today's Session</h3>
       <div class="wk-title">${esc(label)}<span class="badge ${esc(s.status)}">${esc(s.status)}</span></div>
       ${s.duration_min ? `<div class="wk-meta">~${s.duration_min} min</div>` : ''}
       <div class="wk-detail">${esc(s.detail)}</div>
+      ${actual ? `<div class="sec"><div class="seclab">Actual</div><div class="sectxt">${esc(actual.actual || (actual.miles ? actual.miles + ' mi' : ''))}${actual.avg_hr ? ` · avg HR ${actual.avg_hr}` : ''}</div></div>` : ''}
       ${pre ? `<div class="sec"><div class="seclab">Pre-Workout</div><div class="sectxt">${esc(pre)}</div></div>` : ''}
       ${prepList.length ? `<div class="sec"><div class="seclab">Movement Prep</div><ul class="plain">${prepList.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
       ${post ? `<div class="sec"><div class="seclab">Post-Workout</div><div class="sectxt">${esc(post)}</div></div>` : ''}
@@ -737,6 +744,7 @@ function renderSchedule() {
       <div class="full">
         <div class="inner">
           <div class="txt">${esc(s.detail)}</div>
+          ${(() => { const a = actualFor(s); return a ? `<div class="sec"><div class="seclab">Actual</div><div class="sectxt">${esc(a.actual || (a.miles ? a.miles + ' mi' : ''))}${a.avg_hr ? ` · avg HR ${a.avg_hr}` : ''}</div></div>` : ''; })()}
           ${dm ? `<div class="sec"><div class="seclab">Nutrition</div><div class="sectxt">${dm.kcal} cal · ${dm.protein_g}p · ${dm.carbs_g}c · ${dm.fat_g}f</div></div>` : ''}
         </div>
       </div>
