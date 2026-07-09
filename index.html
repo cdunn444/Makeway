@@ -706,7 +706,9 @@ function renderSchedule() {
     <span class="label">Week ${w.week}${w.phase ? ' · ' + esc(w.phase.replace('_', ' ')) : ''}</span>
     <button id="wkNext" ${weekIdx === weeks.length - 1 ? 'disabled' : ''}>›</button>
   </div>`;
-  const miles = sessions.reduce((sum, s) => sum + (s.miles ?? (parseFloat((s.detail || '').match(/(\d+(?:\.\d+)?)\s*mi\b/)?.[1]) || 0)), 0);
+  // miles_target anchors the week's original volume; the sync's volume guard
+  // may trim/pad individual sessions without moving the goalposts
+  const miles = w.miles_target ?? sessions.reduce((sum, s) => sum + (s.miles ?? (parseFloat((s.detail || '').match(/(\d+(?:\.\d+)?)\s*mi\b/)?.[1]) || 0)), 0);
   const nRuns = sessions.filter(s => s.type.endsWith('_run')).length;
   const nStr = sessions.filter(s => s.type === 'strength').length;
   const lo = sessions[0]?.date, hi = sessions[sessions.length - 1]?.date;

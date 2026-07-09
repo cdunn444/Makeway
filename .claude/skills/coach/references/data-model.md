@@ -86,6 +86,17 @@ Run sessions carry a numeric `miles` field and each week carries a 1–2 sentenc
 `summary` — the dashboard's Schedule header totals the miles and shows the summary,
 so keep both current when adapting the plan.
 
+The activity sync's **volume guard** auto-reconciles the current week every few
+hours: when actual + remaining miles track >10% over the week's target it trims
+remaining easy runs (then the long run, never quality sessions, with floors);
+>15% under, it pads them (with caps). It anchors `week.miles_target` (the week's
+original planned volume — the dashboard shows this as "planned") and
+`session.miles_planned` (a session's pre-adjustment mileage) the first time it
+touches them, and logs what it did as a `kind: "adaptation"` line with
+`"source": "auto"`. When you restructure a week in chat, set `miles_target`
+yourself (or delete it to re-anchor) so the guard reconciles against your new
+intent, and expect the guard to fine-tune volume between your sessions.
+
 Session `status`: `upcoming | completed | partial | skipped`. Session `type` values:
 `easy_run, tempo_run, interval_run, long_run, strength, cross_train, active_recovery,
 rest` (extend as needed for the user's activities). Only generate detailed sessions

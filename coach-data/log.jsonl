@@ -75,3 +75,4 @@
 {"date": "2026-07-09", "kind": "nutrition", "desc": "post-run: pea protein shake", "kcal": 130, "protein_g": 20, "carbs_g": 5, "fat_g": 3}
 {"date": "2026-07-09", "kind": "nutrition", "desc": "breakfast: 2 eggs, 95g egg whites, 2 slices Whole Foods organic sourdough, small guac", "kcal": 480, "protein_g": 32, "carbs_g": 49, "fat_g": 16}
 {"date": "2026-07-09", "kind": "coach_note", "topic": "nutrition", "level": "good", "text": "925 kcal, 60g protein by mid-morning (pre-run nuts/banana, post-run shake, and a solid egg breakfast) — strong start after a 4.36 mi easy run in the heat, good recovery-focused fueling."}
+{"date": "2026-07-09", "kind": "adaptation", "action": "volume guard: week tracking 14.3 mi vs 11 planned (cap +10%) — trimmed Sat long run 5→3.5 mi to protect the ramp (shin/arch history). Extra volume is already banked; nothing is lost.", "trigger": "activity sync volume reconcile", "source": "auto"}

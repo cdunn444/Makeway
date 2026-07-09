@@ -15,6 +15,7 @@ Exits 0 with a message when no source is configured, so pre-setup runs stay gree
 import base64
 import json
 import os
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -147,6 +148,103 @@ def session_category(stype):
     return "cross"
 
 
+RUN_SESSION_TYPES = ("easy_run", "long_run", "tempo_run", "interval_run")
+
+
+def _round_q(x):
+    return round(x * 4) / 4
+
+
+def _set_session_miles(s, new_mi):
+    """Update a session's miles, keeping detail text and duration in step."""
+    old = s.get("miles")
+    base = s.get("miles_planned", old)
+    if s.get("duration_min") and old:
+        s["duration_min"] = round(s["duration_min"] * new_mi / old)
+    s["miles"] = new_mi
+    detail = re.sub(r"\s*\(auto-adjusted from [^)]*\)", "", s.get("detail", ""))
+    m = re.search(r"\d+(?:\.\d+)?\s*mi\b", detail)
+    if m:
+        detail = detail[:m.start()] + f"{new_mi:g} mi" + detail[m.end():]
+    if base is not None and abs(new_mi - base) > 0.01:
+        detail = detail.rstrip() + f" (auto-adjusted from {base:g} mi)"
+    s["detail"] = detail
+
+
+def adapt_current_week(plan, entries, today):
+    """Volume guard: reconcile the current week's remaining runs with actual miles.
+
+    Mechanical and bounded by design — trims remaining easy runs (then the long
+    run, never quality sessions) when the week is tracking >10% over its target,
+    and pads easy runs (then the long run) when it's tracking >15% under. The
+    week's original volume is anchored in week.miles_target and each adjusted
+    session's original mileage in session.miles_planned, so repeated runs are
+    idempotent. Structural changes stay with Coach in chat.
+    Returns adaptation log entries (possibly empty); mutates plan in place.
+    """
+    week = None
+    for w in plan.get("weeks", []):
+        dates = [s["date"] for s in w.get("sessions", [])]
+        if dates and min(dates) <= today <= max(dates):
+            week = w
+            break
+    if not week:
+        return []
+    runs = [s for s in week["sessions"] if s["type"] in RUN_SESSION_TYPES]
+    target = week.get("miles_target")
+    if target is None:
+        target = sum(s.get("miles") or 0 for s in runs)
+    if not target:
+        return []
+    dates = [s["date"] for s in week["sessions"]]
+    lo_d, hi_d = min(dates), max(dates)
+    actual = sum(e.get("miles") or 0 for e in entries
+                 if e.get("kind") == "workout" and e.get("result") in ("completed", "partial")
+                 and lo_d <= (e.get("session_date") or e.get("date") or "") <= hi_d)
+    remaining = [s for s in runs if s.get("status") == "upcoming" and (s.get("miles") or 0) > 0]
+    if not remaining:
+        return []
+    projected = actual + sum(s["miles"] for s in remaining)
+    hi, lo = target * 1.10, target * 0.85
+    before = projected
+    changes = []
+    easies = [s for s in remaining if s["type"] == "easy_run"]
+    longs = [s for s in remaining if s["type"] == "long_run"]
+    if projected > hi:
+        for s in easies + longs:  # trim easy days first, protect the long run longest
+            if projected <= hi:
+                break
+            s.setdefault("miles_planned", s["miles"])
+            floor = 2.0 if s["type"] == "easy_run" else max(3.0, _round_q(s["miles_planned"] * 0.7))
+            new_mi = max(floor, _round_q(s["miles"] - (projected - hi)))
+            if new_mi < s["miles"] - 0.01:
+                changes.append(f"{s['day']} {s['type'].replace('_', ' ')} {s['miles']:g}→{new_mi:g} mi")
+                projected -= s["miles"] - new_mi
+                _set_session_miles(s, new_mi)
+        verdict = (f"volume guard: week tracking {before:.1f} mi vs {target:g} planned (cap +10%) — "
+                   f"trimmed {', '.join(changes)} to protect the ramp (shin/arch history). "
+                   "Extra volume is already banked; nothing is lost.")
+    elif projected < lo:
+        goal = target * 0.95
+        for s in easies + longs:  # pad easy days first; quality sessions stay as written
+            if projected >= goal:
+                break
+            s.setdefault("miles_planned", s["miles"])
+            cap = _round_q(s["miles_planned"] * (1.25 if s["type"] == "easy_run" else 1.15))
+            new_mi = min(cap, _round_q(s["miles"] + (goal - projected)))
+            if new_mi > s["miles"] + 0.01:
+                changes.append(f"{s['day']} {s['type'].replace('_', ' ')} {s['miles']:g}→{new_mi:g} mi")
+                projected += new_mi - s["miles"]
+                _set_session_miles(s, new_mi)
+        verdict = (f"volume guard: week tracking {before:.1f} mi vs {target:g} planned (floor −15%) — "
+                   f"bumped {', '.join(changes)} to close the gap without spiking any single day.")
+    if not changes:
+        return []
+    week["miles_target"] = target
+    return [{"date": today, "kind": "adaptation", "action": verdict,
+             "trigger": "activity sync volume reconcile", "source": "auto"}]
+
+
 def main():
     activities = fetch_activities()
     log = load_log()
@@ -196,17 +294,23 @@ def main():
             sess["status"] = result
             plan_changed = True
 
-    if not new_lines:
-        print("No new activities.")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    adaptations = adapt_current_week(plan, log + new_lines, today)
+    if not new_lines and not adaptations:
+        print("No new activities; plan already in balance.")
         return
-    with open(LOG_PATH, "a") as f:
-        for e in new_lines:
-            f.write(json.dumps(e) + "\n")
-    if plan_changed:
+    if new_lines or adaptations:
+        with open(LOG_PATH, "a") as f:
+            for e in new_lines + adaptations:
+                f.write(json.dumps(e) + "\n")
+    if plan_changed or adaptations:
         with open(PLAN_PATH, "w") as f:
             json.dump(plan, f, indent=2)
-    print(f"Logged {len(new_lines)} new activities: " +
-          ", ".join(f"{e['date']} {e['type']} ({e['result']})" for e in new_lines))
+    if new_lines:
+        print(f"Logged {len(new_lines)} new activities: " +
+              ", ".join(f"{e['date']} {e['type']} ({e['result']})" for e in new_lines))
+    for a in adaptations:
+        print("Adaptation: " + a["action"])
 
 
 if __name__ == "__main__":

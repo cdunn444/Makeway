@@ -6,6 +6,15 @@ tell the user what changed and why, in 1–2 sentences — it should feel like a
 paying attention, not silent plan mutation. Record every change as a
 `kind: "adaptation"` line in `log.jsonl` and update `plan.json`.
 
+**Division of labor with the sync's volume guard:** the activity-sync job runs a
+bounded, mechanical volume reconcile every few hours (trim remaining runs when the
+week tracks >10% over `miles_target`, pad when >15% under — see `data-model.md`).
+Its adaptation lines carry `"source": "auto"`. That guard only moves *mileage
+numbers*; everything structural — rescheduling, intensity tiers, skip handling,
+restructuring a week — is yours. Read its auto lines when you review the log so
+you don't double-compensate, and override its numbers freely: your judgment wins,
+just update `miles_target` to match your new intent.
+
 ## Rules
 
 ### 1. Skipped session → redistribute volume

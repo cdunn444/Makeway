@@ -74,10 +74,11 @@
           "date": "2026-07-11",
           "day": "Sat",
           "type": "long_run",
-          "detail": "5 mi easy, all conversational. Practice pre-run fueling.",
-          "duration_min": 52,
+          "detail": "3.5 mi easy, all conversational. Practice pre-run fueling. (auto-adjusted from 5 mi)",
+          "duration_min": 36,
           "status": "upcoming",
-          "miles": 5.0
+          "miles": 3.5,
+          "miles_planned": 5.0
         },
         {
           "date": "2026-07-12",
@@ -87,7 +88,8 @@
           "status": "upcoming"
         }
       ],
-      "summary": "Travel week: re-establish the rhythm \u2014 everything conversational except Thursday's tempo intervals. Daily arch/calf prehab is the real assignment."
+      "summary": "Travel week: re-establish the rhythm \u2014 everything conversational except Thursday's tempo intervals. Daily arch/calf prehab is the real assignment.",
+      "miles_target": 11.0
     },
     {
       "week": 2,
