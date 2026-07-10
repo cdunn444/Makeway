@@ -1,6 +1,9 @@
-# Coach
+# Makeway
 
-An adaptive AI fitness coach, built as a **Claude Agent Skill**. Coach replaces the
+*"I will either find a way, or make one."* — Hannibal
+
+An adaptive AI fitness coach, built as a **Claude Agent Skill**. Makeway (your coach
+answers to "Coach") replaces the
 fragmented stack of training apps, nutrition trackers, and static plans with one
 system: a training plan that talks to your nutrition, adapts when life happens, and
 remembers what you did last Tuesday.
