@@ -68,7 +68,7 @@ with read-only Contents access (stored only on your device).
 
 **Deploy (one-time):** GitHub → repo **Settings → Pages → Source: Deploy from a
 branch** → pick `main` (after merging) or this branch, folder `/ (root)`. Your app
-URL will be `https://<user>.github.io/Coach/`.
+URL will be `https://<user>.github.io/makeway/`.
 
 **Install on iPhone:** open that URL in Safari → Share → **Add to Home Screen**.
 You get the whistle icon, full-screen app, the works.

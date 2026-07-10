@@ -44,7 +44,7 @@ def normalize(sync_id, sport, start_local, distance_m, moving_s, avg_hr, max_hr,
     }
 
 
-UA = "coach-activity-sync/1.0 (github.com/cdunn444/Coach)"
+UA = "makeway-activity-sync/1.0 (github.com/cdunn444/makeway)"
 
 
 def fetch_intervals(athlete_id, api_key):
