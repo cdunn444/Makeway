@@ -100,3 +100,4 @@
 {"date": "2026-07-10", "kind": "workout", "session_date": "2026-07-10", "type": "cross_train", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i164507743", "planned": false, "name": "Cohasset Pickleball", "actual": "43 min", "duration_min": 43, "avg_hr": 127, "max_hr": 164, "active_kcal": 477}
 {"date": "2026-07-10", "kind": "nutrition", "desc": "medium Honeycrisp apple", "kcal": 95, "protein_g": 0.5, "carbs_g": 25, "fat_g": 0.3}
 {"date": "2026-07-10", "kind": "nutrition", "desc": "152g cooked gluten-free pasta", "kcal": 230, "protein_g": 4.5, "carbs_g": 49, "fat_g": 1.5}
+{"date": "2026-07-10", "kind": "nutrition", "desc": "dinner: 140g jasmine rice cooked with bone broth, 1/2 package Kevin's Naturals butter chicken, 1/4 cup chickpeas, 1/2 bell pepper", "kcal": 500, "protein_g": 23, "carbs_g": 62, "fat_g": 17}
