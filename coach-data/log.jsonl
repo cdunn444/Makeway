@@ -97,3 +97,4 @@
 {"date": "2026-07-10", "kind": "nutrition", "desc": "lunch addition: 1 slice sourdough", "kcal": 110, "protein_g": 4, "carbs_g": 20, "fat_g": 0.5}
 {"date": "2026-07-10", "kind": "nutrition", "desc": "chocolate chip cookie", "kcal": 110, "protein_g": 1, "carbs_g": 15, "fat_g": 5}
 {"date": "2026-07-10", "kind": "coach_note", "topic": "nutrition", "level": "good", "text": "1,213 kcal, 109g protein by early afternoon on a strength day — already over two-thirds of the way to protein target with dinner still to come. Great pace."}
+{"date": "2026-07-10", "kind": "workout", "session_date": "2026-07-10", "type": "cross_train", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i164507743", "planned": false, "name": "Cohasset Pickleball", "actual": "43 min", "duration_min": 43, "avg_hr": 127, "max_hr": 164, "active_kcal": 477}
