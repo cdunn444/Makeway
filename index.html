@@ -364,7 +364,7 @@
 <body>
 
 <header class="app">
-  <div><h1 id="bigTitle">Today<span class="tick">.</span></h1><div class="sub" id="subtitle"></div></div>
+  <div><h1 id="bigTitle">Makeway<span class="tick">.</span></h1><div class="sub" id="subtitle"></div></div>
 </header>
 
 <main>
@@ -396,9 +396,11 @@
 
 <a class="fab" id="fab" href="https://claude.ai/code" target="_blank" rel="noopener" aria-label="Talk to Coach">
   <svg viewBox="0 0 512 512" fill="none" aria-hidden="true">
-    <circle cx="225" cy="305" r="118" fill="#04121a"/>
-    <rect x="225" y="196" width="223" height="66" rx="22" fill="#04121a"/>
-    <circle cx="225" cy="305" r="46" fill="#00c8ff"/>
+    <g fill="#04121a" transform="translate(256 256) scale(0.92) translate(-256 -243)">
+      <path d="M 120 150 L 120 245 C 120 305, 92 332, 56 288 C 50 281, 55 274, 62 279 C 96 302, 150 296, 166 244 L 172 200 L 172 150 Z"/>
+      <path d="M 392 150 L 392 245 C 392 305, 420 332, 456 288 C 462 281, 457 274, 450 279 C 416 302, 362 296, 346 244 L 340 200 L 340 150 Z"/>
+      <path d="M 150 150 L 208 150 L 256 258 L 304 150 L 362 150 L 283 336 L 229 336 Z"/>
+    </g>
   </svg>
 </a>
 
@@ -894,7 +896,7 @@ const views = { brief: renderBrief, schedule: renderSchedule, progress: renderPr
 const TITLES = { brief: 'Today', schedule: 'Schedule', progress: 'Progress' };
 document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => {
   document.querySelectorAll('nav.tabs button').forEach(x => x.classList.toggle('on', x === b));
-  $('bigTitle').innerHTML = TITLES[b.dataset.tab] + '<span class="tick">.</span>';
+  $('subtitle').textContent = TITLES[b.dataset.tab];
   for (const v of ['brief', 'schedule', 'progress']) $('view-' + v).classList.toggle('hidden', v !== b.dataset.tab);
   $('view-setup').classList.add('hidden');
   views[b.dataset.tab]();
