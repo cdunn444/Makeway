@@ -100,6 +100,7 @@
   .wk-meta { color: var(--ink-2); font-size: .85rem; margin: 4px 0 8px; font-weight: 600; }
   .wk-detail { font-size: .95rem; line-height: 1.55; color: var(--ink); }
   ul.plain { list-style: none; }
+  ul.exlist { margin-top: 4px; }
   ul.plain li { padding: 5px 0; font-size: .93rem; line-height: 1.5; display: flex; gap: 10px; }
   ul.plain li::before { content: "//"; color: var(--volt); font-weight: 800; flex-shrink: 0; }
   .badge {
@@ -631,6 +632,21 @@ let PLAN = null, PROFILE = null, LOG = [], weekIdx = 0;
 
 function allSessions() { return (PLAN?.weeks || []).flatMap(w => w.sessions.map(s => ({ ...s, week: w.week }))); }
 function esc(t) { const d = document.createElement('div'); d.textContent = t ?? ''; return d.innerHTML; }
+
+/* Strength/hybrid details read as "Intro: ex1, ex2, ex3." — render each
+   exercise on its own line so circuits scan like a checklist. */
+function detailHtml(s) {
+  const d = s.detail || '';
+  const ci = d.indexOf(':');
+  if ((s.type === 'strength' || s.type === 'hybrid') && ci > 0) {
+    const items = d.slice(ci + 1).split(/,(?![^(]*\))/)
+      .map(x => x.trim().replace(/\.$/, '')).filter(Boolean);
+    if (items.length > 1) {
+      return `${esc(d.slice(0, ci))}:<ul class="plain exlist">${items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+    }
+  }
+  return esc(d);
+}
 function actualFor(s) {
   if (s.status !== 'completed' && s.status !== 'partial') return null;
   const matches = LOG.filter(e => e.kind === 'workout' && (e.session_date || e.date) === s.date && e.type === s.type);
@@ -668,7 +684,7 @@ function renderBrief() {
       <h3>Today's Session</h3>
       <div class="wk-title">${esc(label)}<span class="badge ${esc(s.status)}">${esc(s.status)}</span></div>
       ${s.duration_min ? `<div class="wk-meta">~${s.duration_min} min</div>` : ''}
-      <div class="wk-detail">${esc(s.detail)}</div>
+      <div class="wk-detail">${detailHtml(s)}</div>
       ${actual ? `<div class="sec"><div class="seclab">Actual</div><div class="sectxt">${esc(actual.actual || (actual.miles ? actual.miles + ' mi' : ''))}${actual.avg_hr ? ` · avg HR ${actual.avg_hr}` : ''}</div></div>` : ''}
       ${pre ? `<div class="sec"><div class="seclab">Pre-Workout</div><div class="sectxt">${esc(pre)}</div></div>` : ''}
       ${prepList.length ? `<div class="sec"><div class="seclab">Movement Prep</div><ul class="plain">${prepList.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
@@ -745,7 +761,7 @@ function renderSchedule() {
       </div>
       <div class="full">
         <div class="inner">
-          <div class="txt">${esc(s.detail)}</div>
+          <div class="txt">${detailHtml(s)}</div>
           ${(() => { const a = actualFor(s); return a ? `<div class="sec"><div class="seclab">Actual</div><div class="sectxt">${esc(a.actual || (a.miles ? a.miles + ' mi' : ''))}${a.avg_hr ? ` · avg HR ${a.avg_hr}` : ''}</div></div>` : ''; })()}
           ${dm ? `<div class="sec"><div class="seclab">Nutrition</div><div class="sectxt">${dm.kcal} cal · ${dm.protein_g}p · ${dm.carbs_g}c · ${dm.fat_g}f</div></div>` : ''}
         </div>
