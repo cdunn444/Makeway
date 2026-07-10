@@ -420,7 +420,7 @@
 </nav>
 
 <script>
-const OWNER = 'cdunn444', REPO = 'Coach';
+const OWNER = 'cdunn444', REPO = 'Makeway';
 const DEFAULT_BRANCHES = ['main', 'claude/skill-from-prd-skh9jj'];
 const LS = { token: 'coach_gh_token', branch: 'coach_gh_branch' };
 const $ = id => document.getElementById(id);
@@ -443,9 +443,14 @@ async function localFetch(path) {
 async function loadFile(path) {
   const token = localStorage.getItem(LS.token) || '';
   const saved = localStorage.getItem(LS.branch);
-  const branches = saved ? [saved] : DEFAULT_BRANCHES;
+  const auto = localStorage.getItem('coach_branch_auto'); // last branch that worked — try it first
+  const branches = saved ? [saved] : [...new Set([auto, ...DEFAULT_BRANCHES].filter(Boolean))];
   for (const b of branches) {
-    try { return await ghFetch(path, b, token); } catch (e) { /* next */ }
+    try {
+      const r = await ghFetch(path, b, token);
+      try { localStorage.setItem('coach_branch_auto', b); } catch {}
+      return r;
+    } catch (e) { /* next */ }
   }
   return await localFetch(path); // same-origin GitHub Pages copy (may lag a deploy)
 }
@@ -908,6 +913,21 @@ $('saveSetup').onclick = () => {
   location.reload();
 };
 
+/* Stale-while-revalidate: paint instantly from the last good snapshot in
+   localStorage, then fetch fresh data and re-render when it lands. */
+const SNAP_KEY = 'mw_snapshot_v1';
+function hydrate(d) {
+  try { PLAN = d.plan ? JSON.parse(d.plan) : PLAN; } catch {}
+  try { PROFILE = d.profile ? JSON.parse(d.profile) : PROFILE; } catch {}
+  if (d.log) LOG = parseJSONL(d.log);
+  try { const s = d.session && JSON.parse(d.session); if (s?.url) $('fab').href = s.url; } catch {}
+  // pick current week for schedule
+  const t = todayStr();
+  const weeks = PLAN?.weeks || [];
+  const idx = weeks.findIndex(w => w.sessions.some(s => s.date >= t));
+  weekIdx = idx >= 0 ? idx : Math.max(0, weeks.length - 1);
+  renderBrief(); renderSchedule(); renderProgress();
+}
 async function boot() {
   let failures = 0;
   const grab = async (path, fallback) => { try { return await loadFile(path); } catch { failures++; return fallback; } };
@@ -917,21 +937,17 @@ async function boot() {
     grab('coach-data/log.jsonl', ''),
     grab('coach-data/session.json', null),
   ]);
-  try { PLAN = plan && JSON.parse(plan); } catch {}
-  try { PROFILE = profile && JSON.parse(profile); } catch {}
-  LOG = parseJSONL(log || '');
-  try { const s = session && JSON.parse(session); if (s?.url) $('fab').href = s.url; } catch {}
+  if (plan || profile || log) {
+    hydrate({ plan, profile, log, session });
+    try { localStorage.setItem(SNAP_KEY, JSON.stringify({ plan, profile, log, session })); } catch {}
+  }
   if (!PLAN && !PROFILE) {
     $('view-setup').classList.remove('hidden');
     $('setupErr').textContent = failures ? 'Could not reach the repo anonymously — it may be private.' : '';
+    renderBrief(); renderSchedule(); renderProgress();
   }
-  // pick current week for schedule
-  const t = todayStr();
-  const weeks = PLAN?.weeks || [];
-  const idx = weeks.findIndex(w => w.sessions.some(s => s.date >= t));
-  weekIdx = idx >= 0 ? idx : Math.max(0, weeks.length - 1);
-  renderBrief(); renderSchedule(); renderProgress();
 }
+try { const snap = JSON.parse(localStorage.getItem(SNAP_KEY) || 'null'); if (snap) hydrate(snap); } catch {}
 boot();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 
