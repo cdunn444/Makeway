@@ -120,3 +120,6 @@
 {"date": "2026-07-12", "kind": "workout", "session_date": "2026-07-12", "type": "cross_train", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i165026319", "planned": false, "name": "Cohasset Pickleball", "actual": "45 min", "duration_min": 45, "avg_hr": 130, "max_hr": 169, "active_kcal": 457}
 {"date": "2026-07-12", "kind": "nutrition", "desc": "snack: 3 cubes cantaloupe, 4 Crunchmaster crackers, 5 small candied walnuts", "kcal": 117, "protein_g": 2.3, "carbs_g": 14, "fat_g": 6}
 {"date": "2026-07-12", "kind": "nutrition", "desc": "snack: 10 Crunchmaster crackers", "kcal": 81, "protein_g": 1.25, "carbs_g": 13.75, "fat_g": 2.5}
+{"date": "2026-07-12", "kind": "nutrition", "desc": "chocolate chip cookie, 1 serving dried mango", "kcal": 250, "protein_g": 2, "carbs_g": 49, "fat_g": 5}
+{"date": "2026-07-12", "kind": "workout", "session_date": "2026-07-12", "type": "cross_train", "result": "completed", "planned": false, "name": "Pickleball (round 2)", "source": "user report", "actual": "~60 min", "duration_min": 60}
+{"date": "2026-07-12", "kind": "nutrition", "desc": "dinner: 4-5 small roasted yellow potatoes, 6 oz sirloin steak tips marinated in coconut aminos", "kcal": 525, "protein_g": 56, "carbs_g": 41, "fat_g": 17}
