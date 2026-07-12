@@ -108,3 +108,5 @@
 {"date": "2026-07-11", "kind": "workout", "session_date": "2026-07-11", "type": "cross_train", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i164757994", "planned": false, "name": "Cohasset Pickleball", "actual": "45 min", "duration_min": 45, "avg_hr": 117, "max_hr": 151, "active_kcal": 401}
 {"date": "2026-07-11", "kind": "nutrition", "desc": "lunch: 140g jasmine rice cooked with bone broth, 1/2 package Kevin's Naturals butter chicken, 1/4 cup chickpeas, 1/2 bell pepper (same as 7/10 dinner, original size)", "kcal": 500, "protein_g": 23, "carbs_g": 62, "fat_g": 17}
 {"date": "2026-07-11", "kind": "nutrition", "desc": "snack: 1 small turkey Chomps stick", "kcal": 30, "protein_g": 5, "carbs_g": 0, "fat_g": 1.5}
+{"date": "2026-07-11", "kind": "nutrition", "desc": "dinner: 1/2 package Kevin's Naturals Thai curry chicken, 125g rice cooked in bone broth, 1 serving roasted Brussels sprouts with bacon bits", "kcal": 555, "protein_g": 23, "carbs_g": 57, "fat_g": 26.5}
+{"date": "2026-07-11", "kind": "nutrition", "desc": "party: cookie, cake pop, 12 tortilla chips", "kcal": 390, "protein_g": 4.5, "carbs_g": 53, "fat_g": 19}
