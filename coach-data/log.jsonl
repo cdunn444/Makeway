@@ -133,3 +133,4 @@
 {"date": "2026-07-13", "kind": "nutrition", "desc": "pre-pickleball: 1 serving dried mango", "kcal": 140, "protein_g": 1, "carbs_g": 34, "fat_g": 0}
 {"date": "2026-07-13", "kind": "nutrition", "desc": "dinner: half serving Jovial GF pasta, 5 oz pork tenderloin, 1 serving roasted mixed veggies", "kcal": 399, "protein_g": 41, "carbs_g": 37, "fat_g": 9.5}
 {"date": "2026-07-13", "kind": "nutrition", "desc": "dessert: slice of homemade GF banana bread (GF flour, banana, eggs, milk, applesauce)", "kcal": 210, "protein_g": 3, "carbs_g": 32, "fat_g": 7}
+{"date": "2026-07-13", "kind": "workout", "session_date": "2026-07-13", "type": "cross_train", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i165445253", "planned": false, "name": "Cohasset Pickleball", "actual": "33 min", "duration_min": 33, "avg_hr": 107, "max_hr": 147, "active_kcal": 229}
