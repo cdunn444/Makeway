@@ -103,9 +103,10 @@
           "type": "long_run",
           "detail": "4.5 mi easy, all conversational (aiming 4-5 - land anywhere in that band). Practice pre-run fueling. (Moved from Sunday 7/12, which moved from Saturday 7/11.)",
           "duration_min": 47,
-          "status": "upcoming",
+          "status": "skipped",
           "miles": 4.5,
-          "miles_planned": 4.5
+          "miles_planned": 4.5,
+          "note": "Long run let go for this week \u2014 bounced Sat->Sun->Mon without landing amid travel/work. Not rescheduling again; pickleball has been the realistic activity this week."
         },
         {
           "date": "2026-07-14",
