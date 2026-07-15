@@ -120,10 +120,11 @@
           "date": "2026-07-15",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "2.5 mi very easy + 4 strides.",
-          "duration_min": 28,
+          "detail": "3 mi very easy + 4 strides. (auto-adjusted from 2.5 mi)",
+          "duration_min": 34,
           "status": "upcoming",
-          "miles": 2.5
+          "miles": 3.0,
+          "miles_planned": 2.5
         },
         {
           "date": "2026-07-16",
@@ -146,10 +147,11 @@
           "date": "2026-07-18",
           "day": "Sat",
           "type": "long_run",
-          "detail": "5.5 mi easy.",
-          "duration_min": 58,
+          "detail": "6.25 mi easy. (auto-adjusted from 5.5 mi)",
+          "duration_min": 66,
           "status": "upcoming",
-          "miles": 5.5
+          "miles": 6.25,
+          "miles_planned": 5.5
         },
         {
           "date": "2026-07-19",
@@ -159,7 +161,8 @@
           "status": "upcoming"
         }
       ],
-      "summary": "The rebuild continues toward your June base: long run stretches to 5.5 and the tempo becomes two 6-minute steady blocks."
+      "summary": "The rebuild continues toward your June base: long run stretches to 5.5 and the tempo becomes two 6-minute steady blocks.",
+      "miles_target": 16.5
     },
     {
       "week": 3,
