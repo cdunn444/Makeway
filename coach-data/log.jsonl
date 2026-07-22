@@ -143,3 +143,4 @@
 {"date": "2026-07-15", "kind": "nutrition", "desc": "pre-run: 1.5 slices Simple Kneads sourdough, 5g peanut butter", "kcal": 175, "protein_g": 7, "carbs_g": 28, "fat_g": 4}
 {"date": "2026-07-15", "kind": "nutrition", "desc": "post-run breakfast: Truvani protein shake, 2 eggs, 100g egg whites", "kcal": 325, "protein_g": 44, "carbs_g": 7, "fat_g": 13}
 {"date": "2026-07-15", "kind": "nutrition", "desc": "TruBar protein bar", "kcal": 200, "protein_g": 20, "carbs_g": 20, "fat_g": 7}
+{"date": "2026-07-15", "kind": "workout", "session_date": "2026-07-15", "type": "easy_run", "result": "completed", "source": "user report", "planned": true, "name": "Running", "actual": "3.5 mi", "miles": 3.5}

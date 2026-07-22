@@ -122,9 +122,10 @@
           "type": "easy_run",
           "detail": "3 mi very easy + 4 strides. (auto-adjusted from 2.5 mi)",
           "duration_min": 34,
-          "status": "upcoming",
+          "status": "completed",
           "miles": 3.0,
-          "miles_planned": 2.5
+          "miles_planned": 2.5,
+          "actual": "3.5 mi (planned 3.0)"
         },
         {
           "date": "2026-07-16",
