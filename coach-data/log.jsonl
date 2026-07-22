@@ -146,3 +146,4 @@
 {"date": "2026-07-15", "kind": "workout", "session_date": "2026-07-15", "type": "easy_run", "result": "completed", "source": "user report", "planned": true, "name": "Running", "actual": "3.5 mi", "miles": 3.5}
 {"date": "2026-07-15", "kind": "nutrition", "desc": "lunch: ~1 serving rice and black beans, 6 oz flap steak marinated in coconut aminos, olive oil, lemon juice, salt, pepper, garlic", "kcal": 715, "protein_g": 55, "carbs_g": 66, "fat_g": 23}
 {"date": "2026-07-22", "kind": "workout", "session_date": "2026-07-22", "type": "easy_run", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i168025262", "planned": true, "name": "Cohasset Running", "actual": "3.51 mi in 36 min", "duration_min": 36, "miles": 3.51, "avg_pace": "10:15/mi", "avg_hr": 156, "max_hr": 184, "active_kcal": 415}
+{"date": "2026-07-15", "kind": "nutrition", "desc": "OWYN dairy-free vanilla protein shake", "kcal": 160, "protein_g": 20, "carbs_g": 8, "fat_g": 4.5}
