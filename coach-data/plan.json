@@ -241,10 +241,11 @@
           "date": "2026-07-27",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "3 mi easy.",
-          "duration_min": 32,
+          "detail": "3.75 mi easy. (auto-adjusted from 3 mi)",
+          "duration_min": 40,
           "status": "upcoming",
-          "miles": 3.0
+          "miles": 3.75,
+          "miles_planned": 3.0
         },
         {
           "date": "2026-07-28",
@@ -258,19 +259,21 @@
           "date": "2026-07-29",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "2.5 mi very easy.",
-          "duration_min": 27,
+          "detail": "3 mi very easy. (auto-adjusted from 2.5 mi)",
+          "duration_min": 32,
           "status": "upcoming",
-          "miles": 2.5
+          "miles": 3.0,
+          "miles_planned": 2.5
         },
         {
           "date": "2026-07-30",
           "day": "Thu",
           "type": "easy_run",
-          "detail": "3 mi easy + 4 strides (no tempo this week).",
-          "duration_min": 32,
+          "detail": "3.75 mi easy + 4 strides (no tempo this week). (auto-adjusted from 3 mi)",
+          "duration_min": 40,
           "status": "upcoming",
-          "miles": 3.0
+          "miles": 3.75,
+          "miles_planned": 3.0
         },
         {
           "date": "2026-07-31",
@@ -286,7 +289,7 @@
           "type": "long_run",
           "detail": "4 mi easy.",
           "duration_min": 42,
-          "status": "upcoming",
+          "status": "partial",
           "miles": 4.0
         },
         {
@@ -297,7 +300,8 @@
           "status": "upcoming"
         }
       ],
-      "summary": "Down week, on purpose: volume drops so the rebuild sticks. No tempo, strength deloads, legs absorb the month."
+      "summary": "Down week, on purpose: volume drops so the rebuild sticks. No tempo, strength deloads, legs absorb the month.",
+      "miles_target": 12.5
     }
   ],
   "sketch": "Weeks 5-8 (home, gym access): base_build 17\u219220+ mi/wk, weighted strength returns 2x/wk, long run to 8 mi, tempo grows to 25 min. Detail generated as weeks approach."
