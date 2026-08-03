@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-05",
-  "goal_summary": "Rebuild running base to 16-17 mi/wk during July travel (bodyweight strength only), protecting arch/shins; mild deficit for ~0.5-0.75 lb/wk loss",
+  "goal_summary": "Miami Beach Halloween Half Marathon, Sat 2026-10-24 (12-wk block, wks 5-16). Goal: sub-2:05, stretch sub-2:00 (PR 1:52, not chasing this cycle). Weeks 5-6: rebuild consistency post-travel before loading anything. Speed days are optional (tempo/interval choice vs. an easy-run alternative) starting wk 7 \u2014 never mandatory. Target paces: easy/long ~10:00-10:30/mi, optional tempo ~9:05-9:20/mi, optional intervals ~8:30-8:50/mi, goal race pace 9:10-9:32/mi. Mild deficit continues for weight-loss secondary goal; never a deficit day-of/day-before the long run.",
   "phase_map": [
     {
       "phase": "base_rebuild",
@@ -15,9 +15,37 @@
         5,
         8
       ]
+    },
+    {
+      "phase": "base",
+      "weeks": [
+        5,
+        9
+      ]
+    },
+    {
+      "phase": "build",
+      "weeks": [
+        10,
+        13
+      ]
+    },
+    {
+      "phase": "peak",
+      "weeks": [
+        14,
+        15
+      ]
+    },
+    {
+      "phase": "taper",
+      "weeks": [
+        16,
+        16
+      ]
     }
   ],
-  "current_week": 1,
+  "current_week": 5,
   "weeks": [
     {
       "week": 1,
@@ -302,7 +330,208 @@
       ],
       "summary": "Down week, on purpose: volume drops so the rebuild sticks. No tempo, strength deloads, legs absorb the month.",
       "miles_target": 12.5
+    },
+    {
+      "week": 5,
+      "phase": "base",
+      "focus": "Rebuild consistency post-travel \u2014 conservative volume, no forced quality yet.",
+      "summary": "First week back: ~13 mi easy, nothing heroic. Just string together completed sessions.",
+      "sessions": [
+        {
+          "date": "2026-08-03",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "3 mi very easy, conversational \u2014 just get the legs moving again.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-08-04",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Bodyweight A, 3 rounds: 12 squats, 10 push-ups, 10 reverse lunges/leg, 30s side plank/side, 15 glute bridges, 15 single-leg calf raises/leg.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-08-05",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "3 mi very easy.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-08-06",
+          "day": "Thu",
+          "type": "easy_run",
+          "detail": "3 mi very easy \u2014 still no quality this week, on purpose.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-08-07",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Bodyweight B, 3 rounds: 10 tempo squats (3s down), 8-10 pike push-ups, 12 split squats/leg, 40s plank, 15 SL glute bridges/leg, 20 tibialis raises.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-08-08",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "4 mi easy, conversational. Practice pre-run fueling.",
+          "status": "upcoming",
+          "duration_min": 43,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-08-09",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "phase": "base",
+      "focus": "Volume returns gradually \u2014 still all easy effort, first optional strides.",
+      "summary": "~14.5 mi. If week 5 felt genuinely easy, this is where consistency starts compounding.",
+      "sessions": [
+        {
+          "date": "2026-08-10",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "3.25 mi very easy.",
+          "status": "upcoming",
+          "duration_min": 34,
+          "miles": 3.25
+        },
+        {
+          "date": "2026-08-11",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Bodyweight A, 3 rounds (add a round or slow the tempo if it felt easy last time).",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-08-12",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "3.25 mi very easy.",
+          "status": "upcoming",
+          "duration_min": 34,
+          "miles": 3.25
+        },
+        {
+          "date": "2026-08-13",
+          "day": "Thu",
+          "type": "easy_run",
+          "detail": "3.5 mi easy + 4-6 strides at the end (relaxed, not a workout) \u2014 light speed exposure only.",
+          "status": "upcoming",
+          "duration_min": 36,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-08-14",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Bodyweight B, 3 rounds.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-08-15",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "4.5 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 48,
+          "miles": 4.5
+        },
+        {
+          "date": "2026-08-16",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "phase": "base",
+      "focus": "First optional quality day. Pick speed or easy \u2014 either is a completed session.",
+      "summary": "~16 mi. Thursday is a choice, not a mandate: tempo option or an easy run, no wrong answer.",
+      "sessions": [
+        {
+          "date": "2026-08-17",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "3.5 mi very easy.",
+          "status": "upcoming",
+          "duration_min": 37,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-08-18",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Bodyweight A, 3-4 rounds.",
+          "status": "upcoming",
+          "duration_min": 32
+        },
+        {
+          "date": "2026-08-19",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "3.5 mi very easy.",
+          "status": "upcoming",
+          "duration_min": 37,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-08-20",
+          "day": "Thu",
+          "type": "tempo_run",
+          "detail": "Pick one \u2014 both are a completed workout: Option A (light tempo) \u2014 1 mi easy + 10 min @ comfortably-hard (~9:15-9:30/mi) + 1 mi easy, ~3.5 mi total. Option B (easy) \u2014 3.5 mi easy, whatever the legs want today.",
+          "status": "upcoming",
+          "duration_min": 37,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-08-21",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Bodyweight B, 3-4 rounds.",
+          "status": "upcoming",
+          "duration_min": 32
+        },
+        {
+          "date": "2026-08-22",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "5.5 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 58,
+          "miles": 5.5
+        },
+        {
+          "date": "2026-08-23",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ]
     }
   ],
-  "sketch": "Weeks 5-8 (home, gym access): base_build 17\u219220+ mi/wk, weighted strength returns 2x/wk, long run to 8 mi, tempo grows to 25 min. Detail generated as weeks approach."
+  "sketch": "Weeks 8-9 (base, cont.): easy volume to ~17-18 mi/wk, long run to 6.5-7 mi, Thursday quality_optional continues weekly (tempo option grows to ~15-20 min). Weeks 10-13 (build): add optional race-pace intervals (Option A ~8:30-8:50/mi reps vs. Option B easy), long run grows to 8-9 mi, down week (-30% volume) around wk 12 or 13. Weeks 14-15 (peak): highest volume, peak long run 10-11 mi with race-pace segments, quality stays optional. Week 16 (taper/race wk, Oct 19-25): volume -40-60%, short shakeout runs only, freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24 \u2014 goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi). Detail generated as each week approaches."
 }
