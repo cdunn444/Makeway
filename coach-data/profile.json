@@ -81,9 +81,8 @@
     "units": "miles"
   },
   "context": {
-    "traveling_until": "2026-08-02",
     "equipment": "bodyweight only through July; possible light gym access",
-    "pickleball": "opportunistic \u2014 counts as cross-training on easy/rest days"
+    "pickleball": "Capped at 1-2x/wk typical, up to 3x on a big week (self-imposed cap, set 2026-08-03 after pickleball repeatedly displaced runs in late July/early Aug). Fine to fold in on easy/rest days as bonus cross-training; should NOT displace the long run or a quality session once the week's cap is already hit \u2014 flag it if that starts happening rather than silently rescheduling."
   },
   "targets": {
     "bmr": 1650,
