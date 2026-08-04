@@ -340,19 +340,19 @@
         {
           "date": "2026-08-03",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "3 mi very easy, conversational \u2014 just get the legs moving again.",
-          "status": "upcoming",
-          "duration_min": 32,
-          "miles": 3.0
+          "type": "strength",
+          "detail": "Bodyweight A, 3 rounds: 12 squats, 10 push-ups, 10 reverse lunges/leg, 30s side plank/side, 15 glute bridges, 15 single-leg calf raises/leg. (Swapped from Tue.)",
+          "status": "completed",
+          "duration_min": 30
         },
         {
           "date": "2026-08-04",
           "day": "Tue",
-          "type": "strength",
-          "detail": "Bodyweight A, 3 rounds: 12 squats, 10 push-ups, 10 reverse lunges/leg, 30s side plank/side, 15 glute bridges, 15 single-leg calf raises/leg.",
-          "status": "upcoming",
-          "duration_min": 30
+          "type": "easy_run",
+          "detail": "3 mi very easy, conversational. (Swapped from Mon.)",
+          "status": "completed",
+          "duration_min": 32,
+          "miles": 3.0
         },
         {
           "date": "2026-08-05",
