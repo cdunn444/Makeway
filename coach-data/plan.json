@@ -358,19 +358,21 @@
           "date": "2026-08-05",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "3 mi very easy.",
+          "detail": "2 mi very easy. (auto-adjusted from 3 mi)",
           "status": "upcoming",
-          "duration_min": 32,
-          "miles": 3.0
+          "duration_min": 21,
+          "miles": 2.0,
+          "miles_planned": 3.0
         },
         {
           "date": "2026-08-06",
           "day": "Thu",
           "type": "easy_run",
-          "detail": "3 mi very easy \u2014 still no quality this week, on purpose.",
+          "detail": "2.25 mi very easy \u2014 still no quality this week, on purpose. (auto-adjusted from 3 mi)",
           "status": "upcoming",
-          "duration_min": 32,
-          "miles": 3.0
+          "duration_min": 24,
+          "miles": 2.25,
+          "miles_planned": 3.0
         },
         {
           "date": "2026-08-07",
@@ -396,7 +398,8 @@
           "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
           "status": "upcoming"
         }
-      ]
+      ],
+      "miles_target": 13.0
     },
     {
       "week": 6,
