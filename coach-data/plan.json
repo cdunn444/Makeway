@@ -359,7 +359,7 @@
           "day": "Wed",
           "type": "easy_run",
           "detail": "2 mi very easy. (auto-adjusted from 3 mi)",
-          "status": "upcoming",
+          "status": "skipped",
           "duration_min": 21,
           "miles": 2.0,
           "miles_planned": 3.0
@@ -368,7 +368,7 @@
           "date": "2026-08-06",
           "day": "Thu",
           "type": "easy_run",
-          "detail": "2.25 mi very easy \u2014 still no quality this week, on purpose. (auto-adjusted from 3 mi)",
+          "detail": "2.25 mi very easy \u2014 still no quality this week, on purpose. (auto-adjusted from 3 mi) Actual: 4.0 mi \u2014 bumped up to compensate for Wednesday.",
           "status": "completed",
           "duration_min": 24,
           "miles": 2.25,
