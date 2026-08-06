@@ -386,10 +386,11 @@
           "date": "2026-08-08",
           "day": "Sat",
           "type": "long_run",
-          "detail": "4 mi easy, conversational. Practice pre-run fueling.",
+          "detail": "4.5 mi easy, conversational. Practice pre-run fueling. (auto-adjusted from 4 mi)",
           "status": "upcoming",
-          "duration_min": 43,
-          "miles": 4.0
+          "duration_min": 48,
+          "miles": 4.5,
+          "miles_planned": 4.0
         },
         {
           "date": "2026-08-09",
