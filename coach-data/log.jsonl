@@ -180,3 +180,5 @@
 {"date": "2026-08-07", "kind": "nutrition", "desc": "post-workout: usual Truvani protein shake", "kcal": 130, "protein_g": 20, "carbs_g": 5, "fat_g": 3}
 {"date": "2026-08-07", "kind": "nutrition", "desc": "breakfast: 2 eggs, 100g egg whites, hefty scoop of guac", "kcal": 275, "protein_g": 25, "carbs_g": 6, "fat_g": 17}
 {"date": "2026-08-07", "kind": "nutrition", "desc": "meal: 1/2 cup sauteed sweet potato, 1/2 cup sauteed summer squash, 1/2 cup 90/10 ground beef, drizzle Primal Kitchen avocado lime cilantro sauce", "kcal": 336, "protein_g": 24.6, "carbs_g": 25, "fat_g": 16.2}
+{"date": "2026-08-08", "kind": "nutrition", "desc": "pre-run: 2 slices GF Canyon Bakehouse bread, 8g peanut butter total, small banana", "kcal": 318, "protein_g": 9, "carbs_g": 58.6, "fat_g": 8.3}
+{"date": "2026-08-08", "kind": "nutrition", "desc": "post-run: usual Truvani protein shake, Lifetime chimichurri steak bowl (cotija cheese removed, adjusted from listed 570/44/39/30)", "kcal": 605, "protein_g": 59, "carbs_g": 44, "fat_g": 25}
