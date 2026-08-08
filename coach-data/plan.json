@@ -387,7 +387,7 @@
           "day": "Sat",
           "type": "long_run",
           "detail": "4.5 mi easy, conversational. Practice pre-run fueling. (auto-adjusted from 4 mi)",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 48,
           "miles": 4.5,
           "miles_planned": 4.0
