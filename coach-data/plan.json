@@ -421,7 +421,7 @@
           "date": "2026-08-11",
           "day": "Tue",
           "type": "strength",
-          "detail": "Bodyweight A, 3 rounds (add a round or slow the tempo if it felt easy last time).",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light for now \u2014 arch is flagged, keep this one light until it settles).",
           "status": "upcoming",
           "duration_min": 30
         },
@@ -447,7 +447,7 @@
           "date": "2026-08-14",
           "day": "Fri",
           "type": "strength",
-          "detail": "Bodyweight B, 3 rounds.",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20 (bodyweight/band only for now \u2014 same arch caution as Gym A's calf work).",
           "status": "upcoming",
           "duration_min": 30
         },
@@ -488,7 +488,7 @@
           "date": "2026-08-18",
           "day": "Tue",
           "type": "strength",
-          "detail": "Bodyweight A, 3-4 rounds.",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light for now \u2014 arch is flagged, keep this one light until it settles).",
           "status": "upcoming",
           "duration_min": 32
         },
@@ -514,7 +514,7 @@
           "date": "2026-08-21",
           "day": "Fri",
           "type": "strength",
-          "detail": "Bodyweight B, 3-4 rounds.",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20 (bodyweight/band only for now \u2014 same arch caution as Gym A's calf work).",
           "status": "upcoming",
           "duration_min": 32
         },
