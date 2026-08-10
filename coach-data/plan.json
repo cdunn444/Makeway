@@ -411,19 +411,19 @@
         {
           "date": "2026-08-10",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "3.25 mi very easy -- CONDITIONAL on left arch/ankle feeling normal at first steps tomorrow (flagged achey 8/10, not sharp, not clearing through the day). Go/no-go: pain-free and loose within the first 5 min of walking around = run easy, bail at any twinge. Any sharp pain, or the same dull ache still present at wake-up = skip and do a short cross-train/walk instead, no debate.",
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light for now -- arch is flagged, keep this one light until it settles). (Swapped from Tue -- extra day off the arch before running.)",
           "status": "upcoming",
-          "duration_min": 34,
-          "miles": 3.25
+          "duration_min": 30
         },
         {
           "date": "2026-08-11",
           "day": "Tue",
-          "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light for now \u2014 arch is flagged, keep this one light until it settles).",
+          "type": "easy_run",
+          "detail": "3.25 mi very easy -- CONDITIONAL on left arch/ankle feeling normal at first steps (flagged achey 8/10). Go/no-go: pain-free and loose within the first 5 min of walking around = run easy, bail at any twinge. Any sharp pain, or the same dull ache still present at wake-up = skip and do a short cross-train/walk instead, no debate. (Swapped from Mon.)",
           "status": "upcoming",
-          "duration_min": 30
+          "duration_min": 34,
+          "miles": 3.25
         },
         {
           "date": "2026-08-12",
