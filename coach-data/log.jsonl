@@ -206,3 +206,5 @@
 {"date": "2026-08-12", "kind": "workout", "session_date": "2026-08-12", "type": "easy_run", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i175081587", "planned": true, "name": "Miami-Dade County Running", "actual": "3.27 mi in 34 min", "duration_min": 34, "miles": 3.27, "avg_pace": "10:23/mi", "avg_hr": 159, "max_hr": 190, "active_kcal": 390}
 {"date": "2026-08-12", "kind": "nutrition", "desc": "pre-run: banana, 5g peanut butter", "kcal": 135, "protein_g": 2.6, "carbs_g": 28, "fat_g": 2.9}
 {"date": "2026-08-12", "kind": "nutrition", "desc": "post-run: usual Truvani protein shake, 2 eggs, 100g egg whites, 1.5oz smoked salmon, 1 slice Canyon GF bread", "kcal": 465, "protein_g": 54.5, "carbs_g": 24, "fat_g": 16.8}
+{"date": "2026-08-12", "kind": "nutrition", "desc": "lunch: OMA Deluxe hand roll experience at Omakai (5 hand rolls: salmon shiso, blue crab, yellowtail, bay scallop, negi-toro), no soy sauce", "kcal": 465, "protein_g": 29, "carbs_g": 61, "fat_g": 12.5}
+{"date": "2026-08-12", "kind": "nutrition", "desc": "TruBar protein bar (still hungry after lunch)", "kcal": 190, "protein_g": 12, "carbs_g": 22, "fat_g": 8}
