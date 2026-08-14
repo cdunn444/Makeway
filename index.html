@@ -488,7 +488,7 @@ const fuelCat = t => (t === 'tempo_run' || t === 'interval_run') ? 'quality'
    what you actually did. */
 function dayMacros(s, date) {
   const T = PROFILE?.targets; if (!T) return null;
-  const isRest = !s || s.type === 'rest' || s.type === 'active_recovery';
+  const isRest = !s || s.type === 'rest' || s.type === 'active_recovery' || s.status === 'skipped';
   const M = T.model;
   if (!M) return T[isRest ? 'macros_rest_day' : 'macros_training_day'] || null;
   const d = s?.date || date;
