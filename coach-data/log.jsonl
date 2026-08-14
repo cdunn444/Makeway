@@ -212,3 +212,8 @@
 {"date": "2026-08-12", "kind": "nutrition", "desc": "1/3 lb burger patty, guessing 85/15 grass-fed ground beef", "kcal": 284, "protein_g": 28, "carbs_g": 0, "fat_g": 20}
 {"date": "2026-08-12", "kind": "nutrition", "desc": "1 Recess beverage, 2 squares Hu dark chocolate with almond butter filling", "kcal": 120, "protein_g": 2, "carbs_g": 9, "fat_g": 7}
 {"date": "2026-08-13", "kind": "nutrition", "desc": "breakfast: Canyon GF brioche bun, 1.3oz smoked salmon, 5 strawberries, 170g Icelandic Provisions oat milk protein yogurt, 3 Applegate Naturals turkey breakfast sausage links", "kcal": 470, "protein_g": 33, "carbs_g": 53, "fat_g": 15}
+{"date": "2026-08-13", "kind": "workout", "session_date": "2026-08-13", "type": "easy_run", "result": "skipped", "reason": "took a genuine rest day"}
+{"date": "2026-08-14", "kind": "workout", "session_date": "2026-08-14", "type": "easy_run", "result": "completed", "source": "user report", "planned": true, "name": "Running", "actual": "3.5 mi, moved from Thursday", "miles": 3.5}
+{"date": "2026-08-14", "kind": "adaptation", "action": "Rest taken Thu 8/13, run moved to Fri 8/14 (completed). Friday's Gym B strength bumped to Sunday 8/16 (was rest) rather than stacked onto Tuesday's Gym A day.", "trigger": "user reported rest day + run swap"}
+{"date": "2026-08-14", "kind": "nutrition", "desc": "pre-run: banana, peanut butter", "kcal": 135, "protein_g": 2.6, "carbs_g": 28, "fat_g": 2.9}
+{"date": "2026-08-14", "kind": "nutrition", "desc": "breakfast: usual protein shake, 2 eggs, 100g egg whites, 2 slices Canyon GF bread, 2 spoons guacamole", "kcal": 555, "protein_g": 50, "carbs_g": 44, "fat_g": 21}

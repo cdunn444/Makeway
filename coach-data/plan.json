@@ -439,17 +439,19 @@
           "day": "Thu",
           "type": "easy_run",
           "detail": "3.5 mi easy + 4-6 strides at the end (relaxed, not a workout) \u2014 light speed exposure only.",
-          "status": "upcoming",
+          "status": "skipped",
           "duration_min": 36,
-          "miles": 3.5
+          "miles": 3.5,
+          "note": "Took as a genuine rest day; run moved to Friday."
         },
         {
           "date": "2026-08-14",
           "day": "Fri",
-          "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20 (bodyweight/band only for now \u2014 same arch caution as Gym A's calf work).",
-          "status": "upcoming",
-          "duration_min": 30
+          "type": "easy_run",
+          "detail": "3.5 mi easy + 4-6 strides at the end. (Moved from Thursday.)",
+          "status": "completed",
+          "duration_min": 36,
+          "miles": 3.5
         },
         {
           "date": "2026-08-15",
@@ -463,9 +465,10 @@
         {
           "date": "2026-08-16",
           "day": "Sun",
-          "type": "rest",
-          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20 (bodyweight/band). (Moved from Friday, bumped by the run swap.)",
+          "status": "upcoming",
+          "duration_min": 30
         }
       ]
     },
