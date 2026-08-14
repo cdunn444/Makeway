@@ -437,12 +437,10 @@
         {
           "date": "2026-08-13",
           "day": "Thu",
-          "type": "easy_run",
-          "detail": "3.5 mi easy + 4-6 strides at the end (relaxed, not a workout) \u2014 light speed exposure only.",
-          "status": "skipped",
-          "duration_min": 36,
-          "miles": 3.5,
-          "note": "Took as a genuine rest day; run moved to Friday."
+          "type": "rest",
+          "detail": "Rest \u2014 planned easy run moved to Friday.",
+          "status": "completed",
+          "note": "Run relocated to 8/14, not skipped-and-lost \u2014 see Friday entry."
         },
         {
           "date": "2026-08-14",
