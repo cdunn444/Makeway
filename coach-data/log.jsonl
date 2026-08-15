@@ -225,3 +225,5 @@
 {"date": "2026-08-15", "kind": "nutrition", "desc": "breakfast: 130g Icelandic Provisions oat milk protein yogurt, 6 strawberries, 30g Simply Elizabeth granola (per label)", "kcal": 310, "protein_g": 18, "carbs_g": 29, "fat_g": 15}
 {"date": "2026-08-15", "kind": "nutrition", "desc": "approx 100g egg whites, 1 slice Canyon GF bread", "kcal": 145, "protein_g": 15, "carbs_g": 18, "fat_g": 2}
 {"date": "2026-08-15", "kind": "adaptation", "action": "Swapped Sat/Sun sessions: Gym B strength today, long run moved to Sunday -- poor sleep last night plus today's timing made strength the better fit today.", "trigger": "user requested day swap"}
+{"date": "2026-08-15", "kind": "nutrition", "desc": "usual Truvani protein shake", "kcal": 130, "protein_g": 20, "carbs_g": 5, "fat_g": 3}
+{"date": "2026-08-15", "kind": "nutrition", "desc": "lunch: Sweetgreen Shroomami bowl, tofu swapped for roasted chicken, no miso dressing", "kcal": 545, "protein_g": 33, "carbs_g": 57, "fat_g": 17}
