@@ -227,3 +227,5 @@
 {"date": "2026-08-15", "kind": "adaptation", "action": "Swapped Sat/Sun sessions: Gym B strength today, long run moved to Sunday -- poor sleep last night plus today's timing made strength the better fit today.", "trigger": "user requested day swap"}
 {"date": "2026-08-15", "kind": "nutrition", "desc": "usual Truvani protein shake", "kcal": 130, "protein_g": 20, "carbs_g": 5, "fat_g": 3}
 {"date": "2026-08-15", "kind": "nutrition", "desc": "lunch: Sweetgreen Shroomami bowl, tofu swapped for roasted chicken, no miso dressing", "kcal": 545, "protein_g": 33, "carbs_g": 57, "fat_g": 17}
+{"date": "2026-08-16", "kind": "nutrition", "desc": "pre-run: 3 slices Canyon GF bread, 6g peanut butter", "kcal": 306, "protein_g": 10.6, "carbs_g": 52.2, "fat_g": 9}
+{"date": "2026-08-16", "kind": "nutrition", "desc": "post-run: usual Truvani protein shake", "kcal": 130, "protein_g": 20, "carbs_g": 5, "fat_g": 3}
