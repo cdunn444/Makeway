@@ -456,7 +456,7 @@
           "day": "Sat",
           "type": "strength",
           "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20 (bodyweight/band). (Swapped from Sunday -- poor sleep, better timing today.)",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 30
         },
         {
@@ -464,7 +464,7 @@
           "day": "Sun",
           "type": "long_run",
           "detail": "4.5 mi easy, conversational. (Swapped from Saturday.)",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 48,
           "miles": 4.5
         }
