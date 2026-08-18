@@ -479,20 +479,19 @@
         {
           "date": "2026-08-17",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "2 mi very easy. (auto-adjusted from 3.5 mi)",
-          "status": "upcoming",
-          "duration_min": 21,
-          "miles": 2.0,
+          "type": "rest",
+          "detail": "Rest \u2014 walk + 10 min arch/calf mobility. (Planned easy run not taken; genuine rest day.)",
+          "status": "completed",
           "miles_planned": 3.5
         },
         {
           "date": "2026-08-18",
           "day": "Tue",
-          "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light for now \u2014 arch is flagged, keep this one light until it settles).",
-          "status": "upcoming",
-          "duration_min": 32
+          "type": "easy_run",
+          "detail": "Unplanned easy run happened instead of Gym A (5.01 mi actual). Gym A moved to Sunday.",
+          "status": "completed",
+          "duration_min": 52,
+          "miles": 5.01
         },
         {
           "date": "2026-08-19",
@@ -534,9 +533,10 @@
         {
           "date": "2026-08-23",
           "day": "Sun",
-          "type": "rest",
-          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light). (Moved from Tuesday -- ran instead that day.)",
+          "status": "upcoming",
+          "duration_min": 30
         }
       ],
       "miles_target": 16.0
