@@ -480,10 +480,11 @@
           "date": "2026-08-17",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "3.5 mi very easy.",
+          "detail": "2 mi very easy. (auto-adjusted from 3.5 mi)",
           "status": "upcoming",
-          "duration_min": 37,
-          "miles": 3.5
+          "duration_min": 21,
+          "miles": 2.0,
+          "miles_planned": 3.5
         },
         {
           "date": "2026-08-18",
@@ -497,10 +498,11 @@
           "date": "2026-08-19",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "3.5 mi very easy.",
+          "detail": "2 mi very easy. (auto-adjusted from 3.5 mi)",
           "status": "upcoming",
-          "duration_min": 37,
-          "miles": 3.5
+          "duration_min": 21,
+          "miles": 2.0,
+          "miles_planned": 3.5
         },
         {
           "date": "2026-08-20",
@@ -523,10 +525,11 @@
           "date": "2026-08-22",
           "day": "Sat",
           "type": "long_run",
-          "detail": "5.5 mi easy, conversational.",
+          "detail": "5 mi easy, conversational. (auto-adjusted from 5.5 mi)",
           "status": "upcoming",
-          "duration_min": 58,
-          "miles": 5.5
+          "duration_min": 53,
+          "miles": 5.0,
+          "miles_planned": 5.5
         },
         {
           "date": "2026-08-23",
@@ -535,7 +538,8 @@
           "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
           "status": "upcoming"
         }
-      ]
+      ],
+      "miles_target": 16.0
     }
   ],
   "sketch": "Weeks 8-9 (base, cont.): easy volume to ~17-18 mi/wk, long run to 6.5-7 mi, Thursday quality_optional continues weekly (tempo option grows to ~15-20 min). Weeks 10-13 (build): add optional race-pace intervals (Option A ~8:30-8:50/mi reps vs. Option B easy), long run grows to 8-9 mi, down week (-30% volume) around wk 12 or 13. Weeks 14-15 (peak): highest volume, peak long run 10-11 mi with race-pace segments, quality stays optional. Week 16 (taper/race wk, Oct 19-25): volume -40-60%, short shakeout runs only, freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24 \u2014 goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi). Detail generated as each week approaches."
