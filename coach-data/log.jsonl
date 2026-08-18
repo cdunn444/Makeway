@@ -236,3 +236,4 @@
 {"date": "2026-08-18", "kind": "adaptation", "action": "Reconciled a two-day gap: Monday 8/17 was a genuine rest day (marked accordingly, plan updated to match). Tuesday 8/18 an unplanned run happened (5.01 mi, already synced) instead of the scheduled Gym A strength -- moved Gym A to Sunday 8/23 rather than stacking it on Friday's Gym B day.", "trigger": "user confirmed Monday rest, no strength today"}
 {"date": "2026-08-18", "kind": "nutrition", "desc": "lunch: 1.25 servings rice cooked with bone broth, 5oz skinless boneless chicken thigh, 1/2 cup sauteed zucchini with a drizzle of Kinder's BBQ sauce", "kcal": 605, "protein_g": 42, "carbs_g": 76, "fat_g": 15}
 {"date": "2026-08-18", "kind": "nutrition", "desc": "snack: TruBar protein bar", "kcal": 190, "protein_g": 12, "carbs_g": 22, "fat_g": 8}
+{"date": "2026-08-18", "kind": "nutrition", "desc": "dinner: 6oz chicken thighs, 1 serving Jovial GF pasta", "kcal": 495, "protein_g": 46, "carbs_g": 44, "fat_g": 15}
