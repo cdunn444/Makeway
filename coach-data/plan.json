@@ -45,7 +45,7 @@
       ]
     }
   ],
-  "current_week": 5,
+  "current_week": 8,
   "weeks": [
     {
       "week": 1,
@@ -498,48 +498,121 @@
           "day": "Wed",
           "type": "easy_run",
           "detail": "2 mi very easy. (auto-adjusted from 3.5 mi)",
-          "status": "upcoming",
+          "status": "skipped",
           "duration_min": 21,
           "miles": 2.0,
-          "miles_planned": 3.5
+          "miles_planned": 3.5,
+          "note": "Family wedding travel (NYC) + late work nights derailed the rest of the week."
         },
         {
           "date": "2026-08-20",
           "day": "Thu",
           "type": "tempo_run",
           "detail": "Pick one \u2014 both are a completed workout: Option A (light tempo) \u2014 1 mi easy + 10 min @ comfortably-hard (~9:15-9:30/mi) + 1 mi easy, ~3.5 mi total. Option B (easy) \u2014 3.5 mi easy, whatever the legs want today.",
-          "status": "upcoming",
+          "status": "skipped",
           "duration_min": 37,
-          "miles": 3.5
+          "miles": 3.5,
+          "note": "Wedding travel."
         },
         {
           "date": "2026-08-21",
           "day": "Fri",
           "type": "strength",
           "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20 (bodyweight/band only for now \u2014 same arch caution as Gym A's calf work).",
-          "status": "upcoming",
-          "duration_min": 32
+          "status": "skipped",
+          "duration_min": 32,
+          "note": "Wedding travel."
         },
         {
           "date": "2026-08-22",
           "day": "Sat",
           "type": "long_run",
           "detail": "5 mi easy, conversational. (auto-adjusted from 5.5 mi)",
-          "status": "upcoming",
+          "status": "skipped",
           "duration_min": 53,
           "miles": 5.0,
-          "miles_planned": 5.5
+          "miles_planned": 5.5,
+          "note": "Wedding day."
         },
         {
           "date": "2026-08-23",
           "day": "Sun",
           "type": "strength",
           "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15 (bodyweight/light). (Moved from Tuesday -- ran instead that day.)",
-          "status": "upcoming",
-          "duration_min": 30
+          "status": "skipped",
+          "duration_min": 30,
+          "note": "Travel/recovery day, letting the whole week go rather than cramming. Restart Monday 8/24."
         }
       ],
       "miles_target": 16.0
+    },
+    {
+      "week": 8,
+      "phase": "base",
+      "focus": "Restart after a disrupted week 7 (wedding travel + late work nights) \u2014 hold volume flat, ease back into running rhythm.",
+      "summary": "~15 mi. No progression this week since last week's structured training didn't happen \u2014 four days of genuinely heavy NEAT (15k+ steps, stairs, NYC walking) means legs aren't detrained, but the running rhythm needs re-establishing before pushing volume again.",
+      "sessions": [
+        {
+          "date": "2026-08-24",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "3 mi easy, conversational \u2014 first run back, nothing more than RPE 3-4.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-08-25",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-08-26",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "3.5 mi easy.",
+          "status": "upcoming",
+          "duration_min": 37,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-08-27",
+          "day": "Thu",
+          "type": "tempo_run",
+          "detail": "Pick one \u2014 both are a completed workout: Option A (light tempo) \u2014 1 mi easy + 10-12 min @ comfortably-hard (~9:15-9:30/mi) + 1 mi easy, ~3.5 mi total. Option B (easy) \u2014 3.5 mi easy.",
+          "status": "upcoming",
+          "duration_min": 37,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-08-28",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "status": "upcoming",
+          "duration_min": 32
+        },
+        {
+          "date": "2026-08-29",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "5 mi easy, conversational \u2014 held flat vs. last week's planned long run rather than growing it, since it didn't happen.",
+          "status": "upcoming",
+          "duration_min": 53,
+          "miles": 5.0
+        },
+        {
+          "date": "2026-08-30",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 15.0
     }
   ],
   "sketch": "Weeks 8-9 (base, cont.): easy volume to ~17-18 mi/wk, long run to 6.5-7 mi, Thursday quality_optional continues weekly (tempo option grows to ~15-20 min). Weeks 10-13 (build): add optional race-pace intervals (Option A ~8:30-8:50/mi reps vs. Option B easy), long run grows to 8-9 mi, down week (-30% volume) around wk 12 or 13. Weeks 14-15 (peak): highest volume, peak long run 10-11 mi with race-pace segments, quality stays optional. Week 16 (taper/race wk, Oct 19-25): volume -40-60%, short shakeout runs only, freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24 \u2014 goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi). Detail generated as each week approaches."
