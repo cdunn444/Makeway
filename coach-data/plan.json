@@ -576,10 +576,10 @@
           "type": "easy_run",
           "detail": "3.5 mi easy.",
           "status": "completed",
-          "duration_min": 37,
-          "miles": 4.0,
+          "duration_min": 43,
+          "miles": 4.01,
           "miles_planned": 3.5,
-          "note": "Actual 4.0 mi (planned 3.5) -- pending Garmin sync for pace/HR."
+          "note": "4.01 mi in 43 min, 10:43/mi avg, avg HR 153/max 172 (Garmin synced)."
         },
         {
           "date": "2026-08-27",
