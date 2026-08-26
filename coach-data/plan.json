@@ -566,17 +566,20 @@
           "day": "Tue",
           "type": "strength",
           "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
-          "status": "upcoming",
-          "duration_min": 30
+          "status": "skipped",
+          "duration_min": 30,
+          "note": "Worked late, slept in. Moved to Sunday 8/30 (was rest)."
         },
         {
           "date": "2026-08-26",
           "day": "Wed",
           "type": "easy_run",
           "detail": "3.5 mi easy.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 37,
-          "miles": 3.5
+          "miles": 4.0,
+          "miles_planned": 3.5,
+          "note": "Actual 4.0 mi (planned 3.5) -- pending Garmin sync for pace/HR."
         },
         {
           "date": "2026-08-27",
@@ -607,9 +610,10 @@
         {
           "date": "2026-08-30",
           "day": "Sun",
-          "type": "rest",
-          "detail": "Rest \u2014 walk + 10 min arch/calf mobility.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15. (Moved from Tuesday -- work ran late.)",
+          "status": "upcoming",
+          "duration_min": 30
         }
       ],
       "miles_target": 15.0
