@@ -584,8 +584,8 @@
         {
           "date": "2026-08-27",
           "day": "Thu",
-          "type": "tempo_run",
-          "detail": "Pick one \u2014 both are a completed workout: Option A (light tempo) \u2014 1 mi easy + 10-12 min @ comfortably-hard (~9:15-9:30/mi) + 1 mi easy, ~3.5 mi total. Option B (easy) \u2014 3.5 mi easy.",
+          "type": "interval_run",
+          "detail": "First intervals of the cycle (upgraded from the tempo/easy choice at user's request): 0.75 mi easy warm-up, then 4 x 400m @ 8:30-8:50/mi (RPE 7-8, controlled -- not all-out) with 400m easy jog recovery between reps, 0.75 mi easy cooldown. ~3.5 mi total. In the heat, fine to walk the recovery 400s instead of jogging if HR is climbing -- same purpose as the run-walk strategy. Stop the rep (not just slow down) at any arch/shin twinge.",
           "status": "upcoming",
           "duration_min": 37,
           "miles": 3.5
