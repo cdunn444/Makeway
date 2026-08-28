@@ -586,9 +586,11 @@
           "day": "Thu",
           "type": "interval_run",
           "detail": "First intervals of the cycle (upgraded from the tempo/easy choice at user's request): 0.75 mi easy warm-up, then 4 x 400m @ 8:30-8:50/mi (RPE 7-8, controlled -- not all-out) with 400m easy jog recovery between reps, 0.75 mi easy cooldown. ~3.5 mi total. In the heat, fine to walk the recovery 400s instead of jogging if HR is climbing -- same purpose as the run-walk strategy. Stop the rep (not just slow down) at any arch/shin twinge.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 37,
-          "miles": 3.5
+          "miles": 4.0,
+          "miles_planned": 3.5,
+          "note": "1 mi warm-up + 5x400 on/off (vs. 4 planned) + cooldown, ~4 mi total. Reported feeling strong and fast. Debuted Brooks Hyperion GTS (plated speed shoe) -- pending Garmin sync for exact splits/HR."
         },
         {
           "date": "2026-08-28",
