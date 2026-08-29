@@ -263,3 +263,7 @@
 {"date": "2026-08-28", "kind": "nutrition", "desc": "breakfast: 2 slices Canyon GF bread, 1.5oz smoked salmon, 2 eggs", "kcal": 375, "protein_g": 27, "carbs_g": 33, "fat_g": 16}
 {"date": "2026-08-28", "kind": "nutrition", "desc": "lunch: Naked Farmer bowl -- lettuce, sweet potato, green beans, chicken thighs", "kcal": 460, "protein_g": 38, "carbs_g": 40, "fat_g": 15}
 {"date": "2026-08-28", "kind": "coach_note", "topic": "nutrition", "level": "good", "text": "835 kcal / 65P / 73C / 31F through lunch vs. today's ~1850 kcal rest-day target -- well balanced across all macros, right on pace."}
+{"date": "2026-08-29", "kind": "adaptation", "action": "Swapped Sat/Sun sessions: Gym A strength today, long run moved to Sunday.", "trigger": "user requested day swap"}
+{"date": "2026-08-29", "kind": "nutrition", "desc": "pre-lift: 2 slices Canyon GF bread, 6g peanut butter", "kcal": 216, "protein_g": 7.6, "carbs_g": 35.2, "fat_g": 7}
+{"date": "2026-08-29", "kind": "nutrition", "desc": "post-lift: banana, scoop Truvani protein, 100g Icelandic Provisions protein oat yogurt, 1oz smoked salmon, 1 Honeycrisp apple, 1 big turkey Chomps stick", "kcal": 560, "protein_g": 52, "carbs_g": 71, "fat_g": 11}
+{"date": "2026-08-29", "kind": "coach_note", "topic": "nutrition", "level": "good", "text": "776 kcal / 60P / 106C / 18F so far vs. today's ~2220 kcal strength-day target -- protein's already well ahead of pace, fat has plenty of room left for later meals."}
