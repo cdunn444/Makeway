@@ -607,16 +607,19 @@
           "type": "strength",
           "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15. (Moved from Tuesday -- work ran late -- then swapped with Sunday's long run.)",
           "status": "completed",
-          "duration_min": 30
+          "duration_min": 56,
+          "note": "Garmin synced: 56 min, avg HR 112/max 146."
         },
         {
           "date": "2026-08-30",
           "day": "Sun",
           "type": "long_run",
           "detail": "5 mi easy, conversational \u2014 held flat vs. last week's planned long run rather than growing it, since it didn't happen. (Swapped with Saturday's strength.)",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 53,
-          "miles": 5.0
+          "miles": 6.0,
+          "miles_planned": 5.0,
+          "note": "6 mi actual (planned 5.0), fueled with a Huma chia gel mid-run. Pending Garmin sync for pace/HR."
         }
       ],
       "miles_target": 15.0
