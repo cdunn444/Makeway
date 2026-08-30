@@ -616,10 +616,10 @@
           "type": "long_run",
           "detail": "5 mi easy, conversational \u2014 held flat vs. last week's planned long run rather than growing it, since it didn't happen. (Swapped with Saturday's strength.)",
           "status": "completed",
-          "duration_min": 53,
-          "miles": 6.0,
+          "duration_min": 60,
+          "miles": 6.01,
           "miles_planned": 5.0,
-          "note": "6 mi actual (planned 5.0), fueled with a Huma chia gel mid-run. Pending Garmin sync for pace/HR."
+          "note": "Garmin synced: 6.01 mi in 60 min, 9:59/mi avg, avg HR 153/max 170. Fueled with a Huma chia gel mid-run."
         }
       ],
       "miles_target": 15.0
