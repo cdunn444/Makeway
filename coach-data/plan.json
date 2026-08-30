@@ -614,9 +614,11 @@
           "day": "Sun",
           "type": "long_run",
           "detail": "5 mi easy, conversational \u2014 held flat vs. last week's planned long run rather than growing it, since it didn't happen. (Swapped with Saturday's strength.)",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 53,
-          "miles": 5.0
+          "miles": 6.0,
+          "miles_planned": 5.0,
+          "note": "6 mi actual (planned 5.0), fueled with a Huma chia gel mid-run. Pending Garmin sync for pace/HR."
         }
       ],
       "miles_target": 15.0
