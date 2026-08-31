@@ -635,9 +635,11 @@
           "day": "Mon",
           "type": "easy_run",
           "detail": "3.5 mi easy, conversational.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 37,
-          "miles": 3.5
+          "miles": 4.0,
+          "miles_planned": 3.5,
+          "note": "4 mi actual (planned 3.5). Pending Garmin sync for pace/HR."
         },
         {
           "date": "2026-09-01",
