@@ -636,18 +636,20 @@
           "type": "easy_run",
           "detail": "3.5 mi easy, conversational.",
           "status": "completed",
-          "duration_min": 37,
-          "miles": 4.0,
+          "duration_min": 41,
+          "miles": 4.01,
           "miles_planned": 3.5,
-          "note": "4 mi actual (planned 3.5). Pending Garmin sync for pace/HR."
+          "note": "Garmin synced: 4.01 mi in 41 min, 10:13/mi avg, avg HR 151/max 173."
         },
         {
           "date": "2026-09-01",
           "day": "Tue",
-          "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20. (Owed from last Friday, which was let go.)",
-          "status": "upcoming",
-          "duration_min": 32
+          "type": "easy_run",
+          "detail": "Unplanned 4 mi easy run happened instead of Gym B. Gym B moved to Sunday.",
+          "status": "completed",
+          "duration_min": 42,
+          "miles": 4.0,
+          "note": "Pending Garmin sync for pace/HR."
         },
         {
           "date": "2026-09-02",
@@ -687,9 +689,10 @@
         {
           "date": "2026-09-06",
           "day": "Sun",
-          "type": "rest",
-          "detail": "Rest -- walk + 10 min arch/calf mobility.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20. (Moved from Tuesday -- ran instead that day.)",
+          "status": "upcoming",
+          "duration_min": 32
         }
       ],
       "miles_target": 18.0
