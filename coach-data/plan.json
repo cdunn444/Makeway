@@ -667,8 +667,9 @@
           "type": "tempo_run",
           "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 15 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4 mi total. Option B (longer reps) -- 1 mi easy warm-up, then 3 x 800m @ 9:10-9:32/mi (goal race pace, not a sprint) with 400m easy jog recovery, 1 mi easy cooldown, ~4.5 mi total -- try the clock-based departure style if you want (e.g. off every 6 min). Option C (easy) -- 4 mi easy.",
           "status": "completed",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 40,
+          "miles": 4.01,
+          "note": "Garmin synced: 4.01 mi in 40 min, 9:58/mi avg (blended easy+tempo), avg HR 158/max 183."
         },
         {
           "date": "2026-09-04",
@@ -676,7 +677,8 @@
           "type": "strength",
           "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
           "status": "completed",
-          "duration_min": 30
+          "duration_min": 53,
+          "note": "Garmin synced: 53 min, avg HR 93/max 160."
         },
         {
           "date": "2026-09-05",
