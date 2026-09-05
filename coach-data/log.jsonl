@@ -298,3 +298,4 @@
 {"date": "2026-09-04", "kind": "workout", "session_date": "2026-09-04", "type": "strength", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i183213931", "planned": true, "name": "Strength", "actual": "53 min", "duration_min": 53, "avg_hr": 93, "max_hr": 160, "active_kcal": 194}
 {"date": "2026-09-04", "kind": "nutrition", "desc": "1 serving Seven Sundays chocolate cereal", "kcal": 190, "protein_g": 4, "carbs_g": 20, "fat_g": 11}
 {"date": "2026-09-04", "kind": "nutrition", "desc": "breakfast: usual Truvani protein shake, 2oz smoked salmon, 2 slices Canyon GF bread, 2 spoonfuls guacamole", "kcal": 460, "protein_g": 40, "carbs_g": 41, "fat_g": 16}
+{"date": "2026-09-04", "kind": "workout", "session_date": "2026-09-04", "type": "cross_train", "result": "completed", "source": "intervals.icu", "sync_id": "icu-i183428728", "planned": false, "name": "Pickleball", "actual": "88 min", "duration_min": 88, "avg_hr": 117, "max_hr": 169, "active_kcal": 517}
