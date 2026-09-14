@@ -45,7 +45,7 @@
       ]
     }
   ],
-  "current_week": 10,
+  "current_week": 11,
   "weeks": [
     {
       "week": 1,
@@ -759,7 +759,7 @@
           "status": "completed",
           "duration_min": 21,
           "miles": 2.01,
-          "note": "Gym A let go this week rather than stacking a second strength session onto Sunday (which already has Gym B from Tuesday's swap). Garmin synced: 2.01 mi in 21 min, 10:26/mi avg, avg HR 149/max 162. Also ran an extra mile Friday night before pickleball -- pending sync."
+          "note": "Gym A let go this week rather than stacking a second strength session onto Sunday (which already has Gym B from Tuesday's swap). Garmin synced: 2.01 mi in 21 min, 10:26/mi avg, avg HR 149/max 162. Plus a Friday-night extra mile (1.0 mi in 10 min, treadmill) before 104 min of pickleball -- day total 3.01 mi running."
         },
         {
           "date": "2026-09-12",
@@ -767,7 +767,8 @@
           "type": "strength",
           "detail": "Upper body only, 3 sets x 8-12: DB bench press or push-ups, DB row or lat pulldown, DB overhead press, DB bicep curl, tricep extension/dips. Core: plank 2x40s. Swapped from Gym B's leg-heavy version (deadlift, step-ups) to keep legs fresh for tomorrow's 10 mi long run.",
           "status": "completed",
-          "duration_min": 32
+          "duration_min": 51,
+          "note": "Garmin synced: 51 min, avg HR 89/max 129."
         },
         {
           "date": "2026-09-13",
@@ -775,13 +776,150 @@
           "type": "long_run",
           "detail": "10 mi easy, conversational -- user opted to push to 10 (weekly total still lands ~10% up, though the single-session jump from last week's 8 is bigger at ~25%). Self-regulate: walk/jog as needed, and if the arch or shin start aching past mile 8 (not just general fatigue), back off the distance rather than push through. Legs kept fresh today via an upper-body-only lift swap.",
           "status": "completed",
-          "duration_min": 107,
-          "miles": 10.0,
-          "miles_planned": 8.5
+          "duration_min": 98,
+          "miles": 9.01,
+          "miles_planned": 8.5,
+          "note": "Garmin synced: 9.01 mi in 98 min, 10:52/mi avg, avg HR 155/max 178 -- landed just under the 10 mi target, no reported pain. Good outcome either way."
         }
       ],
       "miles_target": 20.0
+    },
+    {
+      "week": 11,
+      "phase": "build",
+      "focus": "Long run steps to 9.5 mi, continuing the tempo/near-goal-pace quality direction.",
+      "summary": "~22 mi target. Week 10 actually landed ~21 mi total with a 9.01 mi long run, so this week holds a normal progression rather than another big jump.",
+      "sessions": [
+        {
+          "date": "2026-09-14",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "4 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 42,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-09-15",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-09-16",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "4 mi easy.",
+          "status": "upcoming",
+          "duration_min": 42,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-09-17",
+          "day": "Thu",
+          "type": "tempo_run",
+          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 20 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4.5 mi total. Option B (longer reps) -- 1 mi easy warm-up, then 5 x 800m @ 9:10-9:32/mi (goal race pace) with 400m easy jog recovery, 1 mi easy cooldown, ~5.5 mi total -- clock-based departure still an option (e.g. off every 6-7 min). Option C (easy) -- 4 mi easy.",
+          "status": "upcoming",
+          "duration_min": 47,
+          "miles": 4.5
+        },
+        {
+          "date": "2026-09-18",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "status": "upcoming",
+          "duration_min": 32
+        },
+        {
+          "date": "2026-09-19",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "9.5 mi easy, conversational -- modest step from last week's actual 9.01.",
+          "status": "upcoming",
+          "duration_min": 101,
+          "miles": 9.5
+        },
+        {
+          "date": "2026-09-20",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 22.0
+    },
+    {
+      "week": 12,
+      "phase": "build",
+      "focus": "Down week -- absorb the last two weeks' growth before the final build push.",
+      "summary": "~16 mi target (-~30% volume). No forced quality this week; strength continues normally, long run drops to 7 mi.",
+      "sessions": [
+        {
+          "date": "2026-09-21",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "3 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-09-22",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-09-23",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "3 mi easy.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-09-24",
+          "day": "Thu",
+          "type": "easy_run",
+          "detail": "3.5 mi easy -- down week, no quality push this time, just an easy run.",
+          "status": "upcoming",
+          "duration_min": 37,
+          "miles": 3.5
+        },
+        {
+          "date": "2026-09-25",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "status": "upcoming",
+          "duration_min": 32
+        },
+        {
+          "date": "2026-09-26",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "7 mi easy, conversational -- down from 9.5, absorbing the last two weeks' growth before the final build push toward peak.",
+          "status": "upcoming",
+          "duration_min": 74,
+          "miles": 7.0
+        },
+        {
+          "date": "2026-09-27",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 16.0
     }
   ],
-  "sketch": "Weeks 11-13 (build, cont.): long run continues 9 -> down week (-30% volume, likely wk 12) -> 9.5-10 mi, quality day keeps leaning tempo/threshold and near-goal-pace reps (800m-1600m at 9:10-9:32/mi). Weeks 14-15 (peak): highest volume, peak long run 10.5-12 mi with race-pace segments, quality stays optional. Week 16 (taper/race wk, Oct 19-25): volume -40-60%, short shakeout runs only, freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24 \u2014 goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi). Detail generated as each week approaches."
+  "sketch": "Week 13 (build, cont.): back to progression after the down week -- long run to ~9.5-10.5 mi, quality day keeps leaning tempo/threshold and near-goal-pace reps (800m-1600m at 9:10-9:32/mi). Weeks 14-15 (peak): highest volume, peak long run 10.5-12 mi with race-pace segments, quality stays optional. Week 16 (taper/race wk, Oct 19-25): volume -40-60%, short shakeout runs only, freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24 \u2014 goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi). Detail generated as each week approaches."
 }
