@@ -919,7 +919,275 @@
         }
       ],
       "miles_target": 16.0
+    },
+    {
+      "week": 13,
+      "phase": "build",
+      "focus": "Back to progression after the down week -- long run to 10 mi, resuming growth from week 11's 9.5 peak rather than week 12's 7 mi trough.",
+      "summary": "~23.5 mi target. Last build-phase week before peak.",
+      "sessions": [
+        {
+          "date": "2026-09-28",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "4.5 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 48,
+          "miles": 4.5
+        },
+        {
+          "date": "2026-09-29",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-09-30",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "4 mi easy.",
+          "status": "upcoming",
+          "duration_min": 42,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-10-01",
+          "day": "Thu",
+          "type": "tempo_run",
+          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 22 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4.75 mi total. Option B (longer reps) -- 1 mi easy warm-up, then 4 x 1000m @ 9:10-9:32/mi (goal race pace) with 400m easy jog recovery, 1 mi easy cooldown, ~6 mi total. Option C (easy) -- 4.5 mi easy.",
+          "status": "upcoming",
+          "duration_min": 52,
+          "miles": 5.0
+        },
+        {
+          "date": "2026-10-02",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "status": "upcoming",
+          "duration_min": 32
+        },
+        {
+          "date": "2026-10-03",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "10 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 106,
+          "miles": 10.0
+        },
+        {
+          "date": "2026-10-04",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 23.5
+    },
+    {
+      "week": 14,
+      "phase": "peak",
+      "focus": "First peak week -- highest volume of the cycle so far, first dedicated race-pace segment.",
+      "summary": "~25 mi target. Thursday's quality option now includes a real race-pace rehearsal (miles at 9:10-9:32/mi), still optional.",
+      "sessions": [
+        {
+          "date": "2026-10-05",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "4.5 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 48,
+          "miles": 4.5
+        },
+        {
+          "date": "2026-10-06",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-10-07",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "4 mi easy.",
+          "status": "upcoming",
+          "duration_min": 42,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-10-08",
+          "day": "Thu",
+          "type": "tempo_run",
+          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 25 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~5 mi total. Option B (race-pace rehearsal) -- 2 mi easy warm-up, then 3 mi @ goal race pace (9:10-9:32/mi), 1 mi easy cooldown, ~6 mi total -- first real dress rehearsal for race effort. Option C (easy) -- 4.5 mi easy.",
+          "status": "upcoming",
+          "duration_min": 58,
+          "miles": 6.0
+        },
+        {
+          "date": "2026-10-09",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Gym B, lighter -- 2-3 sets x 8-10: DB/trap-bar deadlift (light), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20. Dial back load slightly given the week's volume.",
+          "status": "upcoming",
+          "duration_min": 28
+        },
+        {
+          "date": "2026-10-10",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "10.5 mi easy, conversational -- optional: run the last 2 mi at goal race pace (9:10-9:32/mi) if legs feel good, otherwise easy the whole way.",
+          "status": "upcoming",
+          "duration_min": 111,
+          "miles": 10.5
+        },
+        {
+          "date": "2026-10-11",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 25.0
+    },
+    {
+      "week": 15,
+      "phase": "peak",
+      "focus": "Second and final peak week -- biggest long run of the cycle, last real quality work before taper.",
+      "summary": "~25 mi target. Everything after this week is about arriving fresh, not fitter.",
+      "sessions": [
+        {
+          "date": "2026-10-12",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "4 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 42,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-10-13",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Gym A, dial back slightly -- 3 sets x 8-10, moderate load: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "status": "upcoming",
+          "duration_min": 30
+        },
+        {
+          "date": "2026-10-14",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "4 mi easy.",
+          "status": "upcoming",
+          "duration_min": 42,
+          "miles": 4.0
+        },
+        {
+          "date": "2026-10-15",
+          "day": "Thu",
+          "type": "tempo_run",
+          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 20 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4.5 mi total. Option B (race-pace rehearsal) -- 2 mi easy warm-up, then 3 mi @ goal race pace (9:10-9:32/mi), 1 mi easy cooldown, ~6 mi total -- last hard quality before taper. Option C (easy) -- 4 mi easy.",
+          "status": "upcoming",
+          "duration_min": 52,
+          "miles": 5.0
+        },
+        {
+          "date": "2026-10-16",
+          "day": "Fri",
+          "type": "strength",
+          "detail": "Gym B, lighter -- 2-3 sets x 8-10: DB/trap-bar deadlift (light), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "status": "upcoming",
+          "duration_min": 28
+        },
+        {
+          "date": "2026-10-17",
+          "day": "Sat",
+          "type": "long_run",
+          "detail": "11 mi easy, conversational -- the biggest long run of the cycle. Optional: last 2-3 mi at goal race pace as a final dress rehearsal.",
+          "status": "upcoming",
+          "duration_min": 117,
+          "miles": 11.0
+        },
+        {
+          "date": "2026-10-18",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 25.0
+    },
+    {
+      "week": 16,
+      "phase": "taper",
+      "focus": "Taper and race week -- freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24.",
+      "summary": "Volume drops ~60% from peak. Short runs, light legs, and a handful of race-pace strides to stay sharp. Fitness is banked; the only job this week is arriving healthy and rested.",
+      "sessions": [
+        {
+          "date": "2026-10-19",
+          "day": "Mon",
+          "type": "easy_run",
+          "detail": "3 mi easy, conversational.",
+          "status": "upcoming",
+          "duration_min": 32,
+          "miles": 3.0
+        },
+        {
+          "date": "2026-10-20",
+          "day": "Tue",
+          "type": "strength",
+          "detail": "Light/short -- 15-20 min, bodyweight or very light: squats, push-ups, plank, calf raises. Not a real training stimulus at this point, just activation. Skip entirely if it feels like more than that.",
+          "status": "upcoming",
+          "duration_min": 18
+        },
+        {
+          "date": "2026-10-21",
+          "day": "Wed",
+          "type": "easy_run",
+          "detail": "2.5 mi easy + 4 strides at goal race pace -- keeps legs sharp without adding fatigue.",
+          "status": "upcoming",
+          "duration_min": 27,
+          "miles": 2.5
+        },
+        {
+          "date": "2026-10-22",
+          "day": "Thu",
+          "type": "rest",
+          "detail": "Rest, or an optional very easy 2 mi shakeout if it feels better to move than sit still. Either is correct.",
+          "status": "upcoming"
+        },
+        {
+          "date": "2026-10-23",
+          "day": "Fri",
+          "type": "rest",
+          "detail": "Rest day before the race. Optional short shakeout (1.5 mi easy + 2-3 strides) if you feel antsy, otherwise full rest. Lay out race-day gear, plan pre-race fueling and timing tonight.",
+          "status": "upcoming"
+        },
+        {
+          "date": "2026-10-24",
+          "day": "Sat",
+          "type": "race",
+          "detail": "RACE DAY -- Miami Beach Halloween Half Marathon. Goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi), PR is 1:52 (not chasing this cycle). Race-morning fueling per usual long-run routine (banana/rice cake + coffee pre-race, fuel during per what's worked in training -- Tailwind/Huma gels). Start conservative, settle into goal pace by mile 2-3, save something for the last 5K.",
+          "status": "upcoming",
+          "miles": 13.1
+        },
+        {
+          "date": "2026-10-25",
+          "day": "Sun",
+          "type": "rest",
+          "detail": "Recovery day -- walk only, celebrate, eat well. Real training talk resumes once you've had a few easy days.",
+          "status": "upcoming"
+        }
+      ],
+      "miles_target": 22.0
     }
   ],
-  "sketch": "Week 13 (build, cont.): back to progression after the down week -- long run to ~9.5-10.5 mi, quality day keeps leaning tempo/threshold and near-goal-pace reps (800m-1600m at 9:10-9:32/mi). Weeks 14-15 (peak): highest volume, peak long run 10.5-12 mi with race-pace segments, quality stays optional. Week 16 (taper/race wk, Oct 19-25): volume -40-60%, short shakeout runs only, freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24 \u2014 goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi). Detail generated as each week approaches."
+  "sketch": "Training block complete through race day. Post-race: plan a recovery/off-season block once the half is done -- not generated yet, revisit after Oct 24."
 }
