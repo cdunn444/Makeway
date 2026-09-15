@@ -341,3 +341,4 @@
 {"date": "2026-09-15", "kind": "adaptation", "action": "Tuesday's Gym A displaced again by an unplanned 4.5 mi run -- moved to Sunday. This is a well-worn pattern at this point; not re-litigating it, just handling it the usual way.", "trigger": "user reported run instead of strength"}
 {"date": "2026-09-15", "kind": "nutrition", "desc": "pre-run: banana, 6g peanut butter", "kcal": 140, "protein_g": 3, "carbs_g": 28, "fat_g": 3.5}
 {"date": "2026-09-15", "kind": "nutrition", "desc": "post-run: 3 scoops Naked PB, 1 egg, 100g egg whites, 1/2 cup rolled oats, handful raspberries", "kcal": 485, "protein_g": 44, "carbs_g": 48, "fat_g": 12.5}
+{"date": "2026-09-15", "kind": "nutrition", "desc": "1/2 serving Lovebird granola", "kcal": 75, "protein_g": 2, "carbs_g": 6, "fat_g": 5}
