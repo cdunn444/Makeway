@@ -794,10 +794,11 @@
           "date": "2026-09-14",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "4 mi easy, conversational.",
+          "detail": "2 mi easy, conversational. (auto-adjusted from 4 mi)",
           "status": "upcoming",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 21,
+          "miles": 2.0,
+          "miles_planned": 4.0
         },
         {
           "date": "2026-09-15",
@@ -813,10 +814,11 @@
           "date": "2026-09-16",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "4 mi easy.",
+          "detail": "3.75 mi easy. (auto-adjusted from 4 mi)",
           "status": "upcoming",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 39,
+          "miles": 3.75,
+          "miles_planned": 4.0
         },
         {
           "date": "2026-09-17",
@@ -842,7 +844,8 @@
           "detail": "9.5 mi easy, conversational -- modest step from last week's actual 9.01.",
           "status": "upcoming",
           "duration_min": 101,
-          "miles": 9.5
+          "miles": 9.5,
+          "miles_planned": 9.5
         },
         {
           "date": "2026-09-20",
