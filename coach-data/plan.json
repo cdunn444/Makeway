@@ -816,15 +816,16 @@
           "type": "easy_run",
           "detail": "3.75 mi easy. (auto-adjusted from 4 mi)",
           "status": "partial",
-          "duration_min": 39,
-          "miles": 3.75,
-          "miles_planned": 4.0
+          "duration_min": 32,
+          "miles": 3.01,
+          "miles_planned": 3.75,
+          "note": "Garmin synced: 3.01 mi in 32 min, 10:37/mi avg, avg HR 143/max 154 -- cut short, felt achey during the run. Cold plunge afterward. Second consecutive day flagging the ankle (yesterday end-of-day, now during activity) -- watching this closely."
         },
         {
           "date": "2026-09-17",
           "day": "Thu",
           "type": "tempo_run",
-          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 20 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4.5 mi total. Option B (longer reps) -- 1 mi easy warm-up, then 5 x 800m @ 9:10-9:32/mi (goal race pace) with 400m easy jog recovery, 1 mi easy cooldown, ~5.5 mi total -- clock-based departure still an option (e.g. off every 6-7 min). Option C (easy) -- 4 mi easy. CONDITIONAL on the ankle: go/no-go at wake-up -- pain-free and loose within the first 5 min of walking = fine to run, but default to Option C (easy) rather than tempo/reps given today's ache. Any sharp pain or the same dull ache still present at wake-up = skip and do a short walk/cross-train instead, no debate.",
+          "detail": "Tempo/reps options shelved for today given the ankle hurt DURING today's run, not just after -- that's a step up from soreness. CONDITIONAL: go/no-go at wake-up -- pain-free and loose within the first 5 min of walking = a short easy run only (2-3 mi, stop at any twinge), no exceptions on intensity. Same dull ache, or anything sharp = skip running entirely and do cross-train/walk + prehab instead. If this hasn't cleared by Saturday, the long run gets reassessed too -- not pushing through a pattern that's now 2 days running.",
           "status": "upcoming",
           "duration_min": 47,
           "miles": 4.5
