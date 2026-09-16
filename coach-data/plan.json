@@ -815,7 +815,7 @@
           "day": "Wed",
           "type": "easy_run",
           "detail": "3.75 mi easy. (auto-adjusted from 4 mi)",
-          "status": "upcoming",
+          "status": "partial",
           "duration_min": 39,
           "miles": 3.75,
           "miles_planned": 4.0
