@@ -825,16 +825,17 @@
           "date": "2026-09-17",
           "day": "Thu",
           "type": "tempo_run",
-          "detail": "Tempo/reps options shelved for today given the ankle hurt DURING today's run, not just after -- that's a step up from soreness. CONDITIONAL: go/no-go at wake-up -- pain-free and loose within the first 5 min of walking = a short easy run only (2-3 mi, stop at any twinge), no exceptions on intensity. Same dull ache, or anything sharp = skip running entirely and do cross-train/walk + prehab instead. If this hasn't cleared by Saturday, the long run gets reassessed too -- not pushing through a pattern that's now 2 days running.",
-          "status": "upcoming",
+          "detail": "Started an easy treadmill run but ankle was achey on and off during it -- third consecutive day of ankle involvement (9/15 end-of-day, 9/16 during run, 9/17 during an easy run). Told to stop the run and shift to prehab/rest rather than finish planned mileage. Professional eval (podiatrist/PT) recommended given the pattern has now persisted three days including during-activity pain twice.",
+          "status": "partial",
           "duration_min": 47,
-          "miles": 4.5
+          "miles": 4.5,
+          "note": "Stopped early per coach guidance -- exact distance covered pending Garmin sync."
         },
         {
           "date": "2026-09-18",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "detail": "Gym B, modified for the ankle: keep the upper body/hinge work (DB/trap-bar deadlift light-moderate, DB overhead press, plank 2x40s) but swap step-ups for a seated or non-weight-bearing core/upper accessory, and do tibialis raises only if fully pain-free -- skip them otherwise. Don't load the ankle just to check a box.",
           "status": "upcoming",
           "duration_min": 32
         },
@@ -842,7 +843,7 @@
           "date": "2026-09-19",
           "day": "Sat",
           "type": "long_run",
-          "detail": "9.5 mi easy, conversational -- modest step from last week's actual 9.01.",
+          "detail": "9.5 mi easy CONDITIONAL on the ankle being genuinely clear (pain-free at rest and through a short warm-up walk/jog) -- not just 'manageable.' If still achey at all, this becomes a short easy run or full rest instead, and the 9.5 mi target waits until the ankle is a non-issue. Three straight days of involvement means this week is not the week to push a number.",
           "status": "upcoming",
           "duration_min": 101,
           "miles": 9.5,
