@@ -835,9 +835,10 @@
           "date": "2026-09-18",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, modified for the ankle: DB/trap-bar deadlift light-moderate 3x8-10, DB overhead press 3x8-10, DB row or lat pulldown 3x8-10, plank 2x40s, hip thrust machine 3x8-10 progressively loaded near failure (swapped for step-ups -- no ankle range-of-motion demand, feet flat). Skipping tibialis/calf raises tonight since already loaded today (doming + raises at work) -- don't double up on the irritated structures in one day. Preceded by an hour easy-spin bike ride today.",
-          "status": "upcoming",
-          "duration_min": 32
+          "detail": "Gym B, modified for the ankle: DB/trap-bar deadlift light-moderate 3x8-10, DB overhead press 3x8-10, DB row or lat pulldown 3x8-10, plank 2x40s, hip thrust machine 3x8-10 progressively loaded near failure (swapped for step-ups -- no ankle range-of-motion demand, feet flat). Skipped tibialis/calf raises tonight since already loaded today (doming + raises at work). Preceded by an hour easy-spin bike ride today.",
+          "status": "completed",
+          "duration_min": 32,
+          "note": "Hip thrust machine: 3x8 @ 90 lb/side -- strong first session on it, good room to progress from."
         },
         {
           "date": "2026-09-19",
