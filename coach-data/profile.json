@@ -41,14 +41,14 @@
   },
   "injuries": [
     {
-      "area": "left arch",
-      "detail": "achey, plantar-fascia pattern \u2014 worse with volume spikes",
-      "status": "managing"
+      "area": "left arch / posterior tibialis",
+      "detail": "Active flare 9/15-9/17: pain during runs two days running, Achilles/ankle feels stuck/restricted (no end-range loaded calf work or forced stretching on this side until evaluated). Historically a plantar-fascia pattern, worse with volume spikes.",
+      "status": "rehab (Phase 1) -- see coach-data/rehab.md; podiatrist/PT eval recommended"
     },
     {
-      "area": "shins",
-      "detail": "occasional shin splints when volume is not managed \u2014 ramp conservatively",
-      "status": "managing"
+      "area": "right shin",
+      "detail": "Sore alongside the left arch flare (9/15-9/17); shin-splint history when volume ramps fast.",
+      "status": "rehab (Phase 1) -- see coach-data/rehab.md"
     }
   ],
   "diet": {
@@ -142,15 +142,15 @@
     }
   },
   "optional_strength": {
-    "title": "Core + Lower Legs",
-    "note": "Optional \u2014 after your run or anytime today (~12 min). 2 rounds normally, 3 if fresh; skip the day before the long run if legs feel heavy. Built around your arch + shin history.",
+    "title": "Rehab Daily Dose \u2014 Phase 1",
+    "note": "NOT optional right now \u2014 ~12 min daily while the arch/shin flare settles; this replaces the old lower-leg circuit. Everything pain-free (\u22643/10 that settles); left calf stays flat-ground/mid-range only. Full program + progression rules: coach-data/rehab.md.",
     "exercises": [
-      "Single-leg glute bridge \u2014 2\u00d710/leg",
-      "Side plank \u2014 2\u00d730s/side",
-      "Dead bug \u2014 2\u00d78/side",
-      "Eccentric calf raise, 3s down \u2014 2\u00d712/leg",
-      "Tibialis raises \u2014 2\u00d715",
-      "Short-foot arch doming \u2014 2\u00d710/foot"
+      "Short-foot arch doming \u2014 2\u00d710/foot",
+      "Isometric heel-raise hold, flat ground, both feet \u2014 3\u00d730s (left mid-range)",
+      "Banded ankle inversion \u2014 2\u00d715/side",
+      "Tibialis raises (wall lean) \u2014 2\u00d720",
+      "Side plank + top-leg raise \u2014 2\u00d720-30s/side",
+      "Single-leg balance \u2014 2\u00d730s/leg (progress: eyes closed)"
     ]
   }
 }
