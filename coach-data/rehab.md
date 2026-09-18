@@ -3,10 +3,19 @@
 Started 2026-09-18, during the 9/15–9/17 flare (left arch/posterior tibial pain during
 runs two days running, right shin sore, left Achilles/ankle feeling "stuck").
 
-**This program is the meanwhile, not the diagnosis.** A podiatrist/PT eval is still
-the recommendation — pain during activity on three consecutive days, in two different
-structures on opposite legs, plus a left-ankle restriction, is past the self-manage
-threshold. When you get evaluated, hand the PT this file and let their plan override it.
+**Self-managed, by informed choice.** These are both repeat injuries you've cleared
+before, a month of PT for the shins did nothing, and one deep-tissue massage on both
+calves/lower legs cleared it in two days — so the protocol here is your own: rest →
+short test run → back off to cross-train + rehab if it flags. Deep-tissue massage
+(professional, or aggressive self-work with a massage gun/lacrosse ball on the calves,
+soleus, and along the inner shin) is a first-line tool in this program, not an
+afterthought.
+
+**The one escalation line:** if pain *during* runs is still showing up after 2–3 weeks
+of this protocol (rest + rehab + massage), or you get sharp pain or swelling along the
+inner ankle bone, or the left arch visibly flattens vs. the right — that's a different
+animal than the shin splints massage fixed, and worth one imaging/eval visit. Short of
+that, this file is the plan.
 
 ---
 
@@ -30,10 +39,16 @@ show up as two different sore spots on two different legs. Your clamshells and b
 dogs touch this, but running needs hip control **standing, on one leg, under load** —
 that's where this program pushes.
 
-**Likely contributors** (worth telling the PT):
+**Likely contributors:**
+- Acute under-recovery: two build weeks back-to-back, the 9 mi long run Sunday 9/13,
+  then a big family day on your feet that same afternoon — flare started the next day.
 - Long run jumped 8 → 9 → attempted 10 mi in three weeks, right before the flare.
 - The strength-drops-first pattern: 5 of the last 7 planned lifts got displaced by
-  runs — so calf/tib/hip capacity flatlined while run volume grew.
+  runs — so calf/tib/hip capacity flatlined while run volume grew. Your own read,
+  9/18: good about doming/balance/glute work in base building, lost sight of it as
+  the plan progressed and the focus became the miles. That's the root cause to fix.
+- Naturally tight/inflexible tissue that responds to soft-tissue work — history says
+  massage moves the needle more than stretching or isolated rehab did.
 - Brooks Hyperion GTS (plated) debuted 8/27; plates shift work into the calf–arch
   complex. Ankles felt tired after its first outing.
 - Heat-season fatigue + high-humidity long runs.
@@ -48,9 +63,10 @@ that's where this program pushes.
 
 **Left-side special rule:** the Achilles/ankle restriction ("stuck," stealing the
 stretch before the calf loads) means **no end-range loaded calf work and no forced
-calf stretching on the left** until it's evaluated. That includes eccentric heel drops
-off a step on the left — flat-ground, mid-range work only for now. (Right side can
-do the full menu.)
+calf stretching on the left** until that restriction has released — soft-tissue work
+(massage) on the calf/soleus is the tool most likely to free it, given your history.
+That includes eccentric heel drops off a step on the left — flat-ground, mid-range
+work only for now. (Right side can do the full menu.)
 
 ---
 
@@ -74,6 +90,10 @@ Keep the bird dogs if you enjoy them (they're good spine/hip work), but they don
 replace the standing hip items.
 
 ### Also in Phase 1
+- **Soft-tissue work, both legs:** book the deep-tissue massage (calves + lower legs
+  — it's what cleared this in two days last time). Between sessions: massage gun or
+  lacrosse ball on the calves/soleus and along the inner shin border, 3–5 min/leg
+  daily. Work the muscle bellies, not directly on the sore tendon or the bone.
 - **Gentle left-ankle mobility only:** ankle circles, pain-free knee-to-wall rocks
   *short of the pinch/stuck point*. Never push into the restriction.
 - **Keep the evening Normatec + cold plunge** — it measurably helped on 9/17.
@@ -96,7 +116,7 @@ folded into Gym A/B days so it doesn't need its own slot:
 |---|---|---|
 | Heel raises with a ball squeezed between heels | 3×12 → add DBs | The squeeze biases the post tib and soleus. Both legs → single leg. Left enters only once flat-ground work is green. |
 | Bent-knee (soleus) heel raises | 3×12 | Seated with DBs on the knee, or standing with knees bent ~30°. The single most under-trained muscle for both of your issues. |
-| Slow eccentric heel raises | 3×10, 3 s down | Off the floor first, step later. **Right leg now; left only after eval or fully green.** |
+| Slow eccentric heel raises | 3×10, 3 s down | Off the floor first, step later. **Right leg now; left only once the restriction has released and it's fully green.** |
 | Loaded tibialis raises | 2×15–20 | Add a plate on the toes or use a band — progress past bodyweight. |
 | Step-downs | 3×8/leg | Slow, knee tracking over the 2nd toe — hip control under load. |
 | Single-leg RDL | 3×8/leg, light DB | Hip + foot working together; doubles as balance work. |
@@ -105,7 +125,7 @@ folded into Gym A/B days so it doesn't need its own slot:
 
 ## Phase 3 — Springs + return to running (strong on one leg → back on plan)
 
-**Enter when:** Phase 2 exit criteria met, or the PT clears you sooner.
+**Enter when:** Phase 2 exit criteria met.
 
 Reintroduce impact *before* asking running to do it:
 - Pogo hops in place 2×20 → jump rope 2×30 s → single-leg hops 2×10/side, green only.
@@ -124,10 +144,27 @@ throwaway line item): single-leg heel raises (straight + bent knee), loaded tib
 raises, banded inversion, one standing hip item (step-downs or SL RDL), single-leg
 balance. Ten minutes that keeps this from being an annual event.
 
+## The standing rule: strength keeps pace with the miles
+
+Your own diagnosis (9/18), written down so it survives the next build phase: you were
+consistent with doming, single-leg balance, and glute work during base building, then
+the focus drifted to the miles as the plan progressed — and this flare followed. So,
+amending the old "strength drops first" policy:
+
+- **The ~12-min daily dose (or its Phase-2/keeper successor) is now the LAST thing
+  that gets dropped on a busy week — after a run, not before it.** A full gym
+  session can still be skipped when life happens; the lower-leg/hip dose cannot.
+- **Every long-run increase gets a strength check:** the week the long run grows,
+  both weekly strength touches (Gym A/B, even shortened to 20 min) have to actually
+  happen. If they didn't happen last week, the long run holds flat instead of growing.
+- **Recovery is training:** no more long run + all-day-on-feet doubles when it's
+  avoidable; massage/soft-tissue work is scheduled maintenance during build/peak
+  (every 2–3 weeks), not a rescue tool.
+
 ## How the week looks right now (Phase 1)
 
 | Day | Training | Rehab |
 |---|---|---|
-| Mon–Sun | Per plan.json (deload week 11, graded return-test week 12) | Daily dose every day, ideally after the session or in the evening with the Normatec |
+| Mon–Sun | Per plan.json (deload week 11 with a Sunday test run, graded return week 12) | Daily dose every day, ideally after the session or in the evening with the Normatec |
 | Gym days | Modified Gym A/B (no ankle loading in Phase 1) | Daily dose as the warm-up; Phase 2 items join here later |
-| Eval | Schedule the podiatrist/PT visit this week | Bring this file |
+| Soft tissue | Book the deep-tissue massage (calves + lower legs) ASAP | Massage gun / lacrosse ball 3–5 min/leg daily in the meantime |

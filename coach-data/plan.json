@@ -788,7 +788,7 @@
       "week": 11,
       "phase": "build",
       "focus": "Deload pulled forward (was week 12) -- rehab week for the left posterior tib/arch + right shin flare. No more running this week.",
-      "summary": "Converted to the down week on 9/18 per user's call after the 3-day flare (pain during runs 9/16 and 9/17). ~9.5 mi already banked Tue-Thu; the rest of the week is bike/strength/rehab only. Rehab program lives in coach-data/rehab.md -- Phase 1 daily dose every day. Professional eval (podiatrist/PT) still recommended.",
+      "summary": "Converted to the down week on 9/18 per user's call after the 3-day flare (pain during runs 9/16 and 9/17). ~9.5 mi banked Tue-Thu; Fri modified strength, Sat full rest (2nd consecutive off day), Sun short easy-run test. User's read: under-recovery from two build weeks + 9 mi long run + a family day on feet, not a structural problem -- self-managing with rehab.md + deep-tissue massage (what worked last time), no PT.",
       "sessions": [
         {
           "date": "2026-09-14",
@@ -843,50 +843,48 @@
         {
           "date": "2026-09-19",
           "day": "Sat",
-          "type": "cross_train",
-          "detail": "Deload week: NO long run (the 9.5 mi target waits for a clean week). Optional 60-75 min easy-spin bike, seated, conversational, no mashing -- stop if pedaling reproduces the arch/tib/shin ache. If not biking, a walk is plenty. Rehab Phase 1 daily dose either way. Evening Normatec + cold plunge.",
-          "status": "upcoming",
-          "duration_min": 70
+          "type": "rest",
+          "detail": "Full rest from running -- second consecutive off day per user's call (legs likely under-recovered from two build weeks + the 9 mi long run + a family day on feet 9/13-9/14). Walk, rehab daily dose, evening Normatec + cold plunge. If a deep-tissue massage on both calves/lower legs can be booked, this weekend is the time -- it's what cleared this before.",
+          "status": "upcoming"
         },
         {
           "date": "2026-09-20",
           "day": "Sun",
-          "type": "strength",
-          "detail": "Gym A, modified for the flare: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Skip goblet squats (deep dorsiflexion vs. the stuck left ankle), walking lunges, and calf raises this week. After: Rehab Phase 1 daily dose. (Moved from Tuesday -- ran instead that day.)",
+          "type": "easy_run",
+          "detail": "RETURN-TO-RUN TEST (moved up from Monday per user's plan): 2-3 mi short and easy, run-walk welcome, flat route, non-plated shoes. Gate: pain-free at rest and through a 5-min warm-up walk. Any arch/post-tib or shin issue during = stop, walk home, and the next week becomes cross-train cardio + rehab. Rehab dose after. (Modified Gym A moves to Monday.)",
           "status": "upcoming",
-          "duration_min": 40
+          "duration_min": 30,
+          "miles": 2.5
         }
       ],
-      "miles_target": 9.5
+      "miles_target": 12.0
     },
     {
       "week": 12,
       "phase": "build",
-      "focus": "Graded return-to-running test -- the deload moved into week 11, so this week answers one question: has the flare settled?",
-      "summary": "~10 mi target, all easy, every run symptom-gated, no quality. Three test runs (Mon/Wed/Sat) with a rest day after each early one. All three clean = week 13 resumes the build as planned. Any recurrence DURING a run = back to bike + rehab, and the podiatrist/PT eval stops being optional. Rehab Phase 1 daily dose continues every day (coach-data/rehab.md).",
+      "focus": "Graded return-to-running -- Sunday's test run decides how this week goes.",
+      "summary": "~8 mi target, all easy, every run symptom-gated, no quality. Sunday 9/20 was test #1; Wed and Sat are #2 and #3, with recovery days between. All clean = week 13 resumes the build. Any recurrence DURING a run = this week converts to cross-train cardio + rehab for a week or so, per user's own protocol. Strength is back to non-negotiable this week -- user's call: the build phase drifted into miles-only and the strength/recovery side is what keeps these two injuries away. Rehab Phase 1 daily dose every day (coach-data/rehab.md).",
       "sessions": [
         {
           "date": "2026-09-21",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "RETURN-TO-RUN TEST: 2 mi run-walk (4 min easy jog / 1 min walk), flat route, non-plated shoes. Gate: pain-free at rest and through a 5-min warm-up walk. First twinge of arch/post-tib or shin = stop and walk home, zero guilt -- that's data, not failure. Rehab dose after.",
+          "type": "strength",
+          "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.)",
           "status": "upcoming",
-          "duration_min": 24,
-          "miles": 2.0
+          "duration_min": 40
         },
         {
           "date": "2026-09-22",
           "day": "Tue",
-          "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up.",
-          "status": "upcoming",
-          "duration_min": 40
+          "type": "rest",
+          "detail": "Rest from running -- optional 30 min easy spin if the legs feel good. Rehab dose. How did yesterday's body react to Sunday's test? That answer sets up tomorrow.",
+          "status": "upcoming"
         },
         {
           "date": "2026-09-23",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "3 mi easy, run-walk fine -- ONLY if Monday's test was clean and there was no next-morning reaction. Otherwise 30-40 min easy spin instead. Rehab dose after.",
+          "detail": "3 mi easy, run-walk fine -- ONLY if Sunday's test was clean and there was no next-morning reaction. Otherwise 30-40 min easy spin instead. Rehab dose after.",
           "status": "upcoming",
           "duration_min": 33,
           "miles": 3.0
@@ -910,7 +908,7 @@
           "date": "2026-09-26",
           "day": "Sat",
           "type": "long_run",
-          "detail": "5 mi easy, conversational, run-walk welcome -- conditional on Monday AND Wednesday both being clean. This is the graduation run for the week, not a fitness builder. If either earlier run flagged, substitute 60 min easy spin. Rehab dose after.",
+          "detail": "5 mi easy, conversational, run-walk welcome -- conditional on Sunday AND Wednesday both being clean. This is the graduation run for the week, not a fitness builder. If either earlier run flagged, substitute 60 min easy spin. Rehab dose after.",
           "status": "upcoming",
           "duration_min": 55,
           "miles": 5.0
@@ -923,7 +921,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 10.0
+      "miles_target": 8.0
     },
     {
       "week": 13,
