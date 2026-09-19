@@ -79,7 +79,7 @@ daily dose itself fully green.
 
 | Exercise | Dose | Cue |
 |---|---|---|
-| Short-foot arch doming | 2×10/foot | You're already doing these — keep them. Pull the big-toe knuckle toward the heel, don't curl the toes. |
+| Short-foot arch doming | 2×6–8/foot, 5–10 s holds | Your style — squeeze and hold, which suits the post tib's endurance role. Pull the big-toe knuckle toward the heel, no toe curling; end the rep when the dome starts collapsing. |
 | Isometric heel-raise hold, flat ground, both feet | 3×30 s | Rise halfway, hold. Isometrics calm irritated tendons. Left stays mid-range; skip left if not green. |
 | Banded ankle inversion | 2×15/side | Band around forefoot, sweep the foot inward against it. This is the post tib's own exercise — slow, controlled. |
 | Tibialis raises (wall lean) | 2×20 | Heels on the ground, lift both forefeet. Right-shin front-side work. |
