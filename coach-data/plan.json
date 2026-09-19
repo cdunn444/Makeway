@@ -843,9 +843,10 @@
         {
           "date": "2026-09-19",
           "day": "Sat",
-          "type": "rest",
-          "detail": "Full rest from running -- second consecutive off day per user's call (legs likely under-recovered from two build weeks + the 9 mi long run + a family day on feet 9/13-9/14). Walk, rehab daily dose, evening Normatec + cold plunge. If a deep-tissue massage on both calves/lower legs can be booked, this weekend is the time -- it's what cleared this before.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Upper-body lift (user's call -- no leg loading, keeps tomorrow's test legs fresh): DB bench or push-ups, DB row or lat pulldown, DB overhead press, curls, triceps, 3x8-12. Rehab Phase 1 daily dose as the warm-up. Still fully off running; walk, evening Normatec + cold plunge, and soft-tissue work on the calves. Massage this weekend if bookable.",
+          "status": "upcoming",
+          "duration_min": 45
         },
         {
           "date": "2026-09-20",
