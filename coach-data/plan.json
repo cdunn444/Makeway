@@ -787,15 +787,16 @@
     {
       "week": 11,
       "phase": "build",
-      "focus": "Long run steps to 9.5 mi, continuing the tempo/near-goal-pace quality direction.",
-      "summary": "~22 mi target. Week 10 actually landed ~21 mi total with a 9.01 mi long run, so this week holds a normal progression rather than another big jump.",
+      "focus": "Deload pulled forward (was week 12) -- rehab week for the left posterior tib/arch + right shin flare. No more running this week.",
+      "summary": "Converted to the down week on 9/18 per user's call after the 3-day flare (pain during runs 9/16 and 9/17). ~9.5 mi banked Tue-Thu; Fri modified strength, Sat full rest (2nd consecutive off day), Sun short easy-run test. User's read: under-recovery from two build weeks + 9 mi long run + a family day on feet, not a structural problem -- self-managing with rehab.md + deep-tissue massage (what worked last time), no PT.",
       "sessions": [
         {
           "date": "2026-09-14",
           "day": "Mon",
           "type": "easy_run",
           "detail": "2 mi easy, conversational. (auto-adjusted from 4 mi)",
-          "status": "upcoming",
+          "status": "skipped",
+          "note": "No activity logged this day; week opened with Tuesday's unplanned 4.5 mi instead.",
           "duration_min": 21,
           "miles": 2.0,
           "miles_planned": 4.0
@@ -844,94 +845,91 @@
           "date": "2026-09-19",
           "day": "Sat",
           "type": "strength",
-          "detail": "Long run deferred again -- user opted for a gym strength session instead. Modified leg day, ankle-friendly: leg press machine 3x8-10 (feet flat, no free-squat ankle demand), DB Romanian deadlift 3x8-10, seated leg curl 3x10-12, lat pulldown or DB row 3x8-10, side plank 2x30s/side. Skipping hip thrust again today (just loaded heavy yesterday) and calf/tib work (self-check first, skip if not clearly better). Bike remains the aerobic substitute; running still pending the ankle clearing.",
+          "detail": "Upper-body lift (user's call, and the right one with tomorrow's return-to-run test): DB bench or push-ups, DB row or lat pulldown, DB overhead press, curls, triceps, 3x8-12. Rehab Phase 1 daily dose as the warm-up (see coach-data/rehab.md). The ankle-friendly leg day sketched earlier (leg press, RDL, seated leg curl) waits -- fresh legs matter more than a leg session the day before the test, and hips/glutes got loaded hard last night anyway. Long run stays deferred; still fully off running today. Evening: Normatec + cold plunge, soft-tissue work on calves. Massage this weekend if bookable.",
           "status": "upcoming",
-          "duration_min": 40
+          "duration_min": 45
         },
         {
           "date": "2026-09-20",
           "day": "Sun",
-          "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15. (Moved from Tuesday -- ran instead that day.)",
+          "type": "easy_run",
+          "detail": "RETURN-TO-RUN TEST (moved up from Monday per user's plan): 2-3 mi short and easy, run-walk welcome, flat route, non-plated shoes. Gate: pain-free at rest and through a 5-min warm-up walk. Any arch/post-tib or shin issue during = stop, walk home, and the next week becomes cross-train cardio + rehab. Rehab dose after. (Modified Gym A moves to Monday.)",
           "status": "upcoming",
-          "duration_min": 30
+          "duration_min": 30,
+          "miles": 2.5
         }
       ],
-      "miles_target": 22.0
+      "miles_target": 12.0
     },
     {
       "week": 12,
       "phase": "build",
-      "focus": "Down week -- absorb the last two weeks' growth before the final build push.",
-      "summary": "~16 mi target (-~30% volume). No forced quality this week; strength continues normally, long run drops to 7 mi.",
+      "focus": "Graded return-to-running -- Sunday's test run decides how this week goes.",
+      "summary": "~8 mi target, all easy, every run symptom-gated, no quality. Sunday 9/20 was test #1; Wed and Sat are #2 and #3, with recovery days between. All clean = week 13 resumes the build. Any recurrence DURING a run = this week converts to cross-train cardio + rehab for a week or so, per user's own protocol. Strength is back to non-negotiable this week -- user's call: the build phase drifted into miles-only and the strength/recovery side is what keeps these two injuries away. Rehab Phase 1 daily dose every day (coach-data/rehab.md).",
       "sessions": [
         {
           "date": "2026-09-21",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "3 mi easy, conversational.",
+          "type": "strength",
+          "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.)",
           "status": "upcoming",
-          "duration_min": 32,
-          "miles": 3.0
+          "duration_min": 40
         },
         {
           "date": "2026-09-22",
           "day": "Tue",
-          "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
-          "status": "upcoming",
-          "duration_min": 30
+          "type": "rest",
+          "detail": "Rest from running -- optional 30 min easy spin if the legs feel good. Rehab dose. How did yesterday's body react to Sunday's test? That answer sets up tomorrow.",
+          "status": "upcoming"
         },
         {
           "date": "2026-09-23",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "3 mi easy.",
+          "detail": "3 mi easy, run-walk fine -- ONLY if Sunday's test was clean and there was no next-morning reaction. Otherwise 30-40 min easy spin instead. Rehab dose after.",
           "status": "upcoming",
-          "duration_min": 32,
+          "duration_min": 33,
           "miles": 3.0
         },
         {
           "date": "2026-09-24",
           "day": "Thu",
-          "type": "easy_run",
-          "detail": "3.5 mi easy -- down week, no quality push this time, just an easy run.",
-          "status": "upcoming",
-          "duration_min": 37,
-          "miles": 3.5
+          "type": "rest",
+          "detail": "Rest on purpose -- a recovery day between test runs is part of the test. Rehab dose + evening Normatec/cold plunge.",
+          "status": "upcoming"
         },
         {
           "date": "2026-09-25",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, plank 2x40s, seated row or curls. Tibialis raises + banded inversion via the rehab dose. Step-ups only if fully green.",
           "status": "upcoming",
-          "duration_min": 32
+          "duration_min": 40
         },
         {
           "date": "2026-09-26",
           "day": "Sat",
           "type": "long_run",
-          "detail": "7 mi easy, conversational -- down from 9.5, absorbing the last two weeks' growth before the final build push toward peak.",
+          "detail": "5 mi easy, conversational, run-walk welcome -- conditional on Sunday AND Wednesday both being clean. This is the graduation run for the week, not a fitness builder. If either earlier run flagged, substitute 60 min easy spin. Rehab dose after.",
           "status": "upcoming",
-          "duration_min": 74,
-          "miles": 7.0
+          "duration_min": 55,
+          "miles": 5.0
         },
         {
           "date": "2026-09-27",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "detail": "Rest -- walk + rehab dose. Verdict day: if the week was clean, week 13 resumes the build.",
           "status": "upcoming"
         }
       ],
-      "miles_target": 16.0
+      "miles_target": 8.0
     },
     {
       "week": 13,
       "phase": "build",
-      "focus": "Back to progression after the down week -- long run to 10 mi, resuming growth from week 11's 9.5 peak rather than week 12's 7 mi trough.",
-      "summary": "~23.5 mi target. Last build-phase week before peak.",
+      "focus": "Back to progression after the deload + return test -- long run to 10 mi, CONDITIONAL on week 12 being fully clean.",
+      "summary": "~23.5 mi target. Last build-phase week before peak. Only runs as written if week 12's three test runs were all symptom-free; otherwise this week gets rebuilt around whatever the flare (and ideally the PT) says.",
       "sessions": [
         {
           "date": "2026-09-28",
