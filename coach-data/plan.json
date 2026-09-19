@@ -838,17 +838,15 @@
           "detail": "Gym B, modified for the ankle: DB/trap-bar deadlift light-moderate 3x8-10, DB overhead press 3x8-10, DB row or lat pulldown 3x8-10, plank 2x40s, hip thrust machine 3x8-10 progressively loaded near failure (swapped for step-ups -- no ankle range-of-motion demand, feet flat). Skipped tibialis/calf raises tonight since already loaded today (doming + raises at work). Preceded by an hour easy-spin bike ride today.",
           "status": "completed",
           "duration_min": 32,
-          "note": "Hip thrust machine: 3x8 @ 90 lb/side -- strong first session on it, good room to progress from."
+          "note": "Hip thrust machine: 3x8 @ 90 lb/side -- strong first session on it, good room to progress from. Also did eccentric heel drops."
         },
         {
           "date": "2026-09-19",
           "day": "Sat",
-          "type": "long_run",
-          "detail": "9.5 mi easy CONDITIONAL on the left arch/posterior tib and right shin being genuinely clear (pain-free at rest and through a short warm-up walk/jog) -- not just 'manageable.' If either is still achey at all, this becomes a short easy run or full rest instead, and the 9.5 mi target waits. Three straight days of involvement across two structures/both legs means this week is not the week to push a number. Approved substitute if not running: ~95-100 min easy-spin bike (conversational effort, no mashing/climbing out of saddle) -- stop if pedaling itself reproduces the arch/tib/shin ache.",
+          "type": "strength",
+          "detail": "Long run deferred again -- user opted for a gym strength session instead. Modified leg day, ankle-friendly: leg press machine 3x8-10 (feet flat, no free-squat ankle demand), DB Romanian deadlift 3x8-10, seated leg curl 3x10-12, lat pulldown or DB row 3x8-10, side plank 2x30s/side. Skipping hip thrust again today (just loaded heavy yesterday) and calf/tib work (self-check first, skip if not clearly better). Bike remains the aerobic substitute; running still pending the ankle clearing.",
           "status": "upcoming",
-          "duration_min": 101,
-          "miles": 9.5,
-          "miles_planned": 9.5
+          "duration_min": 40
         },
         {
           "date": "2026-09-20",
