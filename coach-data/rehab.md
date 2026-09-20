@@ -160,6 +160,13 @@ amending the old "strength drops first" policy:
 - **Recovery is training:** no more long run + all-day-on-feet doubles when it's
   avoidable; massage/soft-tissue work is scheduled maintenance during build/peak
   (every 2–3 weeks), not a rescue tool.
+- **The recovery stack that worked (named after the 9/20 test):** days genuinely
+  off when needed + strength + self-massage + cold plunge. Your own words: the
+  plunge was the saving grace earlier in the cycle, and it quietly disappeared as
+  the miles took over — same drift as the strength. Standing target: cold plunge
+  (and/or Normatec) on run days and after the long run every week of build/peak,
+  self-massage on the calves most evenings. If the stack starts slipping again,
+  that's a flag to raise, not a detail to let slide.
 
 ## How the week looks right now (Phase 1)
 
