@@ -45,7 +45,7 @@
       ]
     }
   ],
-  "current_week": 11,
+  "current_week": 12,
   "weeks": [
     {
       "week": 1,
@@ -855,24 +855,26 @@
           "day": "Sun",
           "type": "easy_run",
           "detail": "RETURN-TO-RUN TEST (moved up from Monday per user's plan): 2-3 mi short and easy, run-walk welcome, flat route, non-plated shoes. Gate: pain-free at rest and through a 5-min warm-up walk. Any arch/post-tib or shin issue during = stop, walk home, and the next week becomes cross-train cardio + rehab. Rehab dose after. (Modified Gym A moves to Monday.)",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 30,
-          "miles": 2.5
+          "miles": 5.0,
+          "miles_planned": 2.5,
+          "note": "PASSED, and then some: 5 mi on the treadmill as 1 mi run / 2-3 min walk repeats. Slight tightness only, ~1-2/10, never pain. Full rehab warm-up beforehand (isometrics, doming, inversion, balance) -- felt genuinely warmed up and ready. 5 min cold plunge after. Verdict pending the Monday-morning reaction check; note it was 2x the prescribed 2-3 mi test distance."
         }
       ],
-      "miles_target": 12.0
+      "miles_target": 14.5
     },
     {
       "week": 12,
       "phase": "build",
       "focus": "Graded return-to-running -- Sunday's test run decides how this week goes.",
-      "summary": "~8 mi target, all easy, every run symptom-gated, no quality. Sunday 9/20 was test #1; Wed and Sat are #2 and #3, with recovery days between. All clean = week 13 resumes the build. Any recurrence DURING a run = this week converts to cross-train cardio + rehab for a week or so, per user's own protocol. Strength is back to non-negotiable this week -- user's call: the build phase drifted into miles-only and the strength/recovery side is what keeps these two injuries away. Rehab Phase 1 daily dose every day (coach-data/rehab.md).",
+      "summary": "Graded return continues off Sunday's passed test (5 mi run-walk, 1-2/10 tightness, no pain). ~9 mi target: Wed 3-4 easy + Sat 5-6 easy, both gated on no delayed reaction, no quality. Clean week = week 13 resumes the build. Strength non-negotiable (Mon Gym A, Fri Gym B) + rehab Phase 1 daily dose every day.",
       "sessions": [
         {
           "date": "2026-09-21",
           "day": "Mon",
           "type": "strength",
-          "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.)",
+          "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.) Also today: honest morning check on the arch/shin -- the delayed reaction to Sunday's 5 mi is the real test verdict; report it either way.",
           "status": "upcoming",
           "duration_min": 40
         },
@@ -887,10 +889,10 @@
           "date": "2026-09-23",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "3 mi easy, run-walk fine -- ONLY if Sunday's test was clean and there was no next-morning reaction. Otherwise 30-40 min easy spin instead. Rehab dose after.",
+          "detail": "3-4 mi easy, run-walk fine -- Sunday's 5 mi test passed (1-2/10 tightness, no pain), so the gate is now the reaction: only run if Monday/Tuesday brought no delayed arch or shin response. Any delayed soreness = 30-40 min easy spin instead. Rehab dose after.",
           "status": "upcoming",
           "duration_min": 33,
-          "miles": 3.0
+          "miles": 3.5
         },
         {
           "date": "2026-09-24",
@@ -911,10 +913,10 @@
           "date": "2026-09-26",
           "day": "Sat",
           "type": "long_run",
-          "detail": "5 mi easy, conversational, run-walk welcome -- conditional on Sunday AND Wednesday both being clean. This is the graduation run for the week, not a fitness builder. If either earlier run flagged, substitute 60 min easy spin. Rehab dose after.",
+          "detail": "5-6 mi easy, conversational, run-walk welcome -- conditional on Wednesday being clean with no delayed reaction. Graduation run for the week. If Wednesday flagged, substitute 60 min easy spin. Rehab dose after.",
           "status": "upcoming",
           "duration_min": 55,
-          "miles": 5.0
+          "miles": 5.5
         },
         {
           "date": "2026-09-27",
@@ -924,7 +926,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 8.0
+      "miles_target": 9.0
     },
     {
       "week": 13,
