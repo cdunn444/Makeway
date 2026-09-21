@@ -103,6 +103,45 @@ rest` (extend as needed for the user's activities). Only generate detailed sessi
 2–3 weeks ahead; keep later weeks as phase-level sketches and fill them in as they
 approach — adaptation makes far-future detail stale anyway.
 
+## rehab.json — the dashboard face of an active rehab program
+
+When an injury gets a structured rehab/prehab program (full prose, reasoning, and
+progression rules live in `rehab.md`), mirror the *current prescription* here — the
+dashboard renders it as a daily "Re/Prehab" card on the Brief. Keep the two in sync:
+whenever the program changes phase or an exercise progresses in `rehab.md`, update
+this file in the same commit.
+
+```json
+{
+  "updated": "2026-09-21",
+  "active": true,
+  "focus": "Left post tib / arch + right shin",
+  "phase": { "num": 1, "of": 3, "name": "Calm it down", "exit": "…what unlocks the next phase…" },
+  "note": "Daily dose, ~12 min — after the session or in the evening.",
+  "pain_rules": "Green: … Yellow: … Red: …",
+  "special": "One-line hard rule shown with a warning label (e.g. left calf mid-range only).",
+  "exercises": [ { "name": "Short-foot arch doming", "dose": "2×6–8/foot · 5–10s holds", "cue": "1–2 sentence form cue (tap-to-reveal)" } ],
+  "also": ["soft-tissue / mobility / recovery items for the current phase"],
+  "avoid": ["what's off the menu right now"],
+  "source": "coach-data/rehab.md"
+}
+```
+
+Only `active` + `exercises` are required for the card to show; every other field is
+optional and hides when absent. Set `"active": false` when the program ends (the
+card disappears) rather than deleting the file, and fold the "keepers" back into
+`profile.optional_strength`. While `active` with exercises, the dashboard hides the
+`optional_strength` run-day card so the two never double-prescribe.
+
+When the user says they did (or skipped) the day's rehab dose, log it:
+
+```jsonl
+{"date": "2026-09-21", "kind": "rehab", "result": "done", "note": "all green, left iso still mid-range"}
+```
+
+Any `kind: "rehab"` line for today with `result` other than `"skipped"` puts a
+"done today" badge on the card.
+
 ## log.jsonl — one JSON object per line, append-only
 
 ```jsonl

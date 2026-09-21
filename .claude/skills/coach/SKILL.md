@@ -32,6 +32,7 @@ All user state persists as files in `coach-data/` at the repo root:
 | `coach-data/log.jsonl` | One JSON line per logged event: workouts (completed/partial/skipped + details), nutrition check-ins, weigh-ins, device imports |
 | `coach-data/imports/` | Raw uploaded exports (Garmin CSV/TCX), kept for re-parsing |
 | `coach-data/notes.md` | Free-form coach memory: things the user mentioned, flags, upcoming life events |
+| `coach-data/rehab.md` + `rehab.json` | Active rehab/prehab program: full prose program in the `.md`, current prescription mirrored in the `.json` for the dashboard's Re/Prehab card — keep both in sync |
 | `coach-data/session.json` | URL of the most recent coach session — keeps the dashboard's "Talk to Coach" button pointed at a live chat |
 
 A read-only dashboard PWA (`index.html` at the repo root, served via GitHub Pages)

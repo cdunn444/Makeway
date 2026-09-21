@@ -141,16 +141,6 @@
       "notes": "day kcal = tdee_baseline + session cost - deficit; protein constant; fat by day type; carbs = remainder. Key sessions carry the smallest deficit so they stay fueled."
     }
   },
-  "optional_strength": {
-    "title": "Rehab Daily Dose \u2014 Phase 1",
-    "note": "NOT optional right now \u2014 ~12 min daily while the arch/shin flare settles; this replaces the old lower-leg circuit. Everything pain-free (\u22643/10 that settles); left calf stays flat-ground/mid-range only. Full program + progression rules: coach-data/rehab.md.",
-    "exercises": [
-      "Short-foot arch doming, 5-10s holds \u2014 2\u00d76-8/foot",
-      "Isometric heel-raise hold, flat ground, both feet \u2014 3\u00d730s (left mid-range)",
-      "Banded ankle inversion \u2014 2\u00d715/side",
-      "Tibialis raises (wall lean) \u2014 2\u00d720",
-      "Side plank + top-leg raise \u2014 2\u00d720-30s/side",
-      "Single-leg balance \u2014 2\u00d730s/leg (progress: eyes closed)"
-    ]
-  }
+  "optional_strength": null,
+  "optional_strength_note": "Stood down 2026-09-21 \u2014 the rehab daily dose moved to coach-data/rehab.json (its own dashboard card, daily). When rehab ends, restore this with the 'keepers' circuit from rehab.md."
 }
