@@ -874,16 +874,17 @@
           "date": "2026-09-21",
           "day": "Mon",
           "type": "strength",
-          "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.) Also today: honest morning check on the arch/shin -- the delayed reaction to Sunday's 5 mi is the real test verdict; report it either way.",
+          "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.) Also today: honest morning check on the arch/shin -- the delayed reaction to Sunday's 5 mi is the real test verdict; report it either way. Optional 20-30 min easy spin after lifting if you want extra cardio volume.",
           "status": "upcoming",
           "duration_min": 40
         },
         {
           "date": "2026-09-22",
           "day": "Tue",
-          "type": "rest",
-          "detail": "Rest from running -- optional 30 min easy spin if the legs feel good. Rehab dose. How did yesterday's body react to Sunday's test? That answer sets up tomorrow.",
-          "status": "upcoming"
+          "type": "cross_train",
+          "detail": "Still a rest day from running -- 30-45 min easy-spin indoor bike to keep cardio volume up this week while running stays gated. Rehab dose. How did yesterday's body react to Sunday's test? That answer sets up tomorrow.",
+          "status": "upcoming",
+          "duration_min": 35
         },
         {
           "date": "2026-09-23",
@@ -898,14 +899,14 @@
           "date": "2026-09-24",
           "day": "Thu",
           "type": "rest",
-          "detail": "Rest on purpose -- a recovery day between test runs is part of the test. Rehab dose + evening Normatec/cold plunge.",
+          "detail": "Rest on purpose -- a recovery day between test runs is part of the test. Leaving this one as true rest rather than a bike day, so it stays a clean read on how the body's actually responding heading into Saturday. Rehab dose + evening Normatec/cold plunge.",
           "status": "upcoming"
         },
         {
           "date": "2026-09-25",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, plank 2x40s, seated row or curls. Tibialis raises + banded inversion via the rehab dose. Step-ups only if fully green.",
+          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, plank 2x40s, seated row or curls. Tibialis raises + banded inversion via the rehab dose. Step-ups only if fully green. Optional 20-30 min easy spin after lifting if you want extra cardio volume.",
           "status": "upcoming",
           "duration_min": 40
         },
