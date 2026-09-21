@@ -898,9 +898,10 @@
         {
           "date": "2026-09-24",
           "day": "Thu",
-          "type": "rest",
-          "detail": "Rest on purpose -- a recovery day between test runs is part of the test. Leaving this one as true rest rather than a bike day, so it stays a clean read on how the body's actually responding heading into Saturday. Rehab dose + evening Normatec/cold plunge.",
-          "status": "upcoming"
+          "type": "cross_train",
+          "detail": "User's call to fill this with activity rather than pure rest: 30-45 min easy-spin indoor bike, same low effort as Tuesday's -- nothing pushing intensity, so it doesn't add fatigue before Saturday's test long run or confound the delayed-reaction read from Wednesday's run. Rehab dose + evening Normatec/cold plunge.",
+          "status": "upcoming",
+          "duration_min": 35
         },
         {
           "date": "2026-09-25",
