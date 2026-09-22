@@ -876,7 +876,8 @@
           "type": "strength",
           "detail": "Gym A, modified: DB Romanian deadlift, lat pulldown or DB row, side plank 2x30s/side + top-leg raises. Goblet squats and lunges only if the left ankle is fully green; calf work stays in the rehab program. Rehab dose as warm-up. (Moved from Sunday to make room for the test run.) Also today: honest morning check on the arch/shin -- the delayed reaction to Sunday's 5 mi is the real test verdict; report it either way. Optional 20-30 min easy spin after lifting if you want extra cardio volume.",
           "status": "upcoming",
-          "duration_min": 40
+          "duration_min": 40,
+          "note": "Morning check after Sunday's 5 mi test: Achilles tight and a little naggy on waking/walking around -- the delayed reaction the gate was built for. Gym A tonight stays but hinge/upper only (no squats, no lunges); left-side rehab work isometric mid-range only, nothing eccentric."
         },
         {
           "date": "2026-09-22",
@@ -890,10 +891,10 @@
           "date": "2026-09-23",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "3-4 mi easy, run-walk fine -- Sunday's 5 mi test passed (1-2/10 tightness, no pain), so the gate is now the reaction: only run if Monday/Tuesday brought no delayed arch or shin response. Any delayed soreness = 30-40 min easy spin instead. Rehab dose after.",
+          "detail": "DECISION DAY: 3 mi easy ONLY if the Achilles morning-nag is back to baseline by Wednesday wake-up (two mornings of data post-test). Still tight/naggy at first steps = 30-40 min easy spin instead and the run waits for the weekend -- per your own protocol: any issue, back off to cross-train + rehab. Rehab dose either way; full warm-up routine if running.",
           "status": "upcoming",
           "duration_min": 33,
-          "miles": 3.5
+          "miles": 3.0
         },
         {
           "date": "2026-09-24",
