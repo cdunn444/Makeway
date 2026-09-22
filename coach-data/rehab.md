@@ -89,6 +89,12 @@ daily dose itself fully green.
 Keep the bird dogs if you enjoy them (they're good spine/hip work), but they don't
 replace the standing hip items.
 
+**Shoes on or off?** Heel-raise isometrics (cushioned shoes are actually kinder to
+the cranky left Achilles right now), tib raises, inversion, and side plank all work
+shod — do them anywhere. Doming and single-leg balance want bare feet: doming is
+fake inside a shoe, and ground-feel is half the balance exercise. Pair those two
+with a barefoot moment at home (teeth-brushing, coffee brewing).
+
 ### Also in Phase 1
 - **Soft-tissue work, both legs:** book the deep-tissue massage (calves + lower legs
   — it's what cleared this in two days last time). Between sessions: massage gun or
