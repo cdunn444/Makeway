@@ -1,0 +1,57 @@
+{
+  "updated": "2026-09-21",
+  "active": true,
+  "focus": "Left post tib / arch + right shin",
+  "phase": {
+    "num": 1,
+    "of": 3,
+    "name": "Calm it down",
+    "exit": "Walking and daily life pain-free 3+ straight days, and the daily dose itself fully green."
+  },
+  "note": "Daily dose, ~12 min — after the session or in the evening with the Normatec. This is the LAST thing that gets dropped on a busy week.",
+  "pain_rules": "Green: ≤3/10 working discomfort that settles within an hour — continue. Yellow: 4–5/10, or worse the next morning — back off a progression level. Red: sharp pain, limping, or pain at rest — stop that exercise and get the eval scheduled.",
+  "special": "Left calf stays flat-ground, mid-range only — no end-range loaded calf work and no forced stretching until the ankle restriction releases. Right side can do the full menu.",
+  "exercises": [
+    {
+      "name": "Short-foot arch doming",
+      "dose": "2×6–8/foot · 5–10s holds",
+      "cue": "Squeeze and hold — pull the big-toe knuckle toward the heel, no toe curling. End the rep when the dome starts collapsing."
+    },
+    {
+      "name": "Isometric heel-raise hold",
+      "dose": "3×30s · both feet",
+      "cue": "Flat ground: rise halfway and hold — isometrics calm irritated tendons. Left stays mid-range; skip left if not green."
+    },
+    {
+      "name": "Banded ankle inversion",
+      "dose": "2×15/side",
+      "cue": "Band around the forefoot, sweep the foot inward — slow and controlled; this is the post tib's own exercise. No band? Ankle over the opposite knee, press the inside of the forefoot into your palm."
+    },
+    {
+      "name": "Tibialis raises (wall lean)",
+      "dose": "2×20",
+      "cue": "Heels on the ground, lift both forefeet — front-side work for the right shin."
+    },
+    {
+      "name": "Side plank + top-leg raise",
+      "dose": "2×20–30s/side",
+      "cue": "Hips stacked, lift the top leg while holding the plank — the standing progression of your clamshells."
+    },
+    {
+      "name": "Single-leg balance",
+      "dose": "2×30s/leg",
+      "cue": "Barefoot, soft knee — post tib + hip coordination, not filler. Progress: eyes closed."
+    }
+  ],
+  "also": [
+    "Massage gun / lacrosse ball on calves, soleus, and along the inner shin — 3–5 min/leg (muscle bellies, not the sore tendon or bone) until the deep-tissue massage is booked",
+    "Gentle left-ankle mobility only: circles + pain-free knee-to-wall rocks short of the stuck point — never push into the restriction",
+    "Evening Normatec + cold plunge — it measurably helped on 9/17"
+  ],
+  "avoid": [
+    "Running, hopping/jumping, hills, walking lunges",
+    "Loaded left calf work; forced left calf stretching",
+    "The plated Hyperion — even for walking around"
+  ],
+  "source": "coach-data/rehab.md"
+}

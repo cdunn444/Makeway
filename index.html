@@ -263,6 +263,28 @@
   .cread .seclab { margin-bottom: 4px; }
   .cread.watch .seclab { color: var(--warn); }
   .cread.flag .seclab { color: var(--bad); }
+  .seclab.warn { color: var(--warn); }
+  /* re/prehab card — tap a row for the cue */
+  .rxrow { padding: 9px 0; border-bottom: 1px solid var(--line); -webkit-tap-highlight-color: transparent; }
+  .rxrow:last-of-type { border-bottom: 0; }
+  .rxrow.has-cue { cursor: pointer; }
+  .rxrow .r1 { display: flex; align-items: baseline; gap: 10px; }
+  .rxrow .nm { flex: 1; font-weight: 700; font-size: .92rem; line-height: 1.35; }
+  .rxrow .ds {
+    flex-shrink: 0; color: var(--volt); font-size: .74rem; font-weight: 800;
+    letter-spacing: .03em; font-variant-numeric: tabular-nums; text-align: right;
+  }
+  .rxrow .chev2 {
+    flex-shrink: 0; width: 16px; height: 16px; color: var(--ink-3); align-self: center;
+    transition: transform .25s cubic-bezier(.4,0,.2,1);
+  }
+  .rxrow .chev2 svg { width: 16px; height: 16px; display: block; }
+  .rxrow.open .chev2 { transform: rotate(180deg); color: var(--volt); }
+  .rxrow .cue { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s cubic-bezier(.4,0,.2,1); }
+  .rxrow .cue > div { overflow: hidden; min-height: 0; color: var(--ink-2); font-size: .84rem; line-height: 1.5; }
+  .rxrow.open .cue { grid-template-rows: 1fr; }
+  .rxrow.open .cue > div { padding-top: 4px; }
+  @media (prefers-reduced-motion: reduce) { .rxrow .cue, .rxrow .chev2 { transition: none; } }
   .daytag { color: var(--ink-2); font-weight: 700; letter-spacing: .1em; }
   .loglist li { flex-direction: column; gap: 0; }
   .loglist li::before { display: none; }
@@ -635,7 +657,7 @@ const fmtDate = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { w
 const shortDate = s => new Date(s + 'T12:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 
 /* ---------- state ---------- */
-let PLAN = null, PROFILE = null, LOG = [], weekIdx = 0;
+let PLAN = null, PROFILE = null, LOG = [], REHAB = null, weekIdx = 0;
 
 function allSessions() { return (PLAN?.weeks || []).flatMap(w => w.sessions.map(s => ({ ...s, week: w.week }))); }
 function esc(t) { const d = document.createElement('div'); d.textContent = t ?? ''; return d.innerHTML; }
@@ -660,6 +682,33 @@ function actualFor(s) {
   return matches[matches.length - 1] || null;
 }
 
+/* ---------- Re/Prehab ---------- */
+/* Renders coach-data/rehab.json (the structured face of rehab.md) as a daily
+   card on the Brief. Tap an exercise for its cue. A kind:"rehab" log line for
+   today marks the dose done. */
+const CHEV2 = '<div class="chev2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>';
+function rehabBlock() {
+  const R = REHAB;
+  if (!R?.active || !R?.exercises?.length) return '';
+  const t = todayStr();
+  const doneToday = LOG.some(e => e.kind === 'rehab' && e.date === t && e.result !== 'skipped');
+  const ph = R.phase?.num ? `Phase ${R.phase.num}${R.phase.of ? '/' + R.phase.of : ''}${R.phase.name ? ' · ' + R.phase.name : ''}` : '';
+  let html = `<div class="card"><h3>Re/Prehab${ph ? ` · <span class="daytag">${esc(ph).toUpperCase()}</span>` : ''}${doneToday ? '<span class="badge completed" style="vertical-align:1px">done today</span>' : ''}</h3>`;
+  if (R.focus) html += `<div class="wk-meta" style="margin-top:-6px">${esc(R.focus)}</div>`;
+  if (R.note) html += `<p class="muted" style="margin-bottom:2px">${esc(R.note)}</p>`;
+  html += R.exercises.map(x => `
+    <div class="rxrow${x.cue ? ' has-cue" role="button" aria-expanded="false' : ''}">
+      <div class="r1"><span class="nm">${esc(x.name)}</span><span class="ds">${esc(x.dose || '')}</span>${x.cue ? CHEV2 : ''}</div>
+      ${x.cue ? `<div class="cue"><div>${esc(x.cue)}</div></div>` : ''}
+    </div>`).join('');
+  if (R.special) html += `<div class="sec"><div class="seclab warn">Watch</div><div class="sectxt">${esc(R.special)}</div></div>`;
+  if (R.also?.length) html += `<div class="sec"><div class="seclab">Also today</div><ul class="plain">${R.also.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  if (R.avoid?.length) html += `<div class="sec"><div class="seclab">Off the menu</div><ul class="plain">${R.avoid.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  if (R.phase?.exit) html += `<div class="sec"><div class="seclab">Next phase when</div><div class="sectxt">${esc(R.phase.exit)}</div></div>`;
+  if (R.pain_rules) html += `<div class="sec"><div class="seclab">Pain rules</div><div class="sectxt" style="color:var(--ink-2);font-size:.84rem">${esc(R.pain_rules)}</div></div>`;
+  return html + '</div>';
+}
+
 /* ---------- Daily Brief ---------- */
 function renderBrief() {
   const el = $('view-brief');
@@ -678,6 +727,7 @@ function renderBrief() {
         <div class="wk-detail">Nothing on the plan today — walk, stretch, recover.</div>
       </div>`;
     }
+    html += rehabBlock();
     if (PROFILE?.targets) html += nutritionBlock(null, true);
   } else {
     const label = TYPE_LABEL[s.type] || s.type;
@@ -697,8 +747,10 @@ function renderBrief() {
       ${prepList.length ? `<div class="sec"><div class="seclab">Movement Prep</div><ul class="plain">${prepList.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
       ${post ? `<div class="sec"><div class="seclab">Post-Workout</div><div class="sectxt">${esc(post)}</div></div>` : ''}
     </div>`;
+    html += rehabBlock();
+    // the run-day circuit stands down while an active rehab program owns the slot
     const os = PROFILE?.optional_strength;
-    if (s.type.endsWith('_run') && os?.exercises?.length) {
+    if (s.type.endsWith('_run') && os?.exercises?.length && !(REHAB?.active && REHAB?.exercises?.length)) {
       html += `<div class="card"><h3>Optional Strength${os.title ? ` · <span class="daytag">${esc(os.title).toUpperCase()}</span>` : ''}</h3>
         ${os.note ? `<p class="muted" style="margin-bottom:10px">${esc(os.note)}</p>` : ''}
         <ul class="plain">${os.exercises.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
@@ -711,6 +763,10 @@ function renderBrief() {
   el.querySelectorAll('.macro[data-m]').forEach(tile => tile.onclick = () => {
     macroSel = macroSel === tile.dataset.m ? null : tile.dataset.m;
     renderBrief();
+  });
+  el.querySelectorAll('.rxrow.has-cue').forEach(r => r.onclick = () => {
+    r.classList.toggle('open');
+    r.setAttribute('aria-expanded', r.classList.contains('open'));
   });
 }
 
@@ -919,6 +975,7 @@ const SNAP_KEY = 'mw_snapshot_v1';
 function hydrate(d) {
   try { PLAN = d.plan ? JSON.parse(d.plan) : PLAN; } catch {}
   try { PROFILE = d.profile ? JSON.parse(d.profile) : PROFILE; } catch {}
+  try { REHAB = d.rehab ? JSON.parse(d.rehab) : REHAB; } catch {}
   if (d.log) LOG = parseJSONL(d.log);
   try { const s = d.session && JSON.parse(d.session); if (s?.url) $('fab').href = s.url; } catch {}
   // pick current week for schedule
@@ -931,15 +988,16 @@ function hydrate(d) {
 async function boot() {
   let failures = 0;
   const grab = async (path, fallback) => { try { return await loadFile(path); } catch { failures++; return fallback; } };
-  const [plan, profile, log, session] = await Promise.all([
+  const [plan, profile, log, session, rehab] = await Promise.all([
     grab('coach-data/plan.json', null),
     grab('coach-data/profile.json', null),
     grab('coach-data/log.jsonl', ''),
     grab('coach-data/session.json', null),
+    grab('coach-data/rehab.json', null),
   ]);
   if (plan || profile || log) {
-    hydrate({ plan, profile, log, session });
-    try { localStorage.setItem(SNAP_KEY, JSON.stringify({ plan, profile, log, session })); } catch {}
+    hydrate({ plan, profile, log, session, rehab });
+    try { localStorage.setItem(SNAP_KEY, JSON.stringify({ plan, profile, log, session, rehab })); } catch {}
   }
   if (!PLAN && !PROFILE) {
     $('view-setup').classList.remove('hidden');
