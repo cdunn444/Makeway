@@ -884,15 +884,15 @@
           "day": "Tue",
           "type": "cross_train",
           "detail": "Still a rest day from running -- 30-45 min easy-spin indoor bike to keep cardio volume up this week while running stays gated. Rehab dose. How did yesterday's body react to Sunday's test? That answer sets up tomorrow.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 35,
-          "note": "Tuesday-morning check, two days post 5-mi test: LEFT Achilles tight and a little naggy on waking/walking. Separately, it has given a deep ache when stretched for the last few days -- user correctly avoided stretching it. Today: rest or gentle spin only, dose with left side isometric-only, no stretching, soft-tissue on calf bellies not the tendon."
+          "note": "Tuesday-morning check, two days post 5-mi test: LEFT Achilles tight and a little naggy on waking/walking. Separately, it has given a deep ache when stretched for the last few days -- user correctly avoided stretching it. Today: rest or gentle spin only, dose with left side isometric-only, no stretching, soft-tissue on calf bellies not the tendon. Evening: ~45 min interval bike ride (Garmin sync will log it) + rehab dose done minus the side planks. Symptom check: shin 0/10, arch 2/10, Achilles still 'tight/stuck' but NO pain -- trending the right way."
         },
         {
           "date": "2026-09-23",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "DECISION DAY: 3 mi easy ONLY if the Achilles morning-nag is back to baseline by Wednesday wake-up (two mornings of data post-test). Still tight/naggy at first steps = 30-40 min easy spin instead and the run waits for the weekend -- per your own protocol: any issue, back off to cross-train + rehab. Rehab dose either way; full warm-up routine if running.",
+          "detail": "3 mi easy on the TREADMILL (user's choice, good venue), run-walk (4 min jog / 1 min walk), 10:30-11:00/mi locked in, 0-0.5% incline, non-plated shoes, full pre-run routine incl. the isometric holds. GATE at wake-up: no pain at rest, warm-up walk clean, and no 'naggy' quality -- plain tightness that warms up is acceptable (it's been the baseline for a week), naggy/achy is not. Fails the gate = 30-40 min easy spin and the run waits for the weekend. Note: last night's bike was intervals, not an easy spin -- expect some calf fatigue and don't confuse it with the injury.",
           "status": "upcoming",
           "duration_min": 33,
           "miles": 3.0
