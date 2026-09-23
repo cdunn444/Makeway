@@ -901,16 +901,16 @@
         {
           "date": "2026-09-24",
           "day": "Thu",
-          "type": "cross_train",
-          "detail": "User's call to fill this with activity rather than pure rest: 30-45 min easy-spin indoor bike, same low effort as Tuesday's -- nothing pushing intensity, so it doesn't add fatigue before Saturday's test long run or confound the delayed-reaction read from Wednesday's run. Rehab dose + evening Normatec/cold plunge.",
+          "type": "strength",
+          "detail": "Upper-body lift, chest focus (user's call): DB bench or push-up variations, incline DB press, rows or pulldown, overhead press, triceps, 3x8-12. No leg loading -- Saturday's graduation run gets fresh legs. Rehab dose as warm-up. Evening stack: calf self-massage + plunge.",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 45
         },
         {
           "date": "2026-09-25",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, plank 2x40s, seated row or curls. Tibialis raises + banded inversion via the rehab dose. Step-ups only if fully green. Optional 20-30 min easy spin after lifting if you want extra cardio volume.",
+          "detail": "Gym B, moderate -- keep legs serviceable for tomorrow's run: DB/trap-bar deadlift LIGHT 3x8, DB overhead press 3x8-10, plank 2x40s, seated row or curls (chest was yesterday). No step-ups, no calf/tib loading beyond the rehab dose. Done early enough to not eat into sleep.",
           "status": "upcoming",
           "duration_min": 40
         },
@@ -936,17 +936,17 @@
     {
       "week": 13,
       "phase": "build",
-      "focus": "Back to progression after the deload + return test -- long run to 10 mi, CONDITIONAL on week 12 being fully clean.",
-      "summary": "~23.5 mi target. Last build-phase week before peak. Only runs as written if week 12's three test runs were all symptom-free; otherwise this week gets rebuilt around whatever the flare (and ideally the PT) says.",
+      "focus": "Modified return-to-build: symptom-gated ramp resumes, long run to 7.5 mi on a straight/flat route. The original 23.5 mi week is retired -- see summary.",
+      "summary": "~17.5 mi target (revised down from 23.5). Post-flare reality: we ramp from week 12's ~11, not from where the old plan imagined. All easy running, optional strides only, no tempo. Long run 7.5 on a straight route (turns still the marker). Gates: every run needs the green rule (<=3/10 that settles, no naggy mornings after), and per the standing rule both strength touches must happen for the long run to grow next week.",
       "sessions": [
         {
           "date": "2026-09-28",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "4.5 mi easy, conversational.",
+          "detail": "3 mi easy, conversational. Straight/flat route or treadmill. Warm-up routine + rehab dose.",
           "status": "upcoming",
-          "duration_min": 48,
-          "miles": 4.5
+          "duration_min": 32,
+          "miles": 3.0
         },
         {
           "date": "2026-09-29",
@@ -960,7 +960,7 @@
           "date": "2026-09-30",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "4 mi easy.",
+          "detail": "4 mi easy. Straight/flat route or treadmill. If turns have gone silent on recent runs, fine to test a few gentle corners late in the run and report.",
           "status": "upcoming",
           "duration_min": 42,
           "miles": 4.0
@@ -968,11 +968,11 @@
         {
           "date": "2026-10-01",
           "day": "Thu",
-          "type": "tempo_run",
-          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 22 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4.75 mi total. Option B (longer reps) -- 1 mi easy warm-up, then 4 x 1000m @ 9:10-9:32/mi (goal race pace) with 400m easy jog recovery, 1 mi easy cooldown, ~6 mi total. Option C (easy) -- 4.5 mi easy.",
+          "type": "easy_run",
+          "detail": "3 mi easy + 4 strides (strides only if everything is green -- they're the first taste of faster turnover, straight line only). No tempo this week.",
           "status": "upcoming",
-          "duration_min": 52,
-          "miles": 5.0
+          "duration_min": 33,
+          "miles": 3.0
         },
         {
           "date": "2026-10-02",
@@ -986,10 +986,10 @@
           "date": "2026-10-03",
           "day": "Sat",
           "type": "long_run",
-          "detail": "10 mi easy, conversational.",
+          "detail": "7.5 mi easy long run, conversational, run-walk welcome. Straight/flat route. Full warm-up incl. isometric holds. Rehab dose after + evening stack.",
           "status": "upcoming",
-          "duration_min": 106,
-          "miles": 10.0
+          "duration_min": 80,
+          "miles": 7.5
         },
         {
           "date": "2026-10-04",
@@ -999,22 +999,22 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 23.5
+      "miles_target": 17.5
     },
     {
       "week": 14,
       "phase": "peak",
-      "focus": "First peak week -- highest volume of the cycle so far, first dedicated race-pace segment.",
-      "summary": "~25 mi target. Thursday's quality option now includes a real race-pace rehearsal (miles at 9:10-9:32/mi), still optional.",
+      "focus": "Peak week, revised: ~20 mi, long run 9.5-10 -- the biggest run before the race, three weeks out.",
+      "summary": "~20 mi target (revised from 25). Long run 9.5-10 on Sat 10/10 is the race-readiness anchor -- he ran 9 comfortably on 9/13, so this is a return, not new territory. Thursday's quality is optional and only if fully green incl. silent turns: 2x10 min light tempo, else easy. Everything still symptom-gated.",
       "sessions": [
         {
           "date": "2026-10-05",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "4.5 mi easy, conversational.",
+          "detail": "4 mi easy.",
           "status": "upcoming",
-          "duration_min": 48,
-          "miles": 4.5
+          "duration_min": 42,
+          "miles": 4.0
         },
         {
           "date": "2026-10-06",
@@ -1037,10 +1037,10 @@
           "date": "2026-10-08",
           "day": "Thu",
           "type": "tempo_run",
-          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 25 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~5 mi total. Option B (race-pace rehearsal) -- 2 mi easy warm-up, then 3 mi @ goal race pace (9:10-9:32/mi), 1 mi easy cooldown, ~6 mi total -- first real dress rehearsal for race effort. Option C (easy) -- 4.5 mi easy.",
+          "detail": "Optional quality, ONLY if fully green including silent turns: Option A -- 1 mi easy + 2 x 10 min @ comfortably-hard (~9:15-9:30/mi) w/ 3 min easy between + 1 mi easy, ~4.5 mi. Option B -- 4 mi easy. Either is a completed session.",
           "status": "upcoming",
-          "duration_min": 58,
-          "miles": 6.0
+          "duration_min": 46,
+          "miles": 4.5
         },
         {
           "date": "2026-10-09",
@@ -1054,10 +1054,10 @@
           "date": "2026-10-10",
           "day": "Sat",
           "type": "long_run",
-          "detail": "10.5 mi easy, conversational -- optional: run the last 2 mi at goal race pace (9:10-9:32/mi) if legs feel good, otherwise easy the whole way.",
+          "detail": "9.5-10 mi easy long run, conversational -- the race-readiness run, three weeks out. Run-walk welcome (it's likely the race strategy too). Straight-ish route, full warm-up, rehab dose + full recovery stack after.",
           "status": "upcoming",
-          "duration_min": 111,
-          "miles": 10.5
+          "duration_min": 105,
+          "miles": 9.75
         },
         {
           "date": "2026-10-11",
@@ -1067,22 +1067,22 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 25.0
+      "miles_target": 20.0
     },
     {
       "week": 15,
       "phase": "peak",
-      "focus": "Second and final peak week -- biggest long run of the cycle, last real quality work before taper.",
-      "summary": "~25 mi target. Everything after this week is about arriving fresh, not fitter.",
+      "focus": "Pre-taper absorb week: ~14 mi, long run 6-7. Freshness begins here, two weeks out.",
+      "summary": "~14 mi target (revised from 25 -- the old double-peak is gone). Absorb week 14's peak, keep legs sharp with strides, long run drops to 6-7. Strength continues but lighter. From here to race day the goal is arriving healthy, not adding fitness.",
       "sessions": [
         {
           "date": "2026-10-12",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "4 mi easy, conversational.",
+          "detail": "3.5 mi easy.",
           "status": "upcoming",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 37,
+          "miles": 3.5
         },
         {
           "date": "2026-10-13",
@@ -1096,19 +1096,18 @@
           "date": "2026-10-14",
           "day": "Wed",
           "type": "easy_run",
-          "detail": "4 mi easy.",
+          "detail": "3.5 mi easy + 4 strides at goal race pace.",
           "status": "upcoming",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 38,
+          "miles": 3.5
         },
         {
           "date": "2026-10-15",
           "day": "Thu",
-          "type": "tempo_run",
-          "detail": "Pick one -- all are a completed workout: Option A (tempo) -- 1 mi easy + 20 min @ comfortably-hard (~9:05-9:20/mi) + 1 mi easy, ~4.5 mi total. Option B (race-pace rehearsal) -- 2 mi easy warm-up, then 3 mi @ goal race pace (9:10-9:32/mi), 1 mi easy cooldown, ~6 mi total -- last hard quality before taper. Option C (easy) -- 4 mi easy.",
+          "type": "rest",
+          "detail": "Rest + rehab dose. No quality this close to the race beyond strides.",
           "status": "upcoming",
-          "duration_min": 52,
-          "miles": 5.0
+          "duration_min": 52
         },
         {
           "date": "2026-10-16",
@@ -1122,10 +1121,10 @@
           "date": "2026-10-17",
           "day": "Sat",
           "type": "long_run",
-          "detail": "11 mi easy, conversational -- the biggest long run of the cycle. Optional: last 2-3 mi at goal race pace as a final dress rehearsal.",
+          "detail": "6.5 mi easy, conversational -- last medium-long run, one week out. Optional: last 1-2 mi at goal race pace (9:10-9:32/mi) if everything is green.",
           "status": "upcoming",
-          "duration_min": 117,
-          "miles": 11.0
+          "duration_min": 70,
+          "miles": 6.5
         },
         {
           "date": "2026-10-18",
@@ -1135,7 +1134,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 25.0
+      "miles_target": 14.0
     },
     {
       "week": 16,
