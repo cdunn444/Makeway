@@ -904,7 +904,8 @@
           "type": "strength",
           "detail": "Upper-body lift, chest focus (user's call): DB bench or push-up variations, incline DB press, rows or pulldown, overhead press, triceps, 3x8-12. No leg loading -- Saturday's graduation run gets fresh legs. Rehab dose as warm-up. Evening stack: calf self-massage + plunge.",
           "status": "upcoming",
-          "duration_min": 45
+          "duration_min": 45,
+          "note": "Morning check (day after the 3 mi): left ankle very stiff out of bed, loosened within a few steps, then intermittent 2-3/10 discomfort. Chest day unaffected. Left isometric holds OK only if they feel good (they often calm it); no stretching."
         },
         {
           "date": "2026-09-25",
@@ -918,10 +919,10 @@
           "date": "2026-09-26",
           "day": "Sat",
           "type": "long_run",
-          "detail": "5-6 mi easy, conversational, run-walk welcome -- Wednesday passed (arch warm-up ache only, shin silent), so this runs unless Thu/Fri bring a delayed reaction. ROUTE MATTERS: straight and flat, minimal turns (track, straight out-and-back, or treadmill) -- left turns flared the arch to 3-4/10 on Wednesday. Full warm-up routine incl. isometric holds. Rehab dose after.",
+          "detail": "5 mi easy on the treadmill or a straight/flat route, run-walk welcome. The 6 is off the table this week. GATE: Saturday morning must be the same as or better than Thursday's (stiff at first steps, loosens quickly, 2-3/10 at most). Worse than Thursday (stiffness lasting past the first few minutes, or discomfort above 3/10) = 45-60 min easy spin instead. Full warm-up incl. isometric holds. Rehab dose after.",
           "status": "upcoming",
           "duration_min": 55,
-          "miles": 5.5
+          "miles": 5.0
         },
         {
           "date": "2026-09-27",
@@ -969,7 +970,7 @@
           "date": "2026-10-01",
           "day": "Thu",
           "type": "easy_run",
-          "detail": "3 mi easy + 4 strides (strides only if everything is green -- they're the first taste of faster turnover, straight line only). No tempo this week.",
+          "detail": "3 mi easy + 4 strides ONLY if morning ankle reactions have gone quiet by then. While they persist, runs stay on non-consecutive days (Wednesday is a run), so this becomes a 30-40 min easy spin.",
           "status": "upcoming",
           "duration_min": 33,
           "miles": 3.0
