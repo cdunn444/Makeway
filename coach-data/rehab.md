@@ -95,6 +95,30 @@ shod — do them anywhere. Doming and single-leg balance want bare feet: doming 
 fake inside a shoe, and ground-feel is half the balance exercise. Pair those two
 with a barefoot moment at home (teeth-brushing, coffee brewing).
 
+### Post-tib specifics (added 9/24)
+
+"Ankle" in your reports means the left posterior tib: inside of the ankle behind
+the bone, running into the upper arch. That's what flares on left turns and what
+stiffens the morning after runs. The "stuck" Achilles feeling is a separate, milder
+issue at the back of the heel.
+
+- **Pre-run isometric: inversion hold.** Seated, left foot flat, push the inside
+  edge of the foot inward against your other foot or a wall and hold 30–45 s × 3–4.
+  Moderate effort, pain-free. This is the post tib's version of the heel-raise hold
+  and the best way to settle it before a run. Do it alongside the heel-raise holds.
+- **Support all day, not just on runs.** Wear your most supportive non-plated
+  trainer. Avoid flat or minimal shoes, flip-flops, and barefoot time on hard
+  floors, especially first thing in the morning. An over-the-counter arch-support
+  insole in your daily shoes is a cheap way to offload the tendon.
+- **Weekly self-check (Sunday).** Do a single-leg heel raise on each side, just
+  1–3 reps and only if it's pain-free. Watch the left heel at the top: it should
+  swing slightly inward like the right one does. If you can't rise on the left, or
+  the heel stays straight or rolls outward, the post tib isn't doing its job yet.
+  Note the result.
+- **Post-tib red flags** (these are the escalation line): the left arch looking
+  flatter than the right when standing, swelling behind the inside ankle bone, or
+  losing the ability to do that heel raise. Any of those means get it looked at.
+
 ### Also in Phase 1
 - **Soft-tissue work, both legs:** book the deep-tissue massage (calves + lower legs
   — it's what cleared this in two days last time). Between sessions: massage gun or

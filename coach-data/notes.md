@@ -1,5 +1,7 @@
 # Coach notes
 
+- 2026-09-24: LOCATION KEY: when he says "ankle" he means the LEFT POSTERIOR TIB (inside ankle behind the bone, into the upper arch), not the Achilles. The Achilles "stuck"/tight feeling (back of heel) is a separate, milder issue; only log Achilles when he names it.
+
 - 2026-07-05: Onboarding complete. 35M, 5'7", 167 lb. Primary: running base. Secondary: weight loss (~0.5-0.75 lb/wk, deficit on rest days).
 - Trains EARLY: 5:00-6:30am starts (profile preferred_time 05:45). Pre-workout = quick carb 20-30 min out, not a full meal. Real recovery meal = breakfast.
 - Garmin (past 12 wks): 12-16 mi/wk through June, dip to 0 in early May, this week 5.02 mi @ ~10:10/mi. Easy pace anchor ~10:10-10:30/mi.
