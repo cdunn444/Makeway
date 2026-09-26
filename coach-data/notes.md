@@ -1,5 +1,6 @@
 # Coach notes
 
+- 2026-09-26: STRIDE HISTORY: ~2 years ago he deliberately shortened his stride to stop overstriding/heel striking. Easy-run cadence went from ~155-160 to ~160-170, strike moved to midfoot, and he feels more balanced but noticed more calf effort. That effect is real: moving from heel to midfoot landing shifts shock absorption from knee/hip to the calf, Achilles, post tib, and arch, which are exactly the structures in this cycle's flare. Implications: (1) don't revert or tinker with form during rehab or before the race; (2) watch for over-correction into toe-running (heels never touching down), a common and fixable extra calf load; (3) calf/soleus/post-tib strength is a permanent requirement of the stride he chose, not optional prehab.
 - 2026-09-24: LOCATION KEY: when he says "ankle" he means the LEFT POSTERIOR TIB (inside ankle behind the bone, into the upper arch), not the Achilles. The Achilles "stuck"/tight feeling (back of heel) is a separate, milder issue; only log Achilles when he names it.
 
 - 2026-07-05: Onboarding complete. 35M, 5'7", 167 lb. Primary: running base. Secondary: weight loss (~0.5-0.75 lb/wk, deficit on rest days).

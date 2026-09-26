@@ -52,6 +52,9 @@ that's where this program pushes.
 - Brooks Hyperion GTS (plated) debuted 8/27; plates shift work into the calf–arch
   complex. Ankles felt tired after its first outing.
 - Heat-season fatigue + high-humidity long runs.
+- Your stride (changed ~2 years ago): shorter steps and a midfoot landing move shock
+  absorption from the knee and hip onto the calf, Achilles, post tib, and arch. Good
+  trade, but it means lower-leg strength has to keep up with that job permanently.
 
 ## The pain rules (apply to every exercise below)
 
