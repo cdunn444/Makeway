@@ -928,9 +928,10 @@
         {
           "date": "2026-09-27",
           "day": "Sun",
-          "type": "rest",
-          "detail": "Rest -- walk + rehab dose. Day after a deep-tissue massage with cupping and scraping: heel, arch, and inner knee/upper inner shin may be tender or bruised, and that's the massage, not the injury. Start the right-leg range work (calf stretches straight + bent knee, knee-to-wall rocks). Sunday self-checks: single-leg heel raise both sides + knee-to-wall test (right side; left only if pain-free, stop at the first pull) -- record the cm. Post-tib and low-Achilles morning check as planned. Verdict day: if the week was clean, week 13 resumes the build.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Seated upper-body lift, back/shoulders/arms (user's call, legs stay at rest), 3x8-12, supersets: A) lat pulldown + seated DB shoulder press (moderate -- pressed Thursday); B) chest-supported DB row on an incline bench + seated lateral raise; C) reverse pec deck or seated bent-over rear-delt fly + seated incline DB curl; D) seated overhead DB triceps extension. Skip standing and bent-over moves. Also today: rehab dose, right-leg range work, Sunday self-checks (heel raise both sides, knee-to-wall in cm), post-tib and low-Achilles morning check. Heel/arch/inner-knee tenderness from yesterday's cupping and scraping is expected.",
+          "status": "upcoming",
+          "duration_min": 45
         }
       ],
       "miles_target": 9.0
