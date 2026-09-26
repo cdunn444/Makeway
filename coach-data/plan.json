@@ -929,7 +929,7 @@
           "date": "2026-09-27",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + rehab dose. Day after the sports massage: expect some calf tenderness, which is massage soreness and not the injury. Sunday heel-raise self-check still happens, but read the result with that in mind. Verdict day: if the week was clean, week 13 resumes the build.",
+          "detail": "Rest -- walk + rehab dose. Day after a deep-tissue massage with cupping and scraping: heel, arch, and inner knee/upper inner shin may be tender or bruised, and that's the massage, not the injury. Start the right-leg range work (calf stretches straight + bent knee, knee-to-wall rocks). Sunday self-checks: single-leg heel raise both sides + knee-to-wall test (right side; left only if pain-free, stop at the first pull) -- record the cm. Post-tib and low-Achilles morning check as planned. Verdict day: if the week was clean, week 13 resumes the build.",
           "status": "upcoming"
         }
       ],
@@ -954,9 +954,9 @@
           "date": "2026-09-29",
           "day": "Tue",
           "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "detail": "Gym A (hips + pull), 3x8-10 unless noted: hip thrust; DB Romanian deadlift; lat pulldown or row; ADDUCTOR machine 3x12-15 (or short-lever Copenhagen plank 2x15-20s/side, knee on bench); hip abduction machine 3x12-15; side plank + top-leg raise 2x30s/side. Goblet squat only if the left ankle is fully green. No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
           "status": "upcoming",
-          "duration_min": 30
+          "duration_min": 45
         },
         {
           "date": "2026-09-30",
@@ -980,9 +980,9 @@
           "date": "2026-10-02",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, 3 sets x 8-10: DB/trap-bar deadlift (light-moderate), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "detail": "Gym B (full body), 3x8-10 unless noted: trap-bar or DB deadlift, light-moderate; DB overhead press; leg press with feet high 3x10; leg curl or slider curls 3x10; short-lever Copenhagen plank 2x15-20s/side (or adductor machine); plank 2x40s. Step-downs join when rehab Phase 2 starts. Rehab dose as warm-up.",
           "status": "upcoming",
-          "duration_min": 32
+          "duration_min": 45
         },
         {
           "date": "2026-10-03",
@@ -997,7 +997,7 @@
           "date": "2026-10-04",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "detail": "Rest -- walk + rehab dose + right-leg range work. Sunday self-checks: single-leg heel raise both sides, knee-to-wall test (record cm).",
           "status": "upcoming"
         }
       ],
@@ -1007,13 +1007,13 @@
       "week": 14,
       "phase": "peak",
       "focus": "Peak week, revised: ~20 mi, long run 9.5-10 -- the biggest run before the race, three weeks out.",
-      "summary": "~20 mi target (revised from 25). Long run 9.5-10 on Sat 10/10 is the race-readiness anchor -- he ran 9 comfortably on 9/13, so this is a return, not new territory. Thursday's quality is optional and only if fully green incl. silent turns: 2x10 min light tempo, else easy. Everything still symptom-gated.",
+      "summary": "~20 mi target (revised from 25). Long run 9.5-10 on Sat 10/10 is the race-readiness anchor -- he ran 9 comfortably on 9/13, so this is a return, not new territory. Thursday's quality is optional and only if fully green incl. silent turns: 2x10 min light tempo, else easy. Everything still symptom-gated. Book the next sports massage for Mon 10/5 or Tue 10/6 -- 4+ days before the 10/10 long run, ~10 days after the first one.",
       "sessions": [
         {
           "date": "2026-10-05",
           "day": "Mon",
           "type": "easy_run",
-          "detail": "4 mi easy.",
+          "detail": "4 mi easy. Massage this week: aim Mon/Tue (see week summary).",
           "status": "upcoming",
           "duration_min": 42,
           "miles": 4.0
@@ -1022,9 +1022,9 @@
           "date": "2026-10-06",
           "day": "Tue",
           "type": "strength",
-          "detail": "Gym A, 3 sets x 8-10: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "detail": "Gym A (hips + pull), 3x8-10 unless noted: hip thrust; DB Romanian deadlift; lat pulldown or row; ADDUCTOR machine 3x12-15 (or short-lever Copenhagen plank 2x15-20s/side, knee on bench); hip abduction machine 3x12-15; side plank + top-leg raise 2x30s/side. Goblet squat only if the left ankle is fully green. No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
           "status": "upcoming",
-          "duration_min": 30
+          "duration_min": 45
         },
         {
           "date": "2026-10-07",
@@ -1048,7 +1048,7 @@
           "date": "2026-10-09",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, lighter -- 2-3 sets x 8-10: DB/trap-bar deadlift (light), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20. Dial back load slightly given the week's volume.",
+          "detail": "Lighter week-of-long-run version, 2-3 sets: Gym B (full body), 3x8-10 unless noted: trap-bar or DB deadlift, light-moderate; DB overhead press; leg press with feet high 3x10; leg curl or slider curls 3x10; short-lever Copenhagen plank 2x15-20s/side (or adductor machine); plank 2x40s. Step-downs join when rehab Phase 2 starts. Rehab dose as warm-up.",
           "status": "upcoming",
           "duration_min": 28
         },
@@ -1065,7 +1065,7 @@
           "date": "2026-10-11",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "detail": "Rest -- walk + rehab dose + right-leg range work. Sunday self-checks: single-leg heel raise both sides, knee-to-wall test (record cm).",
           "status": "upcoming"
         }
       ],
@@ -1090,7 +1090,7 @@
           "date": "2026-10-13",
           "day": "Tue",
           "type": "strength",
-          "detail": "Gym A, dial back slightly -- 3 sets x 8-10, moderate load: goblet/DB squat, DB Romanian deadlift, walking lunges (DB) 10/leg, lat pulldown or DB row. Core: side plank 2x30s/side. Calf raise 2x15.",
+          "detail": "Moderate, 2-3 sets, nothing near failure: Gym A (hips + pull), 3x8-10 unless noted: hip thrust; DB Romanian deadlift; lat pulldown or row; ADDUCTOR machine 3x12-15 (or short-lever Copenhagen plank 2x15-20s/side, knee on bench); hip abduction machine 3x12-15; side plank + top-leg raise 2x30s/side. Goblet squat only if the left ankle is fully green. No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
           "status": "upcoming",
           "duration_min": 30
         },
@@ -1115,7 +1115,7 @@
           "date": "2026-10-16",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B, lighter -- 2-3 sets x 8-10: DB/trap-bar deadlift (light), DB overhead press, step-ups (DB) 10/leg, plank 2x40s. Tibialis raises 2x15-20.",
+          "detail": "Light, 2 sets: Gym B (full body), 3x8-10 unless noted: trap-bar or DB deadlift, light-moderate; DB overhead press; leg press with feet high 3x10; leg curl or slider curls 3x10; short-lever Copenhagen plank 2x15-20s/side (or adductor machine); plank 2x40s. Step-downs join when rehab Phase 2 starts. Rehab dose as warm-up.",
           "status": "upcoming",
           "duration_min": 28
         },
@@ -1132,7 +1132,7 @@
           "date": "2026-10-18",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + 10 min arch/calf mobility.",
+          "detail": "Rest -- walk + rehab dose. Optional LIGHT flush massage today or tomorrow (6-7 days out): circulation work only, no deep tissue, cupping, or scraping this close to the race. Sunday self-checks.",
           "status": "upcoming"
         }
       ],

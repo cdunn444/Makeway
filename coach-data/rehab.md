@@ -122,6 +122,46 @@ issue at the back of the heel.
   flatter than the right when standing, swelling behind the inside ankle bone, or
   losing the ability to do that heel raise. Any of those means get it looked at.
 
+### Sports massage findings (9/26) and what they change
+
+**What the therapist found:**
+- **Left lower leg:** calf and shin muscles *not* very tight. Heel and arch had a lot of
+  adhesions (worked with cupping, scraping, and manual work). The big find was the lower
+  adductor near the knee (likely the gracilis) and where it attaches on the upper
+  inner shin: "horribly tight." Sore during the work, much looser after.
+- **Right lower leg:** tighter and more restricted overall, with worse range of motion.
+  The calf and posterior tib are much tighter than on the left.
+- **Hips:** good on both sides.
+- **Therapist's theory:** the right side's injury history and restriction make the
+  left side over-compensate and do more work, so the left is the one that strains.
+
+**How that fits:** the left problems sit along one line on the inside of the leg:
+inner thigh, inner knee and upper shin, post tib, arch, heel. The adductors are also
+working hard on turns, which lines up with the left-turn flares. The compensation
+theory fits too: if the right ankle doesn't bend well, that stride gets cut short and
+the left takes more of the load.
+
+**What changes:**
+- **Right leg: restore range (daily, ~4 min).** The right side has no tendon
+  irritation, so stretching is allowed there: calf stretch straight-knee and bent-knee,
+  2 × 45 s each, plus knee-to-wall rocks 2 × 10. Massage gun on the right calf and
+  inner shin. **The left still gets no calf stretching.**
+- **Both legs: keep the inner-thigh line loose.** 1–2 minutes of massage gun or foam
+  roller on the lower inner thigh, above the inner knee, most evenings. Don't press
+  hard on the bony attachment just below the inner knee.
+- **Adductor strength on gym days:** adductor machine 3 × 12–15, or a short-lever
+  Copenhagen plank (knee on the bench, not the foot) 2 × 15–20 s per side. The
+  adductors are used on every turn, and pickleball needs them when it comes back.
+- **Measure the asymmetry (Sundays, with the heel-raise check): knee-to-wall test.**
+  Stand facing a wall, one foot back, heel down. Slide the foot back until the knee
+  can just touch the wall without the heel lifting, and measure toe-to-wall in cm.
+  Do the right fully; do the left only if it's pain-free, stopping at the first pull.
+  A difference of more than ~2 cm between sides means the restriction is real, and
+  shrinking the gap is the goal.
+- **Massage cadence:** next deep session Mon 10/5 or Tue 10/6 (4+ days before the
+  10/10 long run). Before the race, only a light flush on 10/17–10/18. No deep tissue,
+  cupping, or scraping in the final week.
+
 ### Also in Phase 1
 - **Soft-tissue work, both legs:** book the deep-tissue massage (calves + lower legs
   — it's what cleared this in two days last time). Between sessions: massage gun or
