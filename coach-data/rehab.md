@@ -52,6 +52,9 @@ that's where this program pushes.
 - Brooks Hyperion GTS (plated) debuted 8/27; plates shift work into the calf–arch
   complex. Ankles felt tired after its first outing.
 - Heat-season fatigue + high-humidity long runs.
+- Your stride (changed ~2 years ago): shorter steps and a midfoot landing move shock
+  absorption from the knee and hip onto the calf, Achilles, post tib, and arch. Good
+  trade, but it means lower-leg strength has to keep up with that job permanently.
 
 ## The pain rules (apply to every exercise below)
 
@@ -88,6 +91,76 @@ daily dose itself fully green.
 
 Keep the bird dogs if you enjoy them (they're good spine/hip work), but they don't
 replace the standing hip items.
+
+**Shoes on or off?** Heel-raise isometrics (cushioned shoes are actually kinder to
+the cranky left Achilles right now), tib raises, inversion, and side plank all work
+shod — do them anywhere. Doming and single-leg balance want bare feet: doming is
+fake inside a shoe, and ground-feel is half the balance exercise. Pair those two
+with a barefoot moment at home (teeth-brushing, coffee brewing).
+
+### Post-tib specifics (added 9/24)
+
+"Ankle" in your reports means the left posterior tib: inside of the ankle behind
+the bone, running into the upper arch. That's what flares on left turns and what
+stiffens the morning after runs. The "stuck" Achilles feeling is a separate, milder
+issue at the back of the heel.
+
+- **Pre-run isometric: inversion hold.** Seated, left foot flat, push the inside
+  edge of the foot inward against your other foot or a wall and hold 30–45 s × 3–4.
+  Moderate effort, pain-free. This is the post tib's version of the heel-raise hold
+  and the best way to settle it before a run. Do it alongside the heel-raise holds.
+- **Support all day, not just on runs.** Wear your most supportive non-plated
+  trainer. Avoid flat or minimal shoes, flip-flops, and barefoot time on hard
+  floors, especially first thing in the morning. An over-the-counter arch-support
+  insole in your daily shoes is a cheap way to offload the tendon.
+- **Weekly self-check (Sunday).** Do a single-leg heel raise on each side, just
+  1–3 reps and only if it's pain-free. Watch the left heel at the top: it should
+  swing slightly inward like the right one does. If you can't rise on the left, or
+  the heel stays straight or rolls outward, the post tib isn't doing its job yet.
+  Note the result.
+- **Post-tib red flags** (these are the escalation line): the left arch looking
+  flatter than the right when standing, swelling behind the inside ankle bone, or
+  losing the ability to do that heel raise. Any of those means get it looked at.
+
+### Sports massage findings (9/26) and what they change
+
+**What the therapist found:**
+- **Left lower leg:** calf and shin muscles *not* very tight. Heel and arch had a lot of
+  adhesions (worked with cupping, scraping, and manual work). The big find was the lower
+  adductor near the knee (likely the gracilis) and where it attaches on the upper
+  inner shin: "horribly tight." Sore during the work, much looser after.
+- **Right lower leg:** tighter and more restricted overall, with worse range of motion.
+  The calf and posterior tib are much tighter than on the left.
+- **Hips:** good on both sides.
+- **Therapist's theory:** the right side's injury history and restriction make the
+  left side over-compensate and do more work, so the left is the one that strains.
+
+**How that fits:** the left problems sit along one line on the inside of the leg:
+inner thigh, inner knee and upper shin, post tib, arch, heel. The adductors are also
+working hard on turns, which lines up with the left-turn flares. The compensation
+theory fits too: if the right ankle doesn't bend well, that stride gets cut short and
+the left takes more of the load.
+
+**What changes:**
+- **Right leg: restore range (daily, ~4 min).** The right side has no tendon
+  irritation, so stretching is allowed there: calf stretch straight-knee and bent-knee,
+  2 × 45 s each, plus knee-to-wall rocks 2 × 10. Massage gun on the right calf and
+  inner shin. **The left still gets no calf stretching.**
+- **Both legs: keep the inner-thigh line loose.** 1–2 minutes of massage gun or foam
+  roller on the lower inner thigh, above the inner knee, most evenings. Don't press
+  hard on the bony attachment just below the inner knee.
+- **Adductor strength on gym days:** adductor machine 3 × 12–15, or a short-lever
+  Copenhagen plank (knee on the bench, not the foot) 2 × 15–20 s per side. The
+  adductors are used on every turn, and pickleball needs them when it comes back.
+- **Measure the asymmetry (Sundays, with the heel-raise check): knee-to-wall test.**
+  Stand facing a wall, one foot back, heel down. Slide the foot back until the knee
+  can just touch the wall without the heel lifting, and measure toe-to-wall in cm.
+  Do the right fully; do the left only if it's pain-free, stopping at the first pull.
+  A difference of more than ~2 cm between sides means the restriction is real, and
+  shrinking the gap is the goal.
+- **Massage cadence:** next deep session Mon 10/5 or Tue 10/6 (4+ days before the
+  10/10 long run). Before the race, only a light flush on 10/17–10/18. No deep tissue,
+  cupping, or scraping in the final week.
 
 ### Also in Phase 1
 - **Soft-tissue work, both legs:** book the deep-tissue massage (calves + lower legs
