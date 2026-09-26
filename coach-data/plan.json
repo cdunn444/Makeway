@@ -929,9 +929,15 @@
           "date": "2026-09-27",
           "day": "Sun",
           "type": "strength",
-          "detail": "Seated upper-body lift, back/shoulders/arms (user's call, legs stay at rest), 3x8-12, supersets: A) lat pulldown + seated DB shoulder press (moderate -- pressed Thursday); B) chest-supported DB row on an incline bench + seated lateral raise; C) reverse pec deck or seated bent-over rear-delt fly + seated incline DB curl; D) seated overhead DB triceps extension. Skip standing and bent-over moves. Also today: rehab dose, right-leg range work, Sunday self-checks (heel raise both sides, knee-to-wall in cm), post-tib and low-Achilles morning check. Heel/arch/inner-knee tenderness from yesterday's cupping and scraping is expected.",
+          "detail": "Seated upper body, 3x8-12, pair the first three lines as supersets: Lat pulldown + seated DB shoulder press (moderate, you pressed Thursday), Chest-supported DB row on an incline bench + seated lateral raise, Reverse pec deck or seated rear-delt fly + seated incline DB curl, Seated overhead DB triceps extension, No standing or bent-over moves (legs stay at rest), Sunday checks and rehab are on the Re/Prehab card below.",
           "status": "upcoming",
-          "duration_min": 45
+          "duration_min": 45,
+          "prep": [
+            "Band pull-aparts or light face pulls 2\u00d715",
+            "Arm circles + thoracic rotations 8/side",
+            "Light ramp-up sets of the lat pulldown"
+          ],
+          "note": "Heel, arch, and inner-knee tenderness from Saturday's cupping and scraping is expected; that's the massage, not the injury."
         }
       ],
       "miles_target": 9.0
@@ -949,7 +955,14 @@
           "detail": "3 mi easy, conversational. Straight/flat route or treadmill. Warm-up routine + rehab dose.",
           "status": "upcoming",
           "duration_min": 32,
-          "miles": 3.0
+          "miles": 3.0,
+          "prep": [
+            "Arch doming 1\u00d76/foot, 5s holds",
+            "Isometric heel-raise hold 3\u00d730s, half height",
+            "Isometric inversion hold 3\u00d730\u201345s (left)",
+            "5-min brisk warm-up walk: this is the gate",
+            "Land midfoot and let the heel touch down"
+          ]
         },
         {
           "date": "2026-09-29",

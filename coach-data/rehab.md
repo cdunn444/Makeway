@@ -62,7 +62,9 @@ that's where this program pushes.
 - 🟡 **Yellow:** pain 4–5/10, or symptoms worse the next morning → back off a
   progression level, don't stop entirely.
 - 🔴 **Red:** sharp pain, pain that climbs during the set, limping, or pain at rest →
-  stop that exercise, stay in the current phase, and get the eval scheduled.
+  stop that exercise and stay in the current phase. Get it looked at only for the post-tib
+  red flags below (arch flattening vs. the right, swelling behind the inside ankle bone,
+  losing the single-leg heel raise).
 
 **Left-side special rule:** the Achilles/ankle restriction ("stuck," stealing the
 stretch before the calf loads) means **no end-range loaded calf work and no forced

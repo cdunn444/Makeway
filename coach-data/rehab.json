@@ -1,16 +1,16 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-26",
   "active": true,
-  "focus": "Left post tib / arch + right shin",
+  "focus": "Left post tib / arch + right shin · right-side restriction feeding left overload",
   "phase": {
     "num": 1,
     "of": 3,
     "name": "Calm it down",
     "exit": "Walking and daily life pain-free 3+ straight days, and the daily dose itself fully green."
   },
-  "note": "Daily dose, ~12 min — after the session or in the evening with the Normatec. This is the LAST thing that gets dropped on a busy week.",
-  "pain_rules": "Green: ≤3/10 working discomfort that settles within an hour — continue. Yellow: 4–5/10, or worse the next morning — back off a progression level. Red: sharp pain, limping, or pain at rest — stop that exercise and get the eval scheduled.",
-  "special": "Left calf stays flat-ground, mid-range only — no end-range loaded calf work and no forced stretching until the ankle restriction releases. Right side can do the full menu.",
+  "note": "About 15 min daily. Before runs: doming, heel-raise hold, inversion hold. The rest any time that day. This is the LAST thing that gets dropped on a busy week.",
+  "pain_rules": "Green: ≤3/10 working discomfort that settles within an hour, continue. Yellow: 4–5/10, or worse the next morning, back off a level. Red: sharp pain, limping, or pain at rest, stop that exercise. Get it looked at if the left arch looks flatter than the right, it swells behind the inside ankle bone, or you lose the single-leg heel raise.",
+  "special": "Left: no calf stretching and no end-range or eccentric calf work (the Achilles aches on stretch). Right: stretching allowed and needed. On runs, land midfoot and let the heel touch down; don't run up on your toes.",
   "exercises": [
     {
       "name": "Short-foot arch doming",
@@ -20,7 +20,12 @@
     {
       "name": "Isometric heel-raise hold",
       "dose": "3×30s · both feet",
-      "cue": "Flat ground: rise halfway and hold — isometrics calm irritated tendons. Left stays mid-range; skip left if not green."
+      "cue": "Rise to half height and actively press the balls of the feet down for the whole hold, weight through the big toe. Shoes are fine. Skip the left if it isn't comfortable."
+    },
+    {
+      "name": "Isometric inversion hold",
+      "dose": "3–4×30–45s · left",
+      "cue": "Seated, foot flat. Push the inside edge of the foot inward against your other foot or a wall. Moderate effort, pain-free. The post tib's own hold; best right before a run."
     },
     {
       "name": "Banded ankle inversion",
@@ -41,17 +46,27 @@
       "name": "Single-leg balance",
       "dose": "2×30s/leg",
       "cue": "Barefoot, soft knee — post tib + hip coordination, not filler. Progress: eyes closed."
+    },
+    {
+      "name": "Right-leg range work",
+      "dose": "Right only · ~4 min",
+      "cue": "Calf stretch straight-knee and bent-knee, 2×45s each, then knee-to-wall rocks 2×10. The right is the restricted side. The left still gets no calf stretching."
     }
   ],
   "also": [
-    "Massage gun / lacrosse ball on calves, soleus, and along the inner shin — 3–5 min/leg (muscle bellies, not the sore tendon or bone) until the deep-tissue massage is booked",
-    "Gentle left-ankle mobility only: circles + pain-free knee-to-wall rocks short of the stuck point — never push into the restriction",
-    "Evening Normatec + cold plunge — it measurably helped on 9/17"
+    "Massage gun on calves, soleus, inner shin, and lower inner thigh, 1–5 min per area (muscle, not tendon or bone)",
+    "Supportive non-plated trainers all day; no flip-flops or barefoot on hard floors",
+    "Evening: hot tub then cold plunge (finish cold), and/or Normatec",
+    "Gym days: adductor machine or short-lever Copenhagen, plus hip abduction",
+    "Mornings after runs: note post-tib stiffness at first steps and gently squeeze the low left Achilles",
+    "Sundays: single-leg heel raise both sides (does the left heel turn in?) + knee-to-wall in cm (right fully, left only if pain-free)",
+    "Next deep massage: Mon 10/5 or Tue 10/6"
   ],
   "avoid": [
-    "Running, hopping/jumping, hills, walking lunges",
-    "Loaded left calf work; forced left calf stretching",
-    "The plated Hyperion — even for walking around"
+    "Hopping/jumping, hills, lunges, deep squats",
+    "Sharp turns and pickleball for now (left turns flare the post tib)",
+    "Any left calf stretching; loaded end-range left calf work",
+    "The plated Hyperion; flat shoes, flip-flops, barefoot on hard floors"
   ],
   "source": "coach-data/rehab.md"
 }

@@ -82,6 +82,11 @@ change.
 }
 ```
 
+A session may carry an optional `prep` array of short strings; the dashboard shows it as
+that day's Movement Prep in place of the generic per-type list (use it when the generic
+prep is wrong for the day, e.g. a seated upper-body strength day, or a run that needs the
+rehab pre-run isometrics).
+
 Run sessions carry a numeric `miles` field and each week carries a 1–2 sentence
 `summary` — the dashboard's Schedule header totals the miles and shows the summary,
 so keep both current when adapting the plan.

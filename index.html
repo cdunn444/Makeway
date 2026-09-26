@@ -735,7 +735,7 @@ function renderBrief() {
     const cat = fuelCat(s.type);
     const pre = isRest ? null : PROFILE?.targets?.fuel?.pre?.[cat];
     const post = isRest ? null : PROFILE?.targets?.fuel?.post?.[cat];
-    const prepList = (!isRest || s.type === 'active_recovery') ? (PREP[s.type] || []) : [];
+    const prepList = Array.isArray(s.prep) ? s.prep : (!isRest || s.type === 'active_recovery') ? (PREP[s.type] || []) : [];
     const actual = actualFor(s);
     html += `<div class="card">
       <h3>Today's Session</h3>
