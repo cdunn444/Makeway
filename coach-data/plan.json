@@ -916,7 +916,7 @@
           "day": "Sat",
           "type": "long_run",
           "detail": "5-6 mi easy, conversational, run-walk welcome -- conditional on Wednesday being clean with no delayed reaction. Graduation run for the week. If Wednesday flagged, substitute 60 min easy spin. Rehab dose after.",
-          "status": "upcoming",
+          "status": "partial",
           "duration_min": 55,
           "miles": 5.5
         },
