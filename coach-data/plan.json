@@ -953,7 +953,7 @@
           "day": "Mon",
           "type": "easy_run",
           "detail": "3 mi easy, conversational. Straight/flat route or treadmill. Warm-up routine + rehab dose.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 32,
           "miles": 3.0,
           "prep": [
@@ -962,13 +962,14 @@
             "Isometric inversion hold 3\u00d730\u201345s (left)",
             "5-min brisk warm-up walk: this is the gate",
             "Land midfoot and let the heel touch down"
-          ]
+          ],
+          "note": "3 mi run straight through, no walk breaks; cooler weather kept HR low. Right shin 0/10. Left arch 1-2/10, likely mostly leftover massage tenderness. Adductors still bruised/sore from the massage. Gait finding: the late-run knee/inner-thigh rubbing he's always had was absent, knees stayed aligned instead of caving in."
         },
         {
           "date": "2026-09-29",
           "day": "Tue",
           "type": "strength",
-          "detail": "Gym A (hips + pull), 3x8-10 unless noted: hip thrust; DB Romanian deadlift; lat pulldown or row; ADDUCTOR machine 3x12-15 (or short-lever Copenhagen plank 2x15-20s/side, knee on bench); hip abduction machine 3x12-15; side plank + top-leg raise 2x30s/side. Goblet squat only if the left ankle is fully green. No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
+          "detail": "Gym A (hips + pull), 3x8-10 unless noted: Hip thrust (home: barbell or DB glute bridge), DB Romanian deadlift, Pull-ups or lat pulldown or row, Hip abduction 3x15-20 for endurance (machine; home: banded lateral walks or side-lying hip abduction), Side plank + top-leg raise 2x30-40s/side, Adductor work on hold today while the massage bruising settles (back Friday if it's gone), No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
           "status": "upcoming",
           "duration_min": 45
         },
@@ -979,7 +980,15 @@
           "detail": "4 mi easy. Straight/flat route or treadmill. If turns have gone silent on recent runs, fine to test a few gentle corners late in the run and report.",
           "status": "upcoming",
           "duration_min": 42,
-          "miles": 4.0
+          "miles": 4.0,
+          "prep": [
+            "Arch doming 1\u00d76/foot, 5s holds",
+            "Isometric heel-raise hold 3\u00d730s, half height",
+            "Isometric inversion hold 3\u00d730\u201345s (left)",
+            "5-min brisk warm-up walk: this is the gate",
+            "Land midfoot and let the heel touch down",
+            "Late in the run, notice whether the knees/inner thighs rub"
+          ]
         },
         {
           "date": "2026-10-01",
