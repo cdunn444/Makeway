@@ -1,7 +1,7 @@
 {
   "updated": "2026-09-28",
   "active": true,
-  "focus": "Left post tib / arch + right shin · right-side restriction feeding left overload",
+  "focus": "Left post tib / arch + right shin · left Achilles is the main range limiter",
   "phase": {
     "num": 1,
     "of": 3,
@@ -49,8 +49,8 @@
     },
     {
       "name": "Right-leg range work",
-      "dose": "Right only · ~4 min",
-      "cue": "Calf stretch straight-knee and bent-knee, 2×45s each, then knee-to-wall rocks 2×10. The right is the restricted side. The left still gets no calf stretching."
+      "dose": "Right only · ~2 min · maintenance",
+      "cue": "Right ankle range tested normal (11 cm knee-to-wall), so this is upkeep: calf stretch straight-knee and bent-knee, 45s each, plus a few knee-to-wall rocks. Massage gun on the right calf and inner shin for the tissue tightness the therapist felt. The left still gets no calf stretching."
     }
   ],
   "also": [
@@ -60,7 +60,7 @@
     "Evening: hot tub then cold plunge (finish cold), and/or Normatec",
     "Gym days: adductor machine or short-lever Copenhagen, plus hip abduction",
     "Mornings after runs: note post-tib stiffness at first steps and gently squeeze the low left Achilles",
-    "Sundays: single-leg heel raise both sides (does the left heel turn in?) + knee-to-wall in cm (right fully, left only if pain-free)",
+    "Sundays: single-leg heel raise both sides (does the left heel turn in?) + knee-to-wall in cm (right fully, left only to the first Achilles pull). Baseline 9/28: L 9.5 (Achilles-limited), R 11",
     "Next deep massage: Mon 10/5 or Tue 10/6"
   ],
   "avoid": [

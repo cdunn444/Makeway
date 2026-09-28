@@ -160,6 +160,11 @@ the left takes more of the load.
   Do the right fully; do the left only if it's pain-free, stopping at the first pull.
   A difference of more than ~2 cm between sides means the restriction is real, and
   shrinking the gap is the goal.
+- **First knee-to-wall (9/28):** left ~9.5 cm, stopped by Achilles tightness; right ~11 cm.
+  Both are in the normal range, and the right is *not* restricted at the ankle, so the
+  therapist's "right side is restricted" is about calf/post-tib tissue tension, not joint
+  range. The real limiter is the left Achilles. Right-leg stretching drops to upkeep; the
+  left number climbing toward the right is the sign the Achilles is settling.
 - **Massage cadence:** next deep session Mon 10/5 or Tue 10/6 (4+ days before the
   10/10 long run). Before the race, only a light flush on 10/17–10/18. No deep tissue,
   cupping, or scraping in the final week.
