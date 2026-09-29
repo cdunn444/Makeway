@@ -969,9 +969,15 @@
           "date": "2026-09-29",
           "day": "Tue",
           "type": "strength",
-          "detail": "Gym A (hips + pull), 3x8-10 unless noted: Hip thrust (home: barbell or DB glute bridge), DB Romanian deadlift, Pull-ups or lat pulldown or row, Hip abduction 3x15-20 for endurance (machine; home: banded lateral walks or side-lying hip abduction), Side plank + top-leg raise 2x30-40s/side, Adductor work on hold today while the massage bruising settles (back Friday if it's gone), No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
+          "detail": "Gym A at the gym (machines), 3x8-10 unless noted, 2-3 reps in reserve because tomorrow is a 4 mi run: Hip thrust machine (last time 3x8 @ 90 lb/side, add a little if it moves well), DB Romanian deadlift 3x8, Lat pulldown, moderate (back was worked Sunday), Hip abduction machine 3x15-20 (endurance, slow lowering), Seated or lying leg curl 3x10-12, Side plank + top-leg raise 2x30-40s/side, Adductor machine still on hold while the massage bruising settles (back Friday if it's gone), No lunges, squats, or calf raises. Rehab dose as warm-up.",
           "status": "upcoming",
-          "duration_min": 45
+          "duration_min": 45,
+          "prep": [
+            "5 min easy bike",
+            "Rehab dose loading trio: doming, heel-raise hold, inversion hold",
+            "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
+            "Light ramp-up set on the hip thrust"
+          ]
         },
         {
           "date": "2026-09-30",
