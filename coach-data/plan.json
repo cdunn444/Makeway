@@ -970,14 +970,15 @@
           "day": "Tue",
           "type": "strength",
           "detail": "Gym A at the gym (machines), 3x8-10 unless noted, 2-3 reps in reserve because tomorrow is a 4 mi run: Hip thrust machine (last time 3x8 @ 90 lb/side, add a little if it moves well), DB Romanian deadlift 3x8, Lat pulldown, moderate (back was worked Sunday), Hip abduction machine 3x15-20 (endurance, slow lowering), Seated or lying leg curl 3x10-12, Side plank + top-leg raise 2x30-40s/side, Adductor machine, LIGHT test 2x15 (bruising almost cleared): a weight you could do 25+ times, start with the legs only partly open, stop if the sensitive spot above the inner knee gets sore; full adductor work Friday, No lunges, squats, or calf raises. Rehab dose as warm-up.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 45,
           "prep": [
             "5 min easy bike",
             "Rehab dose loading trio: doming, heel-raise hold, inversion hold",
             "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
             "Light ramp-up set on the hip thrust"
-          ]
+          ],
+          "note": "Actual weights: hip thrust machine 3x8 @ 140 lb loaded (per side vs. total to confirm; last time 90 lb/side); DB Romanian deadlift with 45s; hip abduction machine 3x20 @ 50 lb; adductor machine 3x20 @ 20 lb (first adductor work since the massage, bruising nearly cleared)."
         },
         {
           "date": "2026-09-30",
