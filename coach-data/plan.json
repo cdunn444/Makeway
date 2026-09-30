@@ -946,7 +946,7 @@
       "week": 13,
       "phase": "build",
       "focus": "Modified return-to-build: symptom-gated ramp resumes, long run to 7.5 mi on a straight/flat route. The original 23.5 mi week is retired -- see summary.",
-      "summary": "~17.5 mi target (revised down from 23.5). Post-flare reality: we ramp from week 12's ~11, not from where the old plan imagined. All easy running, optional strides only, no tempo. Long run 7.5 on a straight route (turns still the marker). Gates: every run needs the green rule (<=3/10 that settles, no naggy mornings after), and per the standing rule both strength touches must happen for the long run to grow next week.",
+      "summary": "~13 mi (revised from 17.5). Mon 3 and Wed 4 done; Thursday switched to an easy spin after the Achilles talked late in Wednesday's run; Saturday long run held at 6 with planned walk breaks instead of 7.5. Friday lift kept upper-body + hips so legs are fresh for Saturday.",
       "sessions": [
         {
           "date": "2026-09-28",
@@ -985,7 +985,7 @@
           "day": "Wed",
           "type": "easy_run",
           "detail": "4 mi easy. Straight/flat route or treadmill. If turns have gone silent on recent runs, fine to test a few gentle corners late in the run and report.",
-          "status": "upcoming",
+          "status": "completed",
           "duration_min": 42,
           "miles": 4.0,
           "prep": [
@@ -995,22 +995,22 @@
             "5-min brisk warm-up walk: this is the gate",
             "Land midfoot and let the heel touch down",
             "Late in the run, notice whether the knees/inner thighs rub"
-          ]
+          ],
+          "note": "4 mi on the treadmill. At ~3.25 mi the LOW left Achilles started talking; he stopped, massaged the calf, rotated the foot, shook the leg out for ~1 min, then finished and it stayed quiet. Legs felt heavier than usual after Tuesday's leg day + deep-stretch yoga. First run where the Achilles, not the post tib, was the lead complaint."
         },
         {
           "date": "2026-10-01",
           "day": "Thu",
-          "type": "easy_run",
-          "detail": "3 mi easy + 4 strides ONLY if morning ankle reactions have gone quiet by then. While they persist, runs stay on non-consecutive days (Wednesday is a run), so this becomes a 30-40 min easy spin.",
+          "type": "cross_train",
+          "detail": "Easy spin, 30-40 min, conversational, seated, no intervals or hard pedaling (hard pedaling loads the calf/Achilles). The Thursday run is off: morning reactions are still happening and the Achilles talked yesterday. Rehab dose + evening plunge.",
           "status": "upcoming",
-          "duration_min": 33,
-          "miles": 3.0
+          "duration_min": 35
         },
         {
           "date": "2026-10-02",
           "day": "Fri",
           "type": "strength",
-          "detail": "Gym B (full body), 3x8-10 unless noted: trap-bar or DB deadlift, light-moderate; DB overhead press; leg press with feet high 3x10; leg curl or slider curls 3x10; adductor machine 3x15-20 (normal load now, Tuesday's 20 lb test was quiet) or short-lever Copenhagen plank 2x15-20s/side; plank 2x40s. Step-downs join when rehab Phase 2 starts. Rehab dose as warm-up.",
+          "detail": "Lighter Gym B, legs fresh for Saturday: Upper body 3x8-10 (DB bench or push-ups, row, overhead press), Adductor machine 3x15-20, Hip abduction machine 3x15-20, Side plank + top-leg raise 2x30s/side, Skip deadlifts, leg press, and leg curls today (they move to next Tuesday). Rehab dose as warm-up.",
           "status": "upcoming",
           "duration_min": 45
         },
@@ -1018,10 +1018,10 @@
           "date": "2026-10-03",
           "day": "Sat",
           "type": "long_run",
-          "detail": "7.5 mi easy long run, conversational, run-walk welcome. Straight/flat route. Full warm-up incl. isometric holds. Rehab dose after + evening stack.",
+          "detail": "6 mi easy long run (held down from 7.5 after Wednesday's Achilles talk), with a planned 1-min walk every mile, taken before anything talks. Treadmill or straight/flat route, highest-drop non-plated trainer, full pre-run holds. GATE: Achilles and post tib the same as or better than Thursday morning. If the Achilles talks mid-run: stop, 1 min calf massage + ankle circles, continue only if it fully quiets; if it comes back, walk it in. Rehab dose + plunge after.",
           "status": "upcoming",
-          "duration_min": 80,
-          "miles": 7.5
+          "duration_min": 68,
+          "miles": 6.0
         },
         {
           "date": "2026-10-04",
@@ -1031,7 +1031,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 17.5
+      "miles_target": 13.0
     },
     {
       "week": 14,
