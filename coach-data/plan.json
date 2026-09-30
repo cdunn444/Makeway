@@ -946,7 +946,7 @@
       "week": 13,
       "phase": "build",
       "focus": "Modified return-to-build: symptom-gated ramp resumes, long run to 7.5 mi on a straight/flat route. The original 23.5 mi week is retired -- see summary.",
-      "summary": "~13 mi (revised from 17.5). Mon 3 and Wed 4 done; Thursday switched to an easy spin after the Achilles talked late in Wednesday's run; Saturday long run held at 6 with planned walk breaks instead of 7.5. Friday lift kept upper-body + hips so legs are fresh for Saturday.",
+      "summary": "PAUSED 10/1: left Achilles 'giving way' episodes after Wednesday's 4 mi. Running and calf loading held until the tendon is examined (ultrasound to rule out a partial tear). Mon 3 + Wed 4 = 7 mi done.",
       "sessions": [
         {
           "date": "2026-09-28",
@@ -996,21 +996,20 @@
             "Land midfoot and let the heel touch down",
             "Late in the run, notice whether the knees/inner thighs rub"
           ],
-          "note": "4 mi on the treadmill. At ~3.25 mi the LOW left Achilles started talking; he stopped, massaged the calf, rotated the foot, shook the leg out for ~1 min, then finished and it stayed quiet. Legs felt heavier than usual after Tuesday's leg day + deep-stretch yoga. First run where the Achilles, not the post tib, was the lead complaint."
+          "note": "4 mi on the treadmill. At ~3.25 mi the LOW left Achilles started talking; he stopped, massaged the calf, rotated the foot, shook the leg out for ~1 min, then finished and it stayed quiet. Legs felt heavier than usual after Tuesday's leg day + deep-stretch yoga. First run where the Achilles, not the post tib, was the lead complaint. Achilles rated 2/10 when it talked."
         },
         {
           "date": "2026-10-01",
           "day": "Thu",
-          "type": "cross_train",
-          "detail": "Easy spin, 30-40 min, conversational, seated, no intervals or hard pedaling (hard pedaling loads the calf/Achilles). The Thursday run is off: morning reactions are still happening and the Achilles talked yesterday. Rehab dose + evening plunge.",
-          "status": "upcoming",
-          "duration_min": 35
+          "type": "rest",
+          "detail": "HOLD: left Achilles 'giving way' episodes (3 times barefoot, last night + this morning). No running, no spin, no left calf loading until a doctor has checked the tendon. Shoes with a heel on at all times, including at home. Upper body or core is fine if you want to move. Book a sports-medicine or orthopedic visit; ask for an ultrasound of the Achilles.",
+          "status": "upcoming"
         },
         {
           "date": "2026-10-02",
           "day": "Fri",
           "type": "strength",
-          "detail": "Lighter Gym B, legs fresh for Saturday: Upper body 3x8-10 (DB bench or push-ups, row, overhead press), Adductor machine 3x15-20, Hip abduction machine 3x15-20, Side plank + top-leg raise 2x30s/side, Skip deadlifts, leg press, and leg curls today (they move to next Tuesday). Rehab dose as warm-up.",
+          "detail": "Upper body only while the Achilles is on hold, 3x8-10: DB bench or push-ups, row or pulldown, overhead press, curls, triceps, plank 2x40s. Seated hip abduction/adduction machines only if nothing in the left ankle is involved. No standing leg work.",
           "status": "upcoming",
           "duration_min": 45
         },
@@ -1018,10 +1017,10 @@
           "date": "2026-10-03",
           "day": "Sat",
           "type": "long_run",
-          "detail": "6 mi easy long run (held down from 7.5 after Wednesday's Achilles talk), with a planned 1-min walk every mile, taken before anything talks. Treadmill or straight/flat route, highest-drop non-plated trainer, full pre-run holds. GATE: Achilles and post tib the same as or better than Thursday morning. If the Achilles talks mid-run: stop, 1 min calf massage + ankle circles, continue only if it fully quiets; if it comes back, walk it in. Rehab dose + plunge after.",
+          "detail": "ON HOLD pending the Achilles check. If a doctor clears the tendon before Saturday: 4-5 mi easy with a 1-min walk every mile, treadmill, highest-drop shoes. If not yet seen or not cleared: no run; upper body or rest.",
           "status": "upcoming",
           "duration_min": 68,
-          "miles": 6.0
+          "miles": 0
         },
         {
           "date": "2026-10-04",
@@ -1031,7 +1030,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 13.0
+      "miles_target": 7.0
     },
     {
       "week": 14,

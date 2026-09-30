@@ -120,6 +120,8 @@ issue at the back of the heel.
   swing slightly inward like the right one does. If you can't rise on the left, or
   the heel stays straight or rolls outward, the post tib isn't doing its job yet.
   Note the result.
+- **Achilles red flag (added 10/1):** the tendon 'giving way' or feeling unstable
+  under load means stop running and get it examined (ultrasound) before loading it again.
 - **Post-tib red flags** (these are the escalation line): the left arch looking
   flatter than the right when standing, swelling behind the inside ankle bone, or
   losing the ability to do that heel raise. Any of those means get it looked at.
