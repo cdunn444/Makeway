@@ -946,7 +946,7 @@
       "week": 13,
       "phase": "build",
       "focus": "Modified return-to-build: symptom-gated ramp resumes, long run to 7.5 mi on a straight/flat route. The original 23.5 mi week is retired -- see summary.",
-      "summary": "PAUSED 10/1: left Achilles 'giving way' episodes after Wednesday's 4 mi. Running and calf loading held until the tendon is examined (ultrasound to rule out a partial tear). Mon 3 + Wed 4 = 7 mi done.",
+      "summary": "Paused 10/1 after left Achilles 'giving way' episodes; self-check was reassuring (no gap, pain-free repeated single-leg calf raises), so it's a 48-hour watch, not an urgent visit. Saturday 4 mi with walk breaks only if there are no more episodes; any recurrence = ultrasound before running. Mon 3 + Wed 4 = 7 mi done.",
       "sessions": [
         {
           "date": "2026-09-28",
@@ -1002,14 +1002,15 @@
           "date": "2026-10-01",
           "day": "Thu",
           "type": "rest",
-          "detail": "HOLD: left Achilles 'giving way' episodes (3 times barefoot, last night + this morning). No running, no spin, no left calf loading until a doctor has checked the tendon. Shoes with a heel on at all times, including at home. Upper body or core is fine if you want to move. Book a sports-medicine or orthopedic visit; ask for an ultrasound of the Achilles.",
-          "status": "upcoming"
+          "detail": "Rest after the Achilles 'giving way' episodes. Self-check was reassuring: no gap or lump, no discomfort, repeated unassisted single-leg calf raises on the left, pain-free. Shoes with a heel on at all times. Upper body or core fine. 48-hour watch: count any further giving-way moments.",
+          "status": "upcoming",
+          "note": "Self-check 10/1: tendon smooth, no discomfort, multiple unassisted single-leg calf raises on the left without pain (better than Sunday's check)."
         },
         {
           "date": "2026-10-02",
           "day": "Fri",
           "type": "strength",
-          "detail": "Upper body only while the Achilles is on hold, 3x8-10: DB bench or push-ups, row or pulldown, overhead press, curls, triceps, plank 2x40s. Seated hip abduction/adduction machines only if nothing in the left ankle is involved. No standing leg work.",
+          "detail": "Upper body 3x8-10 (DB bench or push-ups, row or pulldown, overhead press, curls, triceps, plank 2x40s), seated hip abduction/adduction machines, then an optional 20-30 min EASY spin as a test, only if there have been no more giving-way moments. No standing leg work.",
           "status": "upcoming",
           "duration_min": 45
         },
@@ -1017,10 +1018,10 @@
           "date": "2026-10-03",
           "day": "Sat",
           "type": "long_run",
-          "detail": "ON HOLD pending the Achilles check. If a doctor clears the tendon before Saturday: 4-5 mi easy with a 1-min walk every mile, treadmill, highest-drop shoes. If not yet seen or not cleared: no run; upper body or rest.",
+          "detail": "CONDITIONAL: 4 mi easy on the treadmill with a 1-min walk every mile, highest-drop non-plated shoes, full pre-run holds, ONLY if there have been zero Achilles giving-way moments since Thursday morning and Friday's spin was quiet. Any further giving-way episode = no run; get the Achilles ultrasound first. Mid-run talk: stop, 1 min calf massage + ankle circles, continue only if fully quiet.",
           "status": "upcoming",
           "duration_min": 68,
-          "miles": 0
+          "miles": 4.0
         },
         {
           "date": "2026-10-04",
@@ -1030,7 +1031,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 7.0
+      "miles_target": 11.0
     },
     {
       "week": 14,
