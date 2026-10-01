@@ -44,8 +44,8 @@
     },
     {
       "name": "Single-leg balance",
-      "dose": "2×30s/leg",
-      "cue": "Barefoot, soft knee — post tib + hip coordination, not filler. Progress: eyes closed."
+      "dose": "2×30s/leg · firm floor",
+      "cue": "During the Achilles watch: in shoes, on a firm floor, fingertips near a counter. Soft knee, quiet foot. Barefoot again once the Achilles is cleared. No soft surfaces (yoga mats, pillows, foam pads) until Phase 3."
     },
     {
       "name": "Right-leg range work",
@@ -69,7 +69,8 @@
     "Hopping/jumping, hills, lunges, deep squats",
     "Sharp turns and pickleball for now (left turns flare the post tib)",
     "Any left calf stretching; loaded end-range left calf work",
-    "The plated Hyperion; flat shoes, flip-flops, barefoot on hard floors"
+    "The plated Hyperion; flat shoes, flip-flops, barefoot on hard floors",
+    "Single-leg balance on soft surfaces (yoga mats, pillows, foam pads) until Phase 3; in yoga, do one-leg poses on two feet or with a hand on the wall for now"
   ],
   "source": "coach-data/rehab.md"
 }
