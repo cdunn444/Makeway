@@ -205,6 +205,11 @@ folded into Gym A/B days so it doesn't need its own slot:
 | Monster walks / lateral band walks | 2×15 steps | Glute med endurance, standing. |
 | Single-leg doming + balance | 2×30 s | Dome the arch and hold it while balancing. |
 
+**Optional tool: Sidekick AxisBoard** (single-leg balance board with pegs that set the tilt
+direction and range). Not during the Achilles watch. If the doctor clears the tendon: start
+in Phase 2 on the lowest setting, front-to-back tilt only, fingertips on a counter, 3 min/day.
+Side-to-side tilt waits until side-shifting on a flat foot no longer zings.
+
 ## Phase 3 — Springs + return to running (strong on one leg → back on plan)
 
 **Enter when:** Phase 2 exit criteria met.
