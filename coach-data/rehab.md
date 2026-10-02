@@ -19,6 +19,39 @@ that, this file is the plan.
 
 ---
 
+## CURRENT PHASE (from 10/2): left Achilles insertion
+
+**Diagnosis (orthopedist, 10/2):** likely micro-tearing in the left Achilles where it attaches
+to the heel, inflamed and pulling on the heel bone, with a risk of a heel spur if it stays
+irritated. Poor left ankle mobility and Achilles stiffness. X-rays: no fracture, no loose
+bone. No MRI for now; get a scan if it keeps giving way or gets worse. The half marathon
+on 10/24 is deferred.
+
+**Recommended:** PT (progressive loading is the main treatment for this), with shockwave
+as a reasonable add-on if progress stalls. PRP, stem cells, and peptides are not first-line
+(weak or no evidence for this injury; see notes.md 10/2).
+
+**Rules for this tendon:** keep the heel up and avoid deep ankle bend under load. Shoes with a
+heel at all times; no barefoot; no left calf stretching; no heel drops off a step; no deep
+squats, lunges, hills, or incline. Load it on flat ground with isometric holds and seated soleus
+raises, at or under 3/10 during and by the next morning.
+
+**Return-to-run criteria (all of them):**
+1. Morning stiffness under 5 minutes for a full week
+2. No giving-way moments for 2 weeks
+3. 20 pain-free single-leg heel raises on the left, flat floor
+4. 2×10 small two-footed hops in place, pain-free (test only once 1–3 are met)
+5. The PT agrees
+
+**Then the walk-run rebuild:** flat surface or treadmill, every other day. Start at 1 min
+run / 2 min walk × 8, and build the running minutes before cutting the walks. Next-morning
+Achilles at or under 3/10 is the gate for every step.
+
+The sections below are the original arch/post-tib program from 9/18. They still apply
+for the post tib, arch, hips, and stride, but the rules above win wherever they conflict.
+
+---
+
 ## What's involved, and why these exercises
 
 **Left posterior tibialis / arch.** The post tib runs behind the inner ankle bone and

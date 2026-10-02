@@ -3,9 +3,9 @@
   "onboarded": "2026-07-05",
   "goals": {
     "primary": {
-      "text": "run the Miami Beach Halloween Half Marathon",
-      "event_date": "2026-10-24",
-      "metric": "sub-2:05 (stretch goal sub-2:00), finish injury-free \u2014 PR is 1:52 but not chasing that this cycle; race is 11.7 weeks out as an accountability anchor for base-building"
+      "text": "heal the left Achilles and get back to pain-free running",
+      "metric": "pass the return-to-run criteria in coach-data/rehab.md, then a graded walk-run rebuild",
+      "note": "Miami Beach Halloween Half (10/24) deferred on 10/2 after the orthopedist's Achilles diagnosis; pick a new target race once running again"
     },
     "secondary": {
       "text": "lose weight",
@@ -42,8 +42,8 @@
   "injuries": [
     {
       "area": "left Achilles (insertion at the heel)",
-      "detail": "Orthopedist 10/2: likely micro-tearing in the Achilles, inflamed and pulling on the heel bone, with a risk of developing a heel spur if it keeps getting irritated. Also poor left ankle mobility and Achilles stiffness. Preceded by 'giving way' episodes 9/30-10/1 and a 2/10 twinge late in the 9/30 run.",
-      "status": "diagnosed 10/2 -- running on hold pending the orthopedist's specific instructions"
+      "detail": "Orthopedist 10/2: likely micro-tearing in the Achilles, inflamed and pulling on the heel bone, with a risk of developing a heel spur if it keeps getting irritated. Also poor left ankle mobility and Achilles stiffness. Preceded by 'giving way' episodes 9/30-10/1 and a 2/10 twinge late in the 9/30 run. X-rays 10/2: no fracture, no loose bone fragments. No MRI for now; scan if it keeps giving way or gets worse. Orthopedist recommended PT; mentioned shockwave, ultrasound therapy, stem cells, PRP, and peptides as other options.",
+      "status": "rehab -- no running; return-to-run criteria in coach-data/rehab.md"
     },
     {
       "area": "left arch / posterior tibialis",

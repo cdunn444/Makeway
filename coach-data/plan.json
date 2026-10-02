@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-05",
-  "goal_summary": "Miami Beach Halloween Half Marathon, Sat 2026-10-24 (12-wk block, wks 5-16). Goal: sub-2:05, stretch sub-2:00 (PR 1:52, not chasing this cycle). Weeks 5-6: rebuild consistency post-travel before loading anything. Speed days are optional (tempo/interval choice vs. an easy-run alternative) starting wk 7 \u2014 never mandatory. Target paces: easy/long ~10:00-10:30/mi, optional tempo ~9:05-9:20/mi, optional intervals ~8:30-8:50/mi, goal race pace 9:10-9:32/mi. Mild deficit continues for weight-loss secondary goal; never a deficit day-of/day-before the long run.",
+  "goal_summary": "Race deferred 10/2. Current goal: heal the left Achilles insertion (micro-tearing per orthopedist) and return to pain-free running. Weeks 14-16 are a no-running recovery block: easy cross-training, Achilles-safe strength twice a week, the daily rehab dose, and weekly checks against the return-to-run criteria in rehab.md. Weight-loss goal continues with a moderate deficit; protein stays high for tendon repair.",
   "phase_map": [
     {
       "phase": "base_rebuild",
@@ -31,21 +31,14 @@
       ]
     },
     {
-      "phase": "peak",
+      "phase": "achilles_rehab",
       "weeks": [
         14,
-        15
-      ]
-    },
-    {
-      "phase": "taper",
-      "weeks": [
-        16,
         16
       ]
     }
   ],
-  "current_week": 12,
+  "current_week": 14,
   "weeks": [
     {
       "week": 1,
@@ -1036,203 +1029,229 @@
     },
     {
       "week": 14,
-      "phase": "peak",
-      "focus": "Peak week, revised: ~20 mi, long run 9.5-10 -- the biggest run before the race, three weeks out.",
-      "summary": "PENDING: to be rebuilt around the orthopedist's instructions for the left Achilles (10/2). ~20 mi target (revised from 25). Long run 9.5-10 on Sat 10/10 is the race-readiness anchor -- he ran 9 comfortably on 9/13, so this is a return, not new territory. Thursday's quality is optional and only if fully green incl. silent turns: 2x10 min light tempo, else easy. Everything still symptom-gated. Book the next sports massage for Mon 10/5 or Tue 10/6 -- 4+ days before the 10/10 long run, ~10 days after the first one.",
+      "phase": "achilles_rehab",
+      "focus": "Achilles recovery block, week 1: calm the insertion, keep fitness with low-impact cardio.",
+      "summary": "No running. 3 easy cardio sessions (spin or swim), 2 Achilles-safe strength days, daily rehab dose, Sunday checks. Book PT this week.",
       "sessions": [
         {
           "date": "2026-10-05",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "4 mi easy. Massage this week: aim Mon/Tue (see week summary).",
+          "type": "cross_train",
+          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose. Also this week: book the PT evaluation the orthopedist recommended (ask for a runner-experienced PT who uses progressive loading).",
           "status": "upcoming",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 35
         },
         {
           "date": "2026-10-06",
           "day": "Tue",
           "type": "strength",
-          "detail": "Gym A (hips + pull), 3x8-10 unless noted: hip thrust; DB Romanian deadlift; lat pulldown or row; ADDUCTOR machine 3x12-15 (or short-lever Copenhagen plank 2x15-20s/side, knee on bench); hip abduction machine 3x12-15; side plank + top-leg raise 2x30s/side. Goblet squat only if the left ankle is fully green. No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
+          "detail": "Strength A (Achilles-safe lower + hips), 3x8-12, 2-3 reps in reserve: Hip thrust (from 140 lb total), DB Romanian deadlift, Leg press with feet high on the platform (don't let the heels lift or the ankles bend deeply), Leg curl, Leg extension, Hip abduction machine 3x15-20, Adductor machine 3x15-20, Side plank + top-leg raise 2x30-40s/side. Skip squats / lunges / step-ups / jumps / standing calf raises.",
           "status": "upcoming",
-          "duration_min": 45
+          "duration_min": 50,
+          "prep": [
+            "5 min easy bike",
+            "Isometric heel-raise holds 2\u00d730s + seated soleus raises 1\u00d715",
+            "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
+            "Light ramp-up set of the hip thrust"
+          ]
         },
         {
           "date": "2026-10-07",
           "day": "Wed",
-          "type": "easy_run",
-          "detail": "4 mi easy.",
+          "type": "cross_train",
+          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 42,
-          "miles": 4.0
+          "duration_min": 35
         },
         {
           "date": "2026-10-08",
           "day": "Thu",
-          "type": "tempo_run",
-          "detail": "Optional quality, ONLY if fully green including silent turns: Option A -- 1 mi easy + 2 x 10 min @ comfortably-hard (~9:15-9:30/mi) w/ 3 min easy between + 1 mi easy, ~4.5 mi. Option B -- 4 mi easy. Either is a completed session.",
-          "status": "upcoming",
-          "duration_min": 46,
-          "miles": 4.5
+          "type": "rest",
+          "detail": "Rest. Walk (in shoes with a heel), rehab dose, evening Normatec/cold plunge if it helps.",
+          "status": "upcoming"
         },
         {
           "date": "2026-10-09",
           "day": "Fri",
           "type": "strength",
-          "detail": "Lighter week-of-long-run version, 2-3 sets: Gym B (full body), 3x8-10 unless noted: trap-bar or DB deadlift, light-moderate; DB overhead press; leg press with feet high 3x10; leg curl or slider curls 3x10; short-lever Copenhagen plank 2x15-20s/side (or adductor machine); plank 2x40s. Step-downs join when rehab Phase 2 starts. Rehab dose as warm-up.",
+          "detail": "Strength B (upper + core + hips), 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Hip abduction 3x15-20, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side.",
           "status": "upcoming",
-          "duration_min": 28
+          "duration_min": 45,
+          "prep": [
+            "5 min easy bike",
+            "Band pull-aparts 2\u00d715 (or light rear-delt raises)",
+            "Arm circles + thoracic rotations 8/side",
+            "Light ramp-up set of the first press and pull"
+          ]
         },
         {
           "date": "2026-10-10",
           "day": "Sat",
-          "type": "long_run",
-          "detail": "9.5-10 mi easy long run, conversational -- the race-readiness run, three weeks out. Run-walk welcome (it's likely the race strategy too). Straight-ish route, full warm-up, rehab dose + full recovery stack after.",
+          "type": "cross_train",
+          "detail": "Easy cardio 45-60 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 105,
-          "miles": 9.75
+          "duration_min": 55
         },
         {
           "date": "2026-10-11",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + rehab dose + right-leg range work. Sunday self-checks: single-leg heel raise both sides, knee-to-wall test (record cm).",
+          "detail": "Rest + Sunday checks: single-leg heel raise count on each side (stop at the first pain or form loss; target 20 pain-free on the left), knee-to-wall in cm (left only to the first pull, no forcing), morning stiffness minutes this week, any giving-way moments. Report the numbers.",
           "status": "upcoming"
         }
       ],
-      "miles_target": 20.0
+      "miles_target": 0.0
     },
     {
       "week": 15,
-      "phase": "peak",
-      "focus": "Pre-taper absorb week: ~14 mi, long run 6-7. Freshness begins here, two weeks out.",
-      "summary": "PENDING: to be rebuilt around the orthopedist's instructions for the left Achilles (10/2). ~14 mi target (revised from 25 -- the old double-peak is gone). Absorb week 14's peak, keep legs sharp with strides, long run drops to 6-7. Strength continues but lighter. From here to race day the goal is arriving healthy, not adding fitness.",
+      "phase": "achilles_rehab",
+      "focus": "Achilles recovery block, week 2.",
+      "summary": "Same structure as last week. Progress the rehab dose only if the week stayed at or under 3/10 and mornings are improving. PT program overrides when it starts.",
       "sessions": [
         {
           "date": "2026-10-12",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "3.5 mi easy.",
+          "type": "cross_train",
+          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 37,
-          "miles": 3.5
+          "duration_min": 35
         },
         {
           "date": "2026-10-13",
           "day": "Tue",
           "type": "strength",
-          "detail": "Moderate, 2-3 sets, nothing near failure: Gym A (hips + pull), 3x8-10 unless noted: hip thrust; DB Romanian deadlift; lat pulldown or row; ADDUCTOR machine 3x12-15 (or short-lever Copenhagen plank 2x15-20s/side, knee on bench); hip abduction machine 3x12-15; side plank + top-leg raise 2x30s/side. Goblet squat only if the left ankle is fully green. No lunges or calf raises (calf work lives in the rehab dose). Rehab dose as warm-up.",
+          "detail": "Strength A (Achilles-safe lower + hips), 3x8-12, 2-3 reps in reserve: Hip thrust (from 140 lb total), DB Romanian deadlift, Leg press with feet high on the platform (don't let the heels lift or the ankles bend deeply), Leg curl, Leg extension, Hip abduction machine 3x15-20, Adductor machine 3x15-20, Side plank + top-leg raise 2x30-40s/side. Skip squats / lunges / step-ups / jumps / standing calf raises.",
           "status": "upcoming",
-          "duration_min": 30
+          "duration_min": 50,
+          "prep": [
+            "5 min easy bike",
+            "Isometric heel-raise holds 2\u00d730s + seated soleus raises 1\u00d715",
+            "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
+            "Light ramp-up set of the hip thrust"
+          ]
         },
         {
           "date": "2026-10-14",
           "day": "Wed",
-          "type": "easy_run",
-          "detail": "3.5 mi easy + 4 strides at goal race pace.",
+          "type": "cross_train",
+          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 38,
-          "miles": 3.5
+          "duration_min": 35
         },
         {
           "date": "2026-10-15",
           "day": "Thu",
           "type": "rest",
-          "detail": "Rest + rehab dose. No quality this close to the race beyond strides.",
-          "status": "upcoming",
-          "duration_min": 52
+          "detail": "Rest. Walk (in shoes with a heel), rehab dose, evening Normatec/cold plunge if it helps.",
+          "status": "upcoming"
         },
         {
           "date": "2026-10-16",
           "day": "Fri",
           "type": "strength",
-          "detail": "Light, 2 sets: Gym B (full body), 3x8-10 unless noted: trap-bar or DB deadlift, light-moderate; DB overhead press; leg press with feet high 3x10; leg curl or slider curls 3x10; short-lever Copenhagen plank 2x15-20s/side (or adductor machine); plank 2x40s. Step-downs join when rehab Phase 2 starts. Rehab dose as warm-up.",
+          "detail": "Strength B (upper + core + hips), 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Hip abduction 3x15-20, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side.",
           "status": "upcoming",
-          "duration_min": 28
+          "duration_min": 45,
+          "prep": [
+            "5 min easy bike",
+            "Band pull-aparts 2\u00d715 (or light rear-delt raises)",
+            "Arm circles + thoracic rotations 8/side",
+            "Light ramp-up set of the first press and pull"
+          ]
         },
         {
           "date": "2026-10-17",
           "day": "Sat",
-          "type": "long_run",
-          "detail": "6.5 mi easy, conversational -- last medium-long run, one week out. Optional: last 1-2 mi at goal race pace (9:10-9:32/mi) if everything is green.",
+          "type": "cross_train",
+          "detail": "Easy cardio 45-60 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 70,
-          "miles": 6.5
+          "duration_min": 55
         },
         {
           "date": "2026-10-18",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest -- walk + rehab dose. Optional LIGHT flush massage today or tomorrow (6-7 days out): circulation work only, no deep tissue, cupping, or scraping this close to the race. Sunday self-checks.",
+          "detail": "Rest + Sunday checks: single-leg heel raise count on each side (stop at the first pain or form loss; target 20 pain-free on the left), knee-to-wall in cm (left only to the first pull, no forcing), morning stiffness minutes this week, any giving-way moments. Report the numbers.",
           "status": "upcoming"
         }
       ],
-      "miles_target": 14.0
+      "miles_target": 0.0
     },
     {
       "week": 16,
-      "phase": "taper",
-      "focus": "Taper and race week -- freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24.",
-      "summary": "PENDING: to be rebuilt around the orthopedist's instructions for the left Achilles (10/2). Volume drops ~60% from peak. Short runs, light legs, and a handful of race-pace strides to stay sharp. Fitness is banked; the only job this week is arriving healthy and rested.",
+      "phase": "achilles_rehab",
+      "focus": "Achilles recovery block, week 3: check against the return-to-run criteria.",
+      "summary": "Same structure. Sunday 10/25: if all return-to-run criteria are met, week 17 starts the walk-run rebuild; if not, the block extends. Saturday was the original race day.",
       "sessions": [
         {
           "date": "2026-10-19",
           "day": "Mon",
-          "type": "easy_run",
-          "detail": "3 mi easy, conversational.",
+          "type": "cross_train",
+          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 32,
-          "miles": 3.0
+          "duration_min": 35
         },
         {
           "date": "2026-10-20",
           "day": "Tue",
           "type": "strength",
-          "detail": "Light/short -- 15-20 min, bodyweight or very light: squats, push-ups, plank, calf raises. Not a real training stimulus at this point, just activation. Skip entirely if it feels like more than that.",
+          "detail": "Strength A (Achilles-safe lower + hips), 3x8-12, 2-3 reps in reserve: Hip thrust (from 140 lb total), DB Romanian deadlift, Leg press with feet high on the platform (don't let the heels lift or the ankles bend deeply), Leg curl, Leg extension, Hip abduction machine 3x15-20, Adductor machine 3x15-20, Side plank + top-leg raise 2x30-40s/side. Skip squats / lunges / step-ups / jumps / standing calf raises.",
           "status": "upcoming",
-          "duration_min": 18
+          "duration_min": 50,
+          "prep": [
+            "5 min easy bike",
+            "Isometric heel-raise holds 2\u00d730s + seated soleus raises 1\u00d715",
+            "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
+            "Light ramp-up set of the hip thrust"
+          ]
         },
         {
           "date": "2026-10-21",
           "day": "Wed",
-          "type": "easy_run",
-          "detail": "2.5 mi easy + 4 strides at goal race pace -- keeps legs sharp without adding fatigue.",
+          "type": "cross_train",
+          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 27,
-          "miles": 2.5
+          "duration_min": 35
         },
         {
           "date": "2026-10-22",
           "day": "Thu",
           "type": "rest",
-          "detail": "Rest, or an optional very easy 2 mi shakeout if it feels better to move than sit still. Either is correct.",
+          "detail": "Rest. Walk (in shoes with a heel), rehab dose, evening Normatec/cold plunge if it helps.",
           "status": "upcoming"
         },
         {
           "date": "2026-10-23",
           "day": "Fri",
-          "type": "rest",
-          "detail": "Rest day before the race. Optional short shakeout (1.5 mi easy + 2-3 strides) if you feel antsy, otherwise full rest. Lay out race-day gear, plan pre-race fueling and timing tonight.",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Strength B (upper + core + hips), 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Hip abduction 3x15-20, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side.",
+          "status": "upcoming",
+          "duration_min": 45,
+          "prep": [
+            "5 min easy bike",
+            "Band pull-aparts 2\u00d715 (or light rear-delt raises)",
+            "Arm circles + thoracic rotations 8/side",
+            "Light ramp-up set of the first press and pull"
+          ]
         },
         {
           "date": "2026-10-24",
           "day": "Sat",
-          "type": "race",
-          "detail": "RACE DAY -- Miami Beach Halloween Half Marathon. Goal sub-2:05 (9:32/mi), stretch sub-2:00 (9:09/mi), PR is 1:52 (not chasing this cycle). Race-morning fueling per usual long-run routine (banana/rice cake + coffee pre-race, fuel during per what's worked in training -- Tailwind/Huma gels). Start conservative, settle into goal pace by mile 2-3, save something for the last 5K.",
+          "type": "cross_train",
+          "detail": "Original race day (Miami Beach Halloween Half, deferred). Easy cardio 45-60 min instead. Good day to pick the new target race with the return-to-run timeline in mind.",
           "status": "upcoming",
-          "miles": 13.1
+          "duration_min": 55
         },
         {
           "date": "2026-10-25",
           "day": "Sun",
           "type": "rest",
-          "detail": "Recovery day -- walk only, celebrate, eat well. Real training talk resumes once you've had a few easy days.",
+          "detail": "Rest + Sunday checks: single-leg heel raise count on each side (stop at the first pain or form loss; target 20 pain-free on the left), knee-to-wall in cm (left only to the first pull, no forcing), morning stiffness minutes this week, any giving-way moments. Report the numbers.",
           "status": "upcoming"
         }
       ],
-      "miles_target": 22.0
+      "miles_target": 0.0
     }
   ],
-  "sketch": "Training block complete through race day. Post-race: plan a recovery/off-season block once the half is done -- not generated yet, revisit after Oct 24."
+  "sketch": "After week 16: if the return-to-run criteria are met, start a graded walk-run block (see rehab.md). Otherwise extend the recovery block. Pick a new target race once running is back."
 }

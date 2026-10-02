@@ -1,75 +1,72 @@
 {
   "updated": "2026-10-02",
   "active": true,
-  "focus": "Left Achilles insertion (micro-tearing per ortho 10/2) + left post tib / arch",
+  "focus": "Left Achilles insertion (micro-tearing, orthopedist 10/2) + left post tib / arch",
   "phase": {
     "num": 1,
     "of": 3,
-    "name": "Calm it down",
-    "exit": "Walking and daily life pain-free 3+ straight days, and the daily dose itself fully green."
+    "name": "Calm the Achilles",
+    "exit": "Return-to-run criteria: morning stiffness under 5 min for a week, no giving-way moments for 2 weeks, 20 pain-free single-leg heel raises on the left (flat floor), and the PT agrees."
   },
-  "note": "About 15 min daily. Before runs: doming, heel-raise hold, inversion hold. The rest any time that day. This is the LAST thing that gets dropped on a busy week.",
-  "pain_rules": "Green: ≤3/10 working discomfort that settles within an hour, continue. Yellow: 4–5/10, or worse the next morning, back off a level. Red: sharp pain, limping, or pain at rest, stop that exercise. Get it looked at if the left arch looks flatter than the right, it swells behind the inside ankle bone, or you lose the single-leg heel raise.",
-  "special": "Left Achilles diagnosed 10/2: micro-tearing and inflammation where it attaches to the heel. No running until cleared. Keep the heel up: shoes with a heel at all times, no barefoot. Nothing that bends the ankle deeply under load: no calf stretching, no heel drops off a step, no deep squats or lunges, no hills or treadmill incline. Left heel-raise holds on flat ground only, and only if pain-free.",
+  "note": "About 15 min daily. Pain during and the morning after must stay at or under 3/10. When PT starts, their program replaces this one.",
+  "pain_rules": "Green: at or under 3/10 during, and settled by the next morning, continue. Yellow: 4–5/10 or a worse morning, drop back a level for 2–3 days. Red: sharp pain, a giving-way moment, or swelling, stop that exercise and call the orthopedist.",
+  "special": "Left Achilles insertion: keep the heel up and avoid deep ankle bend under load. Shoes with a heel at all times, no barefoot, no calf stretching on the left, no heel drops off a step, no deep squats or lunges, no hills or incline. If it gives way again or gets worse, call the orthopedist for a scan.",
   "exercises": [
+    {
+      "name": "Isometric heel-raise hold",
+      "dose": "5×30–45s · both feet, flat floor",
+      "cue": "Rise to half height and push the balls of the feet down at moderate effort for the whole hold. Flat floor only, never off a step. Progress to left-only holds when both-feet holds are pain-free."
+    },
+    {
+      "name": "Seated soleus raise",
+      "dose": "3×15 · slow",
+      "cue": "Seated, knees bent, a dumbbell on each knee. Raise the heels over 2 seconds, lower over 3, and stop when the heels touch the floor. Never let the heel drop below the toes."
+    },
     {
       "name": "Short-foot arch doming",
       "dose": "2×6–8/foot · 5–10s holds",
-      "cue": "Squeeze and hold — pull the big-toe knuckle toward the heel, no toe curling. End the rep when the dome starts collapsing."
-    },
-    {
-      "name": "Isometric heel-raise hold",
-      "dose": "3×30s · both feet",
-      "cue": "Rise to half height and actively press the balls of the feet down for the whole hold, weight through the big toe. Shoes are fine. Skip the left if it isn't comfortable."
+      "cue": "Pull the big-toe knuckle toward the heel, no toe curling. End the rep when the dome starts collapsing."
     },
     {
       "name": "Isometric inversion hold",
-      "dose": "3–4×30–45s · left",
-      "cue": "Seated, foot flat. Push the inside edge of the foot inward against your other foot or a wall. Moderate effort, pain-free. The post tib's own hold; best right before a run."
+      "dose": "3×30–45s · left",
+      "cue": "Seated, foot flat. Push the inside edge of the foot inward against your other foot or a wall. Moderate effort, pain-free. Keeps the post tib working."
     },
     {
-      "name": "Banded ankle inversion",
-      "dose": "2×15/side",
-      "cue": "Band around the forefoot, sweep the foot inward — slow and controlled; this is the post tib's own exercise. No band? Ankle over the opposite knee, press the inside of the forefoot into your palm."
-    },
-    {
-      "name": "Tibialis raises (wall lean)",
+      "name": "Tibialis raises",
       "dose": "2×20",
-      "cue": "Heels on the ground, lift both forefeet — front-side work for the right shin."
+      "cue": "Stand upright with your back on a wall and heels about a foot out, lift both forefeet. Small, controlled range; don't lean back far."
     },
     {
       "name": "Side plank + top-leg raise",
-      "dose": "2×20–30s/side",
-      "cue": "Hips stacked, lift the top leg while holding the plank — the standing progression of your clamshells."
+      "dose": "2×30–40s/side",
+      "cue": "Hips stacked, lift the top leg while holding the plank. Hip control is part of the fix."
     },
     {
       "name": "Single-leg balance",
       "dose": "2×30s/leg · firm floor",
-      "cue": "During the Achilles watch: in shoes, on a firm floor, fingertips near a counter. Soft knee, quiet foot. Barefoot again once the Achilles is cleared. No soft surfaces (yoga mats, pillows, foam pads) until Phase 3."
+      "cue": "In shoes, on a firm floor, fingertips near a counter. Soft knee, quiet foot. No soft surfaces yet."
     },
     {
       "name": "Right-leg range work",
-      "dose": "Right only · ~2 min · maintenance",
-      "cue": "Right ankle range tested normal (11 cm knee-to-wall), so this is upkeep: calf stretch straight-knee and bent-knee, 45s each, plus a few knee-to-wall rocks. Massage gun on the right calf and inner shin for the tissue tightness the therapist felt. The left still gets no calf stretching."
+      "dose": "Right only · ~2 min",
+      "cue": "Right calf stretch straight-knee and bent-knee, 45s each. The left gets no calf stretching."
     }
   ],
   "also": [
+    "Book the PT evaluation the orthopedist recommended: look for a PT who treats runners and uses progressive tendon loading, not just massage and machines",
     "Massage: calf and soleus only. No deep work, scraping, or cupping on the heel or the low Achilles",
-    "Avoid pivoting on a planted left foot: when you stand up, get weight even on both feet, pause a beat, then step off. Turn with small steps, not a twist",
-    "Massage gun on calves, soleus, inner shin, and lower inner thigh, 1–5 min per area (muscle, not tendon or bone)",
-    "Supportive non-plated trainers all day; no flip-flops or barefoot on hard floors",
-    "Desk and commute: every 30–45 min do 10 ankle pumps and a few doming holds, or stand and walk a minute; keep shoes on",
-    "Evening: hot tub then cold plunge (finish cold), and/or Normatec",
-    "Gym days: adductor machine or short-lever Copenhagen, plus hip abduction",
-    "Mornings after runs: note post-tib stiffness at first steps and gently squeeze the low left Achilles",
-    "Sundays: single-leg heel raise both sides (film from behind to see if the heels turn in) + knee-to-wall in cm (right fully, left only to the first Achilles pull). Baseline 9/28: knee-to-wall L 9.5 (Achilles-limited), R 11; heel raise: both rise, neither heel visibly turns in, left harder to rise and balance"
+    "Desk and commute: every 30–45 min do 10 ankle pumps and a few doming holds, or stand and walk a minute",
+    "Evening: Normatec and/or cold plunge if it helps the heel settle",
+    "Protein stays high (155 g/day) for tendon repair; don't deepen the calorie deficit while healing",
+    "Sundays: single-leg heel raise count each side, knee-to-wall in cm, morning stiffness minutes, any giving-way moments"
   ],
   "avoid": [
-    "Hopping/jumping, hills, lunges, deep squats",
-    "Sharp turns and pickleball for now (left turns flare the post tib)",
-    "Any left calf stretching; loaded end-range left calf work",
-    "The plated Hyperion; flat shoes, flip-flops, barefoot on hard floors",
-    "Single-leg balance on soft surfaces (yoga mats, pillows, foam pads) until Phase 3; in yoga, do one-leg poses on two feet or with a hand on the wall for now"
+    "Running, jumping, hopping, pickleball",
+    "Any left calf stretching; heel drops off a step; deep squats, lunges, step-ups",
+    "Hills, treadmill or bike incline climbs, standing on the pedals",
+    "Barefoot walking, flat shoes, flip-flops, the plated Hyperion",
+    "Single-leg balance on soft surfaces (yoga mats, pillows, foam pads)"
   ],
   "source": "coach-data/rehab.md"
 }
