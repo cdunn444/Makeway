@@ -41,6 +41,11 @@
   },
   "injuries": [
     {
+      "area": "left Achilles (insertion at the heel)",
+      "detail": "Orthopedist 10/2: likely micro-tearing in the Achilles, inflamed and pulling on the heel bone, with a risk of developing a heel spur if it keeps getting irritated. Also poor left ankle mobility and Achilles stiffness. Preceded by 'giving way' episodes 9/30-10/1 and a 2/10 twinge late in the 9/30 run.",
+      "status": "diagnosed 10/2 -- running on hold pending the orthopedist's specific instructions"
+    },
+    {
       "area": "left arch / posterior tibialis",
       "detail": "Active flare 9/15-9/17: pain during runs two days running, Achilles/ankle feels stuck/restricted (no end-range loaded calf work or forced stretching on this side until evaluated). Historically a plantar-fascia pattern, worse with volume spikes.",
       "status": "rehab (Phase 1) -- self-managing per coach-data/rehab.md (no PT by informed choice; deep-tissue massage is first-line)"

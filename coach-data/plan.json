@@ -946,7 +946,7 @@
       "week": 13,
       "phase": "build",
       "focus": "Modified return-to-build: symptom-gated ramp resumes, long run to 7.5 mi on a straight/flat route. The original 23.5 mi week is retired -- see summary.",
-      "summary": "Paused 10/1 after left Achilles 'giving way' episodes; self-check was reassuring (no gap, pain-free repeated single-leg calf raises), so it's a 48-hour watch, not an urgent visit. Saturday 4 mi with walk breaks only if there are no more episodes; any recurrence = ultrasound before running. Mon 3 + Wed 4 = 7 mi done.",
+      "summary": "Running stopped 10/1-10/2: orthopedist found likely micro-tearing and inflammation where the left Achilles attaches to the heel. Mon 3 + Wed 4 = 7 mi done. The rest of the block gets rebuilt around the orthopedist's instructions.",
       "sessions": [
         {
           "date": "2026-09-28",
@@ -1013,16 +1013,16 @@
           "detail": "Upper body 3x8-10 (DB bench or push-ups, row or pulldown, overhead press, curls, triceps, plank 2x40s), seated hip abduction/adduction machines, then an optional 20-30 min EASY spin as a test, only if there have been no more giving-way moments. No standing leg work.",
           "status": "upcoming",
           "duration_min": 45,
-          "note": "Doctor visit for the left Achilles booked for today. Ask for an ultrasound; the Saturday run and the rest of the block depend on the result."
+          "note": "Orthopedist visit: likely micro-tearing in the left Achilles, inflamed and pulling on the heel bone, spur risk if it stays irritated; poor ankle mobility and Achilles stiffness. Waiting on the specifics: running clearance, any prescriptions, imaging, follow-up."
         },
         {
           "date": "2026-10-03",
           "day": "Sat",
-          "type": "long_run",
-          "detail": "CONDITIONAL: 4 mi easy on the treadmill with a 1-min walk every mile, highest-drop non-plated shoes, full pre-run holds, ONLY if there have been zero Achilles giving-way moments since Thursday morning and Friday's spin was quiet. Any further giving-way episode = no run; get the Achilles ultrasound first. Mid-run talk: stop, 1 min calf massage + ankle circles, continue only if fully quiet.",
+          "type": "rest",
+          "detail": "No run. Left Achilles diagnosed 10/2 with likely micro-tearing at the heel. Running stays off until the orthopedist's instructions are clear. Upper body or core is fine. Shoes with a heel at all times.",
           "status": "upcoming",
           "duration_min": 68,
-          "miles": 4.0
+          "miles": 0
         },
         {
           "date": "2026-10-04",
@@ -1032,13 +1032,13 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 11.0
+      "miles_target": 7.0
     },
     {
       "week": 14,
       "phase": "peak",
       "focus": "Peak week, revised: ~20 mi, long run 9.5-10 -- the biggest run before the race, three weeks out.",
-      "summary": "~20 mi target (revised from 25). Long run 9.5-10 on Sat 10/10 is the race-readiness anchor -- he ran 9 comfortably on 9/13, so this is a return, not new territory. Thursday's quality is optional and only if fully green incl. silent turns: 2x10 min light tempo, else easy. Everything still symptom-gated. Book the next sports massage for Mon 10/5 or Tue 10/6 -- 4+ days before the 10/10 long run, ~10 days after the first one.",
+      "summary": "PENDING: to be rebuilt around the orthopedist's instructions for the left Achilles (10/2). ~20 mi target (revised from 25). Long run 9.5-10 on Sat 10/10 is the race-readiness anchor -- he ran 9 comfortably on 9/13, so this is a return, not new territory. Thursday's quality is optional and only if fully green incl. silent turns: 2x10 min light tempo, else easy. Everything still symptom-gated. Book the next sports massage for Mon 10/5 or Tue 10/6 -- 4+ days before the 10/10 long run, ~10 days after the first one.",
       "sessions": [
         {
           "date": "2026-10-05",
@@ -1106,7 +1106,7 @@
       "week": 15,
       "phase": "peak",
       "focus": "Pre-taper absorb week: ~14 mi, long run 6-7. Freshness begins here, two weeks out.",
-      "summary": "~14 mi target (revised from 25 -- the old double-peak is gone). Absorb week 14's peak, keep legs sharp with strides, long run drops to 6-7. Strength continues but lighter. From here to race day the goal is arriving healthy, not adding fitness.",
+      "summary": "PENDING: to be rebuilt around the orthopedist's instructions for the left Achilles (10/2). ~14 mi target (revised from 25 -- the old double-peak is gone). Absorb week 14's peak, keep legs sharp with strides, long run drops to 6-7. Strength continues but lighter. From here to race day the goal is arriving healthy, not adding fitness.",
       "sessions": [
         {
           "date": "2026-10-12",
@@ -1173,7 +1173,7 @@
       "week": 16,
       "phase": "taper",
       "focus": "Taper and race week -- freshness over fitness. Race: Miami Beach Halloween Half, Sat Oct 24.",
-      "summary": "Volume drops ~60% from peak. Short runs, light legs, and a handful of race-pace strides to stay sharp. Fitness is banked; the only job this week is arriving healthy and rested.",
+      "summary": "PENDING: to be rebuilt around the orthopedist's instructions for the left Achilles (10/2). Volume drops ~60% from peak. Short runs, light legs, and a handful of race-pace strides to stay sharp. Fitness is banked; the only job this week is arriving healthy and rested.",
       "sessions": [
         {
           "date": "2026-10-19",
