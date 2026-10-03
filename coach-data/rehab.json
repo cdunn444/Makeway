@@ -6,9 +6,9 @@
     "num": 1,
     "of": 3,
     "name": "Calm the Achilles",
-    "exit": "Return-to-run criteria: morning stiffness under 5 min for a week, no giving-way moments for 2 weeks, 20 pain-free single-leg heel raises on the left (flat floor), and the PT agrees."
+    "exit": "Morning stiffness under 5 min for a week, no giving-way moments for 2 weeks, 20 pain-free single-leg heel raises on the left (flat floor), and pain-free two-footed hops 2×10."
   },
-  "note": "About 15 min daily. Pain during and the morning after must stay at or under 3/10. When PT starts, their program replaces this one.",
+  "note": "About 15 min daily, done at home (no formal PT). Pain during and the morning after must stay at or under 3/10. Progress by the Sunday numbers (see rehab.md, Achilles Phase 2).",
   "pain_rules": "Green: at or under 3/10 during, and settled by the next morning, continue. Yellow: 4–5/10 or a worse morning, drop back a level for 2–3 days. Red: sharp pain, a giving-way moment, or swelling, stop that exercise and call the orthopedist.",
   "special": "Left Achilles insertion: keep the heel up and avoid deep ankle bend under load. Shoes with a heel at all times, no barefoot, no calf stretching on the left, no heel drops off a step, no deep squats or lunges, no hills or incline. If it gives way again or gets worse, call the orthopedist for a scan.",
   "exercises": [
@@ -54,7 +54,7 @@
     }
   ],
   "also": [
-    "Book the PT evaluation the orthopedist recommended: look for a PT who treats runners and uses progressive tendon loading, not just massage and machines",
+    "Film one set of single-leg heel raises from behind each Sunday: it stands in for a PT's eye on form and heel position",
     "Massage: calf and soleus only. No deep work, scraping, or cupping on the heel or the low Achilles",
     "Desk and commute: every 30–45 min do 10 ankle pumps and a few doming holds, or stand and walk a minute",
     "Evening: Normatec and/or cold plunge if it helps the heel settle",

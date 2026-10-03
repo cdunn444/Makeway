@@ -27,9 +27,10 @@ irritated. Poor left ankle mobility and Achilles stiffness. X-rays: no fracture,
 bone. No MRI for now; get a scan if it keeps giving way or gets worse. The half marathon
 on 10/24 is deferred.
 
-**Recommended:** PT (progressive loading is the main treatment for this), with shockwave
-as a reasonable add-on if progress stalls. PRP, stem cells, and peptides are not first-line
-(weak or no evidence for this injury; see notes.md 10/2).
+**Treatment choice (10/3):** home rehab, no formal PT. Progressive loading is the main
+treatment, so this program is the treatment. Shockwave is a reasonable add-on if progress
+stalls after 6–8 weeks. Injectables are reviewed in `research/achilles-treatments-and-hyrox.md`
+(short version: none are first-line; avoid steroid injections near the Achilles).
 
 **Rules for this tendon:** keep the heel up and avoid deep ankle bend under load. Shoes with a
 heel at all times; no barefoot; no left calf stretching; no heel drops off a step; no deep
@@ -41,7 +42,18 @@ raises, at or under 3/10 during and by the next morning.
 2. No giving-way moments for 2 weeks
 3. 20 pain-free single-leg heel raises on the left, flat floor
 4. 2×10 small two-footed hops in place, pain-free (test only once 1–3 are met)
-5. The PT agrees
+5. A full week of green days (everything at or under 3/10, mornings settled)
+
+**Achilles progression (self-guided, move up one step per week only if the week was green):**
+- **Phase 1 (now):** isometric heel-raise holds 5 × 30–45 s, seated soleus raises 3 × 15,
+  everything on flat ground.
+- **Phase 2 (when morning stiffness is under 10 min and holds are pain-free):** standing
+  heel raises on flat ground, both feet → left-biased → left only, 3 × 15, slow (2 s up,
+  3 s down). Then add load (backpack or dumbbell) and drop to 3 × 8–10, heavy and slow,
+  3–4 days a week. Seated soleus raises get heavier too. Still never below floor level.
+- **Phase 3 (when the 20 single-leg heel raise test passes):** springs. Two-footed
+  pogo hops 2 × 10 → 3 × 20 → single-leg hops → skips. Small and quiet first. This is
+  what running, and later Hyrox jumping and sled work, need.
 
 **Then the walk-run rebuild:** flat surface or treadmill, every other day. Start at 1 min
 run / 2 min walk × 8, and build the running minutes before cutting the walks. Next-morning
