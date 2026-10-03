@@ -1037,9 +1037,14 @@
           "date": "2026-10-05",
           "day": "Mon",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Easy cardio 30-40 min, conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 35,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-06",
@@ -1059,9 +1064,14 @@
           "date": "2026-10-07",
           "day": "Wed",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Easy cardio 30-40 min, conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 35,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-08",
@@ -1088,9 +1098,14 @@
           "date": "2026-10-10",
           "day": "Sat",
           "type": "cross_train",
-          "detail": "Easy cardio 45-60 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Mixed-machine aerobic session, 45-60 min easy, Hyrox-flavored: e.g., 20 min spin bike + 15 min SkiErg + 15 min row (modified catch), or a 40-50 min pool session. Conversational the whole way. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 55
+          "duration_min": 55,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-11",
@@ -1112,9 +1127,14 @@
           "date": "2026-10-12",
           "day": "Mon",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Easy cardio 30-40 min, conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 35,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-13",
@@ -1134,9 +1154,14 @@
           "date": "2026-10-14",
           "day": "Wed",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Optional intervals, ONLY if last week was green (all days at or under 3/10, mornings settled): SkiErg or swim or deep-water run, 10 min easy, then 6 \u00d7 2 min hard (RPE 7-8) with 2 min easy between, 10 min easy. Otherwise easy 30-40 min as usual. No bike or row sprints yet (they load the calf hardest).",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 35,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-15",
@@ -1163,9 +1188,14 @@
           "date": "2026-10-17",
           "day": "Sat",
           "type": "cross_train",
-          "detail": "Easy cardio 45-60 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Mixed-machine aerobic session, 45-60 min easy, Hyrox-flavored: e.g., 20 min spin bike + 15 min SkiErg + 15 min row (modified catch), or a 40-50 min pool session. Conversational the whole way. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 55
+          "duration_min": 55,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-18",
@@ -1187,9 +1217,14 @@
           "date": "2026-10-19",
           "day": "Mon",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Easy cardio 30-40 min, conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 35,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-20",
@@ -1209,9 +1244,14 @@
           "date": "2026-10-21",
           "day": "Wed",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min: spin bike (low resistance, seated, push through the ball of the foot without dropping the heel hard) or swim/pool running. Conversational effort. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Optional intervals, ONLY if last week was green (all days at or under 3/10, mornings settled): SkiErg or swim or deep-water run, 10 min easy, then 6 \u00d7 2 min hard (RPE 7-8) with 2 min easy between, 10 min easy. Otherwise easy 30-40 min as usual. No bike or row sprints yet (they load the calf hardest).",
           "status": "upcoming",
-          "duration_min": 35
+          "duration_min": 35,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-22",
@@ -1238,9 +1278,14 @@
           "date": "2026-10-24",
           "day": "Sat",
           "type": "cross_train",
-          "detail": "Original race day (Miami Beach Halloween Half, deferred). Easy cardio 45-60 min instead. Good day to pick the new target race with the return-to-run timeline in mind.",
+          "detail": "Original race day (Miami Beach Halloween Half, deferred). Mixed-machine aerobic session, 45-60 min easy, Hyrox-flavored: e.g., 20 min spin bike + 15 min SkiErg + 15 min row (modified catch), or a 40-50 min pool session. Conversational the whole way. Stop if the left heel or Achilles talks above 2/10. Rehab dose. Good day to pick the next target event.",
           "status": "upcoming",
-          "duration_min": 55
+          "duration_min": 55,
+          "prep": [
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way",
+            "Ankle pumps 10/side (gentle, no forcing the bend)"
+          ]
         },
         {
           "date": "2026-10-25",
