@@ -147,5 +147,8 @@
     }
   },
   "optional_strength": null,
-  "optional_strength_note": "Stood down 2026-09-21 \u2014 the rehab daily dose moved to coach-data/rehab.json (its own dashboard card, daily). When rehab ends, restore this with the 'keepers' circuit from rehab.md."
+  "optional_strength_note": "Stood down 2026-09-21 \u2014 the rehab daily dose moved to coach-data/rehab.json (its own dashboard card, daily). When rehab ends, restore this with the 'keepers' circuit from rehab.md.",
+  "health_conditions": [
+    "Hypothyroidism (Hashimoto's thyroiditis) -- reported 10/3. Relevant to tendon healing; check medication timing vs. supplements."
+  ]
 }

@@ -203,6 +203,48 @@ target.
 
 ---
 
+## Part 3 — With hypothyroidism / Hashimoto's (added 10/3)
+
+**The thyroid matters to this injury on its own.** Thyroid hormone is needed for
+collagen production and for keeping tendon cells alive and working. Underactive thyroid
+is linked to tendon problems, slower tendon healing, and calcium deposits in tendons.
+That last one connects to the orthopedist's spur warning. Making sure your levels are
+well controlled is a real healing lever, likely bigger than any injection. If labs
+(TSH, free T4) haven't been checked in the last few months, ask your doctor to recheck.
+
+**By treatment:**
+- **Peptides (BPC-157, TB-500): the most concern.** Hashimoto's is an immune system
+  attacking the thyroid. The FDA's stated worry about BPC-157 was immune reactions, and
+  no study has tested these peptides in people with autoimmune disease, so the risk is
+  unknown, not known to be zero. Gray-market vials can also carry bacterial
+  contaminants that provoke immune reactions. Being autoimmune strengthens the case
+  for skipping them. At minimum, clear it with whoever manages your thyroid.
+- **Steroid injection:** still avoid for the tendon reasons. Steroids can also nudge
+  thyroid lab results for a while, so tell your doctor if you ever get one before labs.
+- **PRP:** your own blood, and Hashimoto's isn't a reason to avoid it. The problem is
+  still that it didn't beat a sham in the best trial.
+- **Stem cells:** your own cells raise no specific thyroid concern. Donor products
+  add an unknown immune factor. Same verdict as before: not recommended.
+- **Shockwave:** no thyroid concern.
+- **Oral collagen:** fine, but timing matters if you take thyroid medication
+  (levothyroxine or similar). Food and protein reduce its absorption, so take the
+  medication on an empty stomach and the collagen at least 30–60 minutes later.
+  Calcium and iron, which are common in multivitamins, interfere more, so keep the
+  multivitamin about 4 hours from the medication. If the multivitamin contains biotin,
+  skip it for 2–3 days before thyroid blood tests, because biotin can distort results.
+
+**One more Achilles safety note, unrelated to the thyroid:** fluoroquinolone
+antibiotics (ciprofloxacin, levofloxacin) carry an FDA warning for tendon rupture,
+especially at the Achilles. If one is ever prescribed, mention your Achilles and ask
+whether there's an alternative.
+
+Sources for this part:
+- Thyroid hormones and tendons review. https://pmc.ncbi.nlm.nih.gov/articles/PMC5310744
+- Hypothyroidism and tendon disorders. https://pmc.ncbi.nlm.nih.gov/articles/PMC3838329
+- Case report: tendinopathy as the presenting complaint of hypothyroidism. https://jmedicalcasereports.biomedcentral.com/articles/10.1186/s13256-015-0794-2
+
+---
+
 ## Sources
 
 - Kearney RS et al. Effect of PRP vs sham injection in chronic midportion Achilles tendinopathy. *JAMA* 2021;326(2):137-144. https://pmc.ncbi.nlm.nih.gov/articles/PMC8278266
