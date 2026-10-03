@@ -19,6 +19,7 @@ choice: home rehab, no formal PT.
 | PRP (plasma) | Large, well-run trials show no benefit over a sham | Not worth it now |
 | Stem cells | Small, low-quality studies | Not recommended |
 | Peptides (BPC-157, TB-500) | No human trials for tendon healing | Not recommended |
+| Oral collagen + vitamin C | Small but positive Achilles trial | Cheap, low-risk add-on |
 | Steroid injection | Short relief, rupture risk | Avoid near the Achilles |
 
 ### Steroid (cortisone) injection
@@ -65,29 +66,73 @@ Cells from your bone marrow or fat, or donor products, injected into the tendon.
 **Verdict:** interesting research area, not a treatment with proof behind it.
 Not recommended.
 
-### Peptides (BPC-157, TB-500)
+### Peptides (BPC-157, TB-500) — detailed pros and cons (expanded 10/3)
 
-Lab-made short proteins, usually self-injected, popular in fitness circles for tendon
-and ligament healing.
+Lab-made short proteins, usually self-injected under the skin near the injury.
+**BPC-157** is a 15-amino-acid fragment of a protein found in stomach juice.
+**TB-500** is a synthetic fragment of thymosin beta-4, a protein involved in cell
+movement and wound repair.
 
-- **Evidence:** the tendon-healing data come from animal and cell studies. There are
-  no published human clinical trials showing they heal tendons.
-- **Regulatory status (moving target):** in November 2023 the FDA put BPC-157 on its
-  list of compounding substances with significant safety concerns, citing immune
-  reactions and the lack of human data. It was taken off that list in April 2026. On
-  July 23, 2026, an FDA advisory committee voted 8–6 (one abstention) to recommend
-  letting compounding pharmacies use it, and also gave "yes" recommendations to TB-500
-  and several others. That vote is advice, not approval: the FDA has to act on it, and
-  FDA staff had recommended keeping these peptides off the list. Even if it is
-  finalized, it would mean pharmacies may compound it, not that it's proven to work.
-- **Sourcing:** much of what's sold is "research use" product online, with unverified
-  purity and dose.
-- **Sport:** prohibited by the World Anti-Doping Agency. That only matters if you're
-  ever drug-tested, but it tells you how regulators view it.
+**Possible upsides**
+- **Animal and lab data are genuinely encouraging.** In rats, BPC-157 has sped healing
+  of cut Achilles tendons and tendon-to-bone attachments, and in cell studies it
+  increases tendon-cell growth and blood-vessel formation. Thymosin beta-4 has similar
+  wound-repair data.
+- **No serious harms reported so far** in the limited human use that's been studied.
+- **Access may become more legitimate.** After the July 2026 advisory vote, if the FDA
+  finalizes it, licensed compounding pharmacies could make BPC-157 with real quality
+  control, which would beat today's online vials.
 
-**Verdict:** not recommended. If you ever decide to try one anyway, only through a
-licensed physician and a properly accredited compounding pharmacy, and only after the
-basics have had a fair run.
+**Downsides**
+- **Almost no human evidence.** The total published human data for BPC-157 is a few
+  small pilot studies and conference abstracts. The best-known is a 2021 knee study:
+  17 patients, no control group, no placebo, and patient-reported improvement, so you
+  can't separate the drug from natural healing or placebo. Nothing in humans tests
+  Achilles or tendon healing.
+- **Unknown long-term safety.** No study has followed people for long. Both peptides
+  work partly by encouraging new blood vessels and cell growth. That's how they might
+  help a tendon, and it's also why researchers raise a theoretical concern about
+  feeding tumors. It's unproven either way, but nobody has checked.
+- **Quality is a gamble today.** Most supply is sold "for research use only," with
+  independent tests often finding wrong doses or contamination. Injecting anything
+  also carries infection risk.
+- **Regulatory status is unsettled.** Flagged by the FDA in 2023 (immune reactions,
+  no human data), removed from that list in April 2026, recommended 8–6 by an advisory
+  committee in July 2026 against FDA staff's advice, and not yet finalized as far as
+  I could find. A recommendation that pharmacies may compound it says nothing about
+  whether it works.
+- **Banned in competition** by the World Anti-Doping Agency (BPC-157 since 2022;
+  TB-500 explicitly). Only matters for drug-tested events.
+- **The hidden cost: false confidence.** Pain relief isn't tendon strength. If a
+  peptide makes the heel feel better, the temptation is to run sooner than the tendon
+  can handle. An insertional Achilles only remodels in response to progressive load,
+  and no injection replaces that.
+
+**If you try one anyway**
+1. Through a licensed physician, using a state-licensed compounding pharmacy, not
+   an online "research" seller.
+2. Don't change the return-to-run criteria. The peptide doesn't earn you a shortcut.
+3. Start it in a week with nothing else new (no shockwave, no big program jump) and
+   log the date, so the Sunday numbers can show whether anything changed.
+4. Stop and see a doctor for injection-site redness, swelling, fever, or a
+   giving-way moment.
+
+**The peptide with actual human Achilles evidence: oral collagen**
+- **Praet et al., 2019:** 20 people with Achilles tendinopathy did a twice-daily calf
+  program for 6 months, with collagen peptides for 3 months and a placebo for 3
+  (crossover). Function scores rose about 12.6 points in 3 months on collagen versus
+  about 5.3 on placebo; 12 of 18 finishers were back to running at 3 months. It's small
+  and used the manufacturer's product, so treat it as promising, not proven.
+- **Shaw et al., 2017:** 15 g of gelatin with vitamin C taken an hour before a short
+  bout of jumping roughly doubled a blood marker of collagen production.
+- **How to use it:** 10–15 g of collagen peptides or gelatin plus about 50 mg of
+  vitamin C, 30–60 minutes before the rehab session. Cheap and low risk. Collagen is
+  usually bovine or marine, so it fits gluten-free, dairy-free, and soy-free; check
+  the label for additives.
+
+**Verdict:** injectable peptides are a speculative bet with real unknowns, not a
+treatment. If you want a peptide, oral collagen before rehab is the one with human
+Achilles data behind it.
 
 ### Shockwave (not an injection)
 
@@ -167,4 +212,8 @@ target.
 - Systematic review: efficacy of stem cell therapy for tendon disorders. https://pmc.ncbi.nlm.nih.gov/articles/PMC7227154
 - BPC-157 regulatory history (law firm summary). https://djholtlaw.com/regulatory-alert-the-legal-status-of-bpc-157-in-compounding-and-clinical-practice/
 - FDA advisory committee peptide vote, July 2026. https://www.americanmedspa.org/?p=21041 and https://healingmaps.com/fda-panel-votes-bpc-157-compounding/
+- Lee E, Padgett B. Intra-articular injection of BPC 157 for multiple types of knee pain. *Altern Ther Health Med* 2021 (retrospective, 17 patients).
+- Overview of published BPC-157 human data. https://pmc.ncbi.nlm.nih.gov/articles/PMC12313605/
+- Praet SFE et al. Oral specific collagen peptides with calf strengthening in Achilles tendinopathy. *Nutrients* 2019;11(1):76. https://pmc.ncbi.nlm.nih.gov/articles/PMC6356409
+- Shaw G et al. Vitamin C-enriched gelatin supplementation before intermittent activity augments collagen synthesis. *Am J Clin Nutr* 2017;105(1):136-143.
 - HYROX 2025/26 weights. https://www.redbull.com/us-en/hyrox-weights-overview
