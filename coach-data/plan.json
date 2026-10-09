@@ -1083,10 +1083,20 @@
         {
           "date": "2026-10-09",
           "day": "Fri",
+          "type": "easy_run",
+          "detail": "Unplanned first run back: 3 mi easy (Strength B moved to Saturday).",
+          "status": "completed",
+          "duration_min": 33,
+          "miles": 3.0,
+          "note": "First run since the 10/2 diagnosis, taken a few days before the return-to-run criteria were all met (heel-raise and hop tests not yet done; 8 of the 14 giving-way-free days). Result: Achilles 0/10, shin 0/10, arch/post tib 2/10. HR a bit high from heat, poor sleep, and ~10 days off running. Achilles had been quiet all week."
+        },
+        {
+          "date": "2026-10-10",
+          "day": "Sat",
           "type": "strength",
-          "detail": "Strength B (upper + core + hips), 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Hip abduction 3x15-20, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side.",
+          "detail": "Strength B (upper + core + hips), moved from Friday, 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Hip abduction 3x15-20, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side. Optional after: 20-30 min easy bike.",
           "status": "upcoming",
-          "duration_min": 45,
+          "duration_min": 60,
           "prep": [
             "5 min easy bike",
             "Band pull-aparts 2\u00d715 (or light rear-delt raises)",
@@ -1095,23 +1105,10 @@
           ]
         },
         {
-          "date": "2026-10-10",
-          "day": "Sat",
-          "type": "cross_train",
-          "detail": "Mixed-machine aerobic session, 45-60 min easy, Hyrox-flavored: e.g., 20 min spin bike + 15 min SkiErg + 15 min row (modified catch), or a 40-50 min pool session. Conversational the whole way. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
-          "status": "upcoming",
-          "duration_min": 55,
-          "prep": [
-            "5 min very easy on the same machine",
-            "Hip circles + arm circles 8 each way",
-            "Ankle pumps 10/side (gentle, no forcing the bend)"
-          ]
-        },
-        {
           "date": "2026-10-11",
           "day": "Sun",
           "type": "rest",
-          "detail": "Rest + Sunday checks: single-leg heel raise count on each side (stop at the first pain or form loss; target 20 pain-free on the left), knee-to-wall in cm (left only to the first pull, no forcing), morning stiffness minutes this week, any giving-way moments. Report the numbers.",
+          "detail": "Rest + TESTS (do these before running again): 1) single-leg heel raises, left and right, flat floor, count to the first pain or form loss (target 20 on the left); 2) only if the left reaches 20: small two-footed pogo hops in place 2\u00d710, pain-free?; 3) knee-to-wall in cm; 4) any giving-way moments this week. Film the heel raises from behind. Report the numbers.",
           "status": "upcoming"
         }
       ],
@@ -1119,15 +1116,15 @@
     },
     {
       "week": 15,
-      "phase": "achilles_rehab",
-      "focus": "Achilles recovery block, week 2.",
-      "summary": "Same structure as last week. Progress the rehab dose only if the week stayed at or under 3/10 and mornings are improving. PT program overrides when it starts.",
+      "phase": "return_to_run",
+      "focus": "Return-to-run week 1: two short easy runs, gated, with strength and Achilles loading continuing.",
+      "summary": "Runs Wed and Sat, 3 mi easy each, flat, highest-drop non-plated shoes, never on back-to-back days. Gate for each run: Achilles quiet the morning of AND the morning after the previous run (at or under 2/10, stiffness under 5 min). If Sunday's heel-raise test is under 20 on the left, keep it to these two runs and keep loading; if it's 20+ and hops are clean, Saturday can go to 4 mi. No speed, hills, or turns-heavy routes.",
       "sessions": [
         {
           "date": "2026-10-12",
           "day": "Mon",
           "type": "cross_train",
-          "detail": "Easy cardio 30-40 min, conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "detail": "Easy cardio 30-40 min (non-impact), conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
           "status": "upcoming",
           "duration_min": 35,
           "prep": [
@@ -1153,15 +1150,17 @@
         {
           "date": "2026-10-14",
           "day": "Wed",
-          "type": "cross_train",
-          "detail": "Optional intervals, ONLY if last week was green (all days at or under 3/10, mornings settled): SkiErg or swim or deep-water run, 10 min easy, then 6 \u00d7 2 min hard (RPE 7-8) with 2 min easy between, 10 min easy. Otherwise easy 30-40 min as usual. No bike or row sprints yet (they load the calf hardest).",
+          "type": "easy_run",
+          "detail": "Easy run 3 mi, conversational, flat route or treadmill (0-0.5% incline), highest-drop non-plated shoes. Land midfoot, let the heel touch down. Gate: Achilles at or under 2/10 and morning stiffness under 5 min today, and no reaction the morning after the last run. Mid-run Achilles talk: stop, 1 min calf massage, continue only if fully quiet. Rehab dose after.",
           "status": "upcoming",
-          "duration_min": 35,
+          "duration_min": 33,
           "prep": [
-            "5 min very easy on the same machine",
-            "Hip circles + arm circles 8 each way",
-            "Ankle pumps 10/side (gentle, no forcing the bend)"
-          ]
+            "Isometric heel-raise holds 3\u00d730s",
+            "Isometric inversion hold 2\u00d730s (left)",
+            "Doming 1\u00d76/foot",
+            "5-min brisk warm-up walk: this is the gate"
+          ],
+          "miles": 3.0
         },
         {
           "date": "2026-10-15",
@@ -1187,15 +1186,17 @@
         {
           "date": "2026-10-17",
           "day": "Sat",
-          "type": "cross_train",
-          "detail": "Mixed-machine aerobic session, 45-60 min easy, Hyrox-flavored: e.g., 20 min spin bike + 15 min SkiErg + 15 min row (modified catch), or a 40-50 min pool session. Conversational the whole way. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
+          "type": "easy_run",
+          "detail": "Easy run 3 (4 if Sunday's heel-raise and hop tests passed) mi, conversational, flat route or treadmill (0-0.5% incline), highest-drop non-plated shoes. Land midfoot, let the heel touch down. Gate: Achilles at or under 2/10 and morning stiffness under 5 min today, and no reaction the morning after the last run. Mid-run Achilles talk: stop, 1 min calf massage, continue only if fully quiet. Rehab dose after.",
           "status": "upcoming",
-          "duration_min": 55,
+          "duration_min": 40,
           "prep": [
-            "5 min very easy on the same machine",
-            "Hip circles + arm circles 8 each way",
-            "Ankle pumps 10/side (gentle, no forcing the bend)"
-          ]
+            "Isometric heel-raise holds 3\u00d730s",
+            "Isometric inversion hold 2\u00d730s (left)",
+            "Doming 1\u00d76/foot",
+            "5-min brisk warm-up walk: this is the gate"
+          ],
+          "miles": 3.0
         },
         {
           "date": "2026-10-18",
@@ -1205,7 +1206,7 @@
           "status": "upcoming"
         }
       ],
-      "miles_target": 0.0
+      "miles_target": 6.0
     },
     {
       "week": 16,

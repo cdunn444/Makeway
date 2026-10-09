@@ -1,26 +1,31 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-10-09",
   "active": true,
   "focus": "Left Achilles insertion (micro-tearing, orthopedist 10/2) + left post tib / arch",
   "phase": {
-    "num": 1,
+    "num": 2,
     "of": 3,
-    "name": "Calm the Achilles",
-    "exit": "Morning stiffness under 5 min for a week, no giving-way moments for 2 weeks, 20 pain-free single-leg heel raises on the left (flat floor), and pain-free two-footed hops 2×10."
+    "name": "Rebuild capacity",
+    "exit": "20 pain-free single-leg heel raises on the left (flat floor) and pain-free two-footed hops 2×10. Then Phase 3: springs (pogo hops → skips → single-leg hops)."
   },
-  "note": "About 15 min daily, done at home (no formal PT). Pain during and the morning after must stay at or under 3/10. Progress by the Sunday numbers (see rehab.md, Achilles Phase 2).",
+  "note": "About 15 min daily at home. Achilles has been quiet all week, so loading moves up: standing heel raises replace the seated-only work. Pain during and the morning after stay at or under 3/10.",
   "pain_rules": "Green: at or under 3/10 during, and settled by the next morning, continue. Yellow: 4–5/10 or a worse morning, drop back a level for 2–3 days. Red: sharp pain, a giving-way moment, or swelling, stop that exercise and call the orthopedist.",
-  "special": "Left Achilles insertion: keep the heel up and avoid deep ankle bend under load. Shoes with a heel at all times, no barefoot, no calf stretching on the left, no heel drops off a step, no deep squats or lunges, no hills or incline. If it gives way again or gets worse, call the orthopedist for a scan.",
+  "special": "Running is back in, carefully: short easy runs, flat, never on back-to-back days, gated on the Achilles being quiet that morning and after the last run. Still keep the heel up (shoes with a heel, no barefoot), no left calf stretching, no heel drops off a step, no hills or incline. If it gives way again or gets worse, stop running and call the orthopedist.",
   "exercises": [
     {
-      "name": "Isometric heel-raise hold",
-      "dose": "5×30–45s · both feet, flat floor",
-      "cue": "Rise to half height and push the balls of the feet down at moderate effort for the whole hold. Flat floor only, never off a step. Progress to left-only holds when both-feet holds are pain-free."
+      "name": "Standing heel raises",
+      "dose": "3×15 · slow, flat floor",
+      "cue": "Both feet → weight biased onto the left → left only, moving up one step per week if pain-free. 2 s up, 3 s down, stop when the heel touches the floor. Never off a step. When left-only 3×15 is easy, hold a dumbbell and drop to 3×8–10."
     },
     {
       "name": "Seated soleus raise",
-      "dose": "3×15 · slow",
-      "cue": "Seated, knees bent, a dumbbell on each knee. Raise the heels over 2 seconds, lower over 3, and stop when the heels touch the floor. Never let the heel drop below the toes."
+      "dose": "3×12 · heavier",
+      "cue": "Seated, knees bent, heavier dumbbells on the knees. 2 s up, 3 s down, stop at the floor. Trains the deep calf that takes most of the running load."
+    },
+    {
+      "name": "Isometric heel-raise hold",
+      "dose": "3×30s · warm-up / pre-run",
+      "cue": "Half height, push the balls of the feet down. Use as the warm-up before the standing raises and before runs."
     },
     {
       "name": "Short-foot arch doming",
@@ -64,7 +69,7 @@
     "Sundays: single-leg heel raise count each side, knee-to-wall in cm, morning stiffness minutes, any giving-way moments"
   ],
   "avoid": [
-    "Running, jumping, hopping, pickleball",
+    "Jumping, hopping (except Sunday's test), pickleball, speed work, back-to-back running days",
     "Any left calf stretching; heel drops off a step; deep squats, lunges, step-ups",
     "Hills, StairMaster, incline treadmill walking, bike climbs or standing on the pedals, jump rope",
     "Barefoot walking, flat shoes, flip-flops, the plated Hyperion",
