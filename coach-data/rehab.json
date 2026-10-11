@@ -1,12 +1,12 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-11",
   "active": true,
   "focus": "Left Achilles insertion (micro-tearing, orthopedist 10/2) + left post tib / arch",
   "phase": {
     "num": 2,
     "of": 3,
     "name": "Rebuild capacity",
-    "exit": "20 pain-free single-leg heel raises on the left (flat floor) and pain-free two-footed hops 2×10. Then Phase 3: springs (pogo hops → skips → single-leg hops)."
+    "exit": "Heel-raise test PASSED 10/11 (20 each leg, left harder and less stable). Remaining: pain-free two-footed hops 2×10. Then Phase 3: springs (pogo hops → skips → single-leg hops)."
   },
   "note": "About 15 min daily at home. Achilles has been quiet all week, so loading moves up: standing heel raises replace the seated-only work. Pain during and the morning after stay at or under 3/10.",
   "pain_rules": "Green: at or under 3/10 during, and settled by the next morning, continue. Yellow: 4–5/10 or a worse morning, drop back a level for 2–3 days. Red: sharp pain, a giving-way moment, or swelling, stop that exercise and call the orthopedist.",
@@ -14,8 +14,8 @@
   "exercises": [
     {
       "name": "Standing heel raises",
-      "dose": "3×15 · slow, flat floor",
-      "cue": "Both feet → weight biased onto the left → left only, moving up one step per week if pain-free. 2 s up, 3 s down, stop when the heel touches the floor. Never off a step. When left-only 3×15 is easy, hold a dumbbell and drop to 3×8–10."
+      "dose": "3×15 · left first, slow",
+      "cue": "Left only now (it passed 20 reps). Always do the left first and have the right match its reps, so the strong side doesn't outwork the weak one. 2 s up, pause, 3 s down, stop when the heel touches the floor. When 3×15 is easy, hold a dumbbell and drop to 3×8–10. Never off a step."
     },
     {
       "name": "Seated soleus raise",
@@ -49,8 +49,8 @@
     },
     {
       "name": "Single-leg balance",
-      "dose": "2×30s/leg · firm floor",
-      "cue": "In shoes, on a firm floor, fingertips near a counter. Soft knee, quiet foot. No soft surfaces yet."
+      "dose": "3×30s left, 2×30s right · firm floor",
+      "cue": "Extra set on the left: it's the less stable side. In shoes, firm floor, fingertips near a counter. Progress to eyes closed when 30 s is steady."
     },
     {
       "name": "Right-leg range work",
@@ -66,7 +66,7 @@
     "Collagen (your pick: bovine hide peptides, 10 g/scoop): 1–1½ scoops + ~50 mg vitamin C (small orange) 30–60 min before the rehab session or a strength day. At least 30–60 min after thyroid medication; multivitamin ~4 h away. It adds to your pea protein, not instead of it",
     "Evening: Normatec and/or cold plunge if it helps the heel settle",
     "Protein stays high (155 g/day) for tendon repair; don't deepen the calorie deficit while healing",
-    "Sundays: single-leg heel raise count each side, knee-to-wall in cm, morning stiffness minutes, any giving-way moments"
+    "Sundays: single-leg heel raise count each side, knee-to-wall in cm, morning stiffness minutes, any giving-way moments. Baseline 9/28: knee-to-wall L 9.5 (Achilles-limited), R 11. Test 10/11: single-leg heel raises L 20 / R 20, left harder and less stable"
   ],
   "avoid": [
     "Jumping, hopping (except Sunday's test), pickleball, speed work, back-to-back running days",
