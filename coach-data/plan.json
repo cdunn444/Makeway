@@ -1110,7 +1110,7 @@
           "type": "rest",
           "detail": "Rest + TESTS (do these before running again): 1) single-leg heel raises, left and right, flat floor, count to the first pain or form loss (target 20 on the left); 2) only if the left reaches 20: small two-footed pogo hops in place 2\u00d710, pain-free?; 3) knee-to-wall in cm; 4) any giving-way moments this week. Film the heel raises from behind. Report the numbers.",
           "status": "completed",
-          "note": "Filmed single-leg heel raises (about 6-8 reps per side, 480x360 video): both legs clean, no collapse, neither heel rolling outward at the top. Right rises noticeably higher and holds the top more steadily; left rises less and returns sooner (same strength gap as 9/28). Reps fast (~1/s). Heel inversion not judgeable at that resolution. Full rep count, hop test, knee-to-wall, and giving-way count still pending. FULL TEST: 20 single-leg heel raises on each side. Right clearly easier; left calf/lower leg burning heavily by the end and noticeably less stable. Left met the 20-rep return-to-run criterion. Hop test pending (do it fresh, after the Achilles stays quiet)."
+          "note": "Filmed single-leg heel raises (about 6-8 reps per side, 480x360 video): both legs clean, no collapse, neither heel rolling outward at the top. Right rises noticeably higher and holds the top more steadily; left rises less and returns sooner (same strength gap as 9/28). Reps fast (~1/s). Heel inversion not judgeable at that resolution. Full rep count, hop test, knee-to-wall, and giving-way count still pending. FULL TEST: 20 single-leg heel raises on each side. Right clearly easier; left calf/lower leg burning heavily by the end and noticeably less stable. Left met the 20-rep return-to-run criterion. Hop test pending (do it fresh, after the Achilles stays quiet). After the test: a slight fatigue-type ache in one spot of the left Achilles ('like holding a muscle flexed too long')."
         }
       ],
       "miles_target": 0.0
@@ -1132,7 +1132,8 @@
             "5 min very easy on the same machine",
             "Hip circles + arm circles 8 each way",
             "Ankle pumps 10/side (gentle, no forcing the bend)"
-          ]
+          ],
+          "note": "After Sunday's max heel-raise test: rehab dose today is isometric holds only (no standing heel raises), calf-belly massage, no stretching. Morning check: Achilles at or under 2/10 and stiffness under 5 min? Report it."
         },
         {
           "date": "2026-10-13",
@@ -1167,7 +1168,7 @@
           "date": "2026-10-15",
           "day": "Thu",
           "type": "rest",
-          "detail": "Rest. Walk (in shoes with a heel), rehab dose, evening Normatec/cold plunge if it helps.",
+          "detail": "Rest + HOP TEST (moved here so it's done fresh, with the Achilles quiet): after a 5-min walk and heel-raise holds, small quick two-footed hops in place 2\u00d710, soft landings. Pain-free during and the next morning = Saturday can be 4 mi. Any Achilles pain = Saturday stays 3 mi and hops wait. Walk, rehab dose, evening recovery.",
           "status": "upcoming"
         },
         {
@@ -1188,7 +1189,7 @@
           "date": "2026-10-17",
           "day": "Sat",
           "type": "easy_run",
-          "detail": "Easy run 3 (4 if the hop test is clean; heel-raise test passed 10/11 at 20/20) mi, conversational, flat route or treadmill (0-0.5% incline), highest-drop non-plated shoes. Land midfoot, let the heel touch down. Gate: Achilles at or under 2/10 and morning stiffness under 5 min today, and no reaction the morning after the last run. Mid-run Achilles talk: stop, 1 min calf massage, continue only if fully quiet. Rehab dose after.",
+          "detail": "Easy run 3 (4 if Thursday's hop test is clean; heel-raise test passed 10/11 at 20/20) mi, conversational, flat route or treadmill (0-0.5% incline), highest-drop non-plated shoes. Land midfoot, let the heel touch down. Gate: Achilles at or under 2/10 and morning stiffness under 5 min today, and no reaction the morning after the last run. Mid-run Achilles talk: stop, 1 min calf massage, continue only if fully quiet. Rehab dose after.",
           "status": "upcoming",
           "duration_min": 40,
           "prep": [
