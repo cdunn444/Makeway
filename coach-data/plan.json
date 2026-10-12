@@ -1119,34 +1119,34 @@
       "week": 15,
       "phase": "return_to_run",
       "focus": "Return-to-run week 1: two short easy runs, gated, with strength and Achilles loading continuing.",
-      "summary": "Return-to-run week 1. All return-to-run tests passed 10/11 (20 single-leg heel raises each side, pain-free hops); 14 days giving-way-free on 10/15. Runs Wed 3 mi and Sat 4 mi, flat, never back-to-back, each gated on a quiet Achilles that morning and after the last run. One new thing at a time: jumping work (Phase 3) waits until next week.",
+      "summary": "Return-to-run week 1. All return-to-run tests passed 10/11. Mon bike (done), Tue upper strength, Wed 3 mi, Thu lower strength + calf loading (the day after the run), Fri easy or rest, Sat 4 mi. Leg-heavy work stays at least 2 days before each run.",
       "sessions": [
         {
           "date": "2026-10-12",
           "day": "Mon",
           "type": "cross_train",
           "detail": "Easy cardio 30-40 min (non-impact), conversational (RPE 3-4; heart rate runs lower in the pool, so go by feel). Pick one: swim, deep-water running with a flotation belt, SkiErg, rower (foot stretcher set low, stop the slide before the shins go vertical), or seated spin bike at low-moderate resistance. Stop if the left heel or Achilles talks above 2/10. Rehab dose.",
-          "status": "upcoming",
-          "duration_min": 35,
+          "status": "completed",
+          "duration_min": 60,
           "prep": [
             "5 min very easy on the same machine",
             "Hip circles + arm circles 8 each way",
             "Ankle pumps 10/side (gentle, no forcing the bend)"
           ],
-          "note": "After Sunday's max heel-raise test and hop test: rehab dose today is isometric holds only (no standing heel raises), calf-belly massage, no stretching. Morning check: Achilles at or under 2/10 and stiffness under 5 min? That confirms Sunday's tests. Report it."
+          "note": "After Sunday's max heel-raise test and hop test: rehab dose today is isometric holds only (no standing heel raises), calf-belly massage, no stretching. Morning check: Achilles at or under 2/10 and stiffness under 5 min? That confirms Sunday's tests. Report it. Done: 60 min stationary bike with intervals (harder than the planned easy session)."
         },
         {
           "date": "2026-10-13",
           "day": "Tue",
           "type": "strength",
-          "detail": "Strength A (Achilles-safe lower + hips), 3x8-12, 2-3 reps in reserve: Hip thrust (from 140 lb total), DB Romanian deadlift, Leg press with feet high on the platform (don't let the heels lift or the ankles bend deeply), Leg curl, Leg extension, Hip abduction machine 3x15-20, Adductor machine 3x15-20, Side plank + top-leg raise 2x30-40s/side. Skip squats / lunges / step-ups / jumps / standing calf raises.",
+          "detail": "Strength B (upper + core), 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side. No heavy leg work today: legs stay fresh for Wednesday's run. Rehab dose: doming, inversion hold, heel-raise holds, balance (no standing heel-raise sets today).",
           "status": "upcoming",
           "duration_min": 50,
           "prep": [
             "5 min easy bike",
-            "Isometric heel-raise holds 2\u00d730s + seated soleus raises 1\u00d715",
-            "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
-            "Light ramp-up set of the hip thrust"
+            "Band pull-aparts 2\u00d715 (or light rear-delt raises)",
+            "Arm circles + thoracic rotations 8/side",
+            "Light ramp-up set of the first press and pull"
           ]
         },
         {
@@ -1167,22 +1167,27 @@
         {
           "date": "2026-10-15",
           "day": "Thu",
-          "type": "rest",
-          "detail": "Rest. Walk (in shoes with a heel), rehab dose, evening Normatec/cold plunge if it helps. (Hop test already done Sunday 10/11.)",
-          "status": "upcoming"
+          "type": "strength",
+          "detail": "Strength A (Achilles-safe lower + hips) the day after the run, 3 sets, 2-3 reps in reserve: Hip thrust (185 at home / machine at the gym), Romanian deadlift (185), Wall sit 3x45-60s or leg press with feet high, Hamstring curl (slider or machine) 3x8-10, Hip abduction 3x15-20, Adductor machine or Copenhagen 2-3 sets. Plus the Phase 2 calf work: standing heel raises left first 3x15 slow, right matches. Skip squats / lunges / step-ups / jumps.",
+          "status": "upcoming",
+          "duration_min": 55,
+          "prep": [
+            "5 min easy bike",
+            "Isometric heel-raise holds 2\u00d730s",
+            "Glute bridge 2\u00d710 + side-lying leg raise 10/side",
+            "Light ramp-up set of the hip thrust"
+          ]
         },
         {
           "date": "2026-10-16",
           "day": "Fri",
-          "type": "strength",
-          "detail": "Strength B (upper + core + hips), 3x8-12: DB bench or push-ups, Pull-ups or lat pulldown, Seated DB shoulder press, Chest-supported row, Curls + triceps, Hip abduction 3x15-20, Copenhagen plank short-lever 2x20s/side, Dead bug 2x10/side.",
+          "type": "cross_train",
+          "detail": "Easy 20-30 min spin or swim, or full rest. No intervals and no leg lifting: Saturday's 4 mi gets fresh legs. Rehab dose (holds, doming, balance).",
           "status": "upcoming",
-          "duration_min": 45,
+          "duration_min": 30,
           "prep": [
-            "5 min easy bike",
-            "Band pull-aparts 2\u00d715 (or light rear-delt raises)",
-            "Arm circles + thoracic rotations 8/side",
-            "Light ramp-up set of the first press and pull"
+            "5 min very easy on the same machine",
+            "Hip circles + arm circles 8 each way"
           ]
         },
         {
